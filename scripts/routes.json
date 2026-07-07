@@ -1,0 +1,6 @@
+[
+  { "path": "/", "fallbackTitle": "LaplandStore — Authentic Lapland Products: Crafts, Jewelry & Delicacies", "fallbackDescription": "Authentic products from Lapland — handicrafts, jewelry, delicacies and souvenirs shipped from Finnish Lapland to your home. Support local makers." },
+  { "path": "/privacy", "fallbackTitle": "Privacy Policy | LaplandStore" },
+  { "path": "/terms", "fallbackTitle": "Terms of Use | LaplandStore" },
+  { "path": "/cookie-policy", "fallbackTitle": "Cookie Policy | LaplandStore" }
+]

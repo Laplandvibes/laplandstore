@@ -1,0 +1,68 @@
+import { useEffect } from 'react';
+import TermsContent from '../../../shared/Legal/TermsContent';
+import { useLang, type Lang } from '../lang';
+
+const META: Record<Lang, { title: string; description: string }> = {
+  en: {
+    title: 'Terms of Service | LaplandStore',
+    description: 'The terms for using LaplandStore (Lapeso Oy): orders, shipping, returns, affiliate links and liability — set out in plain language.',
+  },
+  fi: {
+    title: 'Käyttöehdot | LaplandStore',
+    description: 'LaplandStoren (Lapeso Oy) käyttöehdot: tilaukset, toimitus, palautukset, affiliate-linkit ja vastuut — selkeästi kerrottuna.',
+  },
+  de: {
+    title: 'Nutzungsbedingungen | LaplandStore',
+    description: 'Die Bedingungen für die Nutzung von LaplandStore (Lapeso Oy): Bestellungen, Versand, Rückgabe, Affiliate-Links und Haftung — verständlich erklärt.',
+  },
+  ja: {
+    title: '利用規約 | LaplandStore',
+    description: 'LaplandStore（Lapeso Oy）のご利用条件：注文、配送、返品、アフィリエイトリンク、責任についてわかりやすく説明します。',
+  },
+  es: {
+    title: 'Condiciones de servicio | LaplandStore',
+    description: 'Las condiciones de uso de LaplandStore (Lapeso Oy): pedidos, envíos, devoluciones, enlaces de afiliados y responsabilidad — explicadas con claridad.',
+  },
+  'pt-BR': {
+    title: 'Termos de serviço | LaplandStore',
+    description: 'As condições de uso da LaplandStore (Lapeso Oy): pedidos, envio, devoluções, links de afiliados e responsabilidade — explicados com clareza.',
+  },
+  'zh-CN': {
+    title: '服务条款 | LaplandStore',
+    description: 'LaplandStore（Lapeso Oy）使用条款：订单、配送、退货、联盟链接及责任说明，清晰易懂。',
+  },
+  ko: {
+    title: '이용약관 | LaplandStore',
+    description: 'LaplandStore(Lapeso Oy) 이용 조건: 주문, 배송, 반품, 제휴 링크 및 책임을 알기 쉽게 설명합니다.',
+  },
+  fr: {
+    title: "Conditions d'utilisation | LaplandStore",
+    description: "Les conditions d'utilisation de LaplandStore (Lapeso Oy) : commandes, livraison, retours, liens d'affiliation et responsabilité — expliquées clairement.",
+  },
+  it: {
+    title: 'Condizioni di servizio | LaplandStore',
+    description: "Le condizioni d'uso di LaplandStore (Lapeso Oy): ordini, spedizione, resi, link di affiliazione e responsabilità — spiegate con chiarezza.",
+  },
+  nl: {
+    title: 'Gebruiksvoorwaarden | LaplandStore',
+    description: 'De voorwaarden voor het gebruik van LaplandStore (Lapeso Oy): bestellingen, verzending, retouren, affiliate-links en aansprakelijkheid — helder uitgelegd.',
+  },
+};
+
+export default function Terms() {
+  const { lang } = useLang();
+  const m = META[lang];
+
+  useEffect(() => {
+    document.title = m.title;
+    let desc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!desc) {
+      desc = document.createElement('meta');
+      desc.setAttribute('name', 'description');
+      document.head.appendChild(desc);
+    }
+    desc.setAttribute('content', m.description);
+  }, [m.title, m.description]);
+
+  return <TermsContent siteName="LaplandStore" lang={lang} />;
+}
