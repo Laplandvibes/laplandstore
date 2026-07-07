@@ -527,10 +527,39 @@ const HEADINGS: Record<Lang, { eyebrow: string; h2: string; lead: string }> = {
   nl: { eyebrow: 'Goed om te weten', h2: 'Vragen over kopen uit Lapland', lead: 'Wat kopers vragen voordat ze authentieke Lapland-producten bestellen.' },
 };
 
+// Per-question links to the on-page sections that back each answer
+// (Vesa 2026-07-07: FAQ answers must point to our own supporting content).
+// Section labels reuse the existing footer-pillar translations in App.tsx —
+// no new translation keys. Duodji/Sámi content lives in LocalShops
+// (#putiikit); food categories in #herkut; the maker ethos in #tarina.
+const SECTION_LABELS: Record<Lang, { herkut: string; suosittelemme: string; putiikit: string; tarina: string }> = {
+  en: { herkut: 'Categories', suosittelemme: 'We Recommend', putiikit: 'Boutiques', tarina: 'Story' },
+  fi: { herkut: 'Kategoriat', suosittelemme: 'Suosittelemme', putiikit: 'Putiikit', tarina: 'Tarina' },
+  de: { herkut: 'Kategorien', suosittelemme: 'Empfehlungen', putiikit: 'Boutiquen', tarina: 'Geschichte' },
+  ja: { herkut: 'カテゴリー', suosittelemme: 'おすすめ', putiikit: 'ブティック', tarina: 'ストーリー' },
+  es: { herkut: 'Categorías', suosittelemme: 'Recomendamos', putiikit: 'Boutiques', tarina: 'Historia' },
+  'pt-BR': { herkut: 'Categorias', suosittelemme: 'Recomendamos', putiikit: 'Boutiques', tarina: 'História' },
+  'zh-CN': { herkut: '分类', suosittelemme: '我们的推荐', putiikit: '精品店', tarina: '故事' },
+  ko: { herkut: '카테고리', suosittelemme: '추천 상점', putiikit: '부티크', tarina: '이야기' },
+  fr: { herkut: 'Catégories', suosittelemme: 'Nos recommandations', putiikit: 'Boutiques', tarina: 'Histoire' },
+  it: { herkut: 'Categorie', suosittelemme: 'Le nostre raccomandazioni', putiikit: 'Boutique', tarina: 'Storia' },
+  nl: { herkut: 'Categorieën', suosittelemme: 'Onze aanbevelingen', putiikit: 'Boutiques', tarina: 'Verhaal' },
+};
+type SectionKey = keyof (typeof SECTION_LABELS)['en'];
+const FAQ_LINKS: SectionKey[][] = [
+  ['putiikit', 'herkut'],  // 1 genuinely made in Lapland → verified boutiques + categories
+  ['putiikit'],            // 2 international shipping → each boutique's own terms
+  ['putiikit'],            // 3 what is Duodji → Duodji makers among the boutiques
+  ['putiikit'],            // 4 Sámi Duodji mark → authorised sellers in the directory
+  ['herkut'],              // 5 food products → delicacies category
+  ['tarina', 'putiikit'],  // 6 why buy local → maker stories + boutiques
+];
+
 export default function FAQ() {
   const { lang } = useLang();
   const list = FAQ_BY_LANG[lang];
   const h = HEADINGS[lang];
+  const labels = SECTION_LABELS[lang];
 
   return (
     <section id="faq" className="py-16 sm:py-20 px-4 bg-cream">
@@ -562,10 +591,25 @@ export default function FAQ() {
                   +
                 </span>
               </summary>
-              <p
-                className="text-warm-gray text-[15px] sm:text-base leading-relaxed px-6 pb-6"
-                dangerouslySetInnerHTML={{ __html: faq.aHtml }}
-              />
+              <div className="px-6 pb-6">
+                <p
+                  className="text-warm-gray text-[15px] sm:text-base leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: faq.aHtml }}
+                />
+                {(FAQ_LINKS[i] ?? []).length > 0 && (
+                  <div className="flex flex-wrap gap-x-5 gap-y-2 mt-4">
+                    {FAQ_LINKS[i].map((key) => (
+                      <a
+                        key={key}
+                        href={`#${key}`}
+                        className="inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-amber hover:text-night transition-colors"
+                      >
+                        {labels[key]} <span aria-hidden="true">→</span>
+                      </a>
+                    ))}
+                  </div>
+                )}
+              </div>
             </details>
           ))}
         </div>
