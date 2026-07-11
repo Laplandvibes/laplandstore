@@ -189,24 +189,27 @@ export default function Nav() {
 
           {/* Mobile lang dropdown + hamburger */}
           <div className="lg:hidden flex items-center gap-2">
-            <select
-              value={lang}
-              onChange={(e) => setLang(e.target.value as Lang)}
-              aria-label="Language"
-              className={`bg-transparent border rounded px-2 py-1 text-xs font-bold uppercase ${scrolled ? 'border-warm-gray/30 text-night' : 'border-white/40 text-white'}`}
-            >
-              <option value="en" className="bg-cream text-night">EN</option>
-              <option value="fi" className="bg-cream text-night">FI</option>
-              <option value="de" className="bg-cream text-night">DE</option>
-              <option value="ja" className="bg-cream text-night">JA</option>
-              <option value="es" className="bg-cream text-night">ES</option>
-              <option value="pt-BR" className="bg-cream text-night">BR</option>
-              <option value="zh-CN" className="bg-cream text-night">CN</option>
-              <option value="ko" className="bg-cream text-night">KR</option>
-              <option value="fr" className="bg-cream text-night">FR</option>
-              <option value="it" className="bg-cream text-night">IT</option>
-              <option value="nl" className="bg-cream text-night">NL</option>
-            </select>
+            <div className="relative inline-flex items-center">
+              <select
+                value={lang}
+                onChange={(e) => setLang(e.target.value as Lang)}
+                aria-label="Language"
+                className={`appearance-none bg-transparent border rounded pl-2 pr-6 py-1 text-xs font-bold uppercase ${scrolled ? 'border-warm-gray/30 text-night' : 'border-white/40 text-white'}`}
+              >
+                <option value="en" className="bg-cream text-night">EN</option>
+                <option value="fi" className="bg-cream text-night">FI</option>
+                <option value="de" className="bg-cream text-night">DE</option>
+                <option value="ja" className="bg-cream text-night">JA</option>
+                <option value="es" className="bg-cream text-night">ES</option>
+                <option value="pt-BR" className="bg-cream text-night">BR</option>
+                <option value="zh-CN" className="bg-cream text-night">CN</option>
+                <option value="ko" className="bg-cream text-night">KR</option>
+                <option value="fr" className="bg-cream text-night">FR</option>
+                <option value="it" className="bg-cream text-night">IT</option>
+                <option value="nl" className="bg-cream text-night">NL</option>
+              </select>
+              <ChevronDown aria-hidden="true" className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 ${scrolled ? 'text-night' : 'text-white'}`} />
+            </div>
             <button
               className={`p-2 rounded-lg transition-colors ${scrolled ? 'text-night' : 'text-white'}`}
               onClick={() => setOpen(!open)}
