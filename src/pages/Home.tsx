@@ -10,6 +10,8 @@ import RelatedSites from '../components/RelatedSites';
 import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
 import { KultaCenterAd, IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
+import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import { AD_SLOTS } from '../data/adSlots';
 import { useLang, type Lang } from '../lang';
 
 const BCP47: Record<Lang, string> = {
@@ -104,8 +106,14 @@ export default function Home() {
   return (
     <>
       <Hero />
+      {/* PÄÄKUMPPANI-banneri heti heron alla — sivun paras mainospaikka,
+          tyhjänä kompakti house-ad → LV Media -portaali (cream-pinta → light) */}
+      <MainPartnerBanner config={AD_SLOTS} locale={lang} surface="light" />
       <WhyBuyFromUs />
       <Categories />
+      {/* Kumppaniosio heti ensimmäisen kategoriabändin jälkeen:
+          kakkospääkumppani + 6 premium-paikkaa (house-adit kun vapaat) */}
+      <HomeAdSlots config={AD_SLOTS} locale={lang} surface="light" />
       <FeaturedProducts />
       {/* Mapped product ad — Kulta-Center (jewellery gift), skinned in their brand. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
