@@ -240,7 +240,7 @@ export default function ProductBrandAd({
 
           {/* Evergreen offer chip — real, never stale, in the brand accent. */}
           <div
-            className={`${ns}-rise ${ns}-rise-3 mt-6 inline-flex w-fit items-center gap-2 rounded-full px-3.5 py-1.5 text-sm font-semibold`}
+            className={`${ns}-rise ${ns}-rise-3 mt-6 inline-flex w-fit items-center gap-2 rounded-2xl leading-snug px-3.5 py-1.5 text-sm font-semibold`}
             style={{ backgroundColor: `${brand.accent}22`, color: brand.ink }}
           >
             <OfferIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
@@ -304,7 +304,7 @@ export default function ProductBrandAd({
               <div className={`${ns}-shimmer pointer-events-none absolute inset-0`} />
             </div>
             <span
-              className="rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em]"
+              className="rounded-lg text-center leading-snug px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em]"
               style={{ backgroundColor: brand.accent, color: brand.ink === '#0B0B0C' ? '#0B0B0C' : '#FFFFFF' }}
             >
               {copy.stageBadge[lang]}
