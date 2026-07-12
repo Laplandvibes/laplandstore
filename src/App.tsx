@@ -8,6 +8,7 @@ const Home = lazy(() => import('./pages/Home'))
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'))
 const Terms = lazy(() => import('./pages/Terms'))
 const CookiePolicy = lazy(() => import('./pages/CookiePolicy'))
+const NotFound = lazy(() => import('./pages/NotFound'))
 import { useLang, footerDict } from './lang';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import LocaleHead from './components/LocaleHead';
@@ -229,7 +230,7 @@ export default function App() {
           <Route path="/nl/privacy" element={<PrivacyPolicy />} />
           <Route path="/nl/terms" element={<Terms />} />
           <Route path="/nl/cookie-policy" element={<CookiePolicy />} />
-          <Route path="*" element={<Home />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
       </main>
