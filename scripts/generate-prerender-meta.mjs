@@ -31,6 +31,7 @@ const LANGS = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it',
 
 // route path → legal page component (each declares `const META: Record<Lang,…>`).
 const STATIC_PAGES = {
+  '/': 'src/pages/Home.tsx',
   '/privacy': 'src/pages/PrivacyPolicy.tsx',
   '/terms': 'src/pages/Terms.tsx',
   '/cookie-policy': 'src/pages/CookiePolicy.tsx',
@@ -108,8 +109,9 @@ function extractLegalMeta(rel) {
     const entryRe = new RegExp(`(?:^|[\\s,{])['"]?${escapeRe(lang)}['"]?\\s*:\\s*(\\{[^{}]*\\})`);
     const m = metaBlock.match(entryRe);
     if (!m) { warn(`${rel}: META has no entry for lang '${lang}'`); continue; }
-    const title = matchQuotedField(m[1], 'title');
-    const description = matchQuotedField(m[1], 'description');
+    // Legal pages use title/description; Home.tsx uses seoTitle/seoDescription.
+    const title = matchQuotedField(m[1], 'title') ?? matchQuotedField(m[1], 'seoTitle');
+    const description = matchQuotedField(m[1], 'description') ?? matchQuotedField(m[1], 'seoDescription');
     if (title || description) rec[lang] = { title, description };
     else warn(`${rel}: META['${lang}'] has no title/description`);
   }
