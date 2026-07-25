@@ -38,7 +38,7 @@ const COPY = {
     titleA: 'ラップランドでお買い物をすることは、',
     titleB: 'ここでの暮らしを支えることです。',
     body:
-      'すべてのナイフ、すべての装飾品、すべての保存食の瓶には物語があります — 祖父母から技を受け継いだ職人、北極圏より北の工房、ラップランドを背景ではなく日常の家として扱う事業者の物語です。このページの各ブティックは独立して検証され、出典も記録に残しています。',
+      'すべてのナイフ、すべての装飾品、すべての保存食の瓶には物語があります：祖父母から技を受け継いだ職人、北極圏より北の工房、ラップランドを背景ではなく日常の家として扱う事業者の物語です。このページの各ブティックは独立して検証され、出典も記録に残しています。',
     statA: '年に及ぶ工芸の伝統',
     statB: 'ブティック、すべて実店舗あり',
     statC: 'がオンラインショップも併設',
@@ -48,7 +48,7 @@ const COPY = {
     titleA: 'Cuando usted compra en Laponia,',
     titleB: 'sostiene una forma de vida.',
     body:
-      'Cada cuchillo, cada joya y cada tarro de mermelada llevan una historia — la de un artesano que aprendió el oficio de sus abuelos, la de un taller al norte del Círculo Polar, la de una empresa para la que Laponia es hogar y no decorado. Cada boutique de esta página se verifica de forma independiente, con las fuentes documentadas.',
+      'Cada cuchillo, cada joya y cada tarro de mermelada llevan una historia: la de un artesano que aprendió el oficio de sus abuelos, la de un taller al norte del Círculo Polar, la de una empresa para la que Laponia es hogar y no decorado. Cada boutique de esta página se verifica de forma independiente, con las fuentes documentadas.',
     statA: 'años de tradición artesanal',
     statB: 'boutiques, todas con tienda física',
     statC: 'ofrecen también tienda en línea',
@@ -58,7 +58,7 @@ const COPY = {
     titleA: 'Quando você compra na Lapônia,',
     titleB: 'você sustenta um modo de vida.',
     body:
-      'Cada faca, cada joia, cada vidro de geleia carrega uma história — a do artesão que aprendeu o ofício com os avós, a da oficina ao norte do Círculo Polar, a do negócio para o qual a Lapônia é casa, não cenário. Cada boutique desta página é verificada de forma independente, com as fontes documentadas.',
+      'Cada faca, cada joia, cada vidro de geleia carrega uma história: a do artesão que aprendeu o ofício com os avós, a da oficina ao norte do Círculo Polar, a do negócio para o qual a Lapônia é casa, não cenário. Cada boutique desta página é verificada de forma independente, com as fontes documentadas.',
     statA: 'anos de tradição artesanal',
     statB: 'boutiques, todas com loja física',
     statC: 'oferecem também loja online',
@@ -68,7 +68,7 @@ const COPY = {
     titleA: '当您在拉普兰购物时,',
     titleB: '您支持的是一种生活方式。',
     body:
-      '每一把刀、每一件饰品、每一罐果酱都承载着故事 — 从祖辈传承手艺的工匠、北极圈以北的工作坊,以及把拉普兰当作家园而非背景板的小企业。本页面的每家精品店都经过独立核实,资料来源均有记录。',
+      '每一把刀、每一件饰品、每一罐果酱都承载着故事：从祖辈传承手艺的工匠、北极圈以北的工作坊,以及把拉普兰当作家园而非背景板的小企业。本页面的每家精品店都经过独立核实,资料来源均有记录。',
     statA: '年的工艺传承',
     statB: '家精品店,均设实体店',
     statC: '家同时经营线上商店',
@@ -78,7 +78,7 @@ const COPY = {
     titleA: '라플란드에서 구매하실 때,',
     titleB: '하나의 삶의 방식을 지원하시는 것입니다.',
     body:
-      '모든 칼, 모든 장신구, 모든 잼 한 병에는 이야기가 담겨 있습니다 — 조부모로부터 기술을 배운 장인, 북극권 이북의 공방, 라플란드를 배경이 아닌 일상의 터전으로 여기는 사업체. 이 페이지의 모든 부티크는 독립적으로 검증되었으며 출처가 기록되어 있습니다.',
+      '모든 칼, 모든 장신구, 모든 잼 한 병에는 이야기가 담겨 있습니다: 조부모로부터 기술을 배운 장인, 북극권 이북의 공방, 라플란드를 배경이 아닌 일상의 터전으로 여기는 사업체. 이 페이지의 모든 부티크는 독립적으로 검증되었으며 출처가 기록되어 있습니다.',
     statA: '년의 공예 전통',
     statB: '개의 부티크, 모두 오프라인 매장 보유',
     statC: '곳은 온라인 상점도 운영',
@@ -88,7 +88,7 @@ const COPY = {
     titleA: 'Quand vous achetez en Laponie,',
     titleB: 'vous soutenez un mode de vie.',
     body:
-      "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire — celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, sources documentées.",
+      "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire: celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, sources documentées.",
     statA: "années de tradition artisanale",
     statB: 'boutiques, toutes avec un magasin physique',
     statC: 'proposent également une boutique en ligne',
@@ -98,7 +98,7 @@ const COPY = {
     titleA: 'Quando acquista in Lapponia,',
     titleB: 'sostiene un modo di vivere.',
     body:
-      "Ogni coltello, ogni gioiello, ogni vasetto di marmellata porta una storia — quella di un artigiano che ha imparato il mestiere dai nonni, di un laboratorio a nord del Circolo Polare, di un'attività per cui la Lapponia è casa, non scenografia. Ogni boutique di questa pagina è verificata in modo indipendente, con le fonti documentate.",
+      "Ogni coltello, ogni gioiello, ogni vasetto di marmellata porta una storia: quella di un artigiano che ha imparato il mestiere dai nonni, di un laboratorio a nord del Circolo Polare, di un'attività per cui la Lapponia è casa, non scenografia. Ogni boutique di questa pagina è verificata in modo indipendente, con le fonti documentate.",
     statA: 'anni di tradizione artigianale',
     statB: 'boutique, tutte con negozio fisico',
     statC: 'offrono anche un negozio online',
@@ -108,10 +108,20 @@ const COPY = {
     titleA: 'Wanneer u in Lapland koopt,',
     titleB: 'steunt u een manier van leven.',
     body:
-      'Elk mes, elk sieraad, elke pot jam draagt een verhaal — van een maker die het ambacht leerde van zijn grootouders, van een werkplaats ten noorden van de poolcirkel, van een bedrijf dat Lapland als thuis ziet en niet als decor. Elke boutique op deze pagina is onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
+      'Elk mes, elk sieraad, elke pot jam draagt een verhaal: van een maker die het ambacht leerde van zijn grootouders, van een werkplaats ten noorden van de poolcirkel, van een bedrijf dat Lapland als thuis ziet en niet als decor. Elke boutique op deze pagina is onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
     statA: 'jaar ambachtelijke traditie',
     statB: 'boutiques, allemaal met fysieke winkel',
     statC: 'bieden ook een online winkel',
+  },
+  sv: {
+    eyebrow: 'Berättelserna bakom produkterna',
+    titleA: 'När du köper från Lappland',
+    titleB: 'stödjer du ett sätt att leva.',
+    body:
+      'Varje kniv, varje smycke och varje burk sylt bär en berättelse. En hantverkare som lärde sig yrket av sina mor- och farföräldrar. En verkstad norr om polcirkeln. Ett företag som har Lappland som hem, inte som kuliss. Varje butik på den här sidan är ett verkligt Lappland-företag, och vi sparar källorna.',
+    statA: 'år av hantverkstradition',
+    statB: 'butiker, alla med fysisk butik',
+    statC: 'har även en webbutik',
   },
 } as const;
 
@@ -146,6 +156,8 @@ export default function ArtisanStory() {
             ? 'Un artigiano della Lapponia al lavoro'
             : lang === 'nl'
             ? 'Een Laplandse ambachtsman aan het werk'
+            : lang === 'sv'
+            ? 'En hantverkare från Lappland i arbete'
             : 'A Lapland artisan at work'
         }
       />

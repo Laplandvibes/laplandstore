@@ -58,7 +58,7 @@ export interface ProductAdBrand {
 const AD_LABEL: Record<Lang, string> = {
   en: 'Ad', fi: 'Mainos', de: 'Anzeige', ja: '広告', es: 'Anuncio',
   'pt-BR': 'Anúncio', 'zh-CN': '广告', ko: '광고', fr: 'Annonce',
-  it: 'Annuncio', nl: 'Advertentie',
+  it: 'Annuncio', nl: 'Advertentie', sv: 'Annons',
 };
 
 export default function ProductBrandAd({

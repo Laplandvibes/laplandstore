@@ -16,53 +16,57 @@ import { useLang, type Lang } from '../lang';
 
 const BCP47: Record<Lang, string> = {
   en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES',
-  'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL',
+  'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE',
 };
 
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   'en': {
-    seoTitle: 'LaplandStore — Authentic Lapland gifts, crafts & souvenirs',
+    seoTitle: 'LaplandStore: Authentic Lapland gifts, crafts & souvenirs',
     seoDescription: 'A curated directory of verified Lapland boutiques: puukko knives, reindeer leather, juniper woodware and wool. Order direct from real makers in Finnish Lapland.',
   },
   'fi': {
-    seoTitle: 'LaplandStore — Aitoja Lapin lahjoja ja käsitöitä',
+    seoTitle: 'LaplandStore: Aitoja Lapin lahjoja ja käsitöitä',
     seoDescription: 'Kuratoitu hakemisto aitoihin Lapin putiikkeihin: puukkoja, poronnahkaa, katajapuuta ja villaa. Tilaa suoraan tekijältä Suomen Lapista.',
   },
   'de': {
-    seoTitle: 'LaplandStore — Echte Lappland-Geschenke & Souvenirs',
+    seoTitle: 'LaplandStore: Echte Lappland-Geschenke & Souvenirs',
     seoDescription: 'Kuratiertes Verzeichnis echter Lappland-Boutiquen: Puukko-Messer, Rentierleder, Wacholderholz und Wolle. Direkt bei den Machern in Finnisch-Lappland bestellen.',
   },
   'ja': {
-    seoTitle: 'LaplandStore — 本物のラップランド土産・工芸品・ギフト',
+    seoTitle: 'LaplandStore：本物のラップランド土産・工芸品・ギフト',
     seoDescription: '本物のラップランドのブティックを厳選して紹介するディレクトリ。プーッコナイフ、トナカイ革、ジュニパー材、ウール製品を、フィンランド・ラップランドの作り手に直接注文できます。',
   },
   'es': {
-    seoTitle: 'LaplandStore — Regalos y artesanía auténticos de Laponia',
+    seoTitle: 'LaplandStore: Regalos y artesanía auténticos de Laponia',
     seoDescription: 'Directorio curado de boutiques auténticas de Laponia: cuchillos puukko, cuero de reno, madera de enebro y lana. Compra directamente a los artesanos de la Laponia finlandesa.',
   },
   'pt-BR': {
-    seoTitle: 'LaplandStore — Presentes e artesanato autênticos da Lapônia',
+    seoTitle: 'LaplandStore: Presentes e artesanato autênticos da Lapônia',
     seoDescription: 'Diretório curado de boutiques autênticas da Lapônia: facas puukko, couro de rena, madeira de zimbro e lã. Compre direto dos artesãos da Lapônia finlandesa.',
   },
   'zh-CN': {
-    seoTitle: 'LaplandStore — 正宗拉普兰礼物、手工艺与纪念品',
+    seoTitle: 'LaplandStore：正宗拉普兰礼物、手工艺与纪念品',
     seoDescription: '精选真实拉普兰精品店指南：芬兰传统刀（puukko）、驯鹿皮、杜松木器与羊毛制品。直接向芬兰拉普兰的手工艺人下单。',
   },
   'ko': {
-    seoTitle: 'LaplandStore — 라플란드 정통 선물·공예품·기념품 가이드',
+    seoTitle: 'LaplandStore: 라플란드 정통 선물·공예품·기념품 가이드',
     seoDescription: '엄선한 라플란드 부티크 디렉터리입니다. 푸코(puukko) 칼, 순록 가죽, 향나무 공예품, 양모 제품을 핀란드 라플란드의 장인에게 직접 주문하실 수 있습니다.',
   },
   'fr': {
-    seoTitle: 'LaplandStore — Cadeaux et artisanat authentiques de Laponie',
+    seoTitle: 'LaplandStore: Cadeaux et artisanat authentiques de Laponie',
     seoDescription: 'Annuaire sélectif de boutiques authentiques de Laponie : couteaux puukko, cuir de renne, bois de genévrier et laine. Commandez directement auprès des artisans de Laponie finlandaise.',
   },
   'it': {
-    seoTitle: 'LaplandStore — Regali e artigianato autentici della Lapponia',
+    seoTitle: 'LaplandStore: Regali e artigianato autentici della Lapponia',
     seoDescription: 'Directory curata di boutique autentiche della Lapponia: coltelli puukko, pelle di renna, legno di ginepro e lana. Ordina direttamente dagli artigiani della Lapponia finlandese.',
   },
   'nl': {
-    seoTitle: 'LaplandStore — Authentieke geschenken en ambacht uit Lapland',
+    seoTitle: 'LaplandStore: Authentieke geschenken en ambacht uit Lapland',
     seoDescription: 'Samengestelde gids met echte Lapland-boetieks: puukko-messen, rendierleer, jeneverbeshout en wol. Bestel rechtstreeks bij makers in Fins Lapland.',
+  },
+  'sv': {
+    seoTitle: 'LaplandStore: Äkta presenter och hantverk från Lappland',
+    seoDescription: 'Handplockad katalog över verifierade butiker i Lappland: puukko-knivar, renläder, eneträ och ull. Beställ direkt av verkliga tillverkare i finska Lappland.',
   },
 };
 

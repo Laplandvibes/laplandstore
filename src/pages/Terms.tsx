@@ -5,15 +5,15 @@ import { useLang, type Lang } from '../lang';
 const META: Record<Lang, { title: string; description: string }> = {
   en: {
     title: 'Terms of Service | LaplandStore',
-    description: 'The terms for using LaplandStore (Lapeso Oy): orders, shipping, returns, affiliate links and liability — set out in plain language.',
+    description: 'The terms for using LaplandStore (Lapeso Oy): orders, shipping, returns, affiliate links and liability, set out in plain language.',
   },
   fi: {
     title: 'Käyttöehdot | LaplandStore',
-    description: 'LaplandStoren (Lapeso Oy) käyttöehdot: tilaukset, toimitus, palautukset, affiliate-linkit ja vastuut — selkeästi kerrottuna.',
+    description: 'LaplandStoren (Lapeso Oy) käyttöehdot: tilaukset, toimitus, palautukset, affiliate-linkit ja vastuut, selkeästi kerrottuna.',
   },
   de: {
     title: 'Nutzungsbedingungen | LaplandStore',
-    description: 'Die Bedingungen für die Nutzung von LaplandStore (Lapeso Oy): Bestellungen, Versand, Rückgabe, Affiliate-Links und Haftung — verständlich erklärt.',
+    description: 'Die Bedingungen für die Nutzung von LaplandStore (Lapeso Oy): Bestellungen, Versand, Rückgabe, Affiliate-Links und Haftung, verständlich erklärt.',
   },
   ja: {
     title: '利用規約 | LaplandStore',
@@ -21,11 +21,11 @@ const META: Record<Lang, { title: string; description: string }> = {
   },
   es: {
     title: 'Condiciones de servicio | LaplandStore',
-    description: 'Las condiciones de uso de LaplandStore (Lapeso Oy): pedidos, envíos, devoluciones, enlaces de afiliados y responsabilidad — explicadas con claridad.',
+    description: 'Las condiciones de uso de LaplandStore (Lapeso Oy): pedidos, envíos, devoluciones, enlaces de afiliados y responsabilidad, explicadas con claridad.',
   },
   'pt-BR': {
     title: 'Termos de serviço | LaplandStore',
-    description: 'As condições de uso da LaplandStore (Lapeso Oy): pedidos, envio, devoluções, links de afiliados e responsabilidade — explicados com clareza.',
+    description: 'As condições de uso da LaplandStore (Lapeso Oy): pedidos, envio, devoluções, links de afiliados e responsabilidade, explicados com clareza.',
   },
   'zh-CN': {
     title: '服务条款 | LaplandStore',
@@ -37,15 +37,19 @@ const META: Record<Lang, { title: string; description: string }> = {
   },
   fr: {
     title: "Conditions d'utilisation | LaplandStore",
-    description: "Les conditions d'utilisation de LaplandStore (Lapeso Oy) : commandes, livraison, retours, liens d'affiliation et responsabilité — expliquées clairement.",
+    description: "Les conditions d'utilisation de LaplandStore (Lapeso Oy) : commandes, livraison, retours, liens d'affiliation et responsabilité, expliquées clairement.",
   },
   it: {
     title: 'Condizioni di servizio | LaplandStore',
-    description: "Le condizioni d'uso di LaplandStore (Lapeso Oy): ordini, spedizione, resi, link di affiliazione e responsabilità — spiegate con chiarezza.",
+    description: "Le condizioni d'uso di LaplandStore (Lapeso Oy): ordini, spedizione, resi, link di affiliazione e responsabilità, spiegate con chiarezza.",
   },
   nl: {
     title: 'Gebruiksvoorwaarden | LaplandStore',
-    description: 'De voorwaarden voor het gebruik van LaplandStore (Lapeso Oy): bestellingen, verzending, retouren, affiliate-links en aansprakelijkheid — helder uitgelegd.',
+    description: 'De voorwaarden voor het gebruik van LaplandStore (Lapeso Oy): bestellingen, verzending, retouren, affiliate-links en aansprakelijkheid, helder uitgelegd.',
+  },
+  sv: {
+    title: 'Användarvillkor | LaplandStore',
+    description: 'Villkoren för att använda LaplandStore (Lapeso Oy): beställningar, leverans, returer, partnerlänkar och ansvar, förklarade på ett enkelt sätt.',
   },
 };
 

@@ -21,6 +21,7 @@ const loaders = {
   fr: () => import('./Newsletter.copy.fr'),
   it: () => import('./Newsletter.copy.it'),
   nl: () => import('./Newsletter.copy.nl'),
+  sv: () => import('./Newsletter.copy.sv'),
 } as const;
 
 const cache: Partial<Record<import('../lang').Lang, CopyShape>> = { en: enCopy };

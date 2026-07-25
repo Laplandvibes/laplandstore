@@ -19,6 +19,7 @@ const loaders = {
   fr: () => import('./Nav.copy.fr'),
   it: () => import('./Nav.copy.it'),
   nl: () => import('./Nav.copy.nl'),
+  sv: () => import('./Nav.copy.sv'),
 } as const;
 
 const cache: Partial<Record<import('../lang').Lang, CopyShape>> = { en: enCopy };
@@ -35,6 +36,7 @@ const LANG_OPTIONS: { code: Lang; label: string; native: string }[] = [
   { code: 'fr', label: 'FR', native: 'Français' },
   { code: 'it', label: 'IT', native: 'Italiano' },
   { code: 'nl', label: 'NL', native: 'Nederlands' },
+  { code: 'sv', label: 'SV', native: 'Svenska' },
 ];
 
 export default function Nav() {
@@ -73,9 +75,9 @@ export default function Nav() {
 
   // Strip locale prefix to detect "are we on the home page?".
   const bare =
-    location.pathname.replace(/^\/(?:fi|de|ja|es|br|cn|kr|fr|it|nl)/, '') || '/';
+    location.pathname.replace(/^\/(?:fi|de|ja|es|br|cn|kr|fr|it|nl|sv)/, '') || '/';
   const onHome = bare === '/';
-  const prefixMap: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl' };
+  const prefixMap: Record<Lang, string> = { en: '', fi: '/fi', de: '/de', ja: '/ja', es: '/es', 'pt-BR': '/br', 'zh-CN': '/cn', ko: '/kr', fr: '/fr', it: '/it', nl: '/nl', sv: '/sv' };
   const localePrefix = prefixMap[lang];
 
   // Anchor links work only on the home page; on legal pages they navigate to /
@@ -207,6 +209,7 @@ export default function Nav() {
                 <option value="fr" className="bg-cream text-night">FR</option>
                 <option value="it" className="bg-cream text-night">IT</option>
                 <option value="nl" className="bg-cream text-night">NL</option>
+                <option value="sv" className="bg-cream text-night">SV</option>
               </select>
               <ChevronDown aria-hidden="true" className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 ${scrolled ? 'text-night' : 'text-white'}`} />
             </div>
@@ -249,8 +252,8 @@ export default function Nav() {
 
             {/* Lang toggle — bottom of drawer */}
             <div className="mt-6 pt-6 border-t border-warm-gray/15 flex flex-wrap items-center justify-center gap-2">
-              {(['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'] as const).map((l) => {
-                const labels: Record<typeof l, string> = { en: 'EN', fi: 'FI', de: 'DE', ja: 'JA', es: 'ES', 'pt-BR': 'BR', 'zh-CN': 'CN', ko: 'KR', fr: 'FR', it: 'IT', nl: 'NL' };
+              {(['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'] as const).map((l) => {
+                const labels: Record<typeof l, string> = { en: 'EN', fi: 'FI', de: 'DE', ja: 'JA', es: 'ES', 'pt-BR': 'BR', 'zh-CN': 'CN', ko: 'KR', fr: 'FR', it: 'IT', nl: 'NL', sv: 'SV' };
                 return (
                   <button
                     key={l}

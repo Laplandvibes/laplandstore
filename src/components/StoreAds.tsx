@@ -21,7 +21,7 @@ const KC_COPY: ProductAdCopy = {
     en: 'Finnish jewellery', fi: 'Suomalaiset korut', de: 'Finnischer Schmuck',
     ja: 'フィンランドのジュエリー', es: 'Joyería finlandesa', 'pt-BR': 'Joias finlandesas',
     'zh-CN': '芬兰珠宝', ko: '핀란드 주얼리', fr: 'Bijoux finlandais',
-    it: 'Gioielli finlandesi', nl: 'Finse sieraden',
+    it: 'Gioielli finlandesi', nl: 'Finse sieraden', sv: 'Finska smycken',
   },
   headline: {
     en: 'Looking for a real Finnish gift? Kalevala jewellery and Nordic watches at Kulta-Center.',
@@ -34,7 +34,7 @@ const KC_COPY: ProductAdCopy = {
     ko: '진짜 핀란드 선물을 찾고 계신가요? Kulta-Center의 칼레발라 주얼리와 북유럽 시계를 만나보세요.',
     fr: 'Vous cherchez un vrai cadeau finlandais ? Bijoux Kalevala et montres nordiques chez Kulta-Center.',
     it: 'Cerca un autentico regalo finlandese? Gioielli Kalevala e orologi nordici da Kulta-Center.',
-    nl: 'Op zoek naar een echt Fins cadeau? Kalevala-sieraden en Noordse horloges bij Kulta-Center.',
+    nl: 'Op zoek naar een echt Fins cadeau? Kalevala-sieraden en Noordse horloges bij Kulta-Center.', sv: 'Letar du efter en äkta finsk present? Kalevala-smycken och nordiska klockor hos Kulta-Center.',
   },
   sub: {
     en: 'A family jeweller since 1933, with Kalevala Koru and other Finnish and Nordic brands in one place. Handy when you want a gift that lasts and ships fast across Europe, not another airport souvenir.',
@@ -47,7 +47,7 @@ const KC_COPY: ProductAdCopy = {
     ko: '1933년부터 이어온 가족 보석상으로, 칼레발라 코루를 비롯한 핀란드·북유럽 브랜드를 한곳에 모았습니다. 공항 기념품이 아니라 오래 쓰고 유럽 전역으로 빠르게 배송되는 선물을 원할 때 좋습니다.',
     fr: 'Un bijoutier familial depuis 1933, avec Kalevala Koru et d’autres marques finlandaises et nordiques au même endroit. Pratique quand vous voulez un cadeau qui dure et arrive vite en Europe, pas un énième souvenir d’aéroport.',
     it: 'Un gioielliere di famiglia dal 1933, con Kalevala Koru e altri marchi finlandesi e nordici in un unico posto. Comodo quando vuoi un regalo che dura e arriva in fretta in Europa, non l’ennesimo souvenir da aeroporto.',
-    nl: 'Een familiejuwelier sinds 1933, met Kalevala Koru en andere Finse en Noordse merken op één plek. Handig als je een cadeau wilt dat blijft en snel door Europa geleverd wordt, niet weer een luchthavensouvenir.',
+    nl: 'Een familiejuwelier sinds 1933, met Kalevala Koru en andere Finse en Noordse merken op één plek. Handig als je een cadeau wilt dat blijft en snel door Europa geleverd wordt, niet weer een luchthavensouvenir.', sv: 'En familjejuvelerare sedan 1933, med Kalevala Koru och andra finska och nordiska märken på ett ställe. Bra när du vill ha en present som håller och levereras snabbt i Europa, inte ännu en flygplatssouvenir.',
   },
   trust: [
     {
@@ -58,7 +58,7 @@ const KC_COPY: ProductAdCopy = {
         es: 'Kalevala Koru y diseño finlandés', 'pt-BR': 'Kalevala Koru e design finlandês',
         'zh-CN': 'Kalevala Koru 与芬兰设计', ko: '칼레발라 코루와 핀란드 디자인',
         fr: 'Kalevala Koru et design finlandais', it: 'Kalevala Koru e design finlandese',
-        nl: 'Kalevala Koru & Fins design',
+        nl: 'Kalevala Koru & Fins design', sv: 'Kalevala Koru och finsk design',
       },
     },
     {
@@ -69,7 +69,7 @@ const KC_COPY: ProductAdCopy = {
         es: 'Joyería familiar desde 1933', 'pt-BR': 'Joalheria familiar desde 1933',
         'zh-CN': '家族珠宝店,始于 1933 年', ko: '1933년부터 이어온 가족 보석상',
         fr: 'Bijoutier familial depuis 1933', it: 'Gioielliere di famiglia dal 1933',
-        nl: 'Familiejuwelier sinds 1933',
+        nl: 'Familiejuwelier sinds 1933', sv: 'Familjejuvelerare sedan 1933',
       },
     },
     {
@@ -80,7 +80,7 @@ const KC_COPY: ProductAdCopy = {
         es: 'Envío a Europa en pocos días', 'pt-BR': 'Envio pela Europa em poucos dias',
         'zh-CN': '几天内送达欧洲各地', ko: '며칠 내 유럽 전역 배송',
         fr: 'Livraison en Europe en quelques jours', it: 'Spedizione in Europa in pochi giorni',
-        nl: 'Levering door Europa in enkele dagen',
+        nl: 'Levering door Europa in enkele dagen', sv: 'Levereras i Europa på några dagar',
       },
     },
   ],
@@ -91,24 +91,24 @@ const KC_COPY: ProductAdCopy = {
     es: 'Envío gratis dentro de Europa', 'pt-BR': 'Entrega grátis na Europa',
     'zh-CN': '欧洲境内免费配送', ko: '유럽 내 무료 배송',
     fr: 'Livraison gratuite en Europe', it: 'Consegna gratuita in Europa',
-    nl: 'Gratis levering binnen Europa',
+    nl: 'Gratis levering binnen Europa', sv: 'Gratis leverans inom Europa',
   },
   cta: {
     en: 'Browse Kulta-Center', fi: 'Selaa Kulta-Centeriä', de: 'Kulta-Center ansehen',
     ja: 'Kulta-Center を見る', es: 'Ver Kulta-Center', 'pt-BR': 'Ver a Kulta-Center',
     'zh-CN': '逛逛 Kulta-Center', ko: 'Kulta-Center 둘러보기', fr: 'Découvrir Kulta-Center',
-    it: 'Esplora Kulta-Center', nl: 'Bekijk Kulta-Center',
+    it: 'Esplora Kulta-Center', nl: 'Bekijk Kulta-Center', sv: 'Bläddra hos Kulta-Center',
   },
   soldBy: {
     en: 'Sold by Kulta-Center', fi: 'Myynti: Kulta-Center', de: 'Verkauf durch Kulta-Center',
     ja: '販売:Kulta-Center', es: 'Vendido por Kulta-Center', 'pt-BR': 'Vendido pela Kulta-Center',
     'zh-CN': '由 Kulta-Center 销售', ko: 'Kulta-Center 판매', fr: 'Vendu par Kulta-Center',
-    it: 'Venduto da Kulta-Center', nl: 'Verkocht door Kulta-Center',
+    it: 'Venduto da Kulta-Center', nl: 'Verkocht door Kulta-Center', sv: 'Säljs av Kulta-Center',
   },
   stageBadge: {
     en: 'Since 1933', fi: 'Vuodesta 1933', de: 'Seit 1933', ja: '1933年創業',
     es: 'Desde 1933', 'pt-BR': 'Desde 1933', 'zh-CN': '始于 1933 年', ko: '1933년 설립',
-    fr: 'Depuis 1933', it: 'Dal 1933', nl: 'Sinds 1933',
+    fr: 'Depuis 1933', it: 'Dal 1933', nl: 'Sinds 1933', sv: 'Sedan 1933',
   },
 };
 
@@ -136,7 +136,7 @@ const IVALO_COPY: ProductAdCopy = {
     es: 'Diseño finlandés, a domicilio', 'pt-BR': 'Design finlandês, entregue',
     'zh-CN': '芬兰设计,送货到家', ko: '핀란드 디자인, 집까지',
     fr: 'Design finlandais, livré', it: 'Design finlandese, a casa',
-    nl: 'Fins design, thuisbezorgd',
+    nl: 'Fins design, thuisbezorgd', sv: 'Finsk design, levererad',
   },
   headline: {
     en: 'Take Finnish design home, even after the trip. 100+ Nordic brands at IVALO.COM.',
@@ -149,7 +149,7 @@ const IVALO_COPY: ProductAdCopy = {
     ko: '여행이 끝난 뒤에도 핀란드 디자인을 집으로. IVALO.COM의 북유럽 브랜드 100여 곳.',
     fr: 'Ramenez le design finlandais chez vous, même après le voyage. Plus de 100 marques nordiques sur IVALO.COM.',
     it: 'Porta a casa il design finlandese, anche dopo il viaggio. Oltre 100 marchi nordici su IVALO.COM.',
-    nl: 'Neem Fins design mee naar huis, ook na de reis. Meer dan 100 Noordse merken op IVALO.COM.',
+    nl: 'Neem Fins design mee naar huis, ook na de reis. Meer dan 100 Noordse merken op IVALO.COM.', sv: 'Ta med dig finsk design hem, även efter resan. Över 100 nordiska märken på IVALO.COM.',
   },
   sub: {
     en: 'IVALO.COM gathers over 100 Finnish and Nordic fashion and design brands in one shop, with a focus on responsibly made pieces. Clothing, bags and accessories you can order from home and have delivered across Europe.',
@@ -162,7 +162,7 @@ const IVALO_COPY: ProductAdCopy = {
     ko: 'IVALO.COM은 책임 있게 만든 제품에 초점을 맞춰 핀란드·북유럽 패션·디자인 브랜드 100여 곳을 한 매장에 모았습니다. 집에서 주문해 유럽 전역으로 받아볼 수 있는 의류, 가방, 액세서리.',
     fr: 'IVALO.COM rassemble plus de 100 marques finlandaises et nordiques de mode et de design dans une seule boutique, axée sur des pièces fabriquées de façon responsable. Vêtements, sacs et accessoires à commander depuis chez vous et à faire livrer partout en Europe.',
     it: 'IVALO.COM riunisce oltre 100 marchi finlandesi e nordici di moda e design in un unico negozio, con attenzione ai prodotti realizzati in modo responsabile. Abbigliamento, borse e accessori da ordinare da casa e farti consegnare in tutta Europa.',
-    nl: 'IVALO.COM brengt meer dan 100 Finse en Noordse mode- en designmerken samen in één winkel, met aandacht voor verantwoord gemaakte stukken. Kleding, tassen en accessoires die je vanuit huis bestelt en door heel Europa laat bezorgen.',
+    nl: 'IVALO.COM brengt meer dan 100 Finse en Noordse mode- en designmerken samen in één winkel, met aandacht voor verantwoord gemaakte stukken. Kleding, tassen en accessoires die je vanuit huis bestelt en door heel Europa laat bezorgen.', sv: 'IVALO.COM samlar över 100 finska och nordiska mode- och designmärken i en butik, med fokus på ansvarsfullt tillverkade produkter. Kläder, väskor och accessoarer som du beställer hemifrån och får levererade i hela Europa.',
   },
   trust: [
     {
@@ -173,7 +173,7 @@ const IVALO_COPY: ProductAdCopy = {
         es: 'Más de 100 marcas finlandesas y nórdicas', 'pt-BR': 'Mais de 100 marcas finlandesas e nórdicas',
         'zh-CN': '100 多个芬兰与北欧品牌', ko: '핀란드·북유럽 브랜드 100여 곳',
         fr: 'Plus de 100 marques finlandaises et nordiques', it: 'Oltre 100 marchi finlandesi e nordici',
-        nl: 'Meer dan 100 Finse & Noordse merken',
+        nl: 'Meer dan 100 Finse & Noordse merken', sv: 'Över 100 finska och nordiska märken',
       },
     },
     {
@@ -184,7 +184,7 @@ const IVALO_COPY: ProductAdCopy = {
         es: 'Enfoque en producción responsable', 'pt-BR': 'Foco em produção responsável',
         'zh-CN': '专注负责任的生产', ko: '책임 있는 제작에 집중',
         fr: 'Axé sur une fabrication responsable', it: 'Attenzione alla produzione responsabile',
-        nl: 'Focus op verantwoord maken',
+        nl: 'Focus op verantwoord maken', sv: 'Fokus på ansvarsfull tillverkning',
       },
     },
     {
@@ -195,7 +195,7 @@ const IVALO_COPY: ProductAdCopy = {
         es: 'Envíos a la UE y más allá', 'pt-BR': 'Envio para a UE e além',
         'zh-CN': '配送至欧盟及更远地区', ko: 'EU 및 그 외 지역으로 배송',
         fr: 'Livraison dans l’UE et au-delà', it: 'Spedizione nell’UE e oltre',
-        nl: 'Levering in de EU en daarbuiten',
+        nl: 'Levering in de EU en daarbuiten', sv: 'Levererar inom EU och längre bort',
       },
     },
   ],
@@ -206,19 +206,19 @@ const IVALO_COPY: ProductAdCopy = {
     es: 'Envío gratis en pedidos superiores a 200 €', 'pt-BR': 'Frete grátis em pedidos acima de 200 €',
     'zh-CN': '订单满 200 € 免运费', ko: '200 € 이상 주문 시 무료 배송',
     fr: 'Livraison gratuite dès 200 €', it: 'Spedizione gratuita sopra i 200 €',
-    nl: 'Gratis verzending vanaf 200 €',
+    nl: 'Gratis verzending vanaf 200 €', sv: 'Gratis frakt på beställningar över 200 €',
   },
   cta: {
     en: 'Explore IVALO.COM', fi: 'Tutustu IVALO.COMiin', de: 'IVALO.COM entdecken',
     ja: 'IVALO.COM を見る', es: 'Explorar IVALO.COM', 'pt-BR': 'Explorar a IVALO.COM',
     'zh-CN': '探索 IVALO.COM', ko: 'IVALO.COM 둘러보기', fr: 'Découvrir IVALO.COM',
-    it: 'Esplora IVALO.COM', nl: 'Ontdek IVALO.COM',
+    it: 'Esplora IVALO.COM', nl: 'Ontdek IVALO.COM', sv: 'Utforska IVALO.COM',
   },
   soldBy: {
     en: 'Sold by IVALO.COM', fi: 'Myynti: IVALO.COM', de: 'Verkauf durch IVALO.COM',
     ja: '販売:IVALO.COM', es: 'Vendido por IVALO.COM', 'pt-BR': 'Vendido pela IVALO.COM',
     'zh-CN': '由 IVALO.COM 销售', ko: 'IVALO.COM 판매', fr: 'Vendu par IVALO.COM',
-    it: 'Venduto da IVALO.COM', nl: 'Verkocht door IVALO.COM',
+    it: 'Venduto da IVALO.COM', nl: 'Verkocht door IVALO.COM', sv: 'Säljs av IVALO.COM',
   },
   stageBadge: {
     en: 'Sustainable Nordic fashion', fi: 'Vastuullista pohjoismaista muotia',
@@ -226,7 +226,7 @@ const IVALO_COPY: ProductAdCopy = {
     es: 'Moda nórdica sostenible', 'pt-BR': 'Moda nórdica sustentável',
     'zh-CN': '可持续北欧时尚', ko: '지속가능한 북유럽 패션',
     fr: 'Mode nordique responsable', it: 'Moda nordica sostenibile',
-    nl: 'Duurzame Noordse mode',
+    nl: 'Duurzame Noordse mode', sv: 'Hållbart nordiskt mode',
   },
 };
 
@@ -253,7 +253,7 @@ const SO_COPY: ProductAdCopy = {
     ja: '寒さに備えて', es: 'Equípese para el frío', 'pt-BR': 'Prepare-se para o frio',
     'zh-CN': '为寒冷做准备', ko: '추위에 대비하기',
     fr: 'S’équiper pour le froid', it: 'Attrezzarsi per il freddo',
-    nl: 'Pak in voor de kou',
+    nl: 'Pak in voor de kou', sv: 'Packa för kylan',
   },
   headline: {
     en: 'Coming to Lapland? Sort warm layers and boots before you fly, from Scandinavian Outdoor.',
@@ -266,7 +266,7 @@ const SO_COPY: ProductAdCopy = {
     ko: '라플란드에 오시나요? 비행 전에 따뜻한 레이어와 부츠를 Scandinavian Outdoor에서 준비하세요.',
     fr: 'Vous venez en Laponie ? Procurez-vous des couches chaudes et des bottes avant de partir, chez Scandinavian Outdoor.',
     it: 'In arrivo in Lapponia? Procurati strati caldi e scarponi prima di partire, da Scandinavian Outdoor.',
-    nl: 'Kom je naar Lapland? Regel warme lagen en laarzen vóór je vlucht, bij Scandinavian Outdoor.',
+    nl: 'Kom je naar Lapland? Regel warme lagen en laarzen vóór je vlucht, bij Scandinavian Outdoor.', sv: 'Ska du till Lappland? Fixa varma lager och kängor innan du flyger, från Scandinavian Outdoor.',
   },
   sub: {
     en: 'Lapland gets to −30 °C in winter, and shops sell out of the right sizes fast in season. Scandinavian Outdoor carries the base layers, shells, mittens and winter boots that actually handle it, and ships worldwide so it is waiting when you land.',
@@ -279,7 +279,7 @@ const SO_COPY: ProductAdCopy = {
     ko: '라플란드의 겨울은 −30 °C까지 내려가고, 성수기에는 맞는 사이즈가 금세 품절됩니다. Scandinavian Outdoor에는 실제로 견디는 베이스 레이어, 셸, 벙어리장갑, 겨울 부츠가 있고 전 세계로 배송되어 도착할 때 기다리고 있습니다.',
     fr: 'La Laponie descend à −30 °C en hiver, et en saison les bonnes tailles partent vite. Scandinavian Outdoor propose les sous-couches, vestes shell, moufles et bottes d’hiver qui tiennent vraiment, et livre dans le monde entier : tout vous attend à l’arrivée.',
     it: 'In Lapponia d’inverno si arriva a −30 °C, e in stagione le taglie giuste finiscono in fretta. Scandinavian Outdoor ha gli strati base, le giacche shell, le muffole e gli scarponi invernali che reggono davvero, e spedisce in tutto il mondo, così ti aspetta all’arrivo.',
-    nl: 'In Lapland wordt het ’s winters tot −30 °C, en in het seizoen zijn de juiste maten snel uitverkocht. Scandinavian Outdoor heeft de baselayers, shelljassen, wanten en winterlaarzen die het echt aankunnen, en levert wereldwijd, zodat het klaarligt als je landt.',
+    nl: 'In Lapland wordt het ’s winters tot −30 °C, en in het seizoen zijn de juiste maten snel uitverkocht. Scandinavian Outdoor heeft de baselayers, shelljassen, wanten en winterlaarzen die het echt aankunnen, en levert wereldwijd, zodat het klaarligt als je landt.', sv: 'I Lappland blir det ned till −30 °C på vintern, och rätt storlekar tar snabbt slut under säsong. Scandinavian Outdoor har baslagren, skalplaggen, tumvantarna och vinterkängorna som faktiskt klarar det, och skickar över hela världen så att det väntar när du landar.',
   },
   trust: [
     {
@@ -290,7 +290,7 @@ const SO_COPY: ProductAdCopy = {
         es: 'Primeras capas, shells, botas de invierno', 'pt-BR': 'Camadas-base, shells, botas de inverno',
         'zh-CN': '打底层、冲锋衣、冬靴', ko: '베이스 레이어·셸·겨울 부츠',
         fr: 'Sous-couches, shells, bottes d’hiver', it: 'Strati base, shell, scarponi invernali',
-        nl: 'Baselayers, shells, winterlaarzen',
+        nl: 'Baselayers, shells, winterlaarzen', sv: 'Baslager, skalplagg, vinterkängor',
       },
     },
     {
@@ -301,7 +301,7 @@ const SO_COPY: ProductAdCopy = {
         es: 'Marcas outdoor de confianza', 'pt-BR': 'Marcas outdoor confiáveis',
         'zh-CN': '值得信赖的户外品牌', ko: '믿을 수 있는 아웃도어 브랜드',
         fr: 'Marques outdoor de confiance', it: 'Marchi outdoor affidabili',
-        nl: 'Vertrouwde outdoormerken',
+        nl: 'Vertrouwde outdoormerken', sv: 'Pålitliga friluftsmärken',
       },
     },
     {
@@ -312,7 +312,7 @@ const SO_COPY: ProductAdCopy = {
         es: 'Envíos a todo el mundo', 'pt-BR': 'Envio para o mundo todo',
         'zh-CN': '全球配送', ko: '전 세계 배송',
         fr: 'Livraison dans le monde entier', it: 'Spedizione in tutto il mondo',
-        nl: 'Wereldwijde verzending',
+        nl: 'Wereldwijde verzending', sv: 'Skickar över hela världen',
       },
     },
   ],
@@ -323,25 +323,25 @@ const SO_COPY: ProductAdCopy = {
     es: 'Especialista nórdico en outdoor', 'pt-BR': 'Especialista nórdico em outdoor',
     'zh-CN': '北欧户外专家', ko: '북유럽 아웃도어 전문점',
     fr: 'Spécialiste outdoor nordique', it: 'Specialista outdoor nordico',
-    nl: 'Noordse outdoorspecialist',
+    nl: 'Noordse outdoorspecialist', sv: 'Nordisk friluftsspecialist',
   },
   cta: {
     en: 'Shop Scandinavian Outdoor', fi: 'Tutustu Scandinavian Outdooriin', de: 'Scandinavian Outdoor ansehen',
     ja: 'Scandinavian Outdoor を見る', es: 'Ver Scandinavian Outdoor', 'pt-BR': 'Ver a Scandinavian Outdoor',
     'zh-CN': '选购 Scandinavian Outdoor', ko: 'Scandinavian Outdoor 둘러보기', fr: 'Découvrir Scandinavian Outdoor',
-    it: 'Esplora Scandinavian Outdoor', nl: 'Bekijk Scandinavian Outdoor',
+    it: 'Esplora Scandinavian Outdoor', nl: 'Bekijk Scandinavian Outdoor', sv: 'Handla hos Scandinavian Outdoor',
   },
   soldBy: {
     en: 'Sold by Scandinavian Outdoor', fi: 'Myynti: Scandinavian Outdoor', de: 'Verkauf durch Scandinavian Outdoor',
     ja: '販売:Scandinavian Outdoor', es: 'Vendido por Scandinavian Outdoor', 'pt-BR': 'Vendido pela Scandinavian Outdoor',
     'zh-CN': '由 Scandinavian Outdoor 销售', ko: 'Scandinavian Outdoor 판매', fr: 'Vendu par Scandinavian Outdoor',
-    it: 'Venduto da Scandinavian Outdoor', nl: 'Verkocht door Scandinavian Outdoor',
+    it: 'Venduto da Scandinavian Outdoor', nl: 'Verkocht door Scandinavian Outdoor', sv: 'Säljs av Scandinavian Outdoor',
   },
   stageBadge: {
     en: 'Gear for −30 °C', fi: 'Varusteet −30 asteeseen', de: 'Ausrüstung für −30 °C',
     ja: '−30 °C のための装備', es: 'Equipo para −30 °C', 'pt-BR': 'Equipamento para −30 °C',
     'zh-CN': '应对 −30 °C 的装备', ko: '−30 °C용 장비',
-    fr: 'Équipement pour −30 °C', it: 'Attrezzatura per −30 °C', nl: 'Uitrusting voor −30 °C',
+    fr: 'Équipement pour −30 °C', it: 'Attrezzatura per −30 °C', nl: 'Uitrusting voor −30 °C', sv: 'Utrustning för −30 °C',
   },
 };
 

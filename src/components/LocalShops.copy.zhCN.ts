@@ -5,8 +5,8 @@ const copy: CopyShape = {
   eyebrow: '当地商家',
   heading: '拉普兰精品店',
   sub: (n: number) =>
-    `精选 ${n} 家拉普兰本地商店与精品店。直接向当地工匠购买 — 所有链接都通往商家自己的网站。`,
-  onlineHeading: '线上商店 — 国际配送直达您家',
+    `精选 ${n} 家拉普兰本地商店与精品店。直接向当地工匠购买。所有链接都通往商家自己的网站。`,
+  onlineHeading: '线上商店：国际配送直达您家',
   physicalHeading: '亲临实体店',
   physicalSub: '每家精品店在拉普兰都有实体门店。',
   onlineBadge: '线上',

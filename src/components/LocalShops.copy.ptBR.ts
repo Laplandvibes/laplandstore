@@ -5,8 +5,8 @@ const copy: CopyShape = {
   eyebrow: 'Empresas locais',
   heading: 'Boutiques da Lapônia',
   sub: (n: number) =>
-    `${n} lojas e boutiques da Lapônia escolhidas a dedo. Compre direto dos produtores locais — todos os links levam à página própria da empresa.`,
-  onlineHeading: 'Lojas online — envio internacional para sua casa',
+    `${n} lojas e boutiques da Lapônia escolhidas a dedo. Compre direto dos produtores locais. Todos os links levam à página própria da empresa.`,
+  onlineHeading: 'Lojas online: envio internacional para sua casa',
   physicalHeading: 'Visitar pessoalmente',
   physicalSub: 'Toda boutique tem uma loja física na Lapônia.',
   onlineBadge: 'ONLINE',

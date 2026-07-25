@@ -27,7 +27,7 @@ const ROOT = resolve(__dirname, '..');
 const OUT_FILE = resolve(__dirname, 'prerender-meta.json');
 
 // Keep in sync with ../_prerender_routes.mjs FULL_LOCALE_LIST lang codes.
-const LANGS = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl'];
+const LANGS = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 
 // route path → legal page component (each declares `const META: Record<Lang,…>`).
 const STATIC_PAGES = {

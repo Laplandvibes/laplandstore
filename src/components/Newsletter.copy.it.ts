@@ -12,13 +12,13 @@ const copy: CopyShape = {
     'I Suoi dati non vengono condivisi con terzi. Si disiscriva quando vuole.',
   successHeadline: 'È a bordo.',
   successBody:
-    'Controlli la Sua casella di posta — l\'e-mail di benvenuto è in arrivo e le prossime newsletter arriveranno allo stesso indirizzo.',
+    'Controlli la Sua casella di posta. L\'e-mail di benvenuto è in arrivo e le prossime newsletter arriveranno allo stesso indirizzo.',
   alreadyHeadline: 'Già iscritto/a',
   alreadyBody:
-    'È già nella nostra lista — grazie per seguire il progetto.',
+    'È già nella nostra lista. Grazie per seguire il progetto.',
   codeLabel: 'Il Suo codice da iscritto',
   codeFootnote:
-    "Conservi questo codice. È riservato a Lei sull'intera rete #LaplandVibes — valido sul negozio LaplandVibes dal giorno dell'apertura, e presso i partner man mano che gli accordi vengono chiusi.",
+    "Conservi questo codice. È riservato a Lei sull'intera rete #LaplandVibes, valido sul negozio LaplandVibes dal giorno dell'apertura, e presso i partner man mano che gli accordi vengono chiusi.",
   copy: 'Copia',
   copied: 'Copiato',
   errorGeneric: 'Iscrizione non riuscita. Riprovi.',

@@ -113,6 +113,15 @@ const COPY: Record<Lang, { eyebrow: string; h2: string; cards: Card[] }> = {
       { href: 'https://laplandvisit.com/itineraries/', label: 'Plan een bezoek aan Lapland', body: 'Waar naartoe, wanneer reizen en hoe je je verplaatst.' },
     ],
   },
+  sv: {
+    eyebrow: 'Mer från nätverket',
+    h2: 'Fortsätt utforska Lappland',
+    cards: [
+      { href: 'https://laplandgifts.com', label: 'Presenttips från Lappland', body: 'Handplockad presentinspiration från hela finska Lappland.' },
+      { href: 'https://laplandchristmas.com/christmas-markets/', label: 'Shopping på julmarknader', body: 'Julmarknader, hantverkare och säsongens fynd i norr.' },
+      { href: 'https://laplandvisit.com/itineraries/', label: 'Planera en resa till Lappland', body: 'Vart du ska åka, när du ska resa och hur du tar dig runt.' },
+    ],
+  },
 };
 
 export default function RelatedSites() {

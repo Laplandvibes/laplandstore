@@ -118,16 +118,16 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Versenden Sie Lappland-Produkte ins Ausland?',
       aPlain:
-        'Das hängt von der Boutique ab. LaplandStore ist ein redaktionell gepflegtes Verzeichnis und keine zentrale Kasse — den Versand übernimmt jeder Hersteller selbst. Viele betreiben einen eigenen Online-Shop und versenden innerhalb Finnlands; einige liefern in die EU oder weltweit. Prüfen Sie vor der Bestellung die Versandbedingungen des jeweiligen Shops oder nehmen Sie direkt Kontakt auf.',
+        'Das hängt von der Boutique ab. LaplandStore ist ein redaktionell gepflegtes Verzeichnis und keine zentrale Kasse. Den Versand übernimmt jeder Hersteller selbst. Viele betreiben einen eigenen Online-Shop und versenden innerhalb Finnlands; einige liefern in die EU oder weltweit. Prüfen Sie vor der Bestellung die Versandbedingungen des jeweiligen Shops oder nehmen Sie direkt Kontakt auf.',
       aHtml:
-        'Das hängt von der Boutique ab. LaplandStore ist ein redaktionell gepflegtes Verzeichnis und keine zentrale Kasse — den Versand übernimmt jeder Hersteller selbst. Viele betreiben einen eigenen Online-Shop und versenden innerhalb Finnlands; einige liefern in die EU oder weltweit. Prüfen Sie vor der Bestellung die Versandbedingungen des jeweiligen Shops oder nehmen Sie direkt Kontakt auf.',
+        'Das hängt von der Boutique ab. LaplandStore ist ein redaktionell gepflegtes Verzeichnis und keine zentrale Kasse. Den Versand übernimmt jeder Hersteller selbst. Viele betreiben einen eigenen Online-Shop und versenden innerhalb Finnlands; einige liefern in die EU oder weltweit. Prüfen Sie vor der Bestellung die Versandbedingungen des jeweiligen Shops oder nehmen Sie direkt Kontakt auf.',
     },
     {
       q: 'Was ist ein traditionelles lappländisches oder samisches Handwerk?',
       aPlain:
-        'Die samische Handwerkstradition heißt Duodji. Sie umfasst funktionale, handgefertigte Gegenstände aus der samischen Kultur — Messer, Holzwaren, Artikel aus Rentierleder, Geweih und Knochen, gewebte Bänder und Silberschmuck. Duodji wird von Hand aus Naturmaterialien gefertigt; Muster und Techniken werden innerhalb der samischen Gemeinschaften weitergegeben.',
+        'Die samische Handwerkstradition heißt Duodji. Sie umfasst funktionale, handgefertigte Gegenstände aus der samischen Kultur: Messer, Holzwaren, Artikel aus Rentierleder, Geweih und Knochen, gewebte Bänder und Silberschmuck. Duodji wird von Hand aus Naturmaterialien gefertigt; Muster und Techniken werden innerhalb der samischen Gemeinschaften weitergegeben.',
       aHtml:
-        'Die samische Handwerkstradition heißt Duodji. Sie umfasst funktionale, handgefertigte Gegenstände aus der samischen Kultur — Messer, Holzwaren, Artikel aus Rentierleder, Geweih und Knochen, gewebte Bänder und Silberschmuck. Duodji wird von Hand aus Naturmaterialien gefertigt; Muster und Techniken werden innerhalb der samischen Gemeinschaften weitergegeben.',
+        'Die samische Handwerkstradition heißt Duodji. Sie umfasst funktionale, handgefertigte Gegenstände aus der samischen Kultur: Messer, Holzwaren, Artikel aus Rentierleder, Geweih und Knochen, gewebte Bänder und Silberschmuck. Duodji wird von Hand aus Naturmaterialien gefertigt; Muster und Techniken werden innerhalb der samischen Gemeinschaften weitergegeben.',
     },
     {
       q: 'Woran erkenne ich ein authentisch samisches Produkt (das Sámi-Duodji-Zeichen)?',
@@ -170,9 +170,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: '伝統的なラップランドまたはサーミの工芸とは何ですか?',
       aPlain:
-        'サーミの工芸の伝統は「ドゥオッジ(Duodji)」と呼ばれます。サーミ文化に根ざした実用的な手作りの品々 — ナイフ、木工品、トナカイ革・角・骨の製品、織りのバンド、シルバージュエリーなど — を指します。ドゥオッジは天然素材から手作業で作られ、その文様や技法はサーミの共同体の中で受け継がれています。',
+        'サーミの工芸の伝統は「ドゥオッジ(Duodji)」と呼ばれます。サーミ文化に根ざした実用的な手作りの品々、ナイフ、木工品、トナカイ革・角・骨の製品、織りのバンド、シルバージュエリーなどを指します。ドゥオッジは天然素材から手作業で作られ、その文様や技法はサーミの共同体の中で受け継がれています。',
       aHtml:
-        'サーミの工芸の伝統は「ドゥオッジ(Duodji)」と呼ばれます。サーミ文化に根ざした実用的な手作りの品々 — ナイフ、木工品、トナカイ革・角・骨の製品、織りのバンド、シルバージュエリーなど — を指します。ドゥオッジは天然素材から手作業で作られ、その文様や技法はサーミの共同体の中で受け継がれています。',
+        'サーミの工芸の伝統は「ドゥオッジ(Duodji)」と呼ばれます。サーミ文化に根ざした実用的な手作りの品々、ナイフ、木工品、トナカイ革・角・骨の製品、織りのバンド、シルバージュエリーなどを指します。ドゥオッジは天然素材から手作業で作られ、その文様や技法はサーミの共同体の中で受け継がれています。',
     },
     {
       q: '商品が本物のサーミ製であることをどう見分けますか(サーミ・ドゥオッジのマーク)?',
@@ -305,9 +305,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: '什么是传统的拉普兰或萨米手工艺?',
       aPlain:
-        '萨米手工艺传统称为 Duodji。它涵盖植根于萨米文化的实用手工物件 — 刀具、木制品,以及用驯鹿皮、鹿角和骨制成的物品、编织带和银饰。Duodji 用天然材料手工制作,其纹样和技法在萨米社群中代代相传。',
+        '萨米手工艺传统称为 Duodji。它涵盖植根于萨米文化的实用手工物件：刀具、木制品,以及用驯鹿皮、鹿角和骨制成的物品、编织带和银饰。Duodji 用天然材料手工制作,其纹样和技法在萨米社群中代代相传。',
       aHtml:
-        '萨米手工艺传统称为 Duodji。它涵盖植根于萨米文化的实用手工物件 — 刀具、木制品,以及用驯鹿皮、鹿角和骨制成的物品、编织带和银饰。Duodji 用天然材料手工制作,其纹样和技法在萨米社群中代代相传。',
+        '萨米手工艺传统称为 Duodji。它涵盖植根于萨米文化的实用手工物件：刀具、木制品,以及用驯鹿皮、鹿角和骨制成的物品、编织带和银饰。Duodji 用天然材料手工制作,其纹样和技法在萨米社群中代代相传。',
     },
     {
       q: '我如何确认某件商品是正宗的萨米制品(Sámi Duodji 标志)?',
@@ -350,9 +350,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: '전통 라플란드 또는 사미 공예란 무엇인가요?',
       aPlain:
-        '사미 공예 전통은 두오지(Duodji)라고 합니다. 사미 문화에 뿌리를 둔 실용적인 수공예품 — 칼, 목공품, 순록 가죽·뿔·뼈로 만든 물건, 짜서 만든 띠, 은 장신구 등 — 을 아우릅니다. 두오지는 천연 재료로 손수 만들며, 그 문양과 기법은 사미 공동체 안에서 대대로 전해집니다.',
+        '사미 공예 전통은 두오지(Duodji)라고 합니다. 사미 문화에 뿌리를 둔 실용적인 수공예품, 칼, 목공품, 순록 가죽·뿔·뼈로 만든 물건, 짜서 만든 띠, 은 장신구 등 을 아우릅니다. 두오지는 천연 재료로 손수 만들며, 그 문양과 기법은 사미 공동체 안에서 대대로 전해집니다.',
       aHtml:
-        '사미 공예 전통은 두오지(Duodji)라고 합니다. 사미 문화에 뿌리를 둔 실용적인 수공예품 — 칼, 목공품, 순록 가죽·뿔·뼈로 만든 물건, 짜서 만든 띠, 은 장신구 등 — 을 아우릅니다. 두오지는 천연 재료로 손수 만들며, 그 문양과 기법은 사미 공동체 안에서 대대로 전해집니다.',
+        '사미 공예 전통은 두오지(Duodji)라고 합니다. 사미 문화에 뿌리를 둔 실용적인 수공예품, 칼, 목공품, 순록 가죽·뿔·뼈로 만든 물건, 짜서 만든 띠, 은 장신구 등 을 아우릅니다. 두오지는 천연 재료로 손수 만들며, 그 문양과 기법은 사미 공동체 안에서 대대로 전해집니다.',
     },
     {
       q: '제품이 정품 사미 공예임을 어떻게 알 수 있나요(Sámi Duodji 마크)?',
@@ -511,6 +511,51 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Kopen bij lokale makers houdt het geld bij de ambachtsman en de regio, en u krijgt een stuk met een bekende herkomst in plaats van een geïmporteerde imitatie. Veel gewone souvenirs worden in het buitenland massaal geproduceerd. Elke boutique op deze pagina is een in Lapland gevestigd bedrijf, vermeld met de bronnen gedocumenteerd.',
     },
   ],
+
+  sv: [
+    {
+      q: 'Vilka produkter är verkligt tillverkade i Lappland?',
+      aPlain:
+        'Verkligt lappländska produkter tillverkas i finska Lappland av lokala material och traditioner: föremål i renläder och renhorn, handsmidda puukko-knivar, svarvade föremål i en och masurbjörk, stickat i ull, silversmycken inspirerade av samisk kultur och arktiska livsmedel som hjortronsylt, lingonsylt, björksirap och örtteer. Varje butik som listas här är oberoende verifierad, med källorna sparade.',
+      aHtml:
+        'Verkligt lappländska produkter tillverkas i finska Lappland av lokala material och traditioner: föremål i renläder och renhorn, handsmidda puukko-knivar, svarvade föremål i en och masurbjörk, stickat i ull, silversmycken inspirerade av samisk kultur och arktiska livsmedel som hjortronsylt, lingonsylt, björksirap och örtteer. Varje butik som listas här är oberoende verifierad, med källorna sparade.',
+    },
+    {
+      q: 'Skickar ni produkter från Lappland utomlands?',
+      aPlain:
+        'Det beror på butiken. LaplandStore är en handplockad katalog snarare än en gemensam kassa, så leveransen sköts av varje tillverkare. Många driver en egen webbutik och skickar inom Finland; en del skickar inom EU eller över hela världen. Kontrollera den enskilda butikens leveransvillkor, eller kontakta den direkt, innan du beställer.',
+      aHtml:
+        'Det beror på butiken. LaplandStore är en handplockad katalog snarare än en gemensam kassa, så leveransen sköts av varje tillverkare. Många driver en egen webbutik och skickar inom Finland; en del skickar inom EU eller över hela världen. Kontrollera den enskilda butikens leveransvillkor, eller kontakta den direkt, innan du beställer.',
+    },
+    {
+      q: 'Vad är traditionellt lappländskt eller samiskt hantverk?',
+      aPlain:
+        'Den samiska hantverkstraditionen kallas duodji. Den omfattar funktionella, handgjorda föremål med rötter i samisk kultur: knivar, träföremål, föremål i renläder, horn och ben, vävda band och silversmycken. Duodji görs för hand av naturmaterial, och dess mönster och tekniker förs vidare inom de samiska samhällena.',
+      aHtml:
+        'Den samiska hantverkstraditionen kallas duodji. Den omfattar funktionella, handgjorda föremål med rötter i samisk kultur: knivar, träföremål, föremål i renläder, horn och ben, vävda band och silversmycken. Duodji görs för hand av naturmaterial, och dess mönster och tekniker förs vidare inom de samiska samhällena.',
+    },
+    {
+      q: 'Hur vet jag att en produkt är äkta samisk (märket Sámi Duodji)?',
+      aPlain:
+        'Leta efter varumärket Sámi Duodji. Det är en registrerad äkthetsmärkning som administreras av organisationen Sámi Duodji och intygar att ett föremål har tillverkats av en samisk hantverkare enligt traditionella metoder. Märket hjälper dig att skilja äkta samiskt hantverk från massproducerade imitationer som säljs som souvenirer.',
+      aHtml:
+        'Leta efter varumärket Sámi Duodji. Det är en registrerad äkthetsmärkning som administreras av organisationen Sámi Duodji och intygar att ett föremål har tillverkats av en samisk hantverkare enligt traditionella metoder. Märket hjälper dig att skilja äkta samiskt hantverk från massproducerade imitationer som säljs som souvenirer.',
+    },
+    {
+      q: 'Vilka livsmedel från Lappland är populära att köpa?',
+      aPlain:
+        'Populära ätbara souvenirer är hjortron- och lingonsylt, björksirap, torkat och rökt renkött, arktiska örtteer, råg- och annat lokalt bröd samt choklad smaksatt med nordliga bär. De håller sig bra och tål resan, vilket gör dem till praktiska presenter att ta med hem.',
+      aHtml:
+        'Populära ätbara souvenirer är hjortron- och lingonsylt, björksirap, torkat och rökt renkött, arktiska örtteer, råg- och annat lokalt bröd samt choklad smaksatt med nordliga bär. De håller sig bra och tål resan, vilket gör dem till praktiska presenter att ta med hem.',
+    },
+    {
+      q: 'Varför köpa av lokala tillverkare i Lappland i stället för i vanliga souvenirbutiker?',
+      aPlain:
+        'När du köper av lokala tillverkare stannar pengarna hos hantverkaren och i regionen, och du får ett föremål med känt ursprung i stället för en importerad imitation. Många vanliga souvenirer massproduceras utomlands. Varje butik på den här sidan är ett företag i Lappland, listat med sina källor sparade.',
+      aHtml:
+        'När du köper av lokala tillverkare stannar pengarna hos hantverkaren och i regionen, och du får ett föremål med känt ursprung i stället för en importerad imitation. Många vanliga souvenirer massproduceras utomlands. Varje butik på den här sidan är ett företag i Lappland, listat med sina källor sparade.',
+    },
+  ],
 };
 
 const HEADINGS: Record<Lang, { eyebrow: string; h2: string; lead: string }> = {
@@ -525,6 +570,7 @@ const HEADINGS: Record<Lang, { eyebrow: string; h2: string; lead: string }> = {
   fr: { eyebrow: 'Bon à savoir', h2: 'Questions sur les achats en Laponie', lead: 'Ce que les acheteurs demandent avant de commander des produits authentiques de Laponie.' },
   it: { eyebrow: 'Utile da sapere', h2: 'Domande sull’acquisto dalla Lapponia', lead: 'Cosa chiedono gli acquirenti prima di ordinare prodotti autentici della Lapponia.' },
   nl: { eyebrow: 'Goed om te weten', h2: 'Vragen over kopen uit Lapland', lead: 'Wat kopers vragen voordat ze authentieke Lapland-producten bestellen.' },
+  sv: { eyebrow: 'Bra att veta', h2: 'Frågor om att handla från Lappland', lead: 'Vad kunder undrar innan de beställer äkta produkter från Lappland.' },
 };
 
 // Per-question links to the on-page sections that back each answer
@@ -544,6 +590,7 @@ const SECTION_LABELS: Record<Lang, { herkut: string; suosittelemme: string; puti
   fr: { herkut: 'Catégories', suosittelemme: 'Nos recommandations', putiikit: 'Boutiques', tarina: 'Histoire' },
   it: { herkut: 'Categorie', suosittelemme: 'Le nostre raccomandazioni', putiikit: 'Boutique', tarina: 'Storia' },
   nl: { herkut: 'Categorieën', suosittelemme: 'Onze aanbevelingen', putiikit: 'Boutiques', tarina: 'Verhaal' },
+  sv: { herkut: 'Kategorier', suosittelemme: 'Vi rekommenderar', putiikit: 'Butiker', tarina: 'Berättelse' },
 };
 type SectionKey = keyof (typeof SECTION_LABELS)['en'];
 const FAQ_LINKS: SectionKey[][] = [

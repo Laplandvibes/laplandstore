@@ -43,7 +43,8 @@ const shops: Shop[] = [
       ko: '1924년부터 손으로 만든 칼, 장신구, 펠트 제품. 순록 뼈, 컬리 자작나무, 핀란드 강철.',
       fr: 'Couteaux, bijoux et produits en feutre faits main depuis 1924. Os de renne, bouleau ronceux et acier finlandais.',
       it: 'Coltelli, gioielli e prodotti in feltro fatti a mano dal 1924. Osso di renna, betulla riccia e acciaio finlandese.',
-      nl: 'Met de hand gemaakte messen, sieraden en viltproducten sinds 1924. Rendierbot, gevlamde berk en Fins staal.'
+      nl: 'Met de hand gemaakte messen, sieraden en viltproducten sinds 1924. Rendierbot, gevlamde berk en Fins staal.',
+      sv: 'Handgjorda knivar, smycken och filtprodukter sedan 1924. Renben, masurbjörk och finskt stål.'
     },
     url: 'https://www.laurihouse.com',
     categories: {
@@ -57,7 +58,8 @@ const shops: Shop[] = [
       ko: ['칼', '공예품'],
       fr: ['Couteaux', 'Artisanat'],
       it: ['Coltelli', 'Artigianato'],
-      nl: ['Messen', 'Ambacht']
+      nl: ['Messen', 'Ambacht'],
+      sv: ['Knivar', 'Hantverk']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -70,15 +72,16 @@ const shops: Shop[] = [
     description: {
       fi: 'Maailmankuuluja puukkoja vuodesta 1928. Tehtaanmyymälä ja Brand Store, ilmainen kaiverrus.',
       en: 'World-renowned knives since 1928. Factory outlet and Brand Store, free engraving.',
-      de: 'Weltbekannte Puukko-Messer seit 1928. Fabrikverkauf und Brand Store — kostenfreie Gravur.',
-      ja: '1928年創業の世界的に有名なナイフ。工場直営アウトレットとブランドストア — 刻印サービス無料。',
-      es: 'Cuchillos de fama mundial desde 1928. Tienda de fábrica y Brand Store — grabado gratuito.',
-      'pt-BR': 'Facas mundialmente famosas desde 1928. Loja de fábrica e Brand Store — gravação gratuita.',
-      'zh-CN': '自 1928 年以来享誉世界的刀具。工厂直销店与品牌专卖店 — 免费刻字。',
-      ko: '1928년부터 세계적으로 유명한 칼. 공장 직영점과 브랜드 매장 — 각인 무료.',
-      fr: 'Couteaux de renommée mondiale depuis 1928. Magasin d\'usine et boutique de marque — gravure offerte.',
-      it: 'Coltelli di fama mondiale dal 1928. Spaccio aziendale e Brand Store — incisione gratuita.',
-      nl: 'Wereldberoemde messen sinds 1928. Fabriekswinkel en merkwinkel — gratis graveren.'
+      de: 'Weltbekannte Puukko-Messer seit 1928. Fabrikverkauf und Brand Store. Kostenfreie Gravur.',
+      ja: '1928年創業の世界的に有名なナイフ。工場直営アウトレットとブランドストア。刻印サービス無料。',
+      es: 'Cuchillos de fama mundial desde 1928. Tienda de fábrica y Brand Store. Grabado gratuito.',
+      'pt-BR': 'Facas mundialmente famosas desde 1928. Loja de fábrica e Brand Store. Gravação gratuita.',
+      'zh-CN': '自 1928 年以来享誉世界的刀具。工厂直销店与品牌专卖店。免费刻字。',
+      ko: '1928년부터 세계적으로 유명한 칼. 공장 직영점과 브랜드 매장. 각인 무료.',
+      fr: 'Couteaux de renommée mondiale depuis 1928. Magasin d\'usine et boutique de marque. Gravure offerte.',
+      it: 'Coltelli di fama mondiale dal 1928. Spaccio aziendale e Brand Store. Incisione gratuita.',
+      nl: 'Wereldberoemde messen sinds 1928. Fabriekswinkel en merkwinkel. Gratis graveren.',
+      sv: 'Världsberömda knivar sedan 1928. Fabriksbutik och Brand Store, gratis gravyr.'
     },
     url: 'https://www.marttiini.fi',
     categories: {
@@ -92,7 +95,8 @@ const shops: Shop[] = [
       ko: ['칼', '선물'],
       fr: ['Couteaux', 'Cadeaux'],
       it: ['Coltelli', 'Regali'],
-      nl: ['Messen', 'Geschenken']
+      nl: ['Messen', 'Geschenken'],
+      sv: ['Knivar', 'Presenter']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -113,7 +117,8 @@ const shops: Shop[] = [
       ko: '1971년부터 포시오에서 운영 중인 세계 최북단 도자기 공방. 도자기, 인테리어, 디자인.',
       fr: "La fabrique de céramique la plus au nord du monde, à Posio depuis 1971. Céramique, décoration et design.",
       it: 'La fabbrica di ceramiche più a nord del mondo, a Posio dal 1971. Ceramiche, décor e design.',
-      nl: 'De noordelijkste keramiekfabriek ter wereld in Posio sinds 1971. Keramiek, woondecoratie en design.'
+      nl: 'De noordelijkste keramiekfabriek ter wereld in Posio sinds 1971. Keramiek, woondecoratie en design.',
+      sv: 'Världens nordligaste keramikfabrik i Posio sedan 1971. Keramik, heminredning och design.'
     },
     url: 'https://www.pentik.com',
     categories: {
@@ -127,7 +132,8 @@ const shops: Shop[] = [
       ko: ['도자기', '인테리어'],
       fr: ['Céramique', 'Décoration'],
       it: ['Ceramica', 'Décor'],
-      nl: ['Keramiek', 'Wonen']
+      nl: ['Keramiek', 'Wonen'],
+      sv: ['Keramik', 'Heminredning']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -144,11 +150,12 @@ const shops: Shop[] = [
       ja: 'Sajos文化センター内、フィンランド最大規模の本格的なサーミ工芸品セレクション。',
       es: 'La selección más amplia de Finlandia de auténtica artesanía sami, en el centro cultural Sajos.',
       'pt-BR': 'A mais ampla seleção da Finlândia de autêntico artesanato sámi, no centro cultural Sajos.',
-      'zh-CN': '位于 Sajos 文化中心 — 芬兰种类最齐全的正宗萨米手工艺品。',
-      ko: 'Sajos 문화 센터에 위치 — 핀란드에서 가장 폭넓은 정통 사미 공예품 셀렉션.',
+      'zh-CN': '位于 Sajos 文化中心。芬兰种类最齐全的正宗萨米手工艺品。',
+      ko: 'Sajos 문화 센터에 위치. 핀란드에서 가장 폭넓은 정통 사미 공예품 셀렉션.',
       fr: "La plus large sélection finlandaise d'artisanat sami authentique, au centre culturel Sajos.",
       it: "La più ampia selezione finlandese di autentico artigianato sami, al centro culturale Sajos.",
-      nl: 'De grootste selectie authentieke Sami-ambachten in Finland, in het culturele centrum Sajos.'
+      nl: 'De grootste selectie authentieke Sami-ambachten in Finland, in het culturele centrum Sajos.',
+      sv: 'Finlands bredaste urval av äkta samiskt hantverk i kulturcentret Sajos.'
     },
     url: 'https://duodjishop.fi',
     categories: {
@@ -162,7 +169,8 @@ const shops: Shop[] = [
       ko: ['사미 공예품', '두오지'],
       fr: ['Artisanat sami', 'Duodji'],
       it: ['Artigianato sami', 'Duodji'],
-      nl: ['Sami-ambacht', 'Duodji']
+      nl: ['Sami-ambacht', 'Duodji'],
+      sv: ['Samiskt hantverk', 'Duodji']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -175,15 +183,16 @@ const shops: Shop[] = [
     description: {
       fi: 'Käsintehtyä saamelaista hopeakorumuotoilua: sormukset, soljet ja perinteiset duodji-esineet.',
       en: 'Handcrafted Sámi silver jewellery: rings, brooches and traditional duodji pieces.',
-      de: 'Handgefertigter Sámi-Silberschmuck — Ringe, Broschen und traditionelle Duodji-Stücke.',
-      ja: '手作りのサーミ銀細工 — 指輪、ブローチ、伝統的なドゥオッジ作品。',
-      es: 'Joyería sami en plata hecha a mano — anillos, broches y piezas duodji tradicionales.',
-      'pt-BR': 'Joias sámi em prata feitas à mão — anéis, broches e peças duodji tradicionais.',
-      'zh-CN': '手工制作的萨米银饰 — 戒指、胸针和传统杜奥吉(duodji)作品。',
-      ko: '손으로 만든 사미 은세공 — 반지, 브로치, 전통 두오지 작품.',
-      fr: "Bijoux sami en argent faits main — bagues, broches et pièces duodji traditionnelles.",
-      it: 'Gioielli sami in argento fatti a mano — anelli, spille e pezzi duodji tradizionali.',
-      nl: 'Met de hand gemaakt Sami-zilverwerk — ringen, broches en traditionele duodji-stukken.'
+      de: 'Handgefertigter Sámi-Silberschmuck: Ringe, Broschen und traditionelle Duodji-Stücke.',
+      ja: '手作りのサーミ銀細工：指輪、ブローチ、伝統的なドゥオッジ作品。',
+      es: 'Joyería sami en plata hecha a mano: anillos, broches y piezas duodji tradicionales.',
+      'pt-BR': 'Joias sámi em prata feitas à mão: anéis, broches e peças duodji tradicionais.',
+      'zh-CN': '手工制作的萨米银饰：戒指、胸针和传统杜奥吉(duodji)作品。',
+      ko: '손으로 만든 사미 은세공: 반지, 브로치, 전통 두오지 작품.',
+      fr: "Bijoux sami en argent faits main: bagues, broches et pièces duodji traditionnelles.",
+      it: 'Gioielli sami in argento fatti a mano: anelli, spille e pezzi duodji tradizionali.',
+      nl: 'Met de hand gemaakt Sami-zilverwerk: ringen, broches en traditionele duodji-stukken.',
+      sv: 'Handgjorda samiska silversmycken: ringar, broscher och traditionella duodji-föremål.'
     },
     url: 'https://samekki.fi',
     categories: {
@@ -197,7 +206,8 @@ const shops: Shop[] = [
       ko: ['은세공', '사미 공예품'],
       fr: ['Argent', 'Artisanat sami'],
       it: ['Argento', 'Artigianato sami'],
-      nl: ['Zilver', 'Sami-ambacht']
+      nl: ['Zilver', 'Sami-ambacht'],
+      sv: ['Silver', 'Samiskt hantverk']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -218,7 +228,8 @@ const shops: Shop[] = [
       ko: '기념품, 사미 공예품, 목각, 그리고 오로라 테마 상품.',
       fr: "Souvenirs, artisanat sami, sculptures sur bois et produits sur le thème de l'aurore boréale.",
       it: "Souvenir, artigianato sami, sculture in legno e prodotti a tema aurora boreale.",
-      nl: 'Souvenirs, Sami-ambacht, houtsnijwerk en producten met noorderlicht-thema.'
+      nl: 'Souvenirs, Sami-ambacht, houtsnijwerk en producten met noorderlicht-thema.',
+      sv: 'Souvenirer, samiskt hantverk, träsniderier och produkter med norrskenstema.'
     },
     url: 'https://www.pieceoflapland.fi',
     categories: {
@@ -232,7 +243,8 @@ const shops: Shop[] = [
       ko: ['기념품', '공예품'],
       fr: ['Souvenirs', 'Artisanat'],
       it: ['Souvenir', 'Artigianato'],
-      nl: ['Souvenirs', 'Ambacht']
+      nl: ['Souvenirs', 'Ambacht'],
+      sv: ['Souvenirer', 'Hantverk']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -245,15 +257,16 @@ const shops: Shop[] = [
     description: {
       fi: 'Käsintehtyjä poronsarvituotteita omassa pajassa, ilmainen kaiverrus. Napapiirillä.',
       en: 'Handcrafted reindeer-antler products in their own workshop, free engraving. On the Arctic Circle.',
-      de: 'Handgefertigte Produkte aus Rentierhorn in eigener Werkstatt — kostenfreie Gravur. Polarkreis.',
-      ja: '自社工房で手作りするトナカイの角の製品 — 刻印サービス無料。北極圏。',
-      es: 'Productos de asta de reno hechos a mano en su propio taller — grabado gratuito. Círculo Polar Ártico.',
-      'pt-BR': 'Produtos de chifre de rena feitos à mão no próprio ateliê — gravação gratuita. Círculo Polar Ártico.',
-      'zh-CN': '在自家工作坊手工制作的驯鹿角制品 — 免费刻字。北极圈。',
-      ko: '자체 공방에서 손으로 만드는 순록 뿔 제품 — 각인 무료. 북극권.',
-      fr: "Produits en bois de renne faits main dans leur propre atelier — gravure offerte. Cercle polaire arctique.",
-      it: 'Prodotti in corno di renna fatti a mano nel proprio laboratorio — incisione gratuita. Circolo Polare Artico.',
-      nl: 'Met de hand gemaakte producten van rendiergewei in eigen werkplaats — gratis graveren. Poolcirkel.'
+      de: 'Handgefertigte Produkte aus Rentierhorn in eigener Werkstatt. Kostenfreie Gravur. Polarkreis.',
+      ja: '自社工房で手作りするトナカイの角の製品。刻印サービス無料。北極圏。',
+      es: 'Productos de asta de reno hechos a mano en su propio taller. Grabado gratuito. Círculo Polar Ártico.',
+      'pt-BR': 'Produtos de chifre de rena feitos à mão no próprio ateliê. Gravação gratuita. Círculo Polar Ártico.',
+      'zh-CN': '在自家工作坊手工制作的驯鹿角制品。免费刻字。北极圈。',
+      ko: '자체 공방에서 손으로 만드는 순록 뿔 제품. 각인 무료. 북극권.',
+      fr: "Produits en bois de renne faits main dans leur propre atelier. Gravure offerte. Cercle polaire arctique.",
+      it: 'Prodotti in corno di renna fatti a mano nel proprio laboratorio. Incisione gratuita. Circolo Polare Artico.',
+      nl: 'Met de hand gemaakte producten van rendiergewei in eigen werkplaats. Gratis graveren. Poolcirkel.',
+      sv: 'Handgjorda produkter av renhorn i egen verkstad, gratis gravyr. Vid polcirkeln.'
     },
     url: 'https://www.rovaniemisouvenirsshop.fi',
     categories: {
@@ -267,7 +280,8 @@ const shops: Shop[] = [
       ko: ['순록 뿔', '공예품'],
       fr: ['Bois de renne', 'Artisanat'],
       it: ['Corno di renna', 'Artigianato'],
-      nl: ['Rendiergewei', 'Ambacht']
+      nl: ['Rendiergewei', 'Ambacht'],
+      sv: ['Renhorn', 'Hantverk']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -288,7 +302,8 @@ const shops: Shop[] = [
       ko: '1981년부터 시작된 라플란드 테마 은세공. 오로라, 동물, 로켓 펜던트. 자체 공방.',
       fr: "Bijoux en argent sur le thème de la Laponie depuis 1981. Aurore, animaux, médaillons. Atelier propre.",
       it: "Gioielli in argento a tema Lapponia dal 1981. Aurora, animali, medaglioni. Laboratorio proprio.",
-      nl: 'Zilveren sieraden met Lapland-thema sinds 1981. Noorderlicht, dieren, medaillon-hangers. Eigen werkplaats.'
+      nl: 'Zilveren sieraden met Lapland-thema sinds 1981. Noorderlicht, dieren, medaillon-hangers. Eigen werkplaats.',
+      sv: 'Silversmycken med Lappland-tema sedan 1981. Norrsken, djur, medaljonghängen. Egen verkstad.'
     },
     url: 'https://www.taigakoru.eu',
     categories: {
@@ -302,7 +317,8 @@ const shops: Shop[] = [
       ko: ['은세공', '장신구'],
       fr: ['Argent', 'Bijoux'],
       it: ['Argento', 'Gioielli'],
-      nl: ['Zilver', 'Sieraden']
+      nl: ['Zilver', 'Sieraden'],
+      sv: ['Silver', 'Smycken']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -315,15 +331,16 @@ const shops: Shop[] = [
     description: {
       fi: 'Pohjoisen luonnosta inspiroitua korumuotoilua: revontulikoruja, timantteja ja uniikkeja Lappi-sarjoja.',
       en: 'Jewellery design inspired by the northern wilderness: aurora pieces, diamonds and unique Lapland collections.',
-      de: 'Schmuckdesign inspiriert von der nordischen Wildnis — Polarlicht-Stücke, Diamanten und Lappland-Editionen.',
-      ja: '北極の大自然にインスパイアされたジュエリーデザイン — オーロラ作品、ダイヤモンド、ラップランド限定コレクション。',
-      es: 'Diseño de joyería inspirado en la naturaleza salvaje del norte — piezas de auroras, diamantes y colecciones exclusivas de Laponia.',
-      'pt-BR': 'Design de joias inspirado na natureza selvagem do norte — peças de aurora, diamantes e coleções exclusivas da Lapônia.',
-      'zh-CN': '灵感源自北方荒野的珠宝设计 — 极光主题、钻石与独家拉普兰系列。',
-      ko: '북극 황야에서 영감을 받은 주얼리 디자인 — 오로라 작품, 다이아몬드, 유일무이한 라플란드 컬렉션.',
-      fr: "Création de bijoux inspirée par la nature sauvage du Nord — pièces aurore boréale, diamants et collections uniques de Laponie.",
-      it: "Design di gioielli ispirato alla natura selvaggia del nord — pezzi aurora, diamanti e collezioni esclusive della Lapponia.",
-      nl: 'Sieraadontwerp geïnspireerd op de noordelijke wildernis — noorderlicht-stukken, diamanten en unieke Lapland-collecties.'
+      de: 'Schmuckdesign inspiriert von der nordischen Wildnis: Polarlicht-Stücke, Diamanten und Lappland-Editionen.',
+      ja: '北極の大自然にインスパイアされたジュエリーデザイン：オーロラ作品、ダイヤモンド、ラップランド限定コレクション。',
+      es: 'Diseño de joyería inspirado en la naturaleza salvaje del norte: piezas de auroras, diamantes y colecciones exclusivas de Laponia.',
+      'pt-BR': 'Design de joias inspirado na natureza selvagem do norte: peças de aurora, diamantes e coleções exclusivas da Lapônia.',
+      'zh-CN': '灵感源自北方荒野的珠宝设计：极光主题、钻石与独家拉普兰系列。',
+      ko: '북극 황야에서 영감을 받은 주얼리 디자인: 오로라 작품, 다이아몬드, 유일무이한 라플란드 컬렉션.',
+      fr: "Création de bijoux inspirée par la nature sauvage du Nord: pièces aurore boréale, diamants et collections uniques de Laponie.",
+      it: "Design di gioielli ispirato alla natura selvaggia del nord: pezzi aurora, diamanti e collezioni esclusive della Lapponia.",
+      nl: 'Sieraadontwerp geïnspireerd op de noordelijke wildernis: noorderlicht-stukken, diamanten en unieke Lapland-collecties.',
+      sv: 'Smyckesdesign inspirerad av den nordliga vildmarken: norrskensföremål, diamanter och unika Lappland-kollektioner.'
     },
     url: 'https://www.lapinkelloseppa.fi',
     categories: {
@@ -337,7 +354,8 @@ const shops: Shop[] = [
       ko: ['장신구', '다이아몬드'],
       fr: ['Bijoux', 'Diamants'],
       it: ['Gioielli', 'Diamanti'],
-      nl: ['Sieraden', 'Diamanten']
+      nl: ['Sieraden', 'Diamanten'],
+      sv: ['Smycken', 'Diamanter']
     },
     hasOnlineStore: true,
     hasPhysicalStore: true,
@@ -358,7 +376,8 @@ const shops: Shop[] = [
       ko: '역사적인 Kauppayhtiö 건물 안의 현지 디자이너 작품, 장신구, 패션 아이템.',
       fr: "Art, bijoux et mode de créateurs locaux dans le bâtiment historique Kauppayhtiö.",
       it: 'Arte, gioielli e moda di designer locali nello storico edificio Kauppayhtiö.',
-      nl: 'Kunst, sieraden en mode van lokale ontwerpers in het historische Kauppayhtiö-gebouw.'
+      nl: 'Kunst, sieraden en mode van lokale ontwerpers in het historische Kauppayhtiö-gebouw.',
+      sv: 'Lokala designers konst, smycken och mode i den historiska Kauppayhtiö-byggnaden.'
     },
     url: 'https://arcticdesignshop.com',
     categories: {
@@ -372,7 +391,8 @@ const shops: Shop[] = [
       ko: ['디자인', '장신구'],
       fr: ['Design', 'Bijoux'],
       it: ['Design', 'Gioielli'],
-      nl: ['Design', 'Sieraden']
+      nl: ['Design', 'Sieraden'],
+      sv: ['Design', 'Smycken']
     },
     hasOnlineStore: false,
     hasPhysicalStore: true,
@@ -385,15 +405,16 @@ const shops: Shop[] = [
     description: {
       fi: 'Pajakylän suurin matkamuistomyymälä: lappilaisia tuotteita, koruja, herkkuja ja todistuksia.',
       en: "Santa's Village's largest souvenir store: Lapland products, jewellery, treats and certificates.",
-      de: 'Das größte Souvenirgeschäft im Weihnachtsmanndorf — Lappland-Produkte, Schmuck, Spezialitäten und Zertifikate.',
-      ja: 'サンタクロース村最大のお土産ショップ — ラップランド製品、ジュエリー、お菓子、認定証。',
-      es: 'La mayor tienda de recuerdos del Pueblo de Papá Noel — productos de Laponia, joyas, golosinas y certificados.',
-      'pt-BR': 'A maior loja de lembranças da Vila do Papai Noel — produtos da Lapônia, joias, guloseimas e certificados.',
-      'zh-CN': '圣诞老人村最大的纪念品商店 — 拉普兰商品、饰品、美食与证书。',
-      ko: '산타클로스 마을 최대의 기념품점 — 라플란드 상품, 장신구, 별미, 인증서.',
-      fr: "La plus grande boutique de souvenirs du village du Père Noël — produits lapons, bijoux, gourmandises et certificats.",
-      it: 'Il più grande negozio di souvenir del Villaggio di Babbo Natale — prodotti lapponi, gioielli, dolci e certificati.',
-      nl: 'De grootste souvenirwinkel van het Kerstmandorp — Lapland-producten, sieraden, lekkernijen en certificaten.'
+      de: 'Das größte Souvenirgeschäft im Weihnachtsmanndorf: Lappland-Produkte, Schmuck, Spezialitäten und Zertifikate.',
+      ja: 'サンタクロース村最大のお土産ショップ：ラップランド製品、ジュエリー、お菓子、認定証。',
+      es: 'La mayor tienda de recuerdos del Pueblo de Papá Noel: productos de Laponia, joyas, golosinas y certificados.',
+      'pt-BR': 'A maior loja de lembranças da Vila do Papai Noel: produtos da Lapônia, joias, guloseimas e certificados.',
+      'zh-CN': '圣诞老人村最大的纪念品商店：拉普兰商品、饰品、美食与证书。',
+      ko: '산타클로스 마을 최대의 기념품점: 라플란드 상품, 장신구, 별미, 인증서.',
+      fr: "La plus grande boutique de souvenirs du village du Père Noël: produits lapons, bijoux, gourmandises et certificats.",
+      it: 'Il più grande negozio di souvenir del Villaggio di Babbo Natale: prodotti lapponi, gioielli, dolci e certificati.',
+      nl: 'De grootste souvenirwinkel van het Kerstmandorp: Lapland-producten, sieraden, lekkernijen en certificaten.',
+      sv: 'Jultomtens bys största souvenirbutik: Lappland-produkter, smycken, delikatesser och certifikat.'
     },
     url: 'https://christmashousesanta.fi',
     categories: {
@@ -407,7 +428,8 @@ const shops: Shop[] = [
       ko: ['기념품', '별미'],
       fr: ['Souvenirs', 'Gourmandises'],
       it: ['Souvenir', 'Dolci'],
-      nl: ['Souvenirs', 'Lekkernijen']
+      nl: ['Souvenirs', 'Lekkernijen'],
+      sv: ['Souvenirer', 'Delikatesser']
     },
     hasOnlineStore: false,
     hasPhysicalStore: true,
@@ -428,7 +450,8 @@ const shops: Shop[] = [
       ko: 'Korundi 문화 센터의 북극 예술과 디자인. 독특한 선물과 고급 상품.',
       fr: "Art et design arctiques au centre culturel Korundi. Cadeaux uniques et produits haut de gamme.",
       it: 'Arte e design artici al centro culturale Korundi. Regali unici e prodotti di alta gamma.',
-      nl: 'Arctische kunst en design in het culturele centrum Korundi. Unieke geschenken en topproducten.'
+      nl: 'Arctische kunst en design in het culturele centrum Korundi. Unieke geschenken en topproducten.',
+      sv: 'Arktisk konst och design i kulturhuset Korundi. Unika presenter och exklusiva produkter.'
     },
     url: 'https://korundi.fi',
     categories: {
@@ -442,7 +465,8 @@ const shops: Shop[] = [
       ko: ['예술', '디자인'],
       fr: ['Art', 'Design'],
       it: ['Arte', 'Design'],
-      nl: ['Kunst', 'Design']
+      nl: ['Kunst', 'Design'],
+      sv: ['Konst', 'Design']
     },
     hasOnlineStore: false,
     hasPhysicalStore: true,
@@ -463,7 +487,8 @@ const shops: Shop[] = [
       ko: '레비 슬로프 기슭, 핀란드 장인이 만든 장신구, 액세서리, 기념품.',
       fr: "Bijoux, accessoires et souvenirs d'artisans finlandais, au pied des pistes de Levi.",
       it: 'Gioielli, accessori e souvenir di artigiani finlandesi ai piedi della pista di Levi.',
-      nl: 'Sieraden, accessoires en souvenirs van Finse ambachtslieden aan de voet van de Levi-piste.'
+      nl: 'Sieraden, accessoires en souvenirs van Finse ambachtslieden aan de voet van de Levi-piste.',
+      sv: 'Smycken, accessoarer och souvenirer av finska hantverkare vid foten av Levibacken.'
     },
     url: 'https://www.levi.fi',
     categories: {
@@ -477,7 +502,8 @@ const shops: Shop[] = [
       ko: ['장신구', '디자인'],
       fr: ['Bijoux', 'Design'],
       it: ['Gioielli', 'Design'],
-      nl: ['Sieraden', 'Design']
+      nl: ['Sieraden', 'Design'],
+      sv: ['Smycken', 'Design']
     },
     hasOnlineStore: false,
     hasPhysicalStore: true,
@@ -490,15 +516,16 @@ const shops: Shop[] = [
     description: {
       fi: 'Saamelaismuseon myymälä: duodji-käsitöitä, koruja ja Lapin luontoon liittyviä lahjoja.',
       en: 'The Sámi Museum store: duodji crafts, jewellery and gifts inspired by Lapland nature.',
-      de: 'Der Museumsshop des Sámi-Museums — Duodji-Handwerk, Schmuck und Geschenke mit Lappland-Bezug.',
-      ja: 'サーミ博物館のショップ — ドゥオッジの工芸品、ジュエリー、ラップランドの自然をモチーフにしたギフト。',
-      es: 'La tienda del Museo Sami — artesanía duodji, joyas y regalos inspirados en la naturaleza de Laponia.',
-      'pt-BR': 'A loja do Museu Sámi — artesanato duodji, joias e presentes inspirados na natureza da Lapônia.',
-      'zh-CN': '萨米博物馆商店 — 杜奥吉(duodji)手工艺品、饰品,以及以拉普兰自然为灵感的礼物。',
-      ko: '사미 박물관 매장 — 두오지 공예품, 장신구, 라플란드 자연에서 영감을 받은 선물.',
-      fr: "Boutique du musée sami — artisanat duodji, bijoux et cadeaux inspirés de la nature lapone.",
-      it: 'Negozio del Museo Sami — artigianato duodji, gioielli e regali ispirati alla natura della Lapponia.',
-      nl: 'Winkel van het Sami-museum — duodji-ambacht, sieraden en geschenken geïnspireerd op de Laplandse natuur.'
+      de: 'Der Museumsshop des Sámi-Museums: Duodji-Handwerk, Schmuck und Geschenke mit Lappland-Bezug.',
+      ja: 'サーミ博物館のショップ：ドゥオッジの工芸品、ジュエリー、ラップランドの自然をモチーフにしたギフト。',
+      es: 'La tienda del Museo Sami: artesanía duodji, joyas y regalos inspirados en la naturaleza de Laponia.',
+      'pt-BR': 'A loja do Museu Sámi: artesanato duodji, joias e presentes inspirados na natureza da Lapônia.',
+      'zh-CN': '萨米博物馆商店：杜奥吉(duodji)手工艺品、饰品,以及以拉普兰自然为灵感的礼物。',
+      ko: '사미 박물관 매장: 두오지 공예품, 장신구, 라플란드 자연에서 영감을 받은 선물.',
+      fr: "Boutique du musée sami: artisanat duodji, bijoux et cadeaux inspirés de la nature lapone.",
+      it: 'Negozio del Museo Sami: artigianato duodji, gioielli e regali ispirati alla natura della Lapponia.',
+      nl: 'Winkel van het Sami-museum: duodji-ambacht, sieraden en geschenken geïnspireerd op de Laplandse natuur.',
+      sv: 'Samemuseets butik: duodji-hantverk, smycken och presenter inspirerade av Lapplands natur.'
     },
     url: 'https://siida.fi',
     categories: {
@@ -512,7 +539,8 @@ const shops: Shop[] = [
       ko: ['두오지', '선물'],
       fr: ['Duodji', 'Cadeaux'],
       it: ['Duodji', 'Regali'],
-      nl: ['Duodji', 'Geschenken']
+      nl: ['Duodji', 'Geschenken'],
+      sv: ['Duodji', 'Presenter']
     },
     hasOnlineStore: false,
     hasPhysicalStore: true,
@@ -533,7 +561,8 @@ const shops: Shop[] = [
       ko: '라플란드 사금 채취 전통의 중심지에서 만드는 금 장신구, 진짜 금과 광물.',
       fr: "Bijoux en or, or véritable et minéraux issus du cœur de la tradition d'orpaillage de Laponie.",
       it: "Gioielli in oro, oro vero e minerali dal cuore della tradizione lapponese della ricerca dell'oro.",
-      nl: 'Gouden sieraden, echt goud en mineralen uit het hart van de Laplandse goudwastraditie.'
+      nl: 'Gouden sieraden, echt goud en mineralen uit het hart van de Laplandse goudwastraditie.',
+      sv: 'Guldsmycken, äkta guld och mineraler från hjärtat av Lapplands guldvaskningstradition.'
     },
     url: 'https://www.tankavaara.fi',
     categories: {
@@ -547,7 +576,8 @@ const shops: Shop[] = [
       ko: ['금', '광물'],
       fr: ['Or', 'Minéraux'],
       it: ['Oro', 'Minerali'],
-      nl: ['Goud', 'Mineralen']
+      nl: ['Goud', 'Mineralen'],
+      sv: ['Guld', 'Mineraler']
     },
     hasOnlineStore: false,
     hasPhysicalStore: true,
@@ -567,6 +597,7 @@ const loaders = {
   fr: () => import('./LocalShops.copy.fr'),
   it: () => import('./LocalShops.copy.it'),
   nl: () => import('./LocalShops.copy.nl'),
+  sv: () => import('./LocalShops.copy.sv'),
 } as const;
 
 const cache: Partial<Record<import('../lang').Lang, CopyShape>> = { en: enCopy };

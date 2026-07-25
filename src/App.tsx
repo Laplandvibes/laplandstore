@@ -112,6 +112,15 @@ const FOOTER_PILLARS_NL = [
   { name: 'Kerst in Lapland', href: 'https://laplandchristmas.com' },
 ];
 
+const FOOTER_PILLARS_SV = [
+  { name: 'Kategorier', href: '/sv#herkut' },
+  { name: 'Vi rekommenderar', href: '/sv#suosittelemme' },
+  { name: 'Butiker', href: '/sv#putiikit' },
+  { name: 'Berättelse', href: '/sv#tarina' },
+  { name: 'Kommer snart: webbutik', href: 'https://laplandgifts.com' },
+  { name: 'Jul i Lappland', href: 'https://laplandchristmas.com' },
+];
+
 const FOOTER_NOTE_FI =
   'Itsenäisesti ylläpidetty Lapeso Oy:n toimesta · viimeksi tarkistettu huhtikuu 2026 · listaus on ilmainen lappilaisille yrittäjille.';
 const FOOTER_NOTE_EN =
@@ -134,10 +143,12 @@ const FOOTER_NOTE_IT =
   'Gestito in modo indipendente da Lapeso Oy · ultima revisione aprile 2026 · l\'iscrizione è gratuita per gli imprenditori della Lapponia finlandese.';
 const FOOTER_NOTE_NL =
   'Onafhankelijk beheerd door Lapeso Oy · laatst beoordeeld in april 2026 · vermeldingen zijn gratis voor ondernemers uit Fins Lapland.';
+const FOOTER_NOTE_SV =
+  'Oberoende drivet av Lapeso Oy · senast granskat i april 2026 · det är gratis att listas för företagare i finska Lappland.';
 
-function LocaleSync({ lang }: { lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' }) {
+function LocaleSync({ lang }: { lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv' }) {
   useEffect(() => {
-    const map: Record<typeof lang, string> = { en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL' };
+    const map: Record<typeof lang, string> = { en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE' };
     document.documentElement.lang = map[lang];
   }, [lang]);
   return null;
@@ -156,6 +167,7 @@ export default function App() {
     : lang === 'fr' ? FOOTER_PILLARS_FR
     : lang === 'it' ? FOOTER_PILLARS_IT
     : lang === 'nl' ? FOOTER_PILLARS_NL
+    : lang === 'sv' ? FOOTER_PILLARS_SV
     : FOOTER_PILLARS_EN;
   const note =
     lang === 'fi' ? FOOTER_NOTE_FI
@@ -168,6 +180,7 @@ export default function App() {
     : lang === 'fr' ? FOOTER_NOTE_FR
     : lang === 'it' ? FOOTER_NOTE_IT
     : lang === 'nl' ? FOOTER_NOTE_NL
+    : lang === 'sv' ? FOOTER_NOTE_SV
     : FOOTER_NOTE_EN;
   return (
     <div className="min-h-screen flex flex-col bg-cream">
@@ -230,6 +243,11 @@ export default function App() {
           <Route path="/nl/privacy" element={<PrivacyPolicy />} />
           <Route path="/nl/terms" element={<Terms />} />
           <Route path="/nl/cookie-policy" element={<CookiePolicy />} />
+      {/* SV */}
+          <Route path="/sv" element={<Home />} />
+          <Route path="/sv/privacy" element={<PrivacyPolicy />} />
+          <Route path="/sv/terms" element={<Terms />} />
+          <Route path="/sv/cookie-policy" element={<CookiePolicy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
