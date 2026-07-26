@@ -150,7 +150,7 @@ export default function FeaturedProducts() {
             return (
               <a
                 key={p.shop}
-                href={`${p.shopUrl}?utm_source=laplandstore.fi&utm_medium=referral&utm_campaign=featured`}
+                href={`${p.shopUrl}?utm_source=laplandvibes&utm_medium=referral&utm_campaign=store_featured`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex flex-col h-full rounded-2xl overflow-hidden bg-cream shadow-md hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"

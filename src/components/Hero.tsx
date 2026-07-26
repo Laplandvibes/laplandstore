@@ -27,7 +27,7 @@ export default function Hero() {
   const t = useCopy<CopyShape>(enCopy, lang, loaders, cache);
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden text-white">
+    <section className="relative min-h-svh flex flex-col items-center justify-center overflow-hidden text-white">
       {/* Background — warm wooden crafts / Lapland market (placeholder until AI hero image generated) */}
       <GradientPlaceholder
         theme="cabin"
@@ -105,7 +105,9 @@ export default function Hero() {
         </h1>
 
         <p className="text-sm sm:text-xl text-white/90 font-body mt-3 sm:mt-4 max-w-2xl mx-auto leading-relaxed drop-shadow-[0_2px_12px_rgba(0,0,0,0.9)] [text-wrap:pretty]">
-          {t.sub1}
+          {/* Välilyönti sub1+sub2-saumaan: <sm piilotettu <br> liitti lauseet
+              yhteen ilman väliä ("purkissa.Jokaisella") kaikilla kielillä. */}
+          {t.sub1}{' '}
           <br className="hidden sm:block" />
           {t.sub2}
         </p>

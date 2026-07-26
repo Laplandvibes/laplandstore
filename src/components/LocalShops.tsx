@@ -9,7 +9,9 @@ import { useCopy } from '../i18n/useCopy';
 
 interface Shop {
   name: string;
-  location: string;
+  /** Plain string when the value is pure place names; per-lang record when it
+   *  contains translatable words ("koko Suomi", "Joulupukin Pajakylä", …). */
+  location: string | Record<Lang, string>;
   description: Record<Lang, string>;
   url: string;
   categories: Record<Lang, string[]>;
@@ -21,9 +23,11 @@ interface Shop {
   img: string;
 }
 
+/** Verkkostandardi (Vesa 2026-07-24): utm_source=laplandvibes + campaign=<site>_<konteksti>. */
 function utmLink(url: string, shop: string): string {
   const base = url.includes('?') ? '&' : '?';
-  return `${url}${base}utm_source=laplandstore.fi&utm_medium=referral&utm_campaign=${encodeURIComponent(shop)}`;
+  const slug = shop.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+  return `${url}${base}utm_source=laplandvibes&utm_medium=referral&utm_campaign=store_${slug}`;
 }
 
 // Verified April 2026 — real businesses with confirmed addresses and URLs
@@ -105,7 +109,12 @@ const shops: Shop[] = [
   },
   {
     name: 'Pentik',
-    location: 'Posio / koko Suomi',
+    location: {
+      fi: 'Posio / koko Suomi', en: 'Posio / all of Finland', de: 'Posio / ganz Finnland',
+      ja: 'ポシオ / フィンランド全国', es: 'Posio / toda Finlandia', 'pt-BR': 'Posio / toda a Finlândia',
+      'zh-CN': '波西奥 / 芬兰全国', ko: '포시오 / 핀란드 전역', fr: 'Posio / toute la Finlande',
+      it: 'Posio / tutta la Finlandia', nl: 'Posio / heel Finland', sv: 'Posio / hela Finland',
+    },
     description: {
       fi: 'Maailman pohjoisin keramiikkatehdas Posiolla vuodesta 1971. Keramiikkaa, sisustusta ja designia.',
       en: "The world's northernmost ceramic factory in Posio since 1971. Ceramics, home decor and design.",
@@ -253,7 +262,12 @@ const shops: Shop[] = [
   },
   {
     name: 'Rovaniemi Souvenirs Shop',
-    location: 'Joulupukin Pajakylä',
+    location: {
+      fi: 'Joulupukin Pajakylä', en: 'Santa Claus Village', de: 'Santa Claus Village',
+      ja: 'サンタクロース村', es: 'Santa Claus Village', 'pt-BR': 'Vila do Papai Noel',
+      'zh-CN': '圣诞老人村', ko: '산타클로스 마을', fr: 'Village du Père Noël',
+      it: 'Villaggio di Babbo Natale', nl: 'Santa Claus Village', sv: 'Jultomtens by',
+    },
     description: {
       fi: 'Käsintehtyjä poronsarvituotteita omassa pajassa, ilmainen kaiverrus. Napapiirillä.',
       en: 'Handcrafted reindeer-antler products in their own workshop, free engraving. On the Arctic Circle.',
@@ -290,7 +304,12 @@ const shops: Shop[] = [
   },
   {
     name: 'Taigakoru',
-    location: 'Oulu / koko Lappi',
+    location: {
+      fi: 'Oulu / koko Lappi', en: 'Oulu / all of Lapland', de: 'Oulu / ganz Lappland',
+      ja: 'オウル / ラップランド全域', es: 'Oulu / toda Laponia', 'pt-BR': 'Oulu / toda a Lapônia',
+      'zh-CN': '奥卢 / 拉普兰全境', ko: '오울루 / 라플란드 전역', fr: 'Oulu / toute la Laponie',
+      it: 'Oulu / tutta la Lapponia', nl: 'Oulu / heel Lapland', sv: 'Oulu / hela Lappland',
+    },
     description: {
       fi: 'Lappi-aiheista hopeakorumuotoilua vuodesta 1981. Revontulet, eläimet, kätkytpallot. Oma paja.',
       en: 'Lapland-themed silver jewellery since 1981. Aurora, animals, locket pendants. Own workshop.',
@@ -401,7 +420,12 @@ const shops: Shop[] = [
   },
   {
     name: 'Christmas House Shop',
-    location: 'Joulupukin Pajakylä',
+    location: {
+      fi: 'Joulupukin Pajakylä', en: 'Santa Claus Village', de: 'Santa Claus Village',
+      ja: 'サンタクロース村', es: 'Santa Claus Village', 'pt-BR': 'Vila do Papai Noel',
+      'zh-CN': '圣诞老人村', ko: '산타클로스 마을', fr: 'Village du Père Noël',
+      it: 'Villaggio di Babbo Natale', nl: 'Santa Claus Village', sv: 'Jultomtens by',
+    },
     description: {
       fi: 'Pajakylän suurin matkamuistomyymälä: lappilaisia tuotteita, koruja, herkkuja ja todistuksia.',
       en: "Santa's Village's largest souvenir store: Lapland products, jewellery, treats and certificates.",
@@ -512,7 +536,12 @@ const shops: Shop[] = [
   },
   {
     name: 'Siida Shop',
-    location: 'Inari (Saamelaismuseo)',
+    location: {
+      fi: 'Inari (Saamelaismuseo)', en: 'Inari (Sámi Museum)', de: 'Inari (Sámi-Museum)',
+      ja: 'イナリ（サーミ博物館）', es: 'Inari (Museo Sámi)', 'pt-BR': 'Inari (Museu Sámi)',
+      'zh-CN': '伊纳里（萨米博物馆）', ko: '이나리(사미 박물관)', fr: 'Inari (Musée sámi)',
+      it: 'Inari (Museo Sami)', nl: 'Inari (Sámi-museum)', sv: 'Inari (samemuseet)',
+    },
     description: {
       fi: 'Saamelaismuseon myymälä: duodji-käsitöitä, koruja ja Lapin luontoon liittyviä lahjoja.',
       en: 'The Sámi Museum store: duodji crafts, jewellery and gifts inspired by Lapland nature.',
@@ -713,7 +742,7 @@ function ShopCard({
         </div>
         <div className="absolute bottom-2 left-3 flex items-center gap-1 text-xs text-white/90">
           <MapPin className="w-3 h-3" />
-          <span>{shop.location}</span>
+          <span>{typeof shop.location === 'string' ? shop.location : shop.location[lang] ?? shop.location.en}</span>
         </div>
       </div>
 

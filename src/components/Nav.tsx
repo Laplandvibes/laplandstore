@@ -108,7 +108,8 @@ export default function Nav() {
               className="flex items-center shrink-0"
               aria-label="LaplandStore home"
             >
-              <span className="font-heading tracking-wider leading-none text-xl sm:text-2xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
+              {/* NETWORK RULE (Vesa 2026-07-24): wordmark aina Bebas (--font-logo), otsikot pysyvät Playfairissa. */}
+              <span className="font-logo tracking-wide leading-none text-2xl sm:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
                 <span className="text-amber">#</span>
                 <span className={scrolled ? 'text-night' : 'text-white'}>LAPLAND</span>
                 <span className="text-amber">STORE</span>
