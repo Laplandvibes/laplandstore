@@ -31,7 +31,7 @@ export const KULTA_CENTER: StorePartner = {
   slug: 'kulta-center',
   name: 'Kulta-Center',
   // Ships free across the EEA (Europe); est. 1933; Kalevala Finnish jewellery.
-  link: 'https://at.kulta-center.com/t/t?a=1498456315&as=2086870803&t=2&tk=1',
+  link: 'https://go.laplandvibes.com/go/kultacenter?sid=store_partner',
   logo: '/img/partners/kulta-center.png',
 }
 
@@ -40,7 +40,7 @@ export const IVALO: StorePartner = {
   name: 'IVALO.COM',
   // Marketplace of 100+ Finnish/Nordic sustainable brands; ships EU-wide (named
   // list) + calculates worldwide at checkout. Free shipping over 200 €.
-  link: 'https://at.ivalo.com/t/t?a=2052140535&as=2086870803&t=2&tk=1',
+  link: 'https://go.laplandvibes.com/go/ivalo?sid=store_partner',
   logo: '/img/partners/ivalo.png',
 }
 
@@ -48,7 +48,7 @@ export const SCANDINAVIAN_OUTDOOR: StorePartner = {
   slug: 'scandinavian-outdoor',
   name: 'Scandinavian Outdoor',
   // Ships worldwide (EU, Norway, Switzerland, UK, US, Canada, rest of world).
-  link: 'https://to.scandinavianoutdoor.fi/t/t?a=1119705543&as=2086870803&t=2&tk=1',
+  link: 'https://go.laplandvibes.com/go/scandinavianoutdoor?sid=store_partner',
   logo: '/img/partners/scandinavian-outdoor.png',
 }
 
