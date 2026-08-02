@@ -13,6 +13,7 @@ import { KultaCenterAd, IvaloAd, ScandinavianOutdoorAd } from '../components/Sto
 import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { useLang, type Lang } from '../lang';
+import { AppPromoHero } from '../components/AppPromo';
 
 const BCP47: Record<Lang, string> = {
   en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES',
@@ -143,6 +144,9 @@ export default function Home() {
       <FAQ />
       <RelatedSites />
       <Newsletter />
+    {/* App launch block. Bottom of the page on purpose: the site's own hero is
+        what the search result promised, and this does not get to interrupt it. */}
+    <AppPromoHero />
     </>
   );
 }

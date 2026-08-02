@@ -12,6 +12,7 @@ const NotFound = lazy(() => import('./pages/NotFound'))
 import { useLang, footerDict } from './lang';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import LocaleHead from './components/LocaleHead';
+import { AppPromoNudge } from './components/AppPromo';
 
 const FOOTER_PILLARS_FI = [
   { name: 'Kategoriat', href: '/fi#herkut' },
@@ -255,6 +256,7 @@ export default function App() {
       <Footer pillarLinks={pillars} editorialNote={note} dict={footerDict(lang)} />
       <CookieBanner consentKey="laplandstore_cookie_consent" lang={lang} />
       <NewsletterPopup />
+      <AppPromoNudge />
     </div>
   );
 }
