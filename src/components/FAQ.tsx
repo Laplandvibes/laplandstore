@@ -628,7 +628,11 @@ export default function FAQ() {
               className="group bg-white rounded-2xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden"
             >
               <summary className="cursor-pointer list-none flex items-center justify-between gap-4 p-6 select-none">
-                <h3 className="font-heading text-lg sm:text-xl text-night leading-snug">
+                {/* 🔴 Kysymys on font-bodylla eikä font-headingilla: otsikkofontti
+                    on 2026-08-07 alkaen Bebas Neue, joka on versaali, ja
+                    kokonainen kysymyslause versaalina on lukukelvoton. Sama
+                    päätös kuin giftsin tuotenimissä 1.8. */}
+                <h3 className="font-body font-semibold text-lg sm:text-xl text-night leading-snug">
                   {faq.q}
                 </h3>
                 <span

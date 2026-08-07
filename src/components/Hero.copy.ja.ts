@@ -2,7 +2,7 @@
 import type { CopyShape } from './Hero.copy.en';
 
 const copy: CopyShape = {
-  badge1: '認証済み16ブティック',
+  badge1: (n: number) => `認証済み${n}ブティック`,
   badge2: '本物のラップランド・ストア',
   badge3: 'オンラインショップ + 実店舗',
   titleA: 'ラップランドの',

@@ -4,9 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build:nossg": "tsc -b && vite build",
-    "build": "tsc -b && vite build && node scripts/generate-prerender-meta.mjs && node ../_prerender_routes.mjs --site=https://laplandstore.fi --siteName=LaplandStore --twitter=@laplandvibes --defaultOg=/og-default.jpg --routes=scripts/routes.json --meta=scripts/prerender-meta.json --addLocales=sv",
+    "dev": "node scripts/generate-boutiques.mjs && vite",
+    "build:nossg": "node scripts/generate-boutiques.mjs && tsc -b && vite build",
+    "build": "node scripts/generate-boutiques.mjs && tsc -b && vite build && node scripts/generate-prerender-meta.mjs && node ../_prerender_routes.mjs --site=https://laplandstore.fi --siteName=LaplandStore --twitter=@laplandvibes --defaultOg=/og-default.jpg --routes=scripts/routes.json --meta=scripts/prerender-meta.json --addLocales=sv",
     "lint": "eslint .",
     "preview": "vite preview"
   },

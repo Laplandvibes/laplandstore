@@ -1,7 +1,5 @@
 import { useEffect } from 'react';
 import Hero from '../components/Hero';
-import Categories from '../components/Categories';
-import FeaturedProducts from '../components/FeaturedProducts';
 import ArtisanStory from '../components/ArtisanStory';
 import LocalShops from '../components/LocalShops';
 import WhyBuyFromUs from '../components/WhyBuyFromUs';
@@ -23,51 +21,51 @@ const BCP47: Record<Lang, string> = {
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   'en': {
     seoTitle: 'LaplandStore: Authentic Lapland gifts, crafts & souvenirs',
-    seoDescription: 'A curated directory of verified Lapland boutiques: puukko knives, reindeer leather, juniper woodware and wool. Order direct from real makers in Finnish Lapland.',
+    seoDescription: 'A curated directory of Lapland boutiques from Rovaniemi to Utsjoki: crafts, jewellery, reindeer antler, ceramics and Lapland delicacies. Some ship to you.',
   },
   'fi': {
     seoTitle: 'LaplandStore: Aitoja Lapin lahjoja ja käsitöitä',
-    seoDescription: 'Kuratoitu hakemisto aitoihin Lapin putiikkeihin: puukkoja, poronnahkaa, katajapuuta ja villaa. Tilaa suoraan tekijältä Suomen Lapista.',
+    seoDescription: 'Kuratoitu hakemisto lappilaisiin putiikkeihin Rovaniemeltä Utsjoelle: käsityötä, koruja, poronsarvea, keramiikkaa ja Lapin herkkuja. Osa toimittaa kotiin.',
   },
   'de': {
     seoTitle: 'LaplandStore: Echte Lappland-Geschenke & Souvenirs',
-    seoDescription: 'Kuratiertes Verzeichnis echter Lappland-Boutiquen: Puukko-Messer, Rentierleder, Wacholderholz und Wolle. Direkt bei den Machern in Finnisch-Lappland bestellen.',
+    seoDescription: 'Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentierhorn, Keramik und Delikatessen. Manche versenden.',
   },
   'ja': {
     seoTitle: 'LaplandStore：本物のラップランド土産・工芸品・ギフト',
-    seoDescription: '本物のラップランドのブティックを厳選して紹介するディレクトリ。プーッコナイフ、トナカイ革、ジュニパー材、ウール製品を、フィンランド・ラップランドの作り手に直接注文できます。',
+    seoDescription: 'ロヴァニエミからウツヨキまで、ラップランドのブティックを厳選したディレクトリ。工芸品、ジュエリー、トナカイの角、陶器、ラップランドの味覚。配送する店もあります。',
   },
   'es': {
     seoTitle: 'LaplandStore: Regalos y artesanía auténticos de Laponia',
-    seoDescription: 'Directorio curado de boutiques auténticas de Laponia: cuchillos puukko, cuero de reno, madera de enebro y lana. Compra directamente a los artesanos de la Laponia finlandesa.',
+    seoDescription: 'Directorio curado de boutiques de Laponia, de Rovaniemi a Utsjoki: artesanía, joyas, asta de reno, cerámica y delicias laponas. Algunas hacen envíos.',
   },
   'pt-BR': {
     seoTitle: 'LaplandStore: Presentes e artesanato autênticos da Lapônia',
-    seoDescription: 'Diretório curado de boutiques autênticas da Lapônia: facas puukko, couro de rena, madeira de zimbro e lã. Compre direto dos artesãos da Lapônia finlandesa.',
+    seoDescription: 'Diretório curado de boutiques da Lapônia, de Rovaniemi a Utsjoki: artesanato, joias, chifre de rena, cerâmica e iguarias. Algumas fazem entregas.',
   },
   'zh-CN': {
     seoTitle: 'LaplandStore：正宗拉普兰礼物、手工艺与纪念品',
-    seoDescription: '精选真实拉普兰精品店指南：芬兰传统刀（puukko）、驯鹿皮、杜松木器与羊毛制品。直接向芬兰拉普兰的手工艺人下单。',
+    seoDescription: '精选拉普兰精品店名录，从罗瓦涅米到乌茨约基：手工艺品、饰品、驯鹿角、陶器与拉普兰美味。部分商店可寄送。',
   },
   'ko': {
     seoTitle: 'LaplandStore: 라플란드 정통 선물·공예품·기념품 가이드',
-    seoDescription: '엄선한 라플란드 부티크 디렉터리입니다. 푸코(puukko) 칼, 순록 가죽, 향나무 공예품, 양모 제품을 핀란드 라플란드의 장인에게 직접 주문하실 수 있습니다.',
+    seoDescription: '로바니에미에서 우츠요키까지, 라플란드 부티크를 엄선한 디렉터리입니다. 공예품, 장신구, 순록 뿔, 도자기, 라플란드 먹거리. 일부는 배송합니다.',
   },
   'fr': {
     seoTitle: 'LaplandStore: Cadeaux et artisanat authentiques de Laponie',
-    seoDescription: 'Annuaire sélectif de boutiques authentiques de Laponie : couteaux puukko, cuir de renne, bois de genévrier et laine. Commandez directement auprès des artisans de Laponie finlandaise.',
+    seoDescription: 'Annuaire sélectif de boutiques de Laponie, de Rovaniemi à Utsjoki : artisanat, bijoux, bois de renne, céramique et spécialités. Certaines expédient.',
   },
   'it': {
     seoTitle: 'LaplandStore: Regali e artigianato autentici della Lapponia',
-    seoDescription: 'Directory curata di boutique autentiche della Lapponia: coltelli puukko, pelle di renna, legno di ginepro e lana. Ordina direttamente dagli artigiani della Lapponia finlandese.',
+    seoDescription: 'Directory curata di boutique della Lapponia, da Rovaniemi a Utsjoki: artigianato, gioielli, corno di renna, ceramica e specialità. Alcune spediscono.',
   },
   'nl': {
     seoTitle: 'LaplandStore: Authentieke geschenken en ambacht uit Lapland',
-    seoDescription: 'Samengestelde gids met echte Lapland-boetieks: puukko-messen, rendierleer, jeneverbeshout en wol. Bestel rechtstreeks bij makers in Fins Lapland.',
+    seoDescription: 'Samengestelde gids met Lapland-boetieks van Rovaniemi tot Utsjoki: ambacht, sieraden, rendiergewei, keramiek en lekkernijen. Sommige verzenden.',
   },
   'sv': {
     seoTitle: 'LaplandStore: Äkta presenter och hantverk från Lappland',
-    seoDescription: 'Handplockad katalog över verifierade butiker i Lappland: puukko-knivar, renläder, eneträ och ull. Beställ direkt av verkliga tillverkare i finska Lappland.',
+    seoDescription: 'Handplockad katalog över butiker i Lappland, från Rovaniemi till Utsjoki: hantverk, smycken, renhorn, keramik och delikatesser. Vissa skickar hem.',
   },
 };
 
@@ -121,11 +119,9 @@ export default function Home() {
           tyhjänä kompakti house-ad → LV Media -portaali (cream-pinta → light) */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} surface="light" />
       <WhyBuyFromUs />
-      <Categories />
       {/* Kumppaniosio heti ensimmäisen kategoriabändin jälkeen:
           kakkospääkumppani + 6 premium-paikkaa (house-adit kun vapaat) */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} surface="light" />
-      <FeaturedProducts />
       {/* Mapped product ad — Kulta-Center (jewellery gift), skinned in their brand. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">

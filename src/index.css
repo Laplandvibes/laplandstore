@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Bebas+Neue&display=swap');
 @import "tailwindcss";
 @source "../../shared/**/*.{ts,tsx}";
 
@@ -6,10 +6,15 @@
   /* LV ecosystem tokens required by shared/ components (added 2026-08-04:
      without them Tailwind v4 silently drops e.g. bg-vibe-pink from the build). */
   --color-arctic-cyan: #06B6D4;
-  --font-heading: 'Playfair Display', serif;
+  /* Otsikot yhtenäistetty verkoston standardiin 2026-08-07 (Vesa: "tyyli pitää
+     olla brändin mukainen"). Playfair Display oli ajautumista eikä hyväksytty
+     poikkeus: CLAUDE.md:n varianttilista ei tunne laplandstorea lainkaan.
+     Sama liike kuin laplandstays 23.7. ja laplandchristmas 24.7.
+     Cream-pinta ja amber-aksentti jäävät, ne ovat sivuston oma piirre. */
+  --font-heading: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --font-body: 'DM Sans', sans-serif;
   /* NETWORK RULE (Vesa 2026-07-24): hashtag wordmark = Bebas Neue on every
-     site, even palette variants. Site headings stay Playfair. */
+     site. Sama pino kuin --font-heading nyt kun otsikotkin ovat Bebasia. */
   --font-logo: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --color-amber: #D97706;
   --color-amber-light: #F59E0B;

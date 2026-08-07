@@ -1,6 +1,6 @@
 // Auto-split per-locale copy chunk. EN is the source of truth for the shape.
 const copy = {
-  badge1: '16 verified boutiques',
+  badge1: (n: number) => `${n} verified boutiques`,
   badge2: 'Authentic Lapland products',
   badge3: 'Online + brick-and-mortar',
   titleA: 'Bring a piece of',

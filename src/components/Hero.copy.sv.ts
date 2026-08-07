@@ -2,7 +2,7 @@
 import type { CopyShape } from './Hero.copy.en';
 
 const copy: CopyShape = {
-  badge1: '16 verifierade butiker',
+  badge1: (n: number) => `${n} verifierade butiker`,
   badge2: 'Äkta Lappland-produkter',
   badge3: 'Online + fysiska butiker',
   titleA: 'Ta med dig en bit av',

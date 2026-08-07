@@ -1,5 +1,6 @@
 import { ChevronDown, ShoppingBag, Gift, Sparkles } from 'lucide-react';
 import { useLang } from '../lang';
+import { BOUTIQUES } from '../data/boutiques.generated';
 import GradientPlaceholder from './GradientPlaceholder';
 
 import enCopy, { type CopyShape } from './Hero.copy.en';
@@ -87,7 +88,7 @@ export default function Hero() {
         {/* Trust badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8">
           <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-amber/20 backdrop-blur-sm border border-amber/30 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold text-amber-light">
-            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {t.badge1}
+            <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {t.badge1(BOUTIQUES.length)}
           </span>
           <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[10px] sm:text-xs font-bold text-white/80">
             <Gift className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {t.badge2}
