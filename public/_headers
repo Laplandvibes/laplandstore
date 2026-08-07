@@ -15,3 +15,16 @@
   X-XSS-Protection: 1; mode=block
   Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
 # <<< LV-SECURITY
+
+# >>> LV-ASSET-CACHE (lisätty 2026-08-07)
+/assets/*
+  # 🔴 EI immutable. Tiedostonimi on sisältöhash, joten selain saa pitää sen
+  # ikuisesti (max-age), mutta CDN:n kopio on vanhennuttava: jos assettia
+  # pyydetään ennen kuin se on levinnyt reunalle, SPA-fallback vastaa
+  # HTML:llä statuksella 200 ja se tallentuu tiedoston nimen alle.
+  # Mitattu 7.8.2026: tällä sivustolla ei ollut /assets/*-sääntöä lainkaan,
+  # jolloin väärä vastaus jäi reunalle CF:n oletuksella 4 tunniksi
+  # (max-age=14400). s-maxage rajaa vahingon 10 minuuttiin.
+  # Sama sääntö kuin laplandgiftsin /static/*.
+  Cache-Control: public, max-age=31536000, s-maxage=600
+# <<< LV-ASSET-CACHE
