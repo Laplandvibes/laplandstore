@@ -4,6 +4,7 @@ import { useLang } from '../lang';
 
 import enCopy, { type CopyShape } from './Newsletter.copy.en';
 import { useCopy } from '../i18n/useCopy';
+import FounderByline from '../../../shared/FounderByline';
 
 
 const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
@@ -143,6 +144,7 @@ export default function Newsletter() {
 
         <p className="text-warm-gray mt-4 leading-relaxed [text-wrap:pretty]">{t.intro}</p>
 
+        <FounderByline tone="pink" />
         <form
           onSubmit={handleSubmit}
           className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
