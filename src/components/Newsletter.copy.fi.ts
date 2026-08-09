@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: 'Pysy mukana',
   intro:
-    'Tilaa uutiskirje, niin kuulet ensimmäisten joukossa uusista lappilaisista löydöistä, käsityöläisten tarinoista ja siitä hetkestä kun oma verkkokauppa avataan.',
+    'Tilaa uutiskirje, niin kuulet uusista lappilaisista löydöistä, käsityöläisten tarinoista ja uusista putiikeista sitä mukaa kun ne tulevat hakemistoon.',
   placeholder: 'sähköpostiosoitteesi',
   cta: 'Tilaa',
   loading: 'Tilataan…',
@@ -16,11 +16,6 @@ const copy: CopyShape = {
   alreadyHeadline: 'Olet jo listalla',
   alreadyBody:
     'Sähköpostisi on jo mukana. Kiitos että pysyt mukana.',
-  codeLabel: 'Sinun koodisi',
-  codeFootnote:
-    'Laita koodi talteen, se on sinun. Sillä saat alennuksen omasta verkkokaupasta heti kun se avataan, ja kumppaniliikkeissä sitä mukaa kun yhteistyödiilit aukeavat.',
-  copy: 'Kopioi',
-  copied: 'Kopioitu',
   errorGeneric: 'Tilaus ei mennyt läpi. Kokeile vielä kerran.',
 };
 

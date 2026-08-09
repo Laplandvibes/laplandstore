@@ -2,7 +2,7 @@
 const copy = {
   heading: 'Stay in the loop',
   intro:
-    "Subscribe to hear first about new Lapland finds, artisans' stories, and a heads-up the moment the LaplandVibes webshop opens.",
+    "Subscribe to hear about new Lapland finds, the artisans' stories behind them, and new boutiques as they join the directory.",
   placeholder: 'you@example.com',
   cta: 'Subscribe',
   loading: 'Subscribing…',
@@ -14,11 +14,6 @@ const copy = {
   alreadyHeadline: 'Already subscribed',
   alreadyBody:
     "You're already on the list. Thanks for sticking with the project.",
-  codeLabel: 'Your subscriber code',
-  codeFootnote:
-    'Save this code. It is reserved for you across the #LaplandVibes network. It works on the LaplandVibes webshop the moment it opens, and on partner deals as they are negotiated.',
-  copy: 'Copy',
-  copied: 'Copied',
   errorGeneric: 'Subscription failed. Please try again.',
 };
 

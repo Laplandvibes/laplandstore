@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from 'react';
-import { Mail, Loader2, CheckCircle, AlertCircle, Copy, Check } from 'lucide-react';
+import { Mail, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLang } from '../lang';
 
 import enCopy, { type CopyShape } from './Newsletter.copy.en';
@@ -35,9 +35,7 @@ export default function Newsletter() {
 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
-  const [code, setCode] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState('');
-  const [copied, setCopied] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
@@ -67,25 +65,11 @@ export default function Newsletter() {
         setStatus('already');
       } else {
         setStatus('success');
-        if (typeof data.discountCode === 'string') {
-          setCode(data.discountCode);
-        }
       }
       setEmail('');
     } catch (err: any) {
       setErrorMsg(err?.message || t.errorGeneric);
       setStatus('error');
-    }
-  };
-
-  const copyCode = async () => {
-    if (!code) return;
-    try {
-      await navigator.clipboard.writeText(code);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 1800);
-    } catch {
-      // ignore — user can still read the code visually
     }
   };
 
@@ -102,30 +86,6 @@ export default function Newsletter() {
           <p className="text-warm-gray mt-4 leading-relaxed">
             {status === 'success' ? t.successBody : t.alreadyBody}
           </p>
-
-          {status === 'success' && code && (
-            <div className="mt-8 max-w-md mx-auto rounded-2xl bg-white shadow-md px-6 py-5 border border-amber/30">
-              <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-amber mb-2">
-                {t.codeLabel}
-              </p>
-              <button
-                type="button"
-                onClick={copyCode}
-                className="font-heading text-2xl sm:text-[28px] tracking-[0.10em] text-night leading-none inline-flex items-center gap-3 hover:opacity-80 transition-opacity"
-                aria-label={`${t.copy} ${code}`}
-              >
-                {code}
-                {copied ? (
-                  <Check className="w-5 h-5 text-forest" />
-                ) : (
-                  <Copy className="w-5 h-5 text-warm-gray/60" />
-                )}
-              </button>
-              <p className="text-xs text-warm-gray mt-3 leading-relaxed">
-                {copied ? t.copied : t.codeFootnote}
-              </p>
-            </div>
-          )}
         </div>
       </section>
     );

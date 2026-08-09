@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: 'Manténgase al día',
   intro:
-    'Suscríbase para ser de los primeros en conocer los nuevos hallazgos de Laponia, las historias de los artesanos y un aviso en el momento exacto en que se abra la tienda en línea de LaplandVibes.',
+    'Suscríbase para conocer los nuevos hallazgos de Laponia, las historias de los artesanos que hay detrás y las nuevas tiendas a medida que se suman al directorio.',
   placeholder: 'su@correo.com',
   cta: 'Suscribirme',
   loading: 'Suscribiendo…',
@@ -16,11 +16,6 @@ const copy: CopyShape = {
   alreadyHeadline: 'Ya está suscrito',
   alreadyBody:
     'Ya está en la lista. Gracias por seguir el proyecto.',
-  codeLabel: 'Su código de suscriptor',
-  codeFootnote:
-    'Guarde este código. Está reservado para usted en toda la red #LaplandVibes, válido en la tienda LaplandVibes desde el día de su apertura, y en los socios a medida que se cierren los acuerdos.',
-  copy: 'Copiar',
-  copied: 'Copiado',
   errorGeneric: 'La suscripción no se ha podido completar. Inténtelo de nuevo.',
 };
 

@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: '最新情報をお届け',
   intro:
-    'ニュースレターにご登録ください。ラップランドの新しい逸品、職人の物語、そしてLaplandVibesのオンラインショップ開店のお知らせを、いち早くお届けします。',
+    'ニュースレターでは、ラップランドの新しい逸品、その裏にある職人の物語、そしてディレクトリに加わる新しいショップをお届けします。',
   placeholder: 'メールアドレス',
   cta: '購読する',
   loading: '登録中…',
@@ -16,11 +16,6 @@ const copy: CopyShape = {
   alreadyHeadline: 'すでにご登録済みです',
   alreadyBody:
     'すでに購読者リストに登録されています。このプロジェクトを応援いただきありがとうございます。',
-  codeLabel: 'あなたの購読者コード',
-  codeFootnote:
-    'このコードを大切に保管してください。#LaplandVibesネットワーク全体であなた専用に予約されています。LaplandVibesのオンラインショップ開店時から有効で、提携先との取り決め完了次第、提携店舗でもご利用いただけます。',
-  copy: 'コピー',
-  copied: 'コピー済み',
   errorGeneric: '登録に失敗しました。もう一度お試しください。',
 };
 

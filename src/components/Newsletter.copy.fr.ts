@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: 'Restez informé(e)',
   intro:
-    "Inscrivez-vous à la newsletter pour être parmi les premiers à découvrir de nouvelles trouvailles de Laponie, les histoires des artisans et l'ouverture de la boutique en ligne LaplandVibes.",
+    "Inscrivez-vous à la newsletter pour découvrir les nouvelles trouvailles de Laponie, les histoires des artisans qui se cachent derrière et les nouvelles boutiques au fil de leur arrivée dans l'annuaire.",
   placeholder: 'votre@email.com',
   cta: "S'abonner",
   loading: 'Inscription…',
@@ -16,11 +16,6 @@ const copy: CopyShape = {
   alreadyHeadline: 'Déjà inscrit(e)',
   alreadyBody:
     'Vous êtes déjà sur la liste. Merci de continuer à suivre le projet.',
-  codeLabel: "Votre code d'abonné(e)",
-  codeFootnote:
-    "Conservez ce code. Il vous est réservé sur tout le réseau #LaplandVibes, valable sur la boutique LaplandVibes dès son ouverture, et chez les partenaires au fur et à mesure des accords.",
-  copy: 'Copier',
-  copied: 'Copié',
   errorGeneric: "L'inscription a échoué. Veuillez réessayer.",
 };
 

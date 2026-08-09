@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: '최신 소식 받기',
   intro:
-    '뉴스레터를 구독하시면 새로운 라플란드의 발견, 장인의 이야기, 그리고 LaplandVibes 온라인 상점이 열리는 순간을 가장 먼저 알려드립니다.',
+    '뉴스레터를 구독하시면 새로운 라플란드의 발견, 그 뒤에 있는 장인들의 이야기, 그리고 디렉터리에 새로 합류하는 부티크 소식을 전해드립니다.',
   placeholder: 'your@email.com',
   cta: '구독하기',
   loading: '등록 중…',
@@ -16,11 +16,6 @@ const copy: CopyShape = {
   alreadyHeadline: '이미 구독 중이십니다',
   alreadyBody:
     '이미 구독자 명단에 있으십니다. 프로젝트와 함께해 주셔서 감사합니다.',
-  codeLabel: '구독자 코드',
-  codeFootnote:
-    '이 코드를 보관해 주세요. #LaplandVibes 네트워크 전체에서 회원님 전용으로 예약되어 있습니다. LaplandVibes 온라인 상점이 오픈하는 날부터 사용 가능하며, 파트너 매장에서도 협업이 체결되는 대로 적용됩니다.',
-  copy: '복사',
-  copied: '복사됨',
   errorGeneric: '구독에 실패했습니다. 다시 시도해 주세요.',
 };
 

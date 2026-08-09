@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: 'Blijf op de hoogte',
   intro:
-    'Abonneer u op de nieuwsbrief om als eerste te horen over nieuwe Lapland-vondsten, verhalen van ambachtslieden en zodra de LaplandVibes-online winkel opent.',
+    'Abonneer u op de nieuwsbrief en hoor over nieuwe Lapland-vondsten, de verhalen van de ambachtslieden erachter en nieuwe boetieks zodra ze aan de gids worden toegevoegd.',
   placeholder: 'uw@email.com',
   cta: 'Abonneren',
   loading: 'Inschrijven…',
@@ -16,11 +16,6 @@ const copy: CopyShape = {
   alreadyHeadline: 'Al ingeschreven',
   alreadyBody:
     'U staat al op de lijst. Bedankt dat u het project volgt.',
-  codeLabel: 'Uw abonneecode',
-  codeFootnote:
-    'Bewaar deze code. Hij is voor u gereserveerd binnen het hele #LaplandVibes-netwerk, geldig in de LaplandVibes-winkel zodra deze opent, en bij partners zodra de samenwerkingen rond zijn.',
-  copy: 'Kopiëren',
-  copied: 'Gekopieerd',
   errorGeneric: 'Inschrijven mislukt. Probeer het opnieuw.',
 };
 
