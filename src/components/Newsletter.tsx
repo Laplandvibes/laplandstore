@@ -104,7 +104,7 @@ export default function Newsletter() {
 
         <p className="text-warm-gray mt-4 leading-relaxed [text-wrap:pretty]">{t.intro}</p>
 
-        <><FounderByline tone="pink" />
+        <><FounderByline tone="light" />
         <form
           onSubmit={handleSubmit}
           className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
