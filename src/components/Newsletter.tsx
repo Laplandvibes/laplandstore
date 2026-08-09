@@ -144,7 +144,7 @@ export default function Newsletter() {
 
         <p className="text-warm-gray mt-4 leading-relaxed [text-wrap:pretty]">{t.intro}</p>
 
-        <FounderByline tone="pink" />
+        <><FounderByline tone="pink" />
         <form
           onSubmit={handleSubmit}
           className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
@@ -174,7 +174,7 @@ export default function Newsletter() {
               t.cta
             )}
           </button>
-        </form>
+        </form></>
 
         {status === 'error' && (
           <p className="mt-3 text-sm text-rose-600 inline-flex items-center justify-center gap-1.5">
