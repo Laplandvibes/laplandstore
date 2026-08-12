@@ -334,7 +334,7 @@ export default function ProductBrandAd({
                still named, but what fills the space is what they actually sell. */
             <div className={`${ns}-stage relative flex h-full items-center justify-center p-6`}>
               <div className="relative w-full max-w-[13rem]">
-                <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-white/70">
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-stone-900/10">
                   <img
                     src={shots[0].img}
                     alt={shots[0].alt[lang]}
@@ -346,7 +346,7 @@ export default function ProductBrandAd({
                   />
                   <div className={`${ns}-shimmer pointer-events-none absolute inset-0`} />
                 </div>
-                <div className="absolute -bottom-5 -left-5 h-20 w-20 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-white/70 sm:h-24 sm:w-24">
+                <div className="absolute -bottom-5 -left-5 h-20 w-20 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-stone-900/10 sm:h-24 sm:w-24">
                   <img
                     src={shots[1].img}
                     alt={shots[1].alt[lang]}
@@ -357,7 +357,7 @@ export default function ProductBrandAd({
                     className="h-full w-full object-contain"
                   />
                 </div>
-                <div className="absolute -right-4 -top-4 h-16 w-16 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-white/70 sm:h-20 sm:w-20">
+                <div className="absolute -right-4 -top-4 h-16 w-16 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-stone-900/10 sm:h-20 sm:w-20">
                   <img
                     src={shots[2].img}
                     alt={shots[2].alt[lang]}
@@ -380,7 +380,7 @@ export default function ProductBrandAd({
             </div>
           ) : (
             <div className={`${ns}-stage relative flex h-full flex-col items-center justify-center gap-5 p-8 text-center`}>
-              <div className="relative overflow-hidden rounded-2xl bg-white px-8 py-6 shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-stone-900/5">
+              <div className="relative overflow-hidden rounded-2xl bg-white px-8 py-6 shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-stone-900/10">
                 <img
                   src={partner.logo}
                   alt=""
