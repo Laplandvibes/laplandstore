@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import CookieContent from '../../../shared/Legal/CookieContent';
 import { useLang, type Lang } from '../lang';
+import ConsentControls from '../components/ConsentControls';
 
 const META: Record<Lang, { title: string; description: string }> = {
   en: {
@@ -68,5 +69,9 @@ export default function CookiePolicy() {
     desc.setAttribute('content', m.description);
   }, [m.title, m.description]);
 
-  return <CookieContent siteId="laplandstore" siteName="LaplandStore" lang={lang} />;
+  return <CookieContent siteId="laplandstore" siteName="LaplandStore" lang={lang} />
+        {/* 🔴 Peruutus tällä sivulla eikä bannerissa: CookieBanner on
+            verkoston jaettu komponentti, jonka on oltava identtinen joka
+            sivustolla. */}
+        <ConsentControls lang={lang} />;
 }

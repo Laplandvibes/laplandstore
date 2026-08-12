@@ -75,23 +75,38 @@ const KC_COPY: ProductAdCopy = {
     {
       icon: Truck,
       label: {
-        en: 'Ships across Europe in a few days', fi: 'Toimitus Eurooppaan muutamassa päivässä',
-        de: 'Lieferung in Europa in wenigen Tagen', ja: 'ヨーロッパへ数日で配送',
-        es: 'Envío a Europa en pocos días', 'pt-BR': 'Envio pela Europa em poucos dias',
-        'zh-CN': '几天内送达欧洲各地', ko: '며칠 내 유럽 전역 배송',
-        fr: 'Livraison en Europe en quelques jours', it: 'Spedizione in Europa in pochi giorni',
-        nl: 'Levering door Europa in enkele dagen', sv: 'Levereras i Europa på några dagar',
+        // 🔴 Luki 13.8.2026 asti "Ships across Europe in a few days". Se ei
+        // pidä paikkaansa: Kulta-Centerin oma sivu (info-ja-ostaminen) sanoo
+        // "Mikäli olet tilaamassa tuotetta ulkomaille, pyydämme ottamaan
+        // meihin yhteyttä. Ulkomaille tilattaessa tuotteen hintaan lisätään
+        // toimituskulut, jotka ilmoitetaan asiakkaalle henkilökohtaisesti."
+        // Ulkomaantilaus ei siis ole muutaman päivän kassatapahtuma.
+        en: 'Orders outside Finland: shipping agreed with them first',
+        fi: 'Ulkomaille: toimituskulut sovitaan heidän kanssaan erikseen',
+        de: 'Lieferung ins Ausland: Versand vorab mit ihnen absprechen',
+        ja: 'フィンランド国外への注文は、送料を先に相談する必要があります',
+        es: 'Pedidos fuera de Finlandia: el envío se acuerda con ellos',
+        'pt-BR': 'Pedidos fora da Finlândia: o frete é combinado com eles',
+        'zh-CN': '寄往芬兰以外：运费需先与他们商定',
+        ko: '핀란드 외 지역 주문은 배송비를 먼저 협의합니다',
+        fr: 'Hors Finlande : les frais de port sont convenus avec eux',
+        it: 'Ordini fuori dalla Finlandia: la spedizione si concorda con loro',
+        nl: 'Buiten Finland: verzending wordt vooraf met hen afgesproken',
+        sv: 'Utanför Finland: frakten kommer man överens om med dem',
       },
     },
   ],
   offerIcon: Truck,
   offer: {
-    en: 'Free delivery within Europe', fi: 'Ilmainen toimitus Euroopassa',
-    de: 'Kostenlose Lieferung innerhalb Europas', ja: 'ヨーロッパ域内は送料無料',
-    es: 'Envío gratis dentro de Europa', 'pt-BR': 'Entrega grátis na Europa',
-    'zh-CN': '欧洲境内免费配送', ko: '유럽 내 무료 배송',
-    fr: 'Livraison gratuite en Europe', it: 'Consegna gratuita in Europa',
-    nl: 'Gratis levering binnen Europa', sv: 'Gratis leverans inom Europa',
+    // 🔴 Luki "Free delivery within Europe". Kumppanin oma ehto: "ilmainen
+    // toimitus kaikille yli 50 € tilauksille Suomen alueella" — siis Suomi,
+    // ei Eurooppa, ja vasta 50 eurosta ylöspäin.
+    en: 'Free delivery in Finland over €50', fi: 'Ilmainen toimitus Suomessa yli 50 €',
+    de: 'Kostenlose Lieferung in Finnland ab 50 €', ja: 'フィンランド国内は 50 € 以上で送料無料',
+    es: 'Envío gratis en Finlandia desde 50 €', 'pt-BR': 'Frete grátis na Finlândia acima de 50 €',
+    'zh-CN': '芬兰境内满 50 € 免运费', ko: '핀란드 내 50 € 이상 무료 배송',
+    fr: 'Livraison gratuite en Finlande dès 50 €', it: 'Spedizione gratuita in Finlandia oltre 50 €',
+    nl: 'Gratis levering in Finland vanaf € 50', sv: 'Fri frakt i Finland över 50 €',
   },
   cta: {
     en: 'Browse Kulta-Center', fi: 'Selaa Kulta-Centeriä', de: 'Kulta-Center ansehen',

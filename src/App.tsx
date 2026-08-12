@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Footer from '../../shared/Footer';
 import CookieBanner from '../../shared/CookieBanner';
+import { initConsent } from './lib/consent';
 import Nav from './components/Nav';
 import NewsletterPopup from './components/NewsletterPopup';
 const Home = lazy(() => import('./pages/Home'))
@@ -148,6 +149,11 @@ const FOOTER_NOTE_SV =
   'Oberoende drivet av Lapeso Oy · senast granskat i april 2026 · det är gratis att listas för företagare i finska Lappland.';
 
 function LocaleSync({ lang }: { lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv' }) {
+  // 🔴 Kumppaniskriptit ladataan vasta suostumuksen jälkeen. Ks. lib/consent.ts:
+  // GYG:n tagi oli aiemmin index.htmlissä ehdoitta ja seurasi myös hylkäyksen
+  // jälkeen.
+  useEffect(() => initConsent(), []);
+
   useEffect(() => {
     const map: Record<typeof lang, string> = { en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES', 'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE' };
     document.documentElement.lang = map[lang];
