@@ -8,6 +8,7 @@ import RelatedSites from '../components/RelatedSites';
 import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
 import { KultaCenterAd, IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
+import SuomikauppaAd from '../components/SuomikauppaAd';
 import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { useLang, type Lang } from '../lang';
@@ -130,6 +131,15 @@ export default function Home() {
       </section>
       <ArtisanStory />
       <LocalShops />
+      {/* Suomikauppa (Daisycon) — placed DIRECTLY after the boutique directory
+          because the card's whole argument depends on it: most of the shops
+          listed above sell over the counter only, and this is the one that
+          posts abroad. Moved anywhere else the headline stops being true. */}
+      <section className="px-4 py-10 sm:py-14 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <SuomikauppaAd sid="after_boutiques_ships_home" />
+        </div>
+      </section>
       {/* Mapped product ad — IVALO.COM (Finnish design, delivered), skinned in their brand. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">

@@ -1,91 +1,116 @@
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Store, ArrowRight } from 'lucide-react';
 import { useLang } from '../lang';
+
+/**
+ * Cross-link to laplandgifts.com, the network's online shop.
+ *
+ * 🔴 REWRITTEN 2026-08-10 (Vesa: "miksi meillä edelleen on jokin coming soon").
+ * Every one of the twelve languages announced a shop that was "in the works"
+ * and promised that "until it opens, every link here goes straight to a local
+ * boutique". laplandgifts.com OPENED ON 2026-07-31 and has been a full
+ * multi-page shop since. So this block had been telling twelve languages
+ * something untrue for ten days, and it was doing it on the page whose entire
+ * job is to send people to that shop.
+ *
+ * The pattern to watch for: copy written in the future tense outlives the
+ * launch it was written for. Anything that says "coming", "soon" or "in the
+ * works" needs an owner and a date, or it becomes a lie on a schedule.
+ *
+ * 🔴 Colours corrected in the same pass. The gradient ended on #064e3b, a dark
+ * emerald that is in no network palette, with an amber radial over it. Now:
+ * deep-night → slate → finland-blue, with pink and arctic-cyan washes. Those
+ * are the network's actual tokens.
+ *
+ * 🔴 `noreferrer` removed. laplandgifts.com is OUR OWN site and a registered
+ * Daisycon media; stripping the Referer on a network link throws away the
+ * attribution that tells us the traffic came from store. Same fix as the
+ * footer network links (monorepo 9c7bca9).
+ */
 
 const COPY = {
   fi: {
-    eyebrow: 'Tulossa',
-    heading: 'Oma verkkokauppa Lapin tuotteille',
+    eyebrow: 'Verkkokauppa',
+    heading: 'Verkkokauppamme on auki',
     body:
-      'Rakennamme omaa LaplandVibes-verkkokauppaa, joka kokoaa lappilaisten yrittäjien tuotteet yhteen paikkaan. Sillä välin jokainen tämän sivun linkki vie suoraan paikallisen putiikin sivulle.',
-    cta: 'Vilkaise laplandgifts.com',
+      'LaplandGifts on LaplandVibes-verkoston verkkokauppa: suomalaiset lahjat, herkut ja käsityöt kotiin toimitettuna, myös ulkomaille. Tämä sivu kertoo, mistä ostat Lapissa paikan päällä.',
+    cta: 'Siirry laplandgifts.comiin',
   },
   en: {
-    eyebrow: 'Coming soon',
-    heading: 'A LaplandVibes online store, in the works',
+    eyebrow: 'The online shop',
+    heading: 'Our online shop is open',
     body:
-      'We are building a LaplandVibes online store that gathers Lapland-based makers under one roof. Until it opens, every link here goes straight to a local boutique.',
-    cta: 'Peek at laplandgifts.com',
+      'LaplandGifts is the network’s online shop: Finnish gifts, treats and crafts delivered to your door, abroad included. This page is for the other half of the question, where to buy in Lapland itself.',
+    cta: 'Go to laplandgifts.com',
   },
   de: {
-    eyebrow: 'In Vorbereitung',
-    heading: 'Ein eigener Online-Shop für Lappland-Produkte',
+    eyebrow: 'Der Onlineshop',
+    heading: 'Unser Onlineshop ist geöffnet',
     body:
-      'Ein eigener LaplandVibes-Online-Shop wird derzeit aufgebaut, eine Plattform, die Hersteller aus Lappland bündelt. In der Zwischenzeit führt jeder Link hier direkt zu einer lokalen Boutique.',
-    cta: 'laplandgifts.com ansehen',
+      'LaplandGifts ist der Onlineshop des Netzwerks: finnische Geschenke, Delikatessen und Handwerk, nach Hause geliefert, auch ins Ausland. Diese Seite beantwortet die andere Hälfte der Frage, wo man in Lappland selbst einkauft.',
+    cta: 'Zu laplandgifts.com',
   },
-
   ja: {
-    eyebrow: '近日公開',
-    heading: 'LaplandVibes自社オンラインショップ、準備中',
+    eyebrow: 'オンラインショップ',
+    heading: 'オンラインショップは開いています',
     body:
-      'LaplandVibes自社運営のオンラインショップを構築中です、ラップランドの職人や作り手を一つの屋根の下に集めるプラットフォームです。それまでは、当サイトのリンクはすべて、現地のブティックへ直接ご案内します。',
-    cta: 'laplandgifts.com を覗く',
+      'LaplandGifts はネットワークのオンラインショップです。フィンランドのギフト、食品、工芸品を海外にもお届けします。このページはもう半分の問い、ラップランドの現地でどこで買うかにお答えします。',
+    cta: 'laplandgifts.com へ',
   },
   es: {
-    eyebrow: 'Próximamente',
-    heading: 'Una tienda en línea propia para los productos de Laponia',
+    eyebrow: 'La tienda online',
+    heading: 'Nuestra tienda online está abierta',
     body:
-      'Estamos construyendo una tienda en línea propia de LaplandVibes, una plataforma que reúne a los productores de Laponia bajo un mismo techo. Mientras tanto, cada enlace de esta página le lleva directamente a una boutique local.',
-    cta: 'Echar un vistazo a laplandgifts.com',
+      'LaplandGifts es la tienda online de la red: regalos, delicias y artesanía finlandesa enviados a tu casa, también al extranjero. Esta página responde a la otra mitad de la pregunta, dónde comprar en la propia Laponia.',
+    cta: 'Ir a laplandgifts.com',
   },
   'pt-BR': {
-    eyebrow: 'Em breve',
-    heading: 'Uma loja online própria para produtos da Lapônia',
+    eyebrow: 'A loja online',
+    heading: 'Nossa loja online está aberta',
     body:
-      'A loja online própria do LaplandVibes está sendo construída, uma única plataforma que reúne os produtores da Lapônia. Até lá, cada link daqui leva você diretamente a uma boutique local.',
-    cta: 'Conferir laplandgifts.com',
+      'A LaplandGifts é a loja online da rede: presentes, guloseimas e artesanato finlandês entregues na sua porta, inclusive no exterior. Esta página responde à outra metade da pergunta, onde comprar na própria Lapônia.',
+    cta: 'Ir para laplandgifts.com',
   },
   'zh-CN': {
-    eyebrow: '即将上线',
-    heading: 'LaplandVibes 自营线上商店,正在筹备中',
+    eyebrow: '线上商店',
+    heading: '我们的线上商店已经开张',
     body:
-      '我们正在打造 LaplandVibes 自营的线上商店，一个把拉普兰本地工匠汇聚一堂的平台。在此之前,本页面的每个链接都会直接引导您到当地的精品店。',
-    cta: '看看 laplandgifts.com',
+      'LaplandGifts 是本网络的线上商店:芬兰的礼品、美味与手工艺品送货到家,也寄往国外。本页回答的是另一半问题,在拉普兰当地该去哪里买。',
+    cta: '前往 laplandgifts.com',
   },
   ko: {
-    eyebrow: '곧 오픈',
-    heading: 'LaplandVibes 자체 온라인 상점, 준비 중',
+    eyebrow: '온라인 상점',
+    heading: '온라인 상점이 열려 있습니다',
     body:
-      'LaplandVibes가 직접 운영하는 온라인 상점을 준비하고 있습니다, 라플란드의 장인과 만드는 이들을 하나의 플랫폼에 모으는 곳입니다. 그동안에는 이 페이지의 모든 링크가 현지 부티크로 바로 연결됩니다.',
-    cta: 'laplandgifts.com 미리보기',
+      'LaplandGifts는 네트워크의 온라인 상점입니다. 핀란드의 선물, 먹거리, 수공예품을 해외까지 배송합니다. 이 페이지는 나머지 절반의 질문, 라플란드 현지에서 어디서 살 수 있는지에 답합니다.',
+    cta: 'laplandgifts.com으로 이동',
   },
   fr: {
-    eyebrow: 'Bientôt',
-    heading: 'Une boutique en ligne LaplandVibes en préparation',
+    eyebrow: 'La boutique en ligne',
+    heading: 'Notre boutique en ligne est ouverte',
     body:
-      "Nous construisons une boutique en ligne propre à LaplandVibes, une plateforme qui rassemblera les artisans de Laponie sous un même toit. En attendant, chaque lien de cette page renvoie directement à une boutique locale.",
-    cta: 'Jeter un œil à laplandgifts.com',
+      'LaplandGifts est la boutique en ligne du réseau : cadeaux, gourmandises et artisanat finlandais livrés chez vous, y compris à l’étranger. Cette page répond à l’autre moitié de la question, où acheter en Laponie même.',
+    cta: 'Aller sur laplandgifts.com',
   },
   it: {
-    eyebrow: 'Prossimamente',
-    heading: 'Un negozio online LaplandVibes in arrivo',
+    eyebrow: 'Il negozio online',
+    heading: 'Il nostro negozio online è aperto',
     body:
-      "Stiamo costruendo un negozio online di proprietà di LaplandVibes, una piattaforma che riunisce gli artigiani della Lapponia sotto un unico tetto. Nel frattempo, ogni link in questa pagina porta direttamente a una boutique locale.",
-    cta: 'Dare un\'occhiata a laplandgifts.com',
+      'LaplandGifts è il negozio online della rete: regali, specialità e artigianato finlandese consegnati a casa, estero compreso. Questa pagina risponde all’altra metà della domanda, dove comprare in Lapponia di persona.',
+    cta: 'Vai su laplandgifts.com',
   },
   nl: {
-    eyebrow: 'Binnenkort',
-    heading: 'Een eigen LaplandVibes-online winkel in de maak',
+    eyebrow: 'De webshop',
+    heading: 'Onze webshop is open',
     body:
-      'We bouwen een eigen LaplandVibes-online winkel, één platform dat de Laplandse makers samenbrengt onder één dak. Tot die tijd leidt elke link op deze pagina rechtstreeks naar een lokale boutique.',
-    cta: 'Een kijkje nemen op laplandgifts.com',
+      'LaplandGifts is de webshop van het netwerk: Finse cadeaus, lekkernijen en ambacht thuisbezorgd, ook in het buitenland. Deze pagina beantwoordt de andere helft van de vraag, waar je in Lapland zelf koopt.',
+    cta: 'Naar laplandgifts.com',
   },
   sv: {
-    eyebrow: 'Kommer snart',
-    heading: 'En egen webbutik för produkter från Lappland',
+    eyebrow: 'Webbutiken',
+    heading: 'Vår webbutik är öppen',
     body:
-      'Vi bygger en egen LaplandVibes-webbutik som samlar tillverkare från Lappland på ett ställe. Tills den öppnar leder varje länk här direkt till en lokal butik.',
-    cta: 'Ta en titt på laplandgifts.com',
+      'LaplandGifts är nätverkets webbutik: finska presenter, delikatesser och hantverk hemlevererat, även utomlands. Den här sidan svarar på den andra halvan av frågan, var man handlar i Lappland på plats.',
+    cta: 'Gå till laplandgifts.com',
   },
 } as const;
 
@@ -100,21 +125,21 @@ export default function GiftsHubBanner() {
           className="absolute inset-0"
           style={{
             background:
-              'linear-gradient(135deg, #0F172A 0%, #1e293b 45%, #064e3b 100%)',
+              'linear-gradient(135deg, #0F172A 0%, #1e293b 45%, #002F6C 100%)',
           }}
         />
         <div
           className="absolute inset-0 opacity-50"
           style={{
             background:
-              'radial-gradient(circle at 20% 30%, rgba(217,119,6,0.40), transparent 55%), radial-gradient(circle at 80% 70%, rgba(236,72,153,0.25), transparent 55%)',
+              'radial-gradient(circle at 20% 30%, rgba(236,72,153,0.32), transparent 55%), radial-gradient(circle at 80% 70%, rgba(6,182,212,0.28), transparent 55%)',
           }}
         />
 
         <div className="relative px-6 sm:px-10 py-10 sm:py-14 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
           <div>
-            <div className="inline-flex items-center gap-2 text-amber-light text-xs font-bold tracking-[0.25em] uppercase">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 text-[#7DD3FC] text-xs font-bold tracking-[0.25em] uppercase">
+              <Store className="w-3.5 h-3.5" />
               {t.eyebrow}
             </div>
             <h2 className="font-heading text-3xl sm:text-4xl text-white mt-3 leading-tight [text-wrap:balance]">
@@ -128,8 +153,8 @@ export default function GiftsHubBanner() {
           <a
             href="https://laplandgifts.com"
             target="_blank"
-            rel="noopener noreferrer"
-            className="group inline-flex items-center gap-2 px-7 py-3.5 bg-amber text-white font-bold rounded-full hover:bg-amber-light transition-colors shadow-lg whitespace-nowrap min-h-[44px]"
+            rel="noopener"
+            className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#EC4899] text-white font-bold rounded-full hover:bg-[#DB2777] transition-colors shadow-lg whitespace-nowrap min-h-[44px]"
           >
             {t.cta}
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />

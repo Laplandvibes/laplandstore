@@ -55,6 +55,28 @@ export interface ProductAdBrand {
   cardBg?: string;
 }
 
+/**
+ * Real product photography for the stage. OPTIONAL, and only ever passed for an
+ * advertiser whose programme actually clears its product imagery for affiliate
+ * use (a product feed = cleared; see the Metsola precedent on laplandkids).
+ *
+ * 🔴 Why this exists (Vesa 2026-08-10, desktop screenshots of laplandstore):
+ * "ihan kamala". He was right. A lone wordmark tile floating in a 40 %-wide
+ * gradient reads as an unfinished slot on a wide screen, and every card on the
+ * page had the same hole. Where we are allowed to show what is actually for
+ * sale, we should: three real products fill the stage and tell the reader what
+ * the shop sells before they read a word.
+ *
+ * Cards WITHOUT cleared imagery keep the wordmark stage. That is a licensing
+ * limit, not a design choice, and it is the honest fallback.
+ */
+export interface ProductAdShot {
+  /** Path under /public. */
+  img: string;
+  /** Localised alt text naming the real product. */
+  alt: Record<Lang, string>;
+}
+
 const AD_LABEL: Record<Lang, string> = {
   en: 'Ad', fi: 'Mainos', de: 'Anzeige', ja: '広告', es: 'Anuncio',
   'pt-BR': 'Anúncio', 'zh-CN': '广告', ko: '광고', fr: 'Annonce',
@@ -66,12 +88,16 @@ export default function ProductBrandAd({
   brand,
   copy,
   sid,
+  shots,
   className = '',
 }: {
   partner: StorePartner;
   brand: ProductAdBrand;
   copy: ProductAdCopy;
   sid: string;
+  /** Real product photography for the stage. Pass ONLY when the advertiser's
+   *  programme clears its imagery (product feed). Omitted → wordmark stage. */
+  shots?: ProductAdShot[];
   className?: string;
 }) {
   const { lang } = useLang();
@@ -191,9 +217,14 @@ export default function ProductBrandAd({
         style={{ background: `radial-gradient(closest-side, ${brand.accent}26, transparent)` }}
       />
 
+      {/* 🔴 EI max-height + overflow-hidden -yhdistelmää tähän. Kokeilin
+          `lg:max-h-[380px]`, ja koska kortilla on `overflow-hidden`, se leikkasi
+          Mainos-merkinnän, silmäkulman JA otsikon näkymättömiin: jäljelle jäi
+          pelkkä leipäteksti. Korkeus tulee sisällöstä ja tiivistetyistä
+          sisennyksistä, ei leikkurista. */}
       <div className="relative grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
         {/* ── Copy column ─────────────────────────────────────────────── */}
-        <div className="relative p-6 sm:p-8 lg:p-10">
+        <div className="relative p-5 sm:p-6 lg:p-7">
           <div className={`${ns}-rise ${ns}-rise-1 mb-5 flex items-start justify-between gap-4`}>
             <div className="flex flex-col gap-1.5">
               <span
@@ -213,12 +244,14 @@ export default function ProductBrandAd({
               height={40}
               loading="lazy"
               decoding="async"
-              className="h-6 w-auto shrink-0 sm:h-7"
+              className={`w-auto shrink-0 ${
+                partner.logoShape === 'square' ? 'h-11 sm:h-12' : 'h-6 sm:h-7'
+              }`}
             />
           </div>
 
           <h2
-            className={`${ns}-rise ${ns}-rise-1 mb-3 max-w-xl text-2xl font-bold leading-tight text-stone-900 sm:text-3xl [text-wrap:balance]`}
+            className={`${ns}-rise ${ns}-rise-1 mb-2 max-w-xl text-xl font-bold leading-tight text-stone-900 sm:text-2xl [text-wrap:balance]`}
           >
             {copy.headline[lang]}
           </h2>
@@ -226,7 +259,7 @@ export default function ProductBrandAd({
             {copy.sub[lang]}
           </p>
 
-          <ul className={`${ns}-rise ${ns}-rise-2 mt-5 flex flex-wrap gap-x-5 gap-y-2.5`}>
+          <ul className={`${ns}-rise ${ns}-rise-2 mt-3.5 flex flex-wrap gap-x-4 gap-y-2`}>
             {copy.trust.map((tp) => {
               const Icon = tp.icon;
               return (
@@ -240,20 +273,20 @@ export default function ProductBrandAd({
 
           {/* Evergreen offer chip — real, never stale, in the brand accent. */}
           <div
-            className={`${ns}-rise ${ns}-rise-3 mt-6 inline-flex w-fit items-center gap-2 rounded-2xl leading-snug px-3.5 py-1.5 text-sm font-semibold`}
+            className={`${ns}-rise ${ns}-rise-3 mt-3.5 inline-flex w-fit items-center gap-2 rounded-2xl leading-snug px-3 py-1 text-[13px] font-semibold`}
             style={{ backgroundColor: `${brand.accent}22`, color: brand.ink }}
           >
             <OfferIcon className="h-4 w-4 shrink-0" aria-hidden="true" />
             <span>{copy.offer[lang]}</span>
           </div>
 
-          <div className={`${ns}-rise ${ns}-rise-3 mt-5 flex flex-wrap items-center gap-x-5 gap-y-2`}>
+          <div className={`${ns}-rise ${ns}-rise-3 mt-4 flex flex-wrap items-center gap-x-4 gap-y-2`}>
             <a
               href={href}
               target="_blank"
               rel="sponsored nofollow noopener"
               onClick={() => trackAffiliateClick(partner.slug, `laplandstore:${sid}`, href)}
-              className="group/cta inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-7 py-4 font-semibold text-white no-underline shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
+              className="group/cta inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full px-6 py-3 font-semibold text-white no-underline shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
               style={{ backgroundColor: brand.ink, boxShadow: `0 14px 30px -12px ${brand.ink}99` }}
             >
               {copy.cta[lang]}
@@ -262,13 +295,17 @@ export default function ProductBrandAd({
             <p className="text-[11px] uppercase tracking-[0.12em] text-stone-400">{copy.soldBy[lang]}</p>
           </div>
 
-          <AffiliateDisclosure lang={lang} variant="compact" className="mt-6 !justify-start !text-stone-500" />
+          <AffiliateDisclosure lang={lang} variant="compact" className="mt-4 !justify-start !text-stone-500" />
         </div>
 
-        {/* ── Brand stage (real wordmark + brand gradient, no fake product art) ── */}
+        {/* ── Stage: real product photography when the programme clears it,
+              otherwise the wordmark. Never invented product art. ────────── */}
         <div
-          aria-hidden="true"
-          className="relative min-h-[15rem] overflow-hidden lg:min-h-full"
+          /* Decorative only in the wordmark variant. With real products the
+             images carry alt text that names them, so hiding the subtree from
+             assistive tech would drop real information. */
+          aria-hidden={shots && shots.length >= 3 ? undefined : true}
+          className="relative min-h-[13rem] overflow-hidden lg:min-h-full"
           style={{ background: `linear-gradient(155deg, ${brand.stage[0]} 0%, ${brand.stage[1]} 100%)` }}
         >
           <div className="pointer-events-none absolute inset-0">
@@ -290,26 +327,81 @@ export default function ProductBrandAd({
             ))}
           </div>
 
-          <div className={`${ns}-stage relative flex h-full flex-col items-center justify-center gap-5 p-8 text-center`}>
-            <div className="relative overflow-hidden rounded-2xl bg-white px-8 py-6 shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-stone-900/5">
-              <img
-                src={partner.logo}
-                alt=""
-                width={300}
-                height={100}
-                loading="lazy"
-                decoding="async"
-                className="h-8 w-auto sm:h-10"
-              />
-              <div className={`${ns}-shimmer pointer-events-none absolute inset-0`} />
+          {shots && shots.length >= 3 ? (
+            /* Product stage — a hero shot with two overlapping tiles, the same
+               arrangement that works on the laplandkids Metsola and Moomin
+               cards. The wordmark shrinks to a corner chip: the advertiser is
+               still named, but what fills the space is what they actually sell. */
+            <div className={`${ns}-stage relative flex h-full items-center justify-center p-6`}>
+              <div className="relative w-full max-w-[13rem]">
+                <div className="relative overflow-hidden rounded-2xl bg-white shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-white/70">
+                  <img
+                    src={shots[0].img}
+                    alt={shots[0].alt[lang]}
+                    width={560}
+                    height={560}
+                    loading="lazy"
+                    decoding="async"
+                    className="aspect-square w-full object-contain"
+                  />
+                  <div className={`${ns}-shimmer pointer-events-none absolute inset-0`} />
+                </div>
+                <div className="absolute -bottom-5 -left-5 h-20 w-20 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-white/70 sm:h-24 sm:w-24">
+                  <img
+                    src={shots[1].img}
+                    alt={shots[1].alt[lang]}
+                    width={560}
+                    height={560}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <div className="absolute -right-4 -top-4 h-16 w-16 overflow-hidden rounded-xl bg-white shadow-lg ring-1 ring-white/70 sm:h-20 sm:w-20">
+                  <img
+                    src={shots[2].img}
+                    alt={shots[2].alt[lang]}
+                    width={560}
+                    height={560}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-contain"
+                  />
+                </div>
+                <div className="absolute -bottom-3 right-0 flex items-center gap-2">
+                  <span
+                    className="rounded-lg px-3 py-1 text-[10px] font-bold uppercase leading-snug tracking-[0.16em]"
+                    style={{ backgroundColor: brand.accent, color: brand.ink === '#0B0B0C' ? '#0B0B0C' : '#FFFFFF' }}
+                  >
+                    {copy.stageBadge[lang]}
+                  </span>
+                </div>
+              </div>
             </div>
-            <span
-              className="rounded-lg text-center leading-snug px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em]"
-              style={{ backgroundColor: brand.accent, color: brand.ink === '#0B0B0C' ? '#0B0B0C' : '#FFFFFF' }}
-            >
-              {copy.stageBadge[lang]}
-            </span>
-          </div>
+          ) : (
+            <div className={`${ns}-stage relative flex h-full flex-col items-center justify-center gap-5 p-8 text-center`}>
+              <div className="relative overflow-hidden rounded-2xl bg-white px-8 py-6 shadow-[0_18px_45px_-18px_rgba(0,0,0,0.45)] ring-1 ring-stone-900/5">
+                <img
+                  src={partner.logo}
+                  alt=""
+                  width={300}
+                  height={100}
+                  loading="lazy"
+                  decoding="async"
+                  className={`w-auto ${
+                    partner.logoShape === 'square' ? 'h-16 sm:h-20' : 'h-8 sm:h-10'
+                  }`}
+                />
+                <div className={`${ns}-shimmer pointer-events-none absolute inset-0`} />
+              </div>
+              <span
+                className="rounded-lg text-center leading-snug px-4 py-1.5 text-xs font-bold uppercase tracking-[0.16em]"
+                style={{ backgroundColor: brand.accent, color: brand.ink === '#0B0B0C' ? '#0B0B0C' : '#FFFFFF' }}
+              >
+                {copy.stageBadge[lang]}
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </section>

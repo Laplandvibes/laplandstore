@@ -25,6 +25,20 @@ export interface StorePartner {
   link: string
   /** Logo in /public/img/partners. */
   logo: string
+  /**
+   * Logon muoto. Oletus on `wordmark` eli leveä nimilogo.
+   *
+   * 🔴 Miksi tämä on olemassa (Vesa 12.8.: "katso tätä suomikaupan logoa, ei
+   * näy ollenkaan mainoksessa, desktop ainakaan"): kortti asetti logon
+   * korkeuden `h-6 w-auto`:lla, mikä on oikein leveälle wordmarkille — IVALO
+   * ja Halti saavat siitä noin sadan pikselin levyisen logon. Suomikaupan
+   * merkki on 400 × 400 eli neliö, joten samasta säännöstä tuli 24 × 24
+   * pikselin sininen piste, josta ei erota mitään.
+   *
+   * Korkeus ei siis ole logon koko vaan sen leveys on: neliömerkki tarvitsee
+   * enemmän korkeutta kantaakseen saman visuaalisen painon.
+   */
+  logoShape?: 'wordmark' | 'square'
 }
 
 export const KULTA_CENTER: StorePartner = {
@@ -50,6 +64,38 @@ export const SCANDINAVIAN_OUTDOOR: StorePartner = {
   // Ships worldwide (EU, Norway, Switzerland, UK, US, Canada, rest of world).
   link: 'https://go.laplandvibes.com/go/scandinavianoutdoor?sid=store_partner',
   logo: '/img/partners/scandinavian-outdoor.png',
+}
+
+/**
+ * Suomikauppa.fi — Daisycon campaign 17977, 7 % per sale, 30-day attribution.
+ *
+ * This is the first advertiser on this site that actually sells the thing the
+ * page is about: Finnish goods, delivered. The 2026-08-07 rebuild stripped the
+ * old product grid because it duplicated laplandgifts with ZERO commission
+ * (13 of 15 boutiques are in no affiliate network and never will be). This is
+ * the opposite case — a real programme with a real rate — so the products come
+ * back as ONE advertiser card rather than as a second catalogue.
+ *
+ * 🔴 `dest` points at the Marimekko collection, never the shop's front page: an
+ *    affiliate CTA must land on exactly what the card promised, and this card
+ *    leads with Unikko. `/collections/marimekko-1` verified 200 + title
+ *    "Marimekko – Suomikauppa.fi" 2026-08-10.
+ *
+ * Media laplandstore.fi (Daisycon media 424061) subscribed 2026-08-10, awaiting
+ * the advertiser's approval. Until it lands the Worker answers with an
+ * untracked UTM redirect instead of borrowing another site's media id.
+ */
+export const SUOMIKAUPPA: StorePartner = {
+  slug: 'suomikauppa',
+  name: 'Suomikauppa.fi',
+  link:
+    'https://go.laplandvibes.com/go/suomikauppa?sid=store_marimekko' +
+    '&dest=' + encodeURIComponent('https://suomikauppa.fi/collections/marimekko-1'),
+  // The shop's own brand mark (white Finland outline + wordmark on their blue),
+  // taken from their published og:image. 🔴 Their cookie-banner asset is a
+  // generic cookie icon, not a logo — do not "find" a logo without looking at it.
+  logo: '/img/partners/suomikauppa.png',
+  logoShape: 'square',
 }
 
 /** Build the advertiser link. Adtraction injects the SID server-side, so the SID
