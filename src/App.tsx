@@ -1,5 +1,5 @@
-import { useEffect, lazy, Suspense } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useEffect, lazy, Suspense, type ReactNode } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Footer from '../../shared/Footer';
 import CookieBanner from '../../shared/CookieBanner';
 import { initConsent } from './lib/consent';
@@ -150,6 +150,23 @@ const FOOTER_NOTE_NL =
 const FOOTER_NOTE_SV =
   'Oberoende drivet av Lapeso Oy · senast granskat i april 2026 · det är gratis att listas för företagare i finska Lappland.';
 
+/**
+ * 🔴 The app layout's landmark, EXCEPT on /terms.
+ *
+ * shared/Legal/TermsContent opens its own <main>; nesting it inside this one is
+ * invalid HTML and gives a screen reader two "main" regions. Its siblings
+ * PrivacyContent/CookieContent open a <div>, so only /terms is affected.
+ * Measured from the rendered DOM 2026-08-13 (12 network sites) -- the raw HTML
+ * has zero <main> elements, so this is invisible to grep.
+ *
+ * Do NOT "simplify" this back to a plain <main>.
+ */
+function MainOrDiv({ children }: { children?: ReactNode }) {
+  const { pathname } = useLocation();
+  const Tag = /(^|\/)terms\/?$/.test(pathname) ? 'div' : 'main';
+  return <Tag className="flex-1" id="main-content" tabIndex={-1}>{children}</Tag>;
+}
+
 function LocaleSync({ lang }: { lang: 'en' | 'fi' | 'de' | 'ja' | 'es' | 'pt-BR' | 'zh-CN' | 'ko' | 'fr' | 'it' | 'nl' | 'sv' }) {
   // 🔴 Kumppaniskriptit ladataan vasta suostumuksen jälkeen. Ks. lib/consent.ts:
   // GYG:n tagi oli aiemmin index.htmlissä ehdoitta ja seurasi myös hylkäyksen
@@ -203,7 +220,7 @@ export default function App() {
       <LocaleSync lang={lang} />
       <LocaleHead />
       <Nav />
-      <main className="flex-1" id="main-content" tabIndex={-1}>
+      <MainOrDiv>
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
           <Route path="/" element={<Home />} />
@@ -266,7 +283,7 @@ export default function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
         </Suspense>
-      </main>
+      </MainOrDiv>
       <Footer pillarLinks={pillars} editorialNote={noteWithAi} dict={footerDict(lang)} />
       <CookieBanner consentKey="laplandstore_cookie_consent" lang={lang} />
       <NewsletterPopup />
