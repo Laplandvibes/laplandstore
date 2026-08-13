@@ -1,5 +1,27 @@
 # LaplandStore.fi — Image Generation
 
+> ## 🔴 Päivitys 2026-08-13 — lue tämä ennen alla olevaa
+>
+> Alla oleva teksti kuvaa **28 kuvan** suunnitelmaa jota ei koskaan toteutettu.
+> Todellisuus nyt:
+>
+> - **Käytössä on 2 kuvaa** — `hero-market.jpg` (Hero.tsx) ja
+>   `artisan-hands.jpg` (ArtisanStory.tsx) — plus `og-image.jpg`. Molemmat
+>   renderöityvät `GradientPlaceholder`in kautta ja niissä on EU:n
+>   tekoälyasetuksen art. 50 mukainen merkintä (`AiDisclosure.tsx`).
+> - **25 muuta kuvaa on POISTETTU** (commit `efba68d`, deploy `9a892438`) ja
+>   niiden promptit poistettiin `scripts/generate-images.py`:stä. Ne maalasivat
+>   oikeiden yritysten tunnuksia (`shop-marttiini.jpg`: "Marttiini"
+>   näyteikkunassa) ja tekivät havainnollistavia versioita oikeista paikoista
+>   (Siida, Sajos). Perustelut skriptin IMAGES-listan kommentissa. **Älä palauta.**
+> - **`Categories.tsx` ja `FeaturedProducts.tsx` eivät ole olemassa.** Alla oleva
+>   "Code wiring" -taulukko viittaa niihin — se on suunnitelma, ei koodikartta.
+>   `LocalShops.tsx` on puhdas tekstilistaus ilman kuvia.
+> - Putiikkihakemisto siirtyi 7.8. laplandgiftsiin; store on ohut FI-portti.
+>   Uusia putiikkikuvia ei siis tarvita — ja jos joskus tarvitaan, ne otetaan
+>   kumppanilta, ei generoida.
+
+
 > **Pipeline:** OpenAI `gpt-image-1` via `scripts/generate-images.py`. Same pattern
 > as `laplandfood-new`, `stayinlapland-new`, blog heroes. **Do not** use HeyGen,
 > Make scenarios, Canva, fal.ai, Imagen, or Drive search-and-reuse on first

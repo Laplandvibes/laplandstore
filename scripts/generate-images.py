@@ -1,5 +1,11 @@
 """
-Batch-generate the 28 LaplandStore brand images via OpenAI gpt-image-1.
+Batch-generate the LaplandStore brand images via OpenAI gpt-image-1.
+
+Kuvia on 2 + OG (oli 27 + OG): 25 keksittyä liike-, kategoria- ja tuotekuvaa
+poistettiin 2026-08-13, koska ne maalasivat oikeiden yritysten tunnuksia ja
+tekivät havainnollistavia versioita oikeista paikoista. Perustelut ja säännöt
+ovat IMAGES-listan sisällä olevassa kommentissa — lue se ennen kuin lisäät
+uusia promptteja.
 
 Saves PNG → JPG (Pillow recompress, q=85, progressive) into public/img/.
 OG image is also generated landscape and cropped to 1200×630 social spec.
@@ -24,10 +30,21 @@ except ImportError:
     print("ERROR: Pillow not installed. pip install Pillow", file=sys.stderr)
     sys.exit(2)
 
+# Windowsin konsoli on cp1252: ilman tätä --dry-run kaatuu UnicodeEncodeErroriin
+# OG-rivin nuoleen (→). Vanha vika, ei liity prompteihin.
+try:
+    sys.stdout.reconfigure(encoding="utf-8")
+except Exception:
+    pass
+
 API_URL = "https://api.openai.com/v1/images/generations"
 MODEL = "gpt-image-1"
 
 # Brand-correct visual rule for every image (matches LV image_generation_rule.md):
+# 🔴 HUOM: "no text, no logos" EI ESTÄ TEKSTIÄ. Mitattu 13.8.2026: tämä sama
+# NEGATIVES oli voimassa kun malli maalasi "Marttiini"-valokirjaimet liikkeen
+# näyteikkunaan. Vain sommittelu estää — älä pyydä kylttiä, näyteikkunaa,
+# julkisivua tai pakkausta jos et halua kuvaan tekstiä.
 NEGATIVES = (
     "no text, no logos, no watermarks, no UI elements, no overlay graphics, "
     "no people, no human faces, no obvious AI artefacts, no oversaturation, "
@@ -64,151 +81,32 @@ IMAGES: list[tuple[str, str, str]] = [
      "no face visible. " + STYLE,
      "1536x1024"),
 
-    # === CATEGORY CARDS (6) ===
-    ("cat-knives.jpg",
-     "Hero shot of a hand-forged Finnish puukko knife on raw curly-birch wood. "
-     "Reindeer-antler handle catching low golden light, Finnish steel blade "
-     "with subtle hammered texture, dark slate background. Studio editorial. "
-     + STYLE,
-     "1024x1024"),
-
-    ("cat-silver.jpg",
-     "Sámi-style sterling silver brooch (rissu) on weathered indigo wool. "
-     "Flash of polished silver, hand-stamped solar pattern, soft north-facing "
-     "daylight. Editorial product photography, top-down. " + STYLE,
-     "1024x1024"),
-
-    ("cat-berries.jpg",
-     "Glass jar of cloudberry preserve next to fresh cloudberries and a wooden "
-     "spoon on a linen cloth. Warm amber light, deep crimson and gold tones. "
-     "Food editorial. " + STYLE,
-     "1024x1024"),
-
-    ("cat-wool.jpg",
-     "Stack of folded Lapland wool mittens and a chunky knit scarf in undyed "
-     "cream and charcoal. Wooden bench, soft window light, hint of birch "
-     "branches in the background. Editorial product photography. " + STYLE,
-     "1024x1024"),
-
-    ("cat-design.jpg",
-     "Pentik-style ceramic candle holder and a small carved wooden bird on a "
-     "pale linen surface. Warm flame, deep forest-green wall behind, minimalist "
-     "Nordic styling. " + STYLE,
-     "1024x1024"),
-
-    ("cat-souvenirs.jpg",
-     "Small reindeer-antler keychain and a hand-painted wooden Joulupukki "
-     "figurine on a snowy ledge at dusk. Whimsical but tasteful. Faint birch "
-     "trunks behind in deep blue twilight. " + STYLE,
-     "1024x1024"),
-
-    # === FEATURED PRODUCTS (4) ===
-    ("prod-marttiini.jpg",
-     "Marttiini-style red-handled puukko knife in a leather sheath, lying on "
-     "weathered pine boards. Close, square crop, soft directional light. " + STYLE,
-     "1024x1024"),
-
-    ("prod-samekki.jpg",
-     "Single Sámi-style silver ring with a hand-stamped solar pattern, on a "
-     "dark charcoal velvet pad. Studio macro, warm key light. " + STYLE,
-     "1024x1024"),
-
-    ("prod-pentik.jpg",
-     "Pentik-style cream and burgundy ceramic mug on a smooth oak table, single "
-     "sprig of rosemary beside it. Soft north window light. " + STYLE,
-     "1024x1024"),
-
-    ("prod-berries.jpg",
-     "Three small jars of cloudberry, blueberry and lingonberry preserve on a "
-     "snowy ledge with a sprig of pine. Vibrant fruit colours, cold daylight, "
-     "linen backdrop. " + STYLE,
-     "1024x1024"),
-
-    # === SHOP CARDS (16) ===
-    ("shop-lauri.jpg",
-     "Wooden workshop interior with rows of hand-carved puukko knives on a "
-     "pegboard wall, hand tools hung in order, warm tungsten light. Documentary. "
-     + STYLE,
-     "1024x1024"),
-
-    ("shop-marttiini.jpg",
-     "Red-painted Marttiini-style factory shop facade in Rovaniemi at golden "
-     "hour, snow on the rooftop edge, illuminated brand window display from "
-     "outside. " + STYLE,
-     "1024x1024"),
-
-    ("shop-pentik.jpg",
-     "Pentik-style ceramic shop window display: cream and burgundy mugs and "
-     "candles arranged on tiered wooden shelves, warm interior glow. " + STYLE,
-     "1024x1024"),
-
-    ("shop-duodji.jpg",
-     "Modern Sajos-style cultural-centre interior with a backlit display case "
-     "of Sámi duodji crafts: silver jewellery, antler carvings, woven wool. "
-     "Warm wood and slate. Architectural editorial. " + STYLE,
-     "1024x1024"),
-
-    ("shop-samekki.jpg",
-     "Hand-stamped silver brooches arranged on weathered indigo wool, an Inari "
-     "workshop bench in soft daylight, half-finished pieces and a small hammer. "
-     + STYLE,
-     "1024x1024"),
-
-    ("shop-piece.jpg",
-     "Souvenir shop interior with shelves of small wood carvings and prints of "
-     "the Northern Lights as design motifs, warm pine walls, soft tungsten "
-     "light. " + STYLE,
-     "1024x1024"),
-
-    ("shop-rov-souvenirs.jpg",
-     "Reindeer-antler workshop bench under warm light: half-finished antler "
-     "keychains, a small engraving tool, fine bone dust on the surface. " + STYLE,
-     "1024x1024"),
-
-    ("shop-taiga.jpg",
-     "Northern-lights-themed silver pendants displayed against deep blue "
-     "velvet, single key spotlight. " + STYLE,
-     "1024x1024"),
-
-    ("shop-kelloseppa.jpg",
-     "Jeweller's loupe and tweezers next to a small silver pendant on a marble "
-     "bench, sharp daylight, single diamond catching light. " + STYLE,
-     "1024x1024"),
-
-    ("shop-arctic-design.jpg",
-     "Historic Kauppayhtiö-style building interior turned design boutique: "
-     "white walls, contemporary art prints, polished oak floor, single ceramic "
-     "vase. " + STYLE,
-     "1024x1024"),
-
-    ("shop-christmas.jpg",
-     "Cosy Christmas-souvenir interior in a Lapland village: handcrafted "
-     "ornaments and Lapland treats on rustic shelves, warm fairy-light glow. "
-     + STYLE,
-     "1024x1024"),
-
-    ("shop-korundi.jpg",
-     "Minimalist arctic-art gallery shop: neutral concrete walls, framed "
-     "graphic prints, single ceramic bowl on a plinth. Editorial architecture. "
-     + STYLE,
-     "1024x1024"),
-
-    ("shop-shoppi.jpg",
-     "Boutique near a Lapland ski slope: knitwear and silver jewellery on "
-     "wooden hangers, large window onto snowy fells in soft afternoon light. "
-     + STYLE,
-     "1024x1024"),
-
-    ("shop-siida.jpg",
-     "Sámi Museum gift shop interior: warm wood, glass display cabinet of "
-     "duodji crafts, soft museum lighting, single silver brooch in focus. "
-     + STYLE,
-     "1024x1024"),
-
-    ("shop-tankavaara.jpg",
-     "Gold-panning village interior: rough-cut timber walls, glass case of "
-     "small gold nuggets and gold-themed jewellery, lantern light. " + STYLE,
-     "1024x1024"),
+    # === POISTETTU 2026-08-13: 25 keksittyä liike-/kategoria-/tuotekuvaa ===
+    # Nämä 25 promptia (6 × cat-, 4 × prod-, 15 × shop-) on POISTETTU, ja niiden
+    # tuottamat tiedostot poistettiin public/img/:stä (commit efba68d). Älä palauta.
+    #
+    # Syy: ne rikkoivat lv_permanent_rules §6.5:tä kahdella tavalla.
+    #   1) OIKEAN BRÄNDIN TUNNUSTA EI MAALATA. "Marttiini-style factory shop
+    #      facade ... illuminated brand window display" tuotti kuvan jossa
+    #      näyteikkunassa luki valokirjaimin Marttiini — oikean yrityksen tunnus
+    #      liikkeessä jota ei ole olemassa. Sama vika kuin laplandworkin
+    #      tekaistussa R-Kioski-logossa. Huomaa: NEGATIVES sisälsi jo "no text,
+    #      no logos" eikä se estänyt mitään — negatiiviprompti ei estä tekstiä,
+    #      vain sommittelu estää. Älä jätä kuvaan painettavaa pintaa (kylttiä,
+    #      näyteikkunaa, pakkausta) jos et halua siihen tekstiä.
+    #   2) OIKEASTA PAIKASTA EI TEHDÄ HAVAINNOLLISTAVAA VERSIOTA. "Sámi Museum
+    #      gift shop" (Siida, oikea museo Inarissa), "Sajos-style", "Historic
+    #      Kauppayhtiö-style", "Pentik-style shop window" — tunnistettava oikea
+    #      paikka tai liike joko kuvataan oikeasti tai jätetään tunnistamattomaksi.
+    #
+    # Kuvat eivät myöskään olleet käytössä: niille tarkoitettuja komponentteja
+    # (Categories.tsx, FeaturedProducts.tsx) ei koskaan rakennettu, ja
+    # LocalShops.tsx on puhdas tekstilistaus. Ne olivat silti julkisesti
+    # haettavissa osoitteesta laplandstore.fi/img/*.jpg.
+    #
+    # Jos putiikeille joskus halutaan kuvat: kumppanin oma kuva (ks.
+    # affiliate_tuotekuvat_kumppanilta) tai geneerinen, tunnistamaton
+    # tunnelmakuva ilman kylttejä ja ilman nimettyä liikettä.
 ]
 
 # OG image is generated landscape then cropped to the social-spec 1200×630.
