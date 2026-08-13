@@ -15,6 +15,7 @@ import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import LocaleHead from './components/LocaleHead';
 import { AppPromoNudge } from './components/AppPromo';
 import { AI_NOTE } from './components/AiDisclosure';
+import SkipLink from './components/SkipLink';
 
 const FOOTER_PILLARS_FI = [
   { name: 'Kategoriat', href: '/fi#herkut' },
@@ -196,11 +197,13 @@ export default function App() {
   const noteWithAi = `${note} · ${AI_NOTE[lang]}`;
   return (
     <div className="min-h-screen flex flex-col bg-cream">
+      {/* Ensimmäisenä tab-järjestyksessä, muuten se ei ohita mitään. */}
+      <SkipLink />
       <LocaleAutoRedirect />
       <LocaleSync lang={lang} />
       <LocaleHead />
       <Nav />
-      <main className="flex-1">
+      <main className="flex-1" id="main-content" tabIndex={-1}>
         <Suspense fallback={<div className="min-h-screen" />}>
           <Routes>
           <Route path="/" element={<Home />} />

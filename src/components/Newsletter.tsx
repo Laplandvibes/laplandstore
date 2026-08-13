@@ -1,6 +1,23 @@
 import { useState, type FormEvent } from 'react';
 import { Mail, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
-import { useLang } from '../lang';
+import { Link } from 'react-router-dom';
+import { useLang, LANG_PREFIX, type Lang } from '../lang';
+
+/** Tietosuoja-asetuksen 13 art. -teksti uutiskirjelomakkeen alle. */
+const NEWSLETTER_PRIVACY: Record<Lang, { lead: string; link: string }> = {
+  en: { lead: 'How we handle your data:', link: 'Privacy Policy' },
+  fi: { lead: 'Näin käsittelemme tietojasi:', link: 'Tietosuojaseloste' },
+  de: { lead: 'So gehen wir mit Ihren Daten um:', link: 'Datenschutzerklärung' },
+  ja: { lead: '個人情報の取り扱いについて:', link: 'プライバシーポリシー' },
+  es: { lead: 'Cómo tratamos tus datos:', link: 'Política de Privacidad' },
+  'pt-BR': { lead: 'Como tratamos seus dados:', link: 'Política de Privacidade' },
+  'zh-CN': { lead: '我们如何处理您的数据：', link: '隐私政策' },
+  ko: { lead: '개인정보 처리 방법:', link: '개인정보 처리방침' },
+  fr: { lead: 'Comment nous traitons vos données :', link: 'Politique de confidentialité' },
+  it: { lead: 'Come trattiamo i tuoi dati:', link: 'Informativa sulla privacy' },
+  nl: { lead: 'Hoe wij met je gegevens omgaan:', link: 'Privacybeleid' },
+  sv: { lead: 'Så hanterar vi dina uppgifter:', link: 'Integritetspolicy' },
+};
 
 import enCopy, { type CopyShape } from './Newsletter.copy.en';
 import { useCopy } from '../i18n/useCopy';
@@ -143,7 +160,20 @@ export default function Newsletter() {
           </p>
         )}
 
-        <p className="text-xs text-warm-gray mt-4">{t.fineprint}</p>
+        {/* Tietosuoja-asetuksen 13 art.: käsittelystä on kerrottava
+            keruuhetkellä, ei vasta alatunnisteen linkin takana.
+            Auditti 13.8.2026: lomake keräsi sähköpostit linkittämättä
+            selosteeseen lainkaan. */}
+        <p className="text-xs text-warm-gray mt-4">
+          {t.fineprint}{' '}
+          {NEWSLETTER_PRIVACY[lang].lead}{' '}
+          <Link
+            to={`${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/privacy`}
+            className="underline hover:text-amber"
+          >
+            {NEWSLETTER_PRIVACY[lang].link}
+          </Link>
+        </p>
       </div>
     </section>
   );
