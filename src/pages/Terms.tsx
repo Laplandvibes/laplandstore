@@ -68,5 +68,8 @@ export default function Terms() {
     desc.setAttribute('content', m.description);
   }, [m.title, m.description]);
 
-  return <TermsContent siteName="LaplandStore" lang={lang} />;
+  // variant="shop": this site sells nothing and books nothing, so the
+  // network's travel wording (hotel/flight search, Sembo, Trip.com, travel
+  // insurance) was factually wrong here. Audit 13.8.2026.
+  return <TermsContent siteName="LaplandStore" siteUrl="laplandstore.fi" lang={lang} variant="shop" />;
 }

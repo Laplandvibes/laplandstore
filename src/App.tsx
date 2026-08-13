@@ -14,6 +14,7 @@ import { useLang, footerDict } from './lang';
 import LocaleAutoRedirect from './i18n/LocaleAutoRedirect';
 import LocaleHead from './components/LocaleHead';
 import { AppPromoNudge } from './components/AppPromo';
+import { AI_NOTE } from './components/AiDisclosure';
 
 const FOOTER_PILLARS_FI = [
   { name: 'Kategoriat', href: '/fi#herkut' },
@@ -189,6 +190,10 @@ export default function App() {
     : lang === 'nl' ? FOOTER_NOTE_NL
     : lang === 'sv' ? FOOTER_NOTE_SV
     : FOOTER_NOTE_EN;
+  // EU AI Act art. 50: the site-wide half of the AI transparency marking.
+  // It rides on `editorialNote` so it reaches every page without editing the
+  // shared ecosystem Footer, which has to stay identical across the network.
+  const noteWithAi = `${note} · ${AI_NOTE[lang]}`;
   return (
     <div className="min-h-screen flex flex-col bg-cream">
       <LocaleAutoRedirect />
@@ -259,7 +264,7 @@ export default function App() {
         </Routes>
         </Suspense>
       </main>
-      <Footer pillarLinks={pillars} editorialNote={note} dict={footerDict(lang)} />
+      <Footer pillarLinks={pillars} editorialNote={noteWithAi} dict={footerDict(lang)} />
       <CookieBanner consentKey="laplandstore_cookie_consent" lang={lang} />
       <NewsletterPopup />
       <AppPromoNudge />

@@ -139,6 +139,7 @@ export default function ArtisanStory() {
         theme="wood"
         showIcon={false}
         imgSrc="/img/artisan-hands.jpg"
+        aiGenerated
         ariaLabel={
           lang === 'fi'
             ? 'Lappilainen käsityöläinen työssään'

@@ -12,6 +12,8 @@ import {
   Trees,
   type LucideIcon,
 } from 'lucide-react';
+import { useState } from 'react';
+import AiDisclosure from './AiDisclosure';
 
 export type PlaceholderTheme =
   | 'knives'
@@ -153,6 +155,13 @@ interface Props {
   imgSrc?: string;
   /** Loading hint for the overlaid image. Use 'eager' for above-the-fold heroes. */
   imgLoading?: 'lazy' | 'eager';
+  /**
+   * Mark `imgSrc` as AI-generated (EU AI Act art. 50). Set it only for
+   * photorealistic images that a reader could take for a real place, person
+   * or event — that is the deep-fake test in art. 3(60). A gradient or a
+   * genuine partner photo must NOT be marked.
+   */
+  aiGenerated?: boolean;
 }
 
 export default function GradientPlaceholder({
@@ -163,9 +172,13 @@ export default function GradientPlaceholder({
   ariaLabel,
   imgSrc,
   imgLoading = 'lazy',
+  aiGenerated = false,
 }: Props) {
   const t = THEMES[theme];
   const positionClasses = fill ? 'absolute inset-0 w-full h-full' : 'w-full h-full';
+  // If the image 404s we fall back to the bare gradient — and a gradient is
+  // not AI-generated content, so the badge has to disappear with it.
+  const [imgFailed, setImgFailed] = useState(false);
 
   return (
     <div
@@ -192,9 +205,11 @@ export default function GradientPlaceholder({
           onError={(e) => {
             // 404 → hide and let the gradient remain as a graceful fallback.
             (e.currentTarget as HTMLImageElement).style.display = 'none';
+            setImgFailed(true);
           }}
         />
       )}
+      {imgSrc && aiGenerated && !imgFailed && <AiDisclosure />}
     </div>
   );
 }

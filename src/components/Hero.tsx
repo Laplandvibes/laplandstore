@@ -35,6 +35,7 @@ export default function Hero() {
         showIcon={false}
         imgSrc="/img/hero-market.jpg"
         imgLoading="eager"
+        aiGenerated
         ariaLabel={
           lang === 'fi'
             ? 'Lappilainen käsityömarkkina'
