@@ -45,7 +45,16 @@ export const KULTA_CENTER: StorePartner = {
   slug: 'kulta-center',
   name: 'Kulta-Center',
   // Ships free across the EEA (Europe); est. 1933; Kalevala Finnish jewellery.
-  link: 'https://go.laplandvibes.com/go/kultacenter?sid=store_partner',
+  // 🔴 dest=korut-kategoria: ilman destiä Adtraction-wrap pudottaa
+  //    kulta-center.comin ETUSIVULLE (sama vika jonka SUOMIKAUPPA-kommentti alla
+  //    kirjaa). Kauppa on suomenkielinen → yksi fi-dest kaikille kielille.
+  //    Polku verifioitu 2026-08-14: HTTP 200, <title>Korut netistä 1-2
+  //    arkipäivässä | Ilmainen toimitus | Kulta-Center.com</title>, body listaa
+  //    kaula-/hopea-/kultakorut. Oma sid per kumppani, jotta klikit erottuvat
+  //    raportissa (kaikilla kolmella oli sama store_partner).
+  link:
+    'https://go.laplandvibes.com/go/kultacenter?sid=store_partner_kulta' +
+    '&dest=' + encodeURIComponent('https://www.kulta-center.com/fi/korut'),
   logo: '/img/partners/kulta-center.png',
 }
 
@@ -54,7 +63,13 @@ export const IVALO: StorePartner = {
   name: 'IVALO.COM',
   // Marketplace of 100+ Finnish/Nordic sustainable brands; ships EU-wide (named
   // list) + calculates worldwide at checkout. Free shipping over 200 €.
-  link: 'https://go.laplandvibes.com/go/ivalo?sid=store_partner',
+  // 🔴 dest=Finnish Fashion -kokoelma: ilman destiä klikki putosi ivalo.comin
+  //    etusivulle. Kauppa on englanninkielinen (yksi kieliversio) → yksi dest.
+  //    Polku verifioitu 2026-08-14: HTTP 200, <title>Finnish Fashion |
+  //    IVALO.COM</title>, body täynnä suomalaisia merkkejä.
+  link:
+    'https://go.laplandvibes.com/go/ivalo?sid=store_partner_ivalo' +
+    '&dest=' + encodeURIComponent('https://ivalo.com/collections/finnish-fashion'),
   logo: '/img/partners/ivalo.png',
 }
 
@@ -62,7 +77,15 @@ export const SCANDINAVIAN_OUTDOOR: StorePartner = {
   slug: 'scandinavian-outdoor',
   name: 'Scandinavian Outdoor',
   // Ships worldwide (EU, Norway, Switzerland, UK, US, Canada, rest of world).
-  link: 'https://go.laplandvibes.com/go/scandinavianoutdoor?sid=store_partner',
+  // 🔴 dest=vaatteet-kategoria: ilman destiä klikki putosi etusivulle.
+  //    Adtraction-ohjelman tracking on to.scandinavianoutdoor.fi eli FI-kauppa —
+  //    dest pysyy .fi-domainilla (nordicnest/halti-oppi: ohjelman markkina
+  //    määrää kaupan, .com-syvälinkki hylättäisiin). Polku verifioitu
+  //    2026-08-14: HTTP 200, <title>Vaatteet - Scandinavian Outdoor</title>,
+  //    body listaa takit/ulkoiluvaatteet.
+  link:
+    'https://go.laplandvibes.com/go/scandinavianoutdoor?sid=store_partner_scanout' +
+    '&dest=' + encodeURIComponent('https://scandinavianoutdoor.fi/vaatteet/'),
   logo: '/img/partners/scandinavian-outdoor.png',
 }
 
