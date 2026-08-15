@@ -1,0 +1,21 @@
+# LaplandStore
+
+> A curated directory of Lapland boutiques from Rovaniemi to Utsjoki: crafts, jewellery, reindeer antler, ceramics and Lapland delicacies. Some ship to you.
+
+## Main pages
+
+- [Home](https://laplandstore.fi/): the boutique directory itself: verified Lapland makers and shops with what they sell and where to find them.
+- [Etusivu suomeksi](https://laplandstore.fi/fi/): sama kuratoitu putiikkihakemisto suomeksi.
+- [Privacy Policy](https://laplandstore.fi/privacy/): how the site handles personal data.
+- [Terms of Use](https://laplandstore.fi/terms/): terms for using the directory.
+- [Cookie Policy](https://laplandstore.fi/cookie-policy/): what cookies the site uses.
+
+## Languages
+
+English (default, no prefix), Finnish (/fi/), Swedish (/sv/), German (/de/), Spanish (/es/), French (/fr/), Italian (/it/), Dutch (/nl/), Japanese (/ja/), Korean (/kr/), Brazilian Portuguese (/br/), Chinese (/cn/).
+
+## Network
+
+- Hub: https://laplandvibes.com/
+- Sitemap: https://laplandstore.fi/sitemap.xml
+- Contact: info@laplandstore.fi
