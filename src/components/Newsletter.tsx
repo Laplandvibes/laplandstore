@@ -3,20 +3,96 @@ import { Mail, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useLang, LANG_PREFIX, type Lang } from '../lang';
 
-/** Tietosuoja-asetuksen 13 art. -teksti uutiskirjelomakkeen alle. */
-const NEWSLETTER_PRIVACY: Record<Lang, { lead: string; link: string }> = {
-  en: { lead: 'How we handle your data:', link: 'Privacy Policy' },
-  fi: { lead: 'Näin käsittelemme tietojasi:', link: 'Tietosuojaseloste' },
-  de: { lead: 'So gehen wir mit Ihren Daten um:', link: 'Datenschutzerklärung' },
-  ja: { lead: '個人情報の取り扱いについて:', link: 'プライバシーポリシー' },
-  es: { lead: 'Cómo tratamos tus datos:', link: 'Política de Privacidad' },
-  'pt-BR': { lead: 'Como tratamos seus dados:', link: 'Política de Privacidade' },
-  'zh-CN': { lead: '我们如何处理您的数据：', link: '隐私政策' },
-  ko: { lead: '개인정보 처리 방법:', link: '개인정보 처리방침' },
-  fr: { lead: 'Comment nous traitons vos données :', link: 'Politique de confidentialité' },
-  it: { lead: 'Come trattiamo i tuoi dati:', link: 'Informativa sulla privacy' },
-  nl: { lead: 'Hoe wij met je gegevens omgaan:', link: 'Privacybeleid' },
-  sv: { lead: 'Så hanterar vi dina uppgifter:', link: 'Integritetspolicy' },
+/** Tietosuoja-asetuksen 13 art. -teksti uutiskirjelomakkeen alle.
+ *  `consent` + `privacy` = suostumusvalintaruudun teksti ja sen tietosuojalinkki. */
+const NEWSLETTER_PRIVACY: Record<
+  Lang,
+  { lead: string; link: string; consent: string; privacy: string }
+> = {
+  en: {
+    lead: 'How we handle your data:',
+    link: 'Privacy Policy',
+    consent:
+      'Yes, send the LaplandVibes newsletter (travel tips, seasonal updates and offers) to this email address. I confirm I am 18 or over.',
+    privacy: 'Privacy Policy',
+  },
+  fi: {
+    lead: 'Näin käsittelemme tietojasi:',
+    link: 'Tietosuojaseloste',
+    consent:
+      'LaplandVibes saa lähettää minulle uutiskirjettä (matkailuvinkkejä, sesonkitietoa ja tarjouksia) antamaani sähköpostiosoitteeseen. Olen täyttänyt 18 vuotta.',
+    privacy: 'Tietosuojaseloste',
+  },
+  de: {
+    lead: 'So gehen wir mit Ihren Daten um:',
+    link: 'Datenschutzerklärung',
+    consent:
+      'Ja, LaplandVibes darf mir den Newsletter mit Reisetipps, Saisoninfos und Angeboten an diese E-Mail-Adresse senden. Ich bin mindestens 18 Jahre alt.',
+    privacy: 'Datenschutzerklärung',
+  },
+  ja: {
+    lead: '個人情報の取り扱いについて:',
+    link: 'プライバシーポリシー',
+    consent:
+      '入力したメールアドレス宛に、LaplandVibesがニュースレター（旅のヒント、シーズン情報、キャンペーン情報）を送ることに同意します。私は18歳以上です。',
+    privacy: 'プライバシーポリシー',
+  },
+  es: {
+    lead: 'Cómo tratamos tus datos:',
+    link: 'Política de Privacidad',
+    consent:
+      'Acepto recibir en mi correo el boletín de LaplandVibes (consejos de viaje, información de temporada y ofertas) y confirmo que tengo al menos 18 años.',
+    privacy: 'Política de privacidad',
+  },
+  'pt-BR': {
+    lead: 'Como tratamos seus dados:',
+    link: 'Política de Privacidade',
+    consent:
+      'Aceito receber a newsletter da LaplandVibes no e-mail informado, com dicas de viagem, informações de temporada e ofertas. Tenho 18 anos ou mais.',
+    privacy: 'Política de Privacidade',
+  },
+  'zh-CN': {
+    lead: '我们如何处理您的数据：',
+    link: '隐私政策',
+    consent:
+      '我同意 LaplandVibes 向我填写的邮箱发送订阅邮件，内容包括拉普兰旅行建议、季节资讯和优惠信息，并确认本人已年满18周岁。',
+    privacy: '隐私政策',
+  },
+  ko: {
+    lead: '개인정보 처리 방법:',
+    link: '개인정보 처리방침',
+    consent:
+      '입력한 이메일 주소로 LaplandVibes가 보내는 여행 팁·시즌 정보·프로모션 소식 뉴스레터 수신에 동의하며, 만 18세 이상임을 확인합니다.',
+    privacy: '개인정보처리방침',
+  },
+  fr: {
+    lead: 'Comment nous traitons vos données :',
+    link: 'Politique de confidentialité',
+    consent:
+      "J'accepte de recevoir la newsletter LaplandVibes (conseils voyage, infos saisonnières, offres) à cette adresse e-mail et je confirme avoir 18 ans ou plus.",
+    privacy: 'Politique de confidentialité',
+  },
+  it: {
+    lead: 'Come trattiamo i tuoi dati:',
+    link: 'Informativa sulla privacy',
+    consent:
+      "Sì, desidero ricevere la newsletter di LaplandVibes (consigli di viaggio, novità stagionali e offerte) all'indirizzo indicato. Ho almeno 18 anni.",
+    privacy: 'Informativa sulla privacy',
+  },
+  nl: {
+    lead: 'Hoe wij met je gegevens omgaan:',
+    link: 'Privacybeleid',
+    consent:
+      'Ja, LaplandVibes mag de nieuwsbrief met reistips, seizoensinfo en aanbiedingen naar dit e-mailadres sturen. Ik ben 18 jaar of ouder.',
+    privacy: 'Privacyverklaring',
+  },
+  sv: {
+    lead: 'Så hanterar vi dina uppgifter:',
+    link: 'Integritetspolicy',
+    consent:
+      'Ja, jag vill ha nyhetsbrevet från LaplandVibes med restips, säsongsinfo och erbjudanden till min e-postadress. Jag är minst 18 år.',
+    privacy: 'Integritetspolicy',
+  },
 };
 
 import enCopy, { type CopyShape } from './Newsletter.copy.en';
@@ -53,10 +129,11 @@ export default function Newsletter() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<Status>('idle');
   const [errorMsg, setErrorMsg] = useState('');
+  const [consented, setConsented] = useState(false);
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    if (!email || !SUPABASE_URL || !SUPABASE_KEY) {
+    if (!email || !consented || !SUPABASE_URL || !SUPABASE_KEY) {
       setErrorMsg(t.errorGeneric);
       setStatus('error');
       return;
@@ -72,7 +149,13 @@ export default function Newsletter() {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${SUPABASE_KEY}`,
           },
-          body: JSON.stringify({ email, source: SOURCE }),
+          body: JSON.stringify({
+            email,
+            source: SOURCE,
+            consent: true,
+            ageConfirmed: true,
+            consentText: NEWSLETTER_PRIVACY[lang].consent,
+          }),
         }
       );
       const data = await res.json();
@@ -124,7 +207,7 @@ export default function Newsletter() {
         <><FounderByline tone="light" />
         <form
           onSubmit={handleSubmit}
-          className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto"
+          className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3 max-w-md mx-auto"
         >
           <input
             type="email"
@@ -151,6 +234,28 @@ export default function Newsletter() {
               t.cta
             )}
           </button>
+          {/* GDPR: suostumus on annettava aktiivisesti — ruutu ei ole esivalittu. */}
+          <label className="w-full flex items-start gap-2.5 text-left text-xs text-warm-gray leading-relaxed">
+            <input
+              type="checkbox"
+              checked={consented}
+              onChange={(e) => setConsented(e.target.checked)}
+              required
+              disabled={status === 'loading'}
+              className="mt-0.5 w-4 h-4 shrink-0 rounded border-gray-300 accent-amber focus:outline-none focus:ring-2 focus:ring-amber/50 disabled:opacity-50"
+            />
+            <span>
+              {NEWSLETTER_PRIVACY[lang].consent}{' '}
+              <a
+                href={`${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/privacy`}
+                target="_blank"
+                rel="noopener"
+                className="underline hover:text-amber"
+              >
+                {NEWSLETTER_PRIVACY[lang].privacy}
+              </a>
+            </span>
+          </label>
         </form></>
 
         {status === 'error' && (
