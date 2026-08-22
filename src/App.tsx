@@ -1,7 +1,7 @@
 import { useEffect, lazy, Suspense, type ReactNode } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import Footer from '../../shared/Footer';
-import CookieBanner from '../../shared/CookieBanner';
+import Footer from './shared/Footer';
+import CookieBanner from './shared/CookieBanner';
 import { initConsent } from './lib/consent';
 import Nav from './components/Nav';
 import NewsletterPopup from './components/NewsletterPopup';

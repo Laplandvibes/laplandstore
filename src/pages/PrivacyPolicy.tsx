@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import PrivacyContent from '../../../shared/Legal/PrivacyContent';
+import PrivacyContent from '../shared/Legal/PrivacyContent';
 import { useLang, type Lang } from '../lang';
 
 const META: Record<Lang, { title: string; description: string }> = {

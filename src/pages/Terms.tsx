@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import TermsContent from '../../../shared/Legal/TermsContent';
+import TermsContent from '../shared/Legal/TermsContent';
 import { useLang, type Lang } from '../lang';
 
 const META: Record<Lang, { title: string; description: string }> = {

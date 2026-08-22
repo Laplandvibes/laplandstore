@@ -1,4 +1,4 @@
-import SharedNotFound from '../../../shared/NotFound';
+import SharedNotFound from '../shared/NotFound';
 import { useLang, LANG_PREFIX, type Lang } from '../lang';
 import { useCopy } from '../i18n/useCopy';
 import enCopy, { type CopyShape } from '../components/Nav.copy.en';

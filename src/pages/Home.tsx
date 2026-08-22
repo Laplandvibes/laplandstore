@@ -9,7 +9,7 @@ import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
 import { KultaCenterAd, IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
 import SuomikauppaAd from '../components/SuomikauppaAd';
-import HomeAdSlots, { MainPartnerBanner } from '../../../shared/HomeAdSlots';
+import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { useLang, type Lang } from '../lang';
 import { AppPromoHero } from '../components/AppPromo';

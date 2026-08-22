@@ -5,7 +5,7 @@ import { useLang, type Lang } from '../lang';
 
 import enCopy, { type CopyShape } from './Nav.copy.en';
 import { useCopy } from '../i18n/useCopy';
-import EcosystemMenu from '../../../shared/EcosystemMenu';
+import EcosystemMenu from '../shared/EcosystemMenu';
 
 
 const loaders = {

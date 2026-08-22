@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import CookieContent from '../../../shared/Legal/CookieContent';
+import CookieContent from '../shared/Legal/CookieContent';
 import { useLang, type Lang } from '../lang';
 import ConsentControls from '../components/ConsentControls';
 

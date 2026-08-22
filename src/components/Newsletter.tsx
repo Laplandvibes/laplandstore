@@ -97,7 +97,7 @@ const NEWSLETTER_PRIVACY: Record<
 
 import enCopy, { type CopyShape } from './Newsletter.copy.en';
 import { useCopy } from '../i18n/useCopy';
-import FounderByline from '../../../shared/FounderByline';
+import FounderByline from '../shared/FounderByline';
 
 /**
  * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,

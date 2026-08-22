@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node scripts/generate-boutiques.mjs && vite",
     "build:nossg": "node scripts/generate-boutiques.mjs && tsc -b && vite build",
-    "build": "node scripts/generate-boutiques.mjs && tsc -b && vite build && node scripts/assert-css-budget.mjs && node scripts/generate-prerender-meta.mjs && node ../_prerender_routes.mjs --site=https://laplandstore.fi --siteName=LaplandStore --twitter=@laplandvibes --defaultOg=/og-default.jpg --routes=scripts/routes.json --meta=scripts/prerender-meta.json --addLocales=sv --crawlableBody --emit404",
+    "build": "node scripts/generate-boutiques.mjs && tsc -b && vite build && node scripts/assert-css-budget.mjs && node scripts/generate-prerender-meta.mjs && node scripts/_prerender_routes.mjs --site=https://laplandstore.fi --siteName=LaplandStore --twitter=@laplandvibes --defaultOg=/og-default.jpg --routes=scripts/routes.json --meta=scripts/prerender-meta.json --addLocales=sv --crawlableBody --emit404",
     "lint": "eslint .",
     "preview": "vite preview"
   },
