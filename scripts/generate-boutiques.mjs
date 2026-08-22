@@ -12,10 +12,28 @@
  *
  * Aja: node scripts/generate-boutiques.mjs   (osa build-skriptiä)
  */
-import { readFileSync, writeFileSync, mkdirSync } from 'node:fs'
-import { BOUTIQUES, TOWN_IDS } from '../../laplandgifts/src/data/boutiques.ts'
-import { SHOP_COPY } from '../../laplandgifts/src/locales/shopCopy.ts'
-import { LANG_PREFIX } from '../../laplandgifts/src/i18n/useLang.ts'
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs'
+import { dirname, resolve } from 'node:path'
+import { fileURLToPath } from 'node:url'
+
+// 🔴 Gifts on naapuriREPO, ei tama repo. Monorepossa se on vieressa ja
+// generointi toimii; PUHTAASSA KLONISSA (GitHub Actions) sita ei ole, ja
+// staattinen import kaataa koko buildin ERR_MODULE_NOT_FOUNDiin ennen kuin
+// yksikaan rivi tasta skriptista ajetaan. Mitattu 2026-08-21.
+//
+// src/data/boutiques.generated.ts on committoitu, joten oikea kaytos ilman
+// giftsia on: ala regeneroi, kayta committoitua tulosta. Sama saanto kuin
+// sync-shared.mjs:ssa ("../shared not found -> using committed vendored copy").
+// Siksi importit ovat dynaamisia: staattista importtia ei voi try-catchata.
+const HERE = dirname(fileURLToPath(import.meta.url))
+const GIFTS = resolve(HERE, '..', '..', 'laplandgifts', 'src', 'data', 'boutiques.ts')
+if (!existsSync(GIFTS)) {
+  console.log('[boutiques] laplandgifts/ ei ole vieressa (CI / standalone) — kaytetaan committoitua src/data/boutiques.generated.ts:aa.')
+  process.exit(0)
+}
+const { BOUTIQUES, TOWN_IDS } = await import('../../laplandgifts/src/data/boutiques.ts')
+const { SHOP_COPY } = await import('../../laplandgifts/src/locales/shopCopy.ts')
+const { LANG_PREFIX } = await import('../../laplandgifts/src/i18n/useLang.ts')
 
 const OUT = 'src/data/boutiques.generated.ts'
 const LANGS = Object.keys(LANG_PREFIX)
