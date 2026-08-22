@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: 'Tilataan…',
   fineprint:
     'Sähköpostia ei jaeta kenellekään. Voit perua tilauksen koska vain.',
-  successHeadline: 'Tervetuloa mukaan!',
+  successHeadline: 'Melkein valmista.',
   successBody:
-    'Tervetuloviesti on jo matkalla, ja seuraavatkin kirjeet tulevat samaan osoitteeseen.',
+    'Käy vahvistamassa tilaus sähköpostiisi tulleesta viestistä.',
   alreadyHeadline: 'Olet jo listalla',
   alreadyBody:
     'Sähköpostisi on jo mukana. Kiitos että pysyt mukana.',

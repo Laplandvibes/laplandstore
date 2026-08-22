@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: 'Suscribiendo…',
   fineprint:
     'Sus datos no se comparten con terceros. Cancele la suscripción cuando quiera.',
-  successHeadline: 'Está dentro.',
+  successHeadline: 'Ya casi.',
   successBody:
-    'Revise su bandeja de entrada. El correo de bienvenida está en camino y las próximas cartas llegarán al mismo lugar.',
+    'Confirma tu suscripción desde el correo que acabamos de enviarte.',
   alreadyHeadline: 'Ya está suscrito',
   alreadyBody:
     'Ya está en la lista. Gracias por seguir el proyecto.',

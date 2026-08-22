@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: '등록 중…',
   fineprint:
     '이메일은 외부에 공유되지 않습니다. 언제든지 구독을 해지하실 수 있습니다.',
-  successHeadline: '구독이 완료되었습니다.',
+  successHeadline: '거의 다 됐습니다.',
   successBody:
-    '받은편지함을 확인해 주세요. 환영 메일이 발송되었으며, 이후의 소식도 같은 주소로 도착합니다.',
+    '방금 보내드린 이메일에서 구독을 확인해 주세요.',
   alreadyHeadline: '이미 구독 중이십니다',
   alreadyBody:
     '이미 구독자 명단에 있으십니다. 프로젝트와 함께해 주셔서 감사합니다.',

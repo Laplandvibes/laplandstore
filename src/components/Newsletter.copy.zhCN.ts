@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: '订阅中…',
   fineprint:
     '我们不会将您的信息分享给第三方。您可以随时取消订阅。',
-  successHeadline: '订阅成功。',
+  successHeadline: '就快好了。',
   successBody:
-    '请查收您的收件箱。欢迎邮件正在发送,后续邮件也会发到同一地址。',
+    '请在我们刚发送的邮件中确认订阅。',
   alreadyHeadline: '您已订阅',
   alreadyBody:
     '您已在订阅名单中。感谢您对本项目的持续关注。',

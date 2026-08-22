@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: 'Inschrijven…',
   fineprint:
     'Uw gegevens worden niet gedeeld met derden. Op elk moment uit te schrijven.',
-  successHeadline: 'U bent erbij.',
+  successHeadline: 'Bijna klaar.',
   successBody:
-    'Bekijk uw inbox. De welkomstmail is onderweg en toekomstige brieven komen op hetzelfde adres aan.',
+    'Bevestig je aanmelding via de e-mail die we net hebben gestuurd.',
   alreadyHeadline: 'Al ingeschreven',
   alreadyBody:
     'U staat al op de lijst. Bedankt dat u het project volgt.',

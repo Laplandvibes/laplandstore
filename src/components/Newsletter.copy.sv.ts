@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: 'Prenumererar…',
   fineprint:
     'Dina uppgifter delas inte med tredje part. Avsluta prenumerationen när du vill.',
-  successHeadline: 'Du är med.',
+  successHeadline: 'Nästan klart.',
   successBody:
-    'Kolla din inkorg. Välkomstmejlet är på väg, och kommande brev landar där också.',
+    'Bekräfta din prenumeration i mejlet vi just skickade.',
   alreadyHeadline: 'Redan prenumerant',
   alreadyBody:
     'Du finns redan på listan. Tack för att du håller fast vid projektet.',

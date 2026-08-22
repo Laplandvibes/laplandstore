@@ -8,9 +8,9 @@ const copy = {
   loading: 'Subscribing…',
   fineprint:
     "Your details are not shared with third parties. Unsubscribe anytime.",
-  successHeadline: "You're in.",
+  successHeadline: 'Almost there.',
   successBody:
-    'Check your inbox. The welcome email is on its way, and future letters will land there too.',
+    'Confirm your subscription from the email we just sent you.',
   alreadyHeadline: 'Already subscribed',
   alreadyBody:
     "You're already on the list. Thanks for sticking with the project.",

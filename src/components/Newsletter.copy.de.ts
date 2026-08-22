@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: 'Wird abonniert …',
   fineprint:
     'Ihre E-Mail-Adresse wird nicht weitergegeben. Sie können jederzeit widerrufen.',
-  successHeadline: 'Willkommen an Bord.',
+  successHeadline: 'Fast geschafft.',
   successBody:
-    'Bitte schauen Sie in Ihr Postfach. Die Begrüßungsnachricht ist unterwegs, weitere Briefe folgen.',
+    'Bestätigen Sie Ihr Abo über die E-Mail, die wir Ihnen gerade geschickt haben.',
   alreadyHeadline: 'Bereits eingetragen',
   alreadyBody:
     'Ihre Adresse ist schon dabei. Vielen Dank, dass Sie das Projekt begleiten.',

@@ -10,9 +10,9 @@ const copy: CopyShape = {
   loading: 'Inscription…',
   fineprint:
     "Votre adresse n'est jamais partagée. Désabonnement possible à tout moment.",
-  successHeadline: 'Bienvenue !',
+  successHeadline: 'Presque fini.',
   successBody:
-    "Vérifiez votre boîte de réception. L'e-mail de bienvenue est en route et les prochaines lettres arriveront à la même adresse.",
+    'Confirmez votre inscription depuis l\'e-mail que nous venons de vous envoyer.',
   alreadyHeadline: 'Déjà inscrit(e)',
   alreadyBody:
     'Vous êtes déjà sur la liste. Merci de continuer à suivre le projet.',
