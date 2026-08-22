@@ -4,7 +4,12 @@
     "fallbackTitle": "LaplandStore, Authentic Lapland Products: Crafts, Jewelry & Delicacies",
     "fallbackDescription": "A curated directory of verified Lapland boutiques: handicrafts, jewelry and delicacies direct from real makers in Finnish Lapland. Support local makers.",
     "harvestFiles": [
-      "src/pages/Home.tsx"
+      "src/pages/Home.tsx",
+      "src/components/Hero.copy.{lang}.ts",
+      "src/components/LocalShops.copy.{lang}.ts",
+      "src/components/Newsletter.copy.{lang}.ts",
+      "src/components/ArtisanStory.tsx",
+      "src/components/FAQ.tsx"
     ]
   },
   {
