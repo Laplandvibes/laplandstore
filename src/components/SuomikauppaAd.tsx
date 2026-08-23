@@ -7,65 +7,89 @@ import ProductBrandAd, {
 import { SUOMIKAUPPA } from '../lib/affiliate';
 
 /**
- * Real Marimekko Unikko photography from the shop's own catalogue, read
- * 2026-08-10, all in stock. Suomikauppa's Daisycon programme ships a product
- * feed, which is what clears its imagery for affiliate use (same basis as the
- * Metsola card on laplandkids).
+ * Product photography taken from Suomikauppa's OWN Daisycon product feed
+ * (program 17977, media 424061 = laplandstore.fi), fetched and verified
+ * 2026-08-23. Feed: 1,949 products, every image on the advertiser's own
+ * Shopify CDN. That is "Material provided by the Advertiser" in the sense of
+ * Daisycon's general T&C Art. 2.4/2.6, so the licence question is settled at
+ * source rather than argued.
  *
- * Unikko earns the stage on merit: it is the one Finnish print a visitor
- * recognises without being told, and Marimekko is a brand no affiliate network
- * we are in has ever offered us. Suomikauppa is how we finally reach it.
+ * 🔴 WHY THE PREVIOUS THREE IMAGES WERE REPLACED (2026-08-23). This card used
+ * to show three Marimekko Unikko BAGS, and the header claimed the Daisycon feed
+ * "clears its imagery for affiliate use". That was a non sequitur: the feed does
+ * exist, but it contains six Marimekko items and all six are serviettes — there
+ * are no Unikko bags in it at all. Those images had been taken from the shop's
+ * public website, and the justification was written without checking the thing
+ * it cited. Recorded in _affiliate/creatives.json.
+ *
+ * 🔴 WHY NO MOOMIN, even though the feed carries 205 Moomin products and they
+ * would be the most recognisable choice. Moomin Characters Oy licenses
+ * exceptionally tightly: their own licensing page treats use of the Moomins in
+ * "an advertisement or other sales promotion" as a fee-bearing licensable act,
+ * their press-kit permission is expressly editorial-only, and they logged 552
+ * infringement cases in 2014–2021 and publicly challenged Yle over a single
+ * Instagram post. Dior v Evora (C-337/95) gives a reseller a real defence for
+ * advertising genuine exhausted goods, but an affiliate is not literally a
+ * reseller and that extension is untested. Not worth it for a decorative tile.
+ * Iittala, Fiskars and Lumene carry no third-party character IP at all.
+ *
+ * The three shown are glass, steel and arctic skincare — three Finnish things a
+ * visitor recognises without being told, which is the same merit the Unikko
+ * choice was reaching for.
  */
 const SK_SHOTS: ProductAdShot[] = [
   {
-    img: '/img/partners/suomikauppa/unikko-cosmetic-bag.jpg',
+    // Feed source: cdn.shopify.com/s/files/1/0608/9123/4523/products/Resource_IittalaEMEA_1007062.jpg
+    img: '/img/partners/suomikauppa/iittala-mariskooli.jpg',
     alt: {
-      en: 'Marimekko Kaika Mini Unikko cosmetic bag in red and white',
-      fi: 'Marimekko Kaika Mini Unikko -kosmetiikkalaukku puna-valkoisena',
-      de: 'Marimekko Kaika Mini Unikko Kosmetiktasche in Rot und Weiß',
-      ja: 'マリメッコ Kaika ミニ ウニッコ コスメポーチ（赤・白）',
-      es: 'Neceser Marimekko Kaika Mini Unikko en rojo y blanco',
-      'pt-BR': 'Necessaire Marimekko Kaika Mini Unikko em vermelho e branco',
-      'zh-CN': 'Marimekko Kaika Mini Unikko 化妆包,红白配色',
-      ko: '마리메꼬 카이카 미니 우니꼬 파우치, 레드 화이트',
-      fr: 'Trousse Marimekko Kaika Mini Unikko rouge et blanc',
-      it: 'Pochette Marimekko Kaika Mini Unikko rossa e bianca',
-      nl: 'Marimekko Kaika Mini Unikko toilettas in rood en wit',
-      sv: 'Marimekko Kaika Mini Unikko necessär i rött och vitt',
+      en: 'Iittala Mariskooli footed bowl in clear pressed glass',
+      fi: 'Iittala Mariskooli -jalallinen malja kirkasta painolasia',
+      de: 'Iittala Mariskooli Fußschale aus klarem Pressglas',
+      ja: 'イッタラ マリスコオリ 脚付きボウル（クリアプレスガラス）',
+      es: 'Cuenco con pie Iittala Mariskooli en vidrio prensado transparente',
+      'pt-BR': 'Tigela com pé Iittala Mariskooli em vidro prensado transparente',
+      'zh-CN': 'Iittala Mariskooli 高脚碗,透明压制玻璃',
+      ko: '이딸라 마리스코올리 굽 있는 볼, 투명 프레스 글라스',
+      fr: 'Coupe sur pied Iittala Mariskooli en verre pressé transparent',
+      it: 'Coppa con piede Iittala Mariskooli in vetro pressato trasparente',
+      nl: 'Iittala Mariskooli schaal op voet van helder geperst glas',
+      sv: 'Iittala Mariskooli fotskål i klart pressglas',
     },
   },
   {
-    img: '/img/partners/suomikauppa/unikko-crossbody.jpg',
+    // Feed source: cdn.shopify.com/s/files/1/0608/9123/4523/products/functional_form_yleissakset.jpg
+    img: '/img/partners/suomikauppa/fiskars-classic-scissors.jpg',
     alt: {
-      en: 'Marimekko Neat Crossbody Unikko shoulder bag in blue',
-      fi: 'Marimekko Neat Crossbody Unikko -olkalaukku sinisenä',
-      de: 'Marimekko Neat Crossbody Unikko Umhängetasche in Blau',
-      ja: 'マリメッコ Neat クロスボディ ウニッコ ショルダーバッグ（ブルー）',
-      es: 'Bolso bandolera Marimekko Neat Crossbody Unikko en azul',
-      'pt-BR': 'Bolsa transversal Marimekko Neat Crossbody Unikko em azul',
-      'zh-CN': 'Marimekko Neat Crossbody Unikko 斜挎包,蓝色',
-      ko: '마리메꼬 니트 크로스바디 우니꼬 숄더백, 블루',
-      fr: 'Sac bandoulière Marimekko Neat Crossbody Unikko bleu',
-      it: 'Borsa a tracolla Marimekko Neat Crossbody Unikko blu',
-      nl: 'Marimekko Neat Crossbody Unikko schoudertas in blauw',
-      sv: 'Marimekko Neat Crossbody Unikko axelväska i blått',
+      en: 'Fiskars Classic universal scissors, 21 cm, with the orange handles',
+      fi: 'Fiskars Classic -yleissakset, 21 cm, oranssein kahvoin',
+      de: 'Fiskars Classic Universalschere, 21 cm, mit den orangen Griffen',
+      ja: 'フィスカルス クラシック 万能はさみ 21cm（オレンジの持ち手）',
+      es: 'Tijeras universales Fiskars Classic de 21 cm con mangos naranjas',
+      'pt-BR': 'Tesoura universal Fiskars Classic de 21 cm com cabos laranja',
+      'zh-CN': 'Fiskars Classic 通用剪刀 21 厘米,橙色手柄',
+      ko: '피스카스 클래식 만능 가위 21cm, 오렌지 손잡이',
+      fr: 'Ciseaux universels Fiskars Classic 21 cm à manches orange',
+      it: 'Forbici universali Fiskars Classic da 21 cm con manici arancioni',
+      nl: 'Fiskars Classic universele schaar, 21 cm, met de oranje grepen',
+      sv: 'Fiskars Classic universalsax, 21 cm, med de orange handtagen',
     },
   },
   {
-    img: '/img/partners/suomikauppa/unikko-vilja-bag.jpg',
+    // Feed source: cdn.shopify.com/s/files/1/0608/9123/4523/products/VALO_nordic_c_radiance_flash_day_fluid_6412600817881.jpg
+    img: '/img/partners/suomikauppa/lumene-valo-nordic-c.jpg',
     alt: {
-      en: 'Marimekko Vilja Mini Unikko cosmetic bag in orange and pink',
-      fi: 'Marimekko Vilja Mini Unikko -kosmetiikkalaukku oranssi-pinkkinä',
-      de: 'Marimekko Vilja Mini Unikko Kosmetiktasche in Orange und Pink',
-      ja: 'マリメッコ Vilja ミニ ウニッコ コスメポーチ（オレンジ・ピンク）',
-      es: 'Neceser Marimekko Vilja Mini Unikko en naranja y rosa',
-      'pt-BR': 'Necessaire Marimekko Vilja Mini Unikko em laranja e rosa',
-      'zh-CN': 'Marimekko Vilja Mini Unikko 化妆包,橙粉配色',
-      ko: '마리메꼬 빌야 미니 우니꼬 파우치, 오렌지 핑크',
-      fr: 'Trousse Marimekko Vilja Mini Unikko orange et rose',
-      it: 'Pochette Marimekko Vilja Mini Unikko arancione e rosa',
-      nl: 'Marimekko Vilja Mini Unikko toilettas in oranje en roze',
-      sv: 'Marimekko Vilja Mini Unikko necessär i orange och rosa',
+      en: 'Lumene VALO Nordic-C day fluid in a white and orange tube',
+      fi: 'Lumene VALO Nordic-C -päivävoide valko-oranssissa tuubissa',
+      de: 'Lumene VALO Nordic-C Tagesfluid in weiß-oranger Tube',
+      ja: 'ルメネ VALO Nordic-C デイフルイド（白とオレンジのチューブ）',
+      es: 'Fluido de día Lumene VALO Nordic-C en tubo blanco y naranja',
+      'pt-BR': 'Fluido diurno Lumene VALO Nordic-C em tubo branco e laranja',
+      'zh-CN': 'Lumene VALO Nordic-C 日间乳液,白橙色管装',
+      ko: '루메네 VALO 노르딕-C 데이 플루이드, 화이트 오렌지 튜브',
+      fr: 'Fluide de jour Lumene VALO Nordic-C en tube blanc et orange',
+      it: 'Fluido giorno Lumene VALO Nordic-C in tubo bianco e arancione',
+      nl: 'Lumene VALO Nordic-C dagfluid in een wit-oranje tube',
+      sv: 'Lumene VALO Nordic-C dagfluid i vit och orange tub',
     },
   },
 ];
@@ -103,18 +127,18 @@ const SK_BRAND: ProductAdBrand = {
 
 const SK_COPY: ProductAdCopy = {
   eyebrow: {
-    en: 'New in: Marimekko',
-    fi: 'Uutuutena: Marimekko',
-    de: 'Neu: Marimekko',
-    ja: '新入荷：マリメッコ',
-    es: 'Novedad: Marimekko',
-    'pt-BR': 'Novidade: Marimekko',
-    'zh-CN': '新到:Marimekko',
-    ko: '신상: 마리메꼬',
-    fr: 'Nouveau : Marimekko',
-    it: 'Novità: Marimekko',
-    nl: 'Nieuw: Marimekko',
-    sv: 'Nyhet: Marimekko',
+    en: 'Finnish design, posted home',
+    fi: 'Suomalaista muotoilua, postitse kotiin',
+    de: 'Finnisches Design, nach Hause geschickt',
+    ja: 'フィンランドのデザインを自宅へ',
+    es: 'Diseño finlandés, enviado a casa',
+    'pt-BR': 'Design finlandês, enviado para casa',
+    'zh-CN': '芬兰设计,寄到家',
+    ko: '핀란드 디자인, 집으로 배송',
+    fr: 'Le design finlandais, expédié chez vous',
+    it: 'Design finlandese, spedito a casa',
+    nl: 'Fins design, thuisbezorgd',
+    sv: 'Finsk design, skickad hem',
   },
   headline: {
     en: 'The shops on this page do not all post abroad. This one does.',
@@ -131,18 +155,18 @@ const SK_COPY: ProductAdCopy = {
     sv: 'Alla butiker på den här sidan skickar inte utomlands. Den här gör det.',
   },
   sub: {
-    en: 'Marimekko has just landed at Suomikauppa, Unikko bags and towels included, alongside Moomin, Fiskars, Lumene and the Fazer shelf. They post with DHL, FedEx, GLS, PostNord and Posti, so an Unikko bag reaches Osaka as easily as Oulu.',
-    fi: 'Suomikauppaan on juuri saapunut Marimekko, mukana Unikko-laukut ja -pyyhkeet, Muumien, Fiskarsin, Lumenen ja Fazerin hyllyn rinnalle. Kauppa postittaa DHL:llä, FedExillä, GLS:llä, PostNordilla ja Postilla, joten Unikko-laukku päätyy Osakaan yhtä helposti kuin Ouluun.',
-    de: 'Marimekko ist neu bei Suomikauppa, samt Unikko-Taschen und -Handtüchern, neben Mumins, Fiskars, Lumene und dem Fazer-Regal. Versandt wird mit DHL, FedEx, GLS, PostNord und Posti, eine Unikko-Tasche erreicht Osaka also so leicht wie Oulu.',
-    ja: 'Suomikauppa にマリメッコが入荷しました。ウニッコのバッグやタオルに加え、ムーミン、フィスカルス、ルメネ、そしてファッツェルの棚も。発送は DHL、FedEx、GLS、PostNord、Posti。ウニッコのバッグはオウルへも大阪へも同じように届きます。',
-    es: 'Marimekko acaba de llegar a Suomikauppa, con bolsos y toallas Unikko, junto a los Moomin, Fiskars, Lumene y el estante de Fazer. Envían con DHL, FedEx, GLS, PostNord y Posti, así que un bolso Unikko llega a Osaka igual de fácil que a Oulu.',
-    'pt-BR': 'A Marimekko acaba de chegar à Suomikauppa, com bolsas e toalhas Unikko, ao lado dos Moomin, da Fiskars, da Lumene e da prateleira Fazer. Enviam por DHL, FedEx, GLS, PostNord e Posti, então uma bolsa Unikko chega a Osaka tão facilmente quanto a Oulu.',
-    'zh-CN': 'Marimekko 刚刚上架 Suomikauppa,包含 Unikko 手袋与毛巾,与姆明、Fiskars、Lumene 以及 Fazer 货架并列。他们通过 DHL、FedEx、GLS、PostNord 与 Posti 发货,一只 Unikko 手袋寄到大阪和寄到奥卢一样简单。',
-    ko: '마리메꼬가 Suomikauppa에 막 입고되었습니다. 우니꼬 가방과 타월을 비롯해 무민, 피스카스, 루메네, 그리고 파제르 진열대까지. DHL, FedEx, GLS, PostNord, Posti로 발송하니 우니꼬 가방은 오울루만큼이나 쉽게 오사카에도 도착합니다.',
-    fr: 'Marimekko vient d’arriver chez Suomikauppa, sacs et serviettes Unikko compris, aux côtés des Moumines, de Fiskars, de Lumene et du rayon Fazer. Ils expédient avec DHL, FedEx, GLS, PostNord et Posti : un sac Unikko rejoint Osaka aussi facilement qu’Oulu.',
-    it: 'Marimekko è appena arrivata da Suomikauppa, borse e asciugamani Unikko compresi, accanto ai Moomin, a Fiskars, a Lumene e allo scaffale Fazer. Spediscono con DHL, FedEx, GLS, PostNord e Posti, quindi una borsa Unikko arriva a Osaka con la stessa facilità con cui arriva a Oulu.',
-    nl: 'Marimekko is net binnen bij Suomikauppa, inclusief Unikko-tassen en -handdoeken, naast de Moomins, Fiskars, Lumene en het Fazer-schap. Ze versturen met DHL, FedEx, GLS, PostNord en Posti, dus een Unikko-tas bereikt Osaka net zo makkelijk als Oulu.',
-    sv: 'Marimekko har precis kommit in hos Suomikauppa, Unikko-väskor och -handdukar inkluderat, vid sidan av Mumin, Fiskars, Lumene och Fazerhyllan. De skickar med DHL, FedEx, GLS, PostNord och Posti, så en Unikko-väska når Osaka lika lätt som Uleåborg.',
+    en: 'An Iittala Mariskooli, the orange Fiskars scissors, a Lumene Nordic-C fluid: things you can pick up in Finland and nowhere near as easily at home. Suomikauppa posts with DHL, FedEx, GLS, PostNord and Posti, so the parcel reaches Osaka as readily as Oulu.',
+    fi: 'Iittalan Mariskooli, oranssit Fiskars-sakset, Lumenen Nordic-C-voide: tavaraa jonka saa Suomesta ja jota kotoa ei löydy läheskään yhtä helposti. Suomikauppa postittaa DHL:llä, FedExillä, GLS:llä, PostNordilla ja Postilla, joten paketti päätyy Osakaan yhtä helposti kuin Ouluun.',
+    de: 'Eine Iittala Mariskooli, die orange Fiskars-Schere, ein Lumene Nordic-C Fluid: Dinge, die man in Finnland bekommt und zu Hause längst nicht so leicht. Suomikauppa versendet mit DHL, FedEx, GLS, PostNord und Posti, das Paket erreicht Osaka also so leicht wie Oulu.',
+    ja: 'イッタラのマリスコオリ、オレンジのフィスカルスのはさみ、ルメネの Nordic-C フルイド。フィンランドでは手に入るのに、自国ではそう簡単ではないものです。Suomikauppa は DHL、FedEx、GLS、PostNord、Posti で発送するので、荷物はオウルへも大阪へも同じように届きます。',
+    es: 'Un Mariskooli de Iittala, las tijeras naranjas de Fiskars, un fluido Nordic-C de Lumene: cosas que consigues en Finlandia y no tan fácilmente en casa. Suomikauppa envía con DHL, FedEx, GLS, PostNord y Posti, así que el paquete llega a Osaka igual de fácil que a Oulu.',
+    'pt-BR': 'Um Mariskooli da Iittala, a tesoura laranja da Fiskars, um fluido Nordic-C da Lumene: coisas que se acham na Finlândia e nem de longe tão facilmente em casa. A Suomikauppa envia por DHL, FedEx, GLS, PostNord e Posti, então a encomenda chega a Osaka tão facilmente quanto a Oulu.',
+    'zh-CN': '一只伊塔拉 Mariskooli 玻璃碗、一把橙色 Fiskars 剪刀、一支 Lumene Nordic-C 乳液:在芬兰随手可得,回到家却没那么容易找到。Suomikauppa 通过 DHL、FedEx、GLS、PostNord 与 Posti 发货,包裹寄到大阪和寄到奥卢一样简单。',
+    ko: '이딸라 마리스코올리, 오렌지색 피스카스 가위, 루메네 노르딕-C 플루이드. 핀란드에서는 손쉽게 구하지만 집에서는 그만큼 쉽지 않은 것들입니다. Suomikauppa는 DHL, FedEx, GLS, PostNord, Posti로 발송하므로 소포는 오울루만큼이나 쉽게 오사카에도 도착합니다.',
+    fr: 'Une coupe Mariskooli d’Iittala, les ciseaux orange de Fiskars, un fluide Nordic-C de Lumene : des choses qu’on trouve en Finlande et bien moins facilement chez soi. Suomikauppa expédie avec DHL, FedEx, GLS, PostNord et Posti : le colis rejoint Osaka aussi facilement qu’Oulu.',
+    it: 'Una Mariskooli di Iittala, le forbici arancioni di Fiskars, un fluido Nordic-C di Lumene: cose che in Finlandia trovi e a casa molto meno facilmente. Suomikauppa spedisce con DHL, FedEx, GLS, PostNord e Posti, così il pacco arriva a Osaka con la stessa facilità con cui arriva a Oulu.',
+    nl: 'Een Iittala Mariskooli, de oranje Fiskars-schaar, een Lumene Nordic-C fluid: spullen die je in Finland vindt en thuis lang niet zo makkelijk. Suomikauppa verstuurt met DHL, FedEx, GLS, PostNord en Posti, dus het pakket bereikt Osaka net zo makkelijk als Oulu.',
+    sv: 'En Iittala Mariskooli, den orange Fiskars-saxen, ett Lumene Nordic-C-fluid: sådant man får tag på i Finland och långt ifrån lika lätt hemma. Suomikauppa skickar med DHL, FedEx, GLS, PostNord och Posti, så paketet når Osaka lika lätt som Uleåborg.',
   },
   trust: [
     {
@@ -219,18 +243,18 @@ const SK_COPY: ProductAdCopy = {
   },
   offerIcon: Truck,
   cta: {
-    en: 'See the Marimekko range',
-    fi: 'Katso Marimekko-valikoima',
-    de: 'Marimekko-Sortiment ansehen',
-    ja: 'マリメッコの品ぞろえを見る',
-    es: 'Ver la selección de Marimekko',
-    'pt-BR': 'Ver a seleção Marimekko',
-    'zh-CN': '查看 Marimekko 系列',
-    ko: '마리메꼬 컬렉션 보기',
-    fr: 'Voir la sélection Marimekko',
-    it: 'Vedi la selezione Marimekko',
-    nl: 'Bekijk het Marimekko-assortiment',
-    sv: 'Se Marimekko-sortimentet',
+    en: 'Browse the Finnish shelf',
+    fi: 'Selaa suomalaista hyllyä',
+    de: 'Das finnische Regal ansehen',
+    ja: 'フィンランドの棚を見る',
+    es: 'Ver el estante finlandés',
+    'pt-BR': 'Ver a prateleira finlandesa',
+    'zh-CN': '浏览芬兰货架',
+    ko: '핀란드 진열대 둘러보기',
+    fr: 'Parcourir le rayon finlandais',
+    it: 'Sfoglia lo scaffale finlandese',
+    nl: 'Bekijk het Finse schap',
+    sv: 'Bläddra i den finska hyllan',
   },
   soldBy: {
     en: 'Sold by Suomikauppa.fi',

@@ -111,9 +111,15 @@ export const SCANDINAVIAN_OUTDOOR: StorePartner = {
 export const SUOMIKAUPPA: StorePartner = {
   slug: 'suomikauppa',
   name: 'Suomikauppa.fi',
+  // [LV-2026-08-23] dest vaihdettu marimekko-1 -> collections/all ja sid
+  // store_marimekko -> store_suomikauppa. Kortti ei enää näytä Marimekkoa vaan
+  // Iittalan, Fiskarsin ja Lumenen tuotteet (kuvat Daisycon-feedistä), ja CTA
+  // lupaa "selaa suomalaista hyllyä" — Marimekko-kokoelma olisi ollut lupauksen
+  // vastainen kohde. Polku verifioitu 2026-08-23: HTTP 200,
+  // <title>Tuotteet | Suomikauppa.fi</title>, body listaa tuotteita hintoineen.
   link:
-    'https://go.laplandvibes.com/go/suomikauppa?sid=store_marimekko' +
-    '&dest=' + encodeURIComponent('https://suomikauppa.fi/collections/marimekko-1'),
+    'https://go.laplandvibes.com/go/suomikauppa?sid=store_suomikauppa' +
+    '&dest=' + encodeURIComponent('https://suomikauppa.fi/collections/all'),
   // The shop's own brand mark (white Finland outline + wordmark on their blue),
   // taken from their published og:image. 🔴 Their cookie-banner asset is a
   // generic cookie icon, not a logo — do not "find" a logo without looking at it.
