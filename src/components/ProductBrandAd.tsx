@@ -237,17 +237,30 @@ export default function ProductBrandAd({
                 {copy.eyebrow[lang]}
               </p>
             </div>
-            <img
-              src={partner.logo}
-              alt={partner.name}
-              width={120}
-              height={40}
-              loading="lazy"
-              decoding="async"
-              className={`w-auto shrink-0 ${
-                partner.logoShape === 'square' ? 'h-11 sm:h-12' : 'h-6 sm:h-7'
-              }`}
-            />
+            {/* 🔴 Logo is OPTIONAL. Some advertisers give us no logo file at all
+                (Nordicbuddies is one), and an imitation drawn by us would be a
+                fabrication of someone's wordmark. Honest type beats a fake mark,
+                and an <img> with an empty src would request the page itself. */}
+            {partner.logo ? (
+              <img
+                src={partner.logo}
+                alt={partner.name}
+                width={120}
+                height={40}
+                loading="lazy"
+                decoding="async"
+                className={`w-auto shrink-0 ${
+                  partner.logoShape === 'square' ? 'h-11 sm:h-12' : 'h-6 sm:h-7'
+                }`}
+              />
+            ) : (
+              <span
+                className="shrink-0 text-base font-extrabold tracking-tight sm:text-lg"
+                style={{ color: brand.ink }}
+              >
+                {partner.name}
+              </span>
+            )}
           </div>
 
           <h2

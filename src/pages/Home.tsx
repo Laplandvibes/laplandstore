@@ -9,6 +9,7 @@ import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
 import { KultaCenterAd, IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
 import SuomikauppaAd from '../components/SuomikauppaAd';
+import NordicbuddiesAd from '../components/NordicbuddiesAd';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { useLang, type Lang } from '../lang';
@@ -147,6 +148,16 @@ export default function Home() {
         </div>
       </section>
       <GiftsHubBanner />
+
+      {/* Nordicbuddies (Daisycon 20538). Sits after the gifts banner and before
+          the outdoor card so the page keeps alternating shop → story → shop, and
+          far from the Suomikauppa card: the two answer different questions.
+          Media laplandstore.fi (424061) approved 2026-08-24. */}
+      <section className="px-4 py-10 sm:py-14 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <NordicbuddiesAd sid="home_character_design" />
+        </div>
+      </section>
       {/* Mapped product ad — Scandinavian Outdoor (pack for the trip), ships worldwide. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">

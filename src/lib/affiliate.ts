@@ -104,9 +104,11 @@ export const SCANDINAVIAN_OUTDOOR: StorePartner = {
  *    leads with Unikko. `/collections/marimekko-1` verified 200 + title
  *    "Marimekko – Suomikauppa.fi" 2026-08-10.
  *
- * Media laplandstore.fi (Daisycon media 424061) subscribed 2026-08-10, awaiting
- * the advertiser's approval. Until it lands the Worker answers with an
- * untracked UTM redirect instead of borrowing another site's media id.
+ * Media laplandstore.fi (Daisycon media 424061) subscribed 2026-08-10 and
+ * APPROVED 2026-08-24 on both campaigns. Measured rather than assumed: the
+ * Daisycon datafeed endpoint serves a media_id only when that media's
+ * subscription is accepted, and 424061 answers 200 on 17977 and 20538 alike
+ * (a media id we do not own answers 204). Clicks from this site now earn.
  */
 export const SUOMIKAUPPA: StorePartner = {
   slug: 'suomikauppa',
@@ -125,6 +127,43 @@ export const SUOMIKAUPPA: StorePartner = {
   // generic cookie icon, not a logo — do not "find" a logo without looking at it.
   logo: '/img/partners/suomikauppa.png',
   logoShape: 'square',
+}
+
+/**
+ * Nordicbuddies — Daisycon campaign 20538, 7 % per sale, 30-day attribution.
+ * A Finnish company that holds the official licences for Moomin, Pippi
+ * Longstocking and Mauri Kunnas and makes its own wear and accessories.
+ *
+ * WHY THIS CARD IS NOT A SECOND SUOMIKAUPPA. Suomikauppa's card answers
+ * "the boutiques above do not all post abroad" with Finnish design and
+ * groceries. This one answers a different question the directory leaves open:
+ * where the licensed character things come from. Different shelf, different
+ * shop, no overlap in the products shown.
+ *
+ * 🔴 THE THREE PRODUCTS ARE PIPPI AND MAURI KUNNAS, NOT MOOMIN, AND THAT IS
+ * DELIBERATE. The shop's catalogue is 2 225 Moomin products against 267 Pippi
+ * and 36 Kunnas, so Moomin would have been the easy pick — but Moomin
+ * Characters Oy treats use in "an advertisement or other sales promotion" as
+ * a licensable act, and the network's standing rule (moomin_note in
+ * _affiliate/creatives.json) is: no Moomin in an LV ad unit until they answer
+ * in writing. The same reasoning already kept Moomin off the Suomikauppa card
+ * above. Pippi and Kunnas carry no such open question for us.
+ *
+ * 🔴 No logo file: the advertiser supplies none, and drawing an imitation of
+ * someone's wordmark is a fabrication (laplandwork shipped a made-up R-Kioski
+ * logo once). The card sets the name in type instead — ProductBrandAd falls
+ * back to a wordmark when `logo` is empty.
+ *
+ * Deep link verified 2026-08-24: /collections/pippi-collection HTTP 200.
+ * Media laplandstore.fi (424061) approved on 20538 the same day (see above).
+ */
+export const NORDICBUDDIES: StorePartner = {
+  slug: 'nordicbuddies',
+  name: 'Nordicbuddies',
+  link:
+    'https://go.laplandvibes.com/go/nordicbuddies?sid=home_character_design' +
+    '&dest=' + encodeURIComponent('https://nordicbuddies.com/collections/pippi-collection'),
+  logo: '',
 }
 
 /** Build the advertiser link. Adtraction injects the SID server-side, so the SID
