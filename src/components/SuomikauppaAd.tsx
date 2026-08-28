@@ -156,7 +156,7 @@ const SK_COPY: ProductAdCopy = {
   },
   sub: {
     en: 'An Iittala Mariskooli, the orange Fiskars scissors, a Lumene Nordic-C fluid: things you can pick up in Finland and nowhere near as easily at home. Suomikauppa posts with DHL, FedEx, GLS, PostNord and Posti, so the parcel reaches Osaka as readily as Oulu.',
-    fi: 'Iittalan Mariskooli, oranssit Fiskars-sakset, Lumenen Nordic-C-voide: tavaraa jonka saa Suomesta ja jota kotoa ei löydy läheskään yhtä helposti. Suomikauppa postittaa DHL:llä, FedExillä, GLS:llä, PostNordilla ja Postilla, joten paketti päätyy Osakaan yhtä helposti kuin Ouluun.',
+    fi: 'Iittalan Mariskooli, oranssit Fiskars-sakset, Lumenen Nordic-C-voide: tavaraa, jonka saa Suomesta ja jota kotoa ei löydy läheskään yhtä helposti. Suomikauppa postittaa DHL:llä, FedExillä, GLS:llä, PostNordilla ja Postilla, joten paketti päätyy Osakaan yhtä helposti kuin Ouluun.',
     de: 'Eine Iittala Mariskooli, die orange Fiskars-Schere, ein Lumene Nordic-C Fluid: Dinge, die man in Finnland bekommt und zu Hause längst nicht so leicht. Suomikauppa versendet mit DHL, FedEx, GLS, PostNord und Posti, das Paket erreicht Osaka also so leicht wie Oulu.',
     ja: 'イッタラのマリスコオリ、オレンジのフィスカルスのはさみ、ルメネの Nordic-C フルイド。フィンランドでは手に入るのに、自国ではそう簡単ではないものです。Suomikauppa は DHL、FedEx、GLS、PostNord、Posti で発送するので、荷物はオウルへも大阪へも同じように届きます。',
     es: 'Un Mariskooli de Iittala, las tijeras naranjas de Fiskars, un fluido Nordic-C de Lumene: cosas que consigues en Finlandia y no tan fácilmente en casa. Suomikauppa envía con DHL, FedEx, GLS, PostNord y Posti, así que el paquete llega a Osaka igual de fácil que a Oulu.',

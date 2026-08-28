@@ -38,7 +38,7 @@ const KC_COPY: ProductAdCopy = {
   },
   sub: {
     en: 'A family jeweller since 1933, with Kalevala Koru and other Finnish and Nordic brands in one place. Handy when you want a gift that lasts and ships fast across Europe, not another airport souvenir.',
-    fi: 'Perheen kultaseppä vuodesta 1933. Saman katon alta löydät Kalevala Korun ja muut suomalaiset ja pohjoismaiset merkit. Kun haluat kestävän lahjan etkä lentokentän matkamuistoa, tämä on oikea osoite. Toimitus Eurooppaan parissa päivässä.',
+    fi: 'Perheen kultaseppä vuodesta 1933. Saman katon alta löydät Kalevala Korun ja muut suomalaiset ja pohjoismaiset merkit. Kun haluat kestävän lahjan etkä lentokentän matkamuistoa, tämä on oikea osoite.',
     de: 'Ein Familienjuwelier seit 1933, mit Kalevala Koru und weiteren finnischen und nordischen Marken an einem Ort. Praktisch, wenn Sie ein Geschenk wollen, das bleibt und schnell innerhalb Europas geliefert wird, statt eines weiteren Flughafen-Souvenirs.',
     ja: '1933年から続く家族経営の宝飾店。カレワラ・コルをはじめ、フィンランドや北欧のブランドが一か所に揃います。空港の土産ではなく、長く使えてヨーロッパ各地へ早く届く贈り物が欲しいときに。',
     es: 'Una joyería familiar desde 1933, con Kalevala Koru y otras marcas finlandesas y nórdicas en un mismo sitio. Útil cuando quiere un regalo que dura y llega rápido por Europa, no otro recuerdo de aeropuerto.',

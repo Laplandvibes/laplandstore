@@ -38,7 +38,7 @@ export default function Hero() {
         aiGenerated
         ariaLabel={
           lang === 'fi'
-            ? 'Lappilainen käsityömarkkina'
+            ? 'Lappilaiset käsityömarkkinat'
             : lang === 'de'
             ? 'Ein Handwerksmarkt in Lappland'
             : lang === 'ja'

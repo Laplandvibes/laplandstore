@@ -141,7 +141,7 @@ const NB_COPY: ProductAdCopy = {
   },
   sub: {
     en: 'Nordicbuddies has been making licensed character wear in Helsinki since 2019: a cotton tote, a passport bag that fits a phone, a ribbed beanie in recycled polyester. The shop posts worldwide and every option is tracked, so the parcel follows you home instead of filling a suitcase.',
-    fi: 'Nordicbuddies on tehnyt lisensoituja hahmotuotteita Helsingissä vuodesta 2019: puuvillakassi, passilaukku johon puhelin mahtuu, resoripipo kierrätyspolyesteristä. Kauppa postittaa maailmanlaajuisesti ja jokaisessa toimitustavassa on seuranta, joten paketti tulee perässä eikä täytä matkalaukkua.',
+    fi: 'Nordicbuddies on tehnyt lisensoituja hahmotuotteita Helsingissä vuodesta 2019: puuvillakassi, passilaukku, johon puhelin mahtuu, ja resoripipo kierrätyspolyesteristä. Kauppa postittaa maailmanlaajuisesti ja jokaisessa toimitustavassa on seuranta, joten paketti tulee perässä eikä täytä matkalaukkua.',
     de: 'Nordicbuddies fertigt seit 2019 in Helsinki lizenzierte Figurenmode: eine Baumwolltasche, eine Passtasche, in die das Handy passt, eine Rippmütze aus recyceltem Polyester. Der Shop versendet weltweit, jede Option ist nachverfolgbar — das Paket kommt hinterher, statt den Koffer zu füllen.',
     ja: 'Nordicbuddies は 2019 年からヘルシンキでライセンス製品をつくっています。コットントート、スマホの入るパスポートバッグ、リサイクルポリエステルのリブ帽。世界中へ発送し、どの配送方法にも追跡が付くので、スーツケースを膨らませずに後から届きます。',
     es: 'Nordicbuddies fabrica productos con licencia en Helsinki desde 2019: una bolsa de algodón, un bolso de pasaporte donde cabe el móvil, un gorro de canalé en poliéster reciclado. La tienda envía a todo el mundo y todas las opciones llevan seguimiento, así que el paquete te sigue a casa en vez de llenarte la maleta.',
@@ -208,7 +208,7 @@ const NB_COPY: ProductAdCopy = {
   ],
   offer: {
     en: 'Free shipping over 60 € in the EU, the UK and Norway',
-    fi: 'Ilmainen toimitus yli 60 € tilauksissa EU:ssa, Britanniassa ja Norjassa',
+    fi: 'Ilmainen toimitus yli 60 €:n tilauksiin EU:ssa, Britanniassa ja Norjassa',
     de: 'Versandkostenfrei ab 60 € in der EU, Großbritannien und Norwegen',
     ja: 'EU・英国・ノルウェー向けは 60 € 以上で送料無料',
     es: 'Envío gratis desde 60 € en la UE, el Reino Unido y Noruega',

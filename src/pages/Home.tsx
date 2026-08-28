@@ -27,7 +27,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'fi': {
     seoTitle: 'LaplandStore: Aitoja Lapin lahjoja ja käsitöitä',
-    seoDescription: 'Kuratoitu hakemisto lappilaisiin putiikkeihin Rovaniemeltä Utsjoelle: käsityötä, koruja, poronsarvea, keramiikkaa ja Lapin herkkuja. Osa toimittaa kotiin.',
+    seoDescription: 'Kuratoitu hakemisto lappilaisista putiikeista Rovaniemeltä Utsjoelle: käsityötä, koruja, poronsarvea, keramiikkaa ja Lapin herkkuja. Osa toimittaa kotiin.',
   },
   'de': {
     seoTitle: 'LaplandStore: Echte Lappland-Geschenke & Souvenirs',

@@ -6,7 +6,7 @@ const copy: CopyShape = {
   categories: 'Kategoriat',
   boutiques: 'Putiikit',
   story: 'Tarina',
-  cta: 'Selaa Putiikkeja',
+  cta: 'Selaa putiikkeja',
   menu: 'Avaa valikko',
   close: 'Sulje valikko',
 };

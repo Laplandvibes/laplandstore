@@ -296,7 +296,7 @@ export function footerDict(lang: Lang) {
       body: 'Kattava opas Suomen Lappiin, revontulista keskiyön aurinkoon. Käsin valittuja elämyksiä, sisäpiirin vinkkejä ja käytännön perustiedot Lapin matkan suunnitteluun.',
       badge: 'Riippumaton · lähteet näkyvillä',
     },
-    spottedError: { title: 'Huomasitko virheen?', body: 'Näetkö jotain mikä pitäisi korjata? Kerro meille. Korjaamme sen heti.', cta: 'Ilmoita virheestä →' },
+    spottedError: { title: 'Huomasitko virheen?', body: 'Näetkö jotain, mikä pitäisi korjata? Kerro meille. Korjaamme sen heti.', cta: 'Ilmoita virheestä →' },
     partner: { title: 'Yhteistyö kanssamme', body: 'Mainosta tai tee yhteistyötä yli 21 Lappi-sivustolla.', cta: 'Ota yhteyttä →' },
     press: { title: 'Media ja lehdistö', body: 'Toimitusyhteistyö ja lehdistömateriaalit.', cta: 'Lehdistöyhteydet →' },
     affiliate: 'Tämä sivusto sisältää kumppanuuslinkkejä. Kun varaat näiden kautta, LaplandVibes voi saada provision ilman lisäkustannuksia sinulle.',

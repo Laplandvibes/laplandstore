@@ -92,7 +92,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Etsi Sámi Duodji -tavaramerkki. Se on Sámi Duodji -järjestön hallinnoima rekisteröity aitousmerkki, joka todistaa, että esineen on tehnyt saamelainen käsityöläinen perinteisin menetelmin. Merkki auttaa erottamaan aidon saamelaiskäsityön matkamuistoiksi myytävistä massatuotetuista jäljitelmistä.',
     },
     {
-      q: 'Mitkä ovat suosittuja Lapin elintarviketuotteita ostettavaksi?',
+      q: 'Mitä Lapin elintarvikkeita kannattaa ostaa mukaan?',
       aPlain:
         'Suosittuja syötäviä matkamuistoja ovat lakka- ja puolukkahillot, koivusiirappi, kuivattu ja savustettu poronliha, arktiset yrttiteet, ruisleipä ja muut paikalliset leivät sekä pohjoisen marjoilla maustetut suklaat. Ne säilyvät ja kestävät matkan, joten ne ovat käteviä tuliaisia.',
       aHtml:

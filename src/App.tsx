@@ -22,7 +22,7 @@ const FOOTER_PILLARS_FI = [
   { name: 'Suosittelemme', href: '/fi#suosittelemme' },
   { name: 'Putiikit', href: '/fi#putiikit' },
   { name: 'Tarina', href: '/fi#tarina' },
-  { name: 'Tulossa: Verkkokauppa', href: 'https://laplandgifts.com' },
+  { name: 'Verkkokauppa: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Joulu Lapissa', href: 'https://laplandchristmas.com' },
 ];
 
@@ -126,7 +126,7 @@ const FOOTER_PILLARS_SV = [
 ];
 
 const FOOTER_NOTE_FI =
-  'Itsenäisesti ylläpidetty Lapeso Oy:n toimesta · viimeksi tarkistettu huhtikuu 2026 · listaus on ilmainen lappilaisille yrittäjille.';
+  'Sivustoa ylläpitää itsenäisesti Lapeso Oy · viimeksi tarkistettu huhtikuussa 2026 · listaus on ilmainen lappilaisille yrittäjille.';
 const FOOTER_NOTE_EN =
   'Independently maintained by Lapeso Oy · last reviewed April 2026 · listings are free for Lapland-based entrepreneurs.';
 const FOOTER_NOTE_DE =

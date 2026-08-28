@@ -33,7 +33,7 @@ const COPY = {
     heading: 'Verkkokauppamme on auki',
     body:
       'LaplandGifts on LaplandVibes-verkoston verkkokauppa: suomalaiset lahjat, herkut ja käsityöt kotiin toimitettuna, myös ulkomaille. Tämä sivu kertoo, mistä ostat Lapissa paikan päällä.',
-    cta: 'Siirry laplandgifts.comiin',
+    cta: 'Siirry osoitteeseen laplandgifts.com',
   },
   en: {
     eyebrow: 'The online shop',

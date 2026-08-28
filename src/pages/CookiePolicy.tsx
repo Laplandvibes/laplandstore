@@ -69,9 +69,14 @@ export default function CookiePolicy() {
     desc.setAttribute('content', m.description);
   }, [m.title, m.description]);
 
-  return <CookieContent siteId="laplandstore" siteName="LaplandStore" lang={lang} />
-        {/* 🔴 Peruutus tällä sivulla eikä bannerissa: CookieBanner on
-            verkoston jaettu komponentti, jonka on oltava identtinen joka
-            sivustolla. */}
-        <ConsentControls lang={lang} />;
+  // 🔴 Peruutus tällä sivulla eikä bannerissa: CookieBanner on verkoston
+  // jaettu komponentti, jonka on oltava identtinen joka sivustolla.
+  // (fi-katselmus 28.8.2026: return-lause päättyi ensimmäiseen elementtiin ja
+  // ConsentControls oli kuollutta koodia — "Peru suostumus" ei renderöitynyt.)
+  return (
+    <>
+      <CookieContent siteId="laplandstore" siteName="LaplandStore" lang={lang} />
+      <ConsentControls lang={lang} />
+    </>
+  );
 }
