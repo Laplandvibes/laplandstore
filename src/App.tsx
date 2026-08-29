@@ -31,7 +31,7 @@ const FOOTER_PILLARS_EN = [
   { name: 'We Recommend', href: '/#suosittelemme' },
   { name: 'Boutiques', href: '/#putiikit' },
   { name: 'Story', href: '/#tarina' },
-  { name: 'Coming: Online Store', href: 'https://laplandgifts.com' },
+  { name: 'Online shop: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Christmas in Lapland', href: 'https://laplandchristmas.com' },
 ];
 
@@ -40,7 +40,7 @@ const FOOTER_PILLARS_DE = [
   { name: 'Empfehlungen', href: '/de#suosittelemme' },
   { name: 'Boutiquen', href: '/de#putiikit' },
   { name: 'Geschichte', href: '/de#tarina' },
-  { name: 'Bald: Online-Shop', href: 'https://laplandgifts.com' },
+  { name: 'Onlineshop: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Weihnachten in Lappland', href: 'https://laplandchristmas.com' },
 ];
 
@@ -49,7 +49,7 @@ const FOOTER_PILLARS_JA = [
   { name: 'おすすめ', href: '/ja#suosittelemme' },
   { name: 'ブティック', href: '/ja#putiikit' },
   { name: 'ストーリー', href: '/ja#tarina' },
-  { name: '近日公開：オンラインストア', href: 'https://laplandgifts.com' },
+  { name: 'オンラインショップ：LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'ラップランドのクリスマス', href: 'https://laplandchristmas.com' },
 ];
 
@@ -58,7 +58,7 @@ const FOOTER_PILLARS_ES = [
   { name: 'Recomendamos', href: '/es#suosittelemme' },
   { name: 'Boutiques', href: '/es#putiikit' },
   { name: 'Historia', href: '/es#tarina' },
-  { name: 'Próximamente: Tienda en línea', href: 'https://laplandgifts.com' },
+  { name: 'Tienda online: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Navidad en Laponia', href: 'https://laplandchristmas.com' },
 ];
 
@@ -67,7 +67,7 @@ const FOOTER_PILLARS_PT = [
   { name: 'Recomendamos', href: '/br#suosittelemme' },
   { name: 'Boutiques', href: '/br#putiikit' },
   { name: 'História', href: '/br#tarina' },
-  { name: 'Em breve: Loja online', href: 'https://laplandgifts.com' },
+  { name: 'Loja online: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Natal na Lapônia', href: 'https://laplandchristmas.com' },
 ];
 
@@ -76,7 +76,7 @@ const FOOTER_PILLARS_ZH = [
   { name: '我们的推荐', href: '/cn#suosittelemme' },
   { name: '精品店', href: '/cn#putiikit' },
   { name: '故事', href: '/cn#tarina' },
-  { name: '即将上线:线上商店', href: 'https://laplandgifts.com' },
+  { name: '线上商店:LaplandGifts', href: 'https://laplandgifts.com' },
   { name: '拉普兰的圣诞节', href: 'https://laplandchristmas.com' },
 ];
 
@@ -85,7 +85,7 @@ const FOOTER_PILLARS_KO = [
   { name: '추천 상점', href: '/kr#suosittelemme' },
   { name: '부티크', href: '/kr#putiikit' },
   { name: '이야기', href: '/kr#tarina' },
-  { name: '곧 오픈: 온라인 상점', href: 'https://laplandgifts.com' },
+  { name: '온라인 상점: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: '라플란드의 크리스마스', href: 'https://laplandchristmas.com' },
 ];
 
@@ -94,7 +94,7 @@ const FOOTER_PILLARS_FR = [
   { name: 'Nos recommandations', href: '/fr#suosittelemme' },
   { name: 'Boutiques', href: '/fr#putiikit' },
   { name: 'Histoire', href: '/fr#tarina' },
-  { name: 'Bientôt : boutique en ligne', href: 'https://laplandgifts.com' },
+  { name: 'Boutique en ligne : LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Noël en Laponie', href: 'https://laplandchristmas.com' },
 ];
 
@@ -103,7 +103,7 @@ const FOOTER_PILLARS_IT = [
   { name: 'Le nostre raccomandazioni', href: '/it#suosittelemme' },
   { name: 'Boutique', href: '/it#putiikit' },
   { name: 'Storia', href: '/it#tarina' },
-  { name: 'Prossimamente: negozio online', href: 'https://laplandgifts.com' },
+  { name: 'Negozio online: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Natale in Lapponia', href: 'https://laplandchristmas.com' },
 ];
 
@@ -112,7 +112,7 @@ const FOOTER_PILLARS_NL = [
   { name: 'Onze aanbevelingen', href: '/nl#suosittelemme' },
   { name: 'Boutiques', href: '/nl#putiikit' },
   { name: 'Verhaal', href: '/nl#tarina' },
-  { name: 'Binnenkort: online winkel', href: 'https://laplandgifts.com' },
+  { name: 'Webshop: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Kerst in Lapland', href: 'https://laplandchristmas.com' },
 ];
 
@@ -121,7 +121,7 @@ const FOOTER_PILLARS_SV = [
   { name: 'Vi rekommenderar', href: '/sv#suosittelemme' },
   { name: 'Butiker', href: '/sv#putiikit' },
   { name: 'Berättelse', href: '/sv#tarina' },
-  { name: 'Kommer snart: webbutik', href: 'https://laplandgifts.com' },
+  { name: 'Webbutik: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Jul i Lappland', href: 'https://laplandchristmas.com' },
 ];
 

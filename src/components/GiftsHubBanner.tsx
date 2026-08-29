@@ -39,7 +39,7 @@ const COPY = {
     eyebrow: 'The online shop',
     heading: 'Our online shop is open',
     body:
-      'LaplandGifts is the network’s online shop: Finnish gifts, treats and crafts delivered to your door, abroad included. This page is for the other half of the question, where to buy in Lapland itself.',
+      'LaplandGifts is the network’s online shop: Finnish gifts, treats and crafts delivered to your door, abroad included. This page answers the other half of the question: where to buy in Lapland itself.',
     cta: 'Go to laplandgifts.com',
   },
   de: {

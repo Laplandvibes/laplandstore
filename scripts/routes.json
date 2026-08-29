@@ -1,8 +1,8 @@
 [
   {
     "path": "/",
-    "fallbackTitle": "LaplandStore, Authentic Lapland Products: Crafts, Jewelry & Delicacies",
-    "fallbackDescription": "A curated directory of verified Lapland boutiques: handicrafts, jewelry and delicacies direct from real makers in Finnish Lapland. Support local makers.",
+    "fallbackTitle": "LaplandStore: Authentic Lapland gifts, crafts & souvenirs",
+    "fallbackDescription": "A curated directory of verified Lapland boutiques: handicrafts, jewellery and delicacies direct from real makers in Finnish Lapland. Support local makers.",
     "harvestFiles": [
       "src/pages/Home.tsx",
       "src/components/Hero.copy.{lang}.ts",
@@ -21,7 +21,7 @@
   },
   {
     "path": "/terms",
-    "fallbackTitle": "Terms of Use | LaplandStore",
+    "fallbackTitle": "Terms of Service | LaplandStore",
     "harvestFiles": [
       "src/shared/Legal/TermsContent.tsx",
       "src/pages/Terms.tsx"
