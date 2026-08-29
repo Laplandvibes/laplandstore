@@ -6,9 +6,9 @@ const copy: CopyShape = {
   heading: 'Boutiquen in Lappland',
   sub: (n: number) =>
     `${n} handverlesene Läden und Boutiquen in Lappland. Das vollständige Verzeichnis mit Beschreibungen finden Sie bei LaplandGifts.`,
-  onlineHeading: 'Versenden zu Ihnen',
+  onlineHeading: 'Nach Hause liefern lassen',
   physicalHeading: 'Vor Ort besuchen',
-  physicalSub: 'Diese besuchen Sie vor Ort. Sie versenden nicht.',
+  physicalSub: 'Diese Läden besuchen Sie vor Ort; sie versenden nicht.',
   directoryCta: 'Zum vollständigen Boutiquen-Verzeichnis',
   onlineBadge: 'ONLINE',
   physicalBadge: 'LADEN',

@@ -62,7 +62,7 @@ const SK_SHOTS: ProductAdShot[] = [
     alt: {
       en: 'Fiskars Classic universal scissors, 21 cm, with the orange handles',
       fi: 'Fiskars Classic -yleissakset, 21 cm, oranssein kahvoin',
-      de: 'Fiskars Classic Universalschere, 21 cm, mit den orangen Griffen',
+      de: 'Fiskars Classic Universalschere, 21 cm, mit den orangefarbenen Griffen',
       ja: 'フィスカルス クラシック 万能はさみ 21cm（オレンジの持ち手）',
       es: 'Tijeras universales Fiskars Classic de 21 cm con mangos naranjas',
       'pt-BR': 'Tesoura universal Fiskars Classic de 21 cm com cabos laranja',
@@ -80,7 +80,7 @@ const SK_SHOTS: ProductAdShot[] = [
     alt: {
       en: 'Lumene VALO Nordic-C day fluid in a white and orange tube',
       fi: 'Lumene VALO Nordic-C -päivävoide valko-oranssissa tuubissa',
-      de: 'Lumene VALO Nordic-C Tagesfluid in weiß-oranger Tube',
+      de: 'Lumene VALO Nordic-C Tagesfluid in einer weiß-orangefarbenen Tube',
       ja: 'ルメネ VALO Nordic-C デイフルイド（白とオレンジのチューブ）',
       es: 'Fluido de día Lumene VALO Nordic-C en tubo blanco y naranja',
       'pt-BR': 'Fluido diurno Lumene VALO Nordic-C em tubo branco e laranja',

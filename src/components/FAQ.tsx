@@ -111,9 +111,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Welche Produkte werden tatsächlich in Lappland hergestellt?',
       aPlain:
-        'Echte lappländische Produkte werden in Finnisch-Lappland aus regionalen Materialien und nach überlieferten Traditionen gefertigt: Artikel aus Rentierleder und Geweih, handgeschmiedete Puukko-Messer, Holzwaren aus Wacholder und Maserbirke, Wollstrick, von der samischen Kultur inspirierter Silberschmuck sowie arktische Lebensmittel wie Moltebeerenkonfitüre, Preiselbeermarmelade, Birkensirup und Kräutertees. Jede hier aufgeführte Boutique wird redaktionell geprüft, die Quellen sind dokumentiert.',
+        'Echte lappländische Produkte werden in Finnisch-Lappland aus regionalen Materialien und nach überlieferten Traditionen gefertigt: Artikel aus Rentierleder und Geweih, handgeschmiedete Puukko-Messer, Holzwaren aus Wacholder und Maserbirke, Strickwaren aus Wolle, von der samischen Kultur inspirierter Silberschmuck sowie arktische Lebensmittel wie Moltebeerenkonfitüre, Preiselbeermarmelade, Birkensirup und Kräutertees. Jede hier aufgeführte Boutique wird redaktionell geprüft, die Quellen sind dokumentiert.',
       aHtml:
-        'Echte lappländische Produkte werden in Finnisch-Lappland aus regionalen Materialien und nach überlieferten Traditionen gefertigt: Artikel aus Rentierleder und Geweih, handgeschmiedete Puukko-Messer, Holzwaren aus Wacholder und Maserbirke, Wollstrick, von der samischen Kultur inspirierter Silberschmuck sowie arktische Lebensmittel wie Moltebeerenkonfitüre, Preiselbeermarmelade, Birkensirup und Kräutertees. Jede hier aufgeführte Boutique wird redaktionell geprüft, die Quellen sind dokumentiert.',
+        'Echte lappländische Produkte werden in Finnisch-Lappland aus regionalen Materialien und nach überlieferten Traditionen gefertigt: Artikel aus Rentierleder und Geweih, handgeschmiedete Puukko-Messer, Holzwaren aus Wacholder und Maserbirke, Strickwaren aus Wolle, von der samischen Kultur inspirierter Silberschmuck sowie arktische Lebensmittel wie Moltebeerenkonfitüre, Preiselbeermarmelade, Birkensirup und Kräutertees. Jede hier aufgeführte Boutique wird redaktionell geprüft, die Quellen sind dokumentiert.',
     },
     {
       q: 'Versenden Sie Lappland-Produkte ins Ausland?',

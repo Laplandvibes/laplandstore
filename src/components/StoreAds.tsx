@@ -286,7 +286,7 @@ const SO_COPY: ProductAdCopy = {
   sub: {
     en: 'Lapland gets to −30 °C in winter, and shops sell out of the right sizes fast in season. Scandinavian Outdoor carries the base layers, shells, mittens and winter boots that actually handle it, and ships worldwide so it is waiting when you land.',
     fi: 'Lapissa on talvella jopa −30 °C, eikä kaupungin takki siihen riitä. Scandinavian Outdoorilta saat aluskerrastot, kuoritakit, rukkaset ja talvikengät, jotka oikeasti kestävät pakkasen. He toimittavat ympäri maailmaa, joten varusteet voivat odottaa sinua jo perillä.',
-    de: 'In Lappland wird es im Winter bis zu −30 °C, und die richtigen Größen sind in der Saison schnell ausverkauft. Scandinavian Outdoor führt die Basisschichten, Shells, Fäustlinge und Winterstiefel, die das wirklich aushalten, und liefert weltweit, sodass alles bereitliegt, wenn Sie ankommen.',
+    de: 'In Lappland wird es im Winter bis zu −30 °C, und die richtigen Größen sind in der Saison schnell ausverkauft. Scandinavian Outdoor führt die Basisschichten, Shelljacken, Fäustlinge und Winterstiefel, die das wirklich aushalten, und liefert weltweit, sodass alles bereitliegt, wenn Sie ankommen.',
     ja: 'ラップランドの冬は −30 °C にもなり、シーズン中は適切なサイズがすぐ売り切れます。Scandinavian Outdoor には本当に寒さに耐えるベースレイヤー、シェル、ミトン、冬靴が揃い、世界中へ配送するので、到着時には手元に届いています。',
     es: 'Laponia llega a −30 °C en invierno, y en temporada las tallas adecuadas se agotan rápido. Scandinavian Outdoor tiene las primeras capas, chaquetas shell, manoplas y botas de invierno que de verdad aguantan, y envía a todo el mundo, así está esperándole al llegar.',
     'pt-BR': 'A Lapônia chega a −30 °C no inverno, e na temporada os tamanhos certos esgotam rápido. A Scandinavian Outdoor tem as camadas-base, casacos shell, luvas e botas de inverno que realmente aguentam, e envia para o mundo todo, então já está esperando quando você chega.',
@@ -301,7 +301,7 @@ const SO_COPY: ProductAdCopy = {
       icon: Snowflake,
       label: {
         en: 'Base layers, shells, winter boots', fi: 'Aluskerrastot, kuoritakit, talvikengät',
-        de: 'Basisschichten, Shells, Winterstiefel', ja: 'ベースレイヤー・シェル・冬靴',
+        de: 'Basisschichten, Shelljacken, Winterstiefel', ja: 'ベースレイヤー・シェル・冬靴',
         es: 'Primeras capas, shells, botas de invierno', 'pt-BR': 'Camadas-base, shells, botas de inverno',
         'zh-CN': '打底层、冲锋衣、冬靴', ko: '베이스 레이어·셸·겨울 부츠',
         fr: 'Sous-couches, shells, bottes d’hiver', it: 'Strati base, shell, scarponi invernali',

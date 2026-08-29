@@ -8,7 +8,7 @@ const copy: CopyShape = {
   titleA: 'Ein Stück',
   titleHi: 'Lappland',
   titleB: ' für zu Hause',
-  sub1: 'Handgefertigte Puukko-Messer. Sámi-Handwerk in Silber. Moltebeer-Konfitüre im Glas.',
+  sub1: 'Handgefertigte Puukko-Messer. Sámi-Handwerk in Silber. Moltebeerenkonfitüre im Glas.',
   sub2: 'Jedes Souvenir erzählt die Geschichte der Handwerkerin oder des Handwerkers dahinter.',
   cta1: 'Boutiquen entdecken',
   cta2: 'Lappland-Delikatessen',

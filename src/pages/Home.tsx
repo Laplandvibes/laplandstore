@@ -31,7 +31,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'de': {
     seoTitle: 'LaplandStore: Echte Lappland-Geschenke & Souvenirs',
-    seoDescription: 'Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentierhorn, Keramik und Delikatessen. Manche versenden.',
+    seoDescription: 'Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentiergeweih, Keramik und Delikatessen. Manche versenden.',
   },
   'ja': {
     seoTitle: 'LaplandStore：本物のラップランド土産・工芸品・ギフト',

@@ -26,7 +26,7 @@ const COPY = {
   de: {
     eyebrow: 'Geschichten hinter den Produkten',
     titleA: 'Wer in Lappland einkauft,',
-    titleB: 'stützt eine Lebensweise.',
+    titleB: 'unterstützt eine Lebensweise.',
     body:
       'Jedes Messer, jedes Schmuckstück, jedes Glas Konfitüre erzählt eine Geschichte: von einer Handwerkerin, die das Handwerk von den Großeltern gelernt hat, von einer Werkstatt nördlich des Polarkreises, von einem Betrieb, für den Lappland Alltag ist und keine Kulisse. Alle Boutiquen auf dieser Seite werden redaktionell geprüft, die Quellen sind dokumentiert.',
     statA: 'Jahre Handwerkstradition',

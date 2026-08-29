@@ -4,12 +4,12 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: 'Auf dem Laufenden bleiben',
   intro:
-    'Im Newsletter erfahren Sie von neuen Lappland-Funden, den Geschichten der Handwerkerinnen und Handwerker dahinter und von neuen Boutiquen, sobald sie ins Verzeichnis aufgenommen werden.',
+    'Im Newsletter erfahren Sie von neuen Entdeckungen aus Lappland, von den Geschichten der Handwerkerinnen und Handwerker dahinter und von neuen Boutiquen, sobald sie ins Verzeichnis aufgenommen werden.',
   placeholder: 'ihre@e-mail.de',
   cta: 'Abonnieren',
   loading: 'Wird abonniert …',
   fineprint:
-    'Ihre E-Mail-Adresse wird nicht weitergegeben. Sie können jederzeit widerrufen.',
+    'Ihre E-Mail-Adresse wird nicht weitergegeben. Sie können den Newsletter jederzeit abbestellen.',
   successHeadline: 'Fast geschafft.',
   successBody:
     'Bestätigen Sie Ihr Abo über die E-Mail, die wir Ihnen gerade geschickt haben.',

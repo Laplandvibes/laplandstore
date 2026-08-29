@@ -87,7 +87,7 @@ const NB_SHOTS: ProductAdShot[] = [
     alt: {
       en: 'Lilac ribbed beanie in recycled polyester with a small embroidered Mr. Clutterbuck',
       fi: 'Liila resoripipo kierrätyspolyesteristä, käänteessä kirjailtu Herra Hakkarainen',
-      de: 'Fliederfarbene Rippmütze aus recyceltem Polyester mit kleiner gestickter Figur',
+      de: 'Fliederfarbene Rippstrickmütze aus recyceltem Polyester mit kleiner gestickter Figur',
       ja: 'リサイクルポリエステルのライラック色リブ帽。小さな刺繍入り',
       es: 'Gorro de canalé lila en poliéster reciclado con una figura bordada',
       'pt-BR': 'Gorro canelado lilás em poliéster reciclado com uma figura bordada',
@@ -142,7 +142,7 @@ const NB_COPY: ProductAdCopy = {
   sub: {
     en: 'Nordicbuddies is a Helsinki label founded in 2019, selling licensed character wear: a cotton tote, a passport bag that fits a phone, a ribbed beanie in recycled polyester. The shop posts worldwide and every option is tracked, so the parcel follows you home instead of filling a suitcase.',
     fi: 'Nordicbuddies on vuonna 2019 perustettu helsinkiläinen merkki, joka myy lisensoituja hahmotuotteita: puuvillakassi, passilaukku, johon puhelin mahtuu, ja resoripipo kierrätyspolyesteristä. Kauppa postittaa maailmanlaajuisesti ja jokaisessa toimitustavassa on seuranta, joten paketti tulee perässä eikä täytä matkalaukkua.',
-    de: 'Nordicbuddies ist ein 2019 gegründetes Helsinkier Label für lizenzierte Figurenmode: eine Baumwolltasche, eine Passtasche, in die das Handy passt, eine Rippmütze aus recyceltem Polyester. Der Shop versendet weltweit, jede Option ist nachverfolgbar, das Paket kommt hinterher, statt den Koffer zu füllen.',
+    de: 'Nordicbuddies ist ein 2019 gegründetes Helsinkier Label für lizenzierte Figurenmode: eine Baumwolltasche, eine Passtasche, in die das Handy passt, eine Rippstrickmütze aus recyceltem Polyester. Der Shop versendet weltweit, jede Versandart ist nachverfolgbar, das Paket kommt hinterher, statt den Koffer zu füllen.',
     ja: 'Nordicbuddies は 2019 年にヘルシンキで創業した、ライセンス製品を扱うブランドです。コットントート、スマホの入るパスポートバッグ、リサイクルポリエステルのリブ帽。世界中へ発送し、どの配送方法にも追跡が付くので、スーツケースを膨らませずに後から届きます。',
     es: 'Nordicbuddies es una marca de Helsinki fundada en 2019 que vende productos con licencia: una bolsa de algodón, un bolso de pasaporte donde cabe el móvil, un gorro de canalé en poliéster reciclado. La tienda envía a todo el mundo y todas las opciones llevan seguimiento, así que el paquete te sigue a casa en vez de llenarte la maleta.',
     'pt-BR': 'A Nordicbuddies é uma marca de Helsinque fundada em 2019 que vende produtos licenciados: uma sacola de algodão, uma bolsa de passaporte onde cabe o celular, um gorro canelado em poliéster reciclado. A loja envia para o mundo todo e toda opção tem rastreio, então a encomenda segue você para casa em vez de encher a mala.',
@@ -193,7 +193,7 @@ const NB_COPY: ProductAdCopy = {
       label: {
         en: 'Packed in 1–3 working days',
         fi: 'Pakataan 1–3 arkipäivässä',
-        de: 'Verpackt in 1–3 Werktagen',
+        de: 'Wird in 1–3 Werktagen verpackt',
         ja: '1〜3 営業日で梱包',
         es: 'Preparado en 1–3 días laborables',
         'pt-BR': 'Preparado em 1–3 dias úteis',
