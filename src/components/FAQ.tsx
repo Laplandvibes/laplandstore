@@ -431,7 +431,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'I prodotti autenticamente lapponi sono realizzati nella Lapponia finlandese con materiali e tradizioni locali: articoli in pelle di renna e corno, coltelli puukko forgiati a mano, oggetti in legno di ginepro e betulla fiammata, maglieria di lana, gioielli d’argento di ispirazione sami e alimenti artici come confettura di lampone artico, marmellata di mirtillo rosso, sciroppo di betulla e tisane. Ogni boutique qui presentata è verificata in modo indipendente, con le fonti documentate.',
     },
     {
-      q: 'Spedite i prodotti della Lapponia all’estero?',
+      q: 'Spedisce i prodotti della Lapponia all’estero?',
       aPlain:
         'Dipende dalla boutique. LaplandStore è una directory selezionata, non una cassa unica, quindi la spedizione è gestita da ciascun artigiano. Molti hanno un proprio negozio online e spediscono in Finlandia; alcuni spediscono nell’UE o in tutto il mondo. Verifichi le condizioni di spedizione del singolo negozio, o lo contatti direttamente, prima di ordinare.',
       aHtml:

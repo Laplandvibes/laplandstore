@@ -42,7 +42,7 @@ const META: Record<Lang, { title: string; description: string }> = {
   },
   it: {
     title: 'Politica sui cookie | LaplandStore',
-    description: 'Quali cookie usa LaplandStore (Lapeso Oy) e perché: Consent Mode v2, Google Analytics 4 e attribuzione di affiliazione, e come gestire le tue scelte.',
+    description: 'Quali cookie usa LaplandStore (Lapeso Oy) e perché: Consent Mode v2, Google Analytics 4 e attribuzione di affiliazione, e come gestire le Sue scelte.',
   },
   nl: {
     title: 'Cookiebeleid | LaplandStore',

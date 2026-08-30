@@ -293,7 +293,7 @@ const SO_COPY: ProductAdCopy = {
     'zh-CN': '拉普兰冬天能到 −30 °C,旺季时合适的尺码很快售罄。Scandinavian Outdoor 备有真正扛得住严寒的打底层、冲锋衣、连指手套和冬靴,并向全球发货,你落地时它已在等你。',
     ko: '라플란드의 겨울은 −30 °C까지 내려가고, 성수기에는 맞는 사이즈가 금세 품절됩니다. Scandinavian Outdoor에는 실제로 견디는 베이스 레이어, 셸, 벙어리장갑, 겨울 부츠가 있고 전 세계로 배송되어 도착할 때 기다리고 있습니다.',
     fr: 'La Laponie descend à −30 °C en hiver, et en saison les bonnes tailles partent vite. Scandinavian Outdoor propose les sous-couches, vestes shell, moufles et bottes d’hiver qui tiennent vraiment, et livre dans le monde entier : tout vous attend à l’arrivée.',
-    it: 'In Lapponia d’inverno si arriva a −30 °C, e in stagione le taglie giuste finiscono in fretta. Scandinavian Outdoor ha gli strati base, le giacche shell, le muffole e gli scarponi invernali che reggono davvero, e spedisce in tutto il mondo, così ti aspetta all’arrivo.',
+    it: 'In Lapponia d’inverno si arriva a −30 °C, e in stagione le taglie giuste finiscono in fretta. Scandinavian Outdoor ha gli strati base, le giacche shell, le muffole e gli scarponi invernali che reggono davvero, e spedisce in tutto il mondo, così La aspetta all’arrivo.',
     nl: 'In Lapland wordt het ’s winters tot −30 °C, en in het seizoen zijn de juiste maten snel uitverkocht. Scandinavian Outdoor heeft de baselayers, shelljassen, wanten en winterlaarzen die het echt aankunnen, en levert wereldwijd, zodat het klaarligt als je landt.', sv: 'I Lappland blir det ned till −30 °C på vintern, och rätt storlekar tar snabbt slut under säsong. Scandinavian Outdoor har baslagren, skalplaggen, tumvantarna och vinterkängorna som faktiskt klarar det, och skickar över hela världen så att det väntar när du landar.',
   },
   trust: [

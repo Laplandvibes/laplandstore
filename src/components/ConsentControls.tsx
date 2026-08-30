@@ -72,7 +72,7 @@ const COPY: Record<Lang, {
     note: 'Al retirarlo se recarga la página para que los scripts ya cargados dejen de ejecutarse.',
   },
   it: {
-    h: 'La tua scelta',
+    h: 'La Sua scelta',
     accepted: 'Hai accettato i cookie di analisi e dei partner.',
     declined: 'Hai rifiutato i cookie di analisi e dei partner.',
     none: 'Non hai ancora scelto. Fino ad allora non viene caricato nulla.',

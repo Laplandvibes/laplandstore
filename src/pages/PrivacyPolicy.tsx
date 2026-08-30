@@ -41,7 +41,7 @@ const META: Record<Lang, { title: string; description: string }> = {
   },
   it: {
     title: 'Informativa sulla privacy | LaplandStore',
-    description: 'Come LaplandStore (Lapeso Oy) tratta i tuoi dati: Google Analytics 4 con Consent Mode v2, newsletter via Resend/Supabase e tracciamento di affiliazione, spiegato con chiarezza.',
+    description: 'Come LaplandStore (Lapeso Oy) tratta i Suoi dati: Google Analytics 4 con Consent Mode v2, newsletter via Resend/Supabase e tracciamento di affiliazione, spiegato con chiarezza.',
   },
   nl: {
     title: 'Privacybeleid | LaplandStore',
