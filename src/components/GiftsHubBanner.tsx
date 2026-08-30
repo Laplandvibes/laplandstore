@@ -102,7 +102,7 @@ const COPY = {
     eyebrow: 'De webshop',
     heading: 'Onze webshop is open',
     body:
-      'LaplandGifts is de webshop van het netwerk: Finse cadeaus, lekkernijen en ambacht thuisbezorgd, ook in het buitenland. Deze pagina beantwoordt de andere helft van de vraag, waar je in Lapland zelf koopt.',
+      'LaplandGifts is de webshop van het netwerk: Finse cadeaus, lekkernijen en ambacht thuisbezorgd, ook in het buitenland. Deze pagina beantwoordt de andere helft van de vraag, waar u in Lapland zelf koopt.',
     cta: 'Naar laplandgifts.com',
   },
   sv: {

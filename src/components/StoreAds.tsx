@@ -47,7 +47,7 @@ const KC_COPY: ProductAdCopy = {
     ko: '1933년부터 이어온 가족 보석상으로, 칼레발라 코루를 비롯한 핀란드·북유럽 브랜드를 한곳에 모았습니다. 공항 기념품이 아니라 오래 쓰는 선물을 원할 때 좋습니다.',
     fr: 'Un bijoutier familial depuis 1933, avec Kalevala Koru et d’autres marques finlandaises et nordiques au même endroit. Pratique quand vous voulez un cadeau qui dure, pas un énième souvenir d’aéroport.',
     it: 'Un gioielliere di famiglia dal 1933, con Kalevala Koru e altri marchi finlandesi e nordici in un unico posto. Comodo quando vuoi un regalo che dura, non l’ennesimo souvenir da aeroporto.',
-    nl: 'Een familiejuwelier sinds 1933, met Kalevala Koru en andere Finse en Noordse merken op één plek. Handig als je een cadeau wilt dat blijft, niet weer een luchthavensouvenir.', sv: 'En familjejuvelerare sedan 1933, med Kalevala Koru och andra finska och nordiska märken på ett ställe. Bra när du vill ha en present som håller, inte ännu en flygplatssouvenir.',
+    nl: 'Een familiejuwelier sinds 1933, met Kalevala Koru en andere Finse en Noordse merken op één plek. Handig als u een cadeau wilt dat blijft, niet weer een luchthavensouvenir.', sv: 'En familjejuvelerare sedan 1933, med Kalevala Koru och andra finska och nordiska märken på ett ställe. Bra när du vill ha en present som håller, inte ännu en flygplatssouvenir.',
   },
   trust: [
     {
@@ -177,7 +177,7 @@ const IVALO_COPY: ProductAdCopy = {
     ko: 'IVALO.COM은 책임 있게 만든 제품에 초점을 맞춰 핀란드·북유럽 패션·디자인 브랜드 100여 곳을 한 매장에 모았습니다. 집에서 주문해 유럽 전역으로 받아볼 수 있는 의류, 가방, 액세서리.',
     fr: 'IVALO.COM rassemble plus de 100 marques finlandaises et nordiques de mode et de design dans une seule boutique, axée sur des pièces fabriquées de façon responsable. Vêtements, sacs et accessoires à commander depuis chez vous et à faire livrer partout en Europe.',
     it: 'IVALO.COM riunisce oltre 100 marchi finlandesi e nordici di moda e design in un unico negozio, con attenzione ai prodotti realizzati in modo responsabile. Abbigliamento, borse e accessori da ordinare da casa e farti consegnare in tutta Europa.',
-    nl: 'IVALO.COM brengt meer dan 100 Finse en Noordse mode- en designmerken samen in één winkel, met aandacht voor verantwoord gemaakte stukken. Kleding, tassen en accessoires die je vanuit huis bestelt en door heel Europa laat bezorgen.', sv: 'IVALO.COM samlar över 100 finska och nordiska mode- och designmärken i en butik, med fokus på ansvarsfullt tillverkade produkter. Kläder, väskor och accessoarer som du beställer hemifrån och får levererade i hela Europa.',
+    nl: 'IVALO.COM brengt meer dan 100 Finse en Noordse mode- en designmerken samen in één winkel, met aandacht voor verantwoord gemaakte stukken. Kleding, tassen en accessoires die u vanuit huis bestelt en door heel Europa laat bezorgen.', sv: 'IVALO.COM samlar över 100 finska och nordiska mode- och designmärken i en butik, med fokus på ansvarsfullt tillverkade produkter. Kläder, väskor och accessoarer som du beställer hemifrån och får levererade i hela Europa.',
   },
   trust: [
     {
@@ -281,7 +281,7 @@ const SO_COPY: ProductAdCopy = {
     ko: '라플란드에 오시나요? 비행 전에 따뜻한 레이어와 부츠를 Scandinavian Outdoor에서 준비하세요.',
     fr: 'Vous venez en Laponie ? Procurez-vous des couches chaudes et des bottes avant de partir, chez Scandinavian Outdoor.',
     it: 'In arrivo in Lapponia? Procurati strati caldi e scarponi prima di partire, da Scandinavian Outdoor.',
-    nl: 'Kom je naar Lapland? Regel warme lagen en laarzen vóór je vlucht, bij Scandinavian Outdoor.', sv: 'Ska du till Lappland? Fixa varma lager och kängor innan du flyger, från Scandinavian Outdoor.',
+    nl: 'Komt u naar Lapland? Regel warme lagen en laarzen vóór uw vlucht, bij Scandinavian Outdoor.', sv: 'Ska du till Lappland? Fixa varma lager och kängor innan du flyger, från Scandinavian Outdoor.',
   },
   sub: {
     en: 'Lapland gets to −30 °C in winter, and shops sell out of the right sizes fast in season. Scandinavian Outdoor carries the base layers, shells, mittens and winter boots that actually handle it, and ships worldwide so it is waiting when you land.',
@@ -294,7 +294,7 @@ const SO_COPY: ProductAdCopy = {
     ko: '라플란드의 겨울은 −30 °C까지 내려가고, 성수기에는 맞는 사이즈가 금세 품절됩니다. Scandinavian Outdoor에는 실제로 견디는 베이스 레이어, 셸, 벙어리장갑, 겨울 부츠가 있고 전 세계로 배송되어 도착할 때 기다리고 있습니다.',
     fr: 'La Laponie descend à −30 °C en hiver, et en saison les bonnes tailles partent vite. Scandinavian Outdoor propose les sous-couches, vestes shell, moufles et bottes d’hiver qui tiennent vraiment, et livre dans le monde entier : tout vous attend à l’arrivée.',
     it: 'In Lapponia d’inverno si arriva a −30 °C, e in stagione le taglie giuste finiscono in fretta. Scandinavian Outdoor ha gli strati base, le giacche shell, le muffole e gli scarponi invernali che reggono davvero, e spedisce in tutto il mondo, così La aspetta all’arrivo.',
-    nl: 'In Lapland wordt het ’s winters tot −30 °C, en in het seizoen zijn de juiste maten snel uitverkocht. Scandinavian Outdoor heeft de baselayers, shelljassen, wanten en winterlaarzen die het echt aankunnen, en levert wereldwijd, zodat het klaarligt als je landt.', sv: 'I Lappland blir det ned till −30 °C på vintern, och rätt storlekar tar snabbt slut under säsong. Scandinavian Outdoor har baslagren, skalplaggen, tumvantarna och vinterkängorna som faktiskt klarar det, och skickar över hela världen så att det väntar när du landar.',
+    nl: 'In Lapland wordt het ’s winters tot −30 °C, en in het seizoen zijn de juiste maten snel uitverkocht. Scandinavian Outdoor heeft de baselayers, shelljassen, wanten en winterlaarzen die het echt aankunnen, en levert wereldwijd, zodat het klaarligt als u landt.', sv: 'I Lappland blir det ned till −30 °C på vintern, och rätt storlekar tar snabbt slut under säsong. Scandinavian Outdoor har baslagren, skalplaggen, tumvantarna och vinterkängorna som faktiskt klarar det, och skickar över hela världen så att det väntar när du landar.',
   },
   trust: [
     {

@@ -110,7 +110,7 @@ const COPY: Record<Lang, { eyebrow: string; h2: string; cards: Card[] }> = {
     cards: [
       { href: 'https://laplandgifts.com', label: 'Cadeau-ideeën uit Lapland', body: 'Samengestelde cadeau-inspiratie uit heel Fins Lapland.' },
       { href: 'https://laplandchristmas.com/christmas-markets/', label: 'Winkelen op kerstmarkten', body: 'Feestelijke markten, makers en seizoensvondsten in het noorden.' },
-      { href: 'https://laplandvisit.com/itineraries/', label: 'Plan een bezoek aan Lapland', body: 'Waar naartoe, wanneer reizen en hoe je je verplaatst.' },
+      { href: 'https://laplandvisit.com/itineraries/', label: 'Plan een bezoek aan Lapland', body: 'Waar naartoe, wanneer reizen en hoe u zich verplaatst.' },
     ],
   },
   sv: {

@@ -476,7 +476,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Echt Laplandse producten worden in Fins Lapland gemaakt van lokale materialen en tradities: artikelen van rendierleer en gewei, handgesmede puukko-messen, houtwerk van jeneverbes en gevlamd berken, wollen breiwerk, op de Sami-cultuur geïnspireerde zilveren sieraden en Arctische levensmiddelen zoals kruipbraamjam, vossenbessenjam, berkensiroop en kruidenthee. Elke hier vermelde boutique wordt onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
     },
     {
-      q: 'Verzenden jullie Lapland-producten naar het buitenland?',
+      q: 'Verzendt u Lapland-producten naar het buitenland?',
       aPlain:
         'Dat hangt van de boutique af. LaplandStore is een samengestelde gids, geen gezamenlijke kassa, dus de verzending wordt door elke maker zelf geregeld. Veel makers hebben een eigen online winkel en versturen binnen Finland; sommige verzenden naar de EU of wereldwijd. Controleer vóór het bestellen de verzendvoorwaarden van de betreffende winkel, of neem rechtstreeks contact op.',
       aHtml:

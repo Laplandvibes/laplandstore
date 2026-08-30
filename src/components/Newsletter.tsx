@@ -80,7 +80,7 @@ const NEWSLETTER_PRIVACY: Record<
     privacy: 'Informativa sulla privacy',
   },
   nl: {
-    lead: 'Hoe wij met je gegevens omgaan:',
+    lead: 'Hoe wij met uw gegevens omgaan:',
     link: 'Privacybeleid',
     consent:
       'Ja, LaplandVibes mag de nieuwsbrief met reistips, seizoensinfo en aanbiedingen naar dit e-mailadres sturen. Ik ben 18 jaar of ouder.',

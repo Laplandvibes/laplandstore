@@ -12,7 +12,7 @@ const copy: CopyShape = {
     'Uw gegevens worden niet gedeeld met derden. Op elk moment uit te schrijven.',
   successHeadline: 'Bijna klaar.',
   successBody:
-    'Bevestig je aanmelding via de e-mail die we net hebben gestuurd.',
+    'Bevestig uw aanmelding via de e-mail die we net hebben gestuurd.',
   alreadyHeadline: 'Al ingeschreven',
   alreadyBody:
     'U staat al op de lijst. Bedankt dat u het project volgt.',
