@@ -89,7 +89,7 @@ const COPY = {
     titleA: 'Quand vous achetez en Laponie,',
     titleB: 'vous soutenez un mode de vie.',
     body:
-      "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire: celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, sources documentées.",
+      "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire : celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, sources documentées.",
     statA: "années de tradition artisanale",
     statB: 'boutiques dans l’annuaire',
     statC: 'proposent également une boutique en ligne',

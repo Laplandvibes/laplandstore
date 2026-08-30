@@ -54,7 +54,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
     seoDescription: '로바니에미에서 우츠요키까지, 라플란드 부티크를 엄선한 디렉터리입니다. 공예품, 장신구, 순록 뿔, 도자기, 라플란드 먹거리. 일부는 배송합니다.',
   },
   'fr': {
-    seoTitle: 'LaplandStore: Cadeaux et artisanat authentiques de Laponie',
+    seoTitle: 'LaplandStore : Cadeaux et artisanat authentiques de Laponie',
     seoDescription: 'Annuaire sélectif de boutiques de Laponie, de Rovaniemi à Utsjoki : artisanat, bijoux, bois de renne, céramique et spécialités. Certaines expédient.',
   },
   'it': {

@@ -10,7 +10,7 @@
     },
     "de": {
       "title": "LaplandStore: Echte Lappland-Geschenke & Souvenirs",
-      "description": "Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentierhorn, Keramik und Delikatessen. Manche versenden."
+      "description": "Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentiergeweih, Keramik und Delikatessen. Manche versenden."
     },
     "ja": {
       "title": "LaplandStore：本物のラップランド土産・工芸品・ギフト",
@@ -33,7 +33,7 @@
       "description": "로바니에미에서 우츠요키까지, 라플란드 부티크를 엄선한 디렉터리입니다. 공예품, 장신구, 순록 뿔, 도자기, 라플란드 먹거리. 일부는 배송합니다."
     },
     "fr": {
-      "title": "LaplandStore: Cadeaux et artisanat authentiques de Laponie",
+      "title": "LaplandStore : Cadeaux et artisanat authentiques de Laponie",
       "description": "Annuaire sélectif de boutiques de Laponie, de Rovaniemi à Utsjoki : artisanat, bijoux, bois de renne, céramique et spécialités. Certaines expédient."
     },
     "it": {
@@ -60,7 +60,7 @@
     },
     "de": {
       "title": "Cookie-Richtlinie | LaplandStore",
-      "description": "Welche Cookies LaplandStore (Lapeso Oy) verwendet und warum: Consent Mode v2, Google Analytics 4 und Affiliate-Zuordnung, und wie Sie Ihre Auswahl verwalten."
+      "description": "Welche Cookies LaplandStore (Lapeso Oy) verwendet und warum: Consent Mode v2, Google Analytics 4 und Affiliate-Zuordnung. So verwalten Sie Ihre Auswahl."
     },
     "ja": {
       "title": "クッキーポリシー | LaplandStore",
@@ -88,7 +88,7 @@
     },
     "it": {
       "title": "Politica sui cookie | LaplandStore",
-      "description": "Quali cookie usa LaplandStore (Lapeso Oy) e perché: Consent Mode v2, Google Analytics 4 e attribuzione di affiliazione, e come gestire le tue scelte."
+      "description": "Quali cookie usa LaplandStore (Lapeso Oy) e perché: Consent Mode v2, Google Analytics 4 e attribuzione di affiliazione, e come gestire le Sue scelte."
     },
     "nl": {
       "title": "Cookiebeleid | LaplandStore",
@@ -138,7 +138,7 @@
     },
     "it": {
       "title": "Informativa sulla privacy | LaplandStore",
-      "description": "Come LaplandStore (Lapeso Oy) tratta i tuoi dati: Google Analytics 4 con Consent Mode v2, newsletter via Resend/Supabase e tracciamento di affiliazione, spiegato con chiarezza."
+      "description": "Come LaplandStore (Lapeso Oy) tratta i Suoi dati: Google Analytics 4 con Consent Mode v2, newsletter via Resend/Supabase e tracciamento di affiliazione, spiegato con chiarezza."
     },
     "nl": {
       "title": "Privacybeleid | LaplandStore",

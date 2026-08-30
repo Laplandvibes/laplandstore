@@ -101,7 +101,7 @@ const COPY = {
   ],
   fr: [
     { title: 'Produits authentiques', body: 'Chaque boutique est vérifiée de façon indépendante. Uniquement des entreprises de Laponie, sources documentées.' },
-    { title: 'Livraison à domicile', body: 'Neuf boutiques disposent d\'une boutique en ligne: vous commandez directement, et plusieurs expédient aussi à l\'étranger.' },
+    { title: 'Livraison à domicile', body: 'Neuf boutiques disposent d\'une boutique en ligne : vous commandez directement, et plusieurs expédient aussi à l\'étranger.' },
     { title: "Soutenir le local", body: 'Votre achat va directement à un artisan ou entrepreneur de Laponie. Sans intermédiaires.' },
     { title: 'Un souvenir qui dure', body: 'Un cadeau ou un souvenir de Laponie continue de raconter son histoire. De nombreuses boutiques proposent un emballage cadeau.' },
   ],

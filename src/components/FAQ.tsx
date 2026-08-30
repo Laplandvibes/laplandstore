@@ -381,9 +381,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Quels produits sont réellement fabriqués en Laponie ?',
       aPlain:
-        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de mûres arctiques, la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, sources documentées.',
+        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de plaquebières (mûres arctiques), la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, sources documentées.',
       aHtml:
-        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de mûres arctiques, la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, sources documentées.',
+        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de plaquebières (mûres arctiques), la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, sources documentées.',
     },
     {
       q: 'Expédiez-vous les produits de Laponie à l’étranger ?',
@@ -409,9 +409,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Quels produits alimentaires de Laponie sont prisés à l’achat ?',
       aPlain:
-        'Parmi les souvenirs comestibles prisés figurent les confitures de mûres arctiques et d’airelles, le sirop de bouleau, la viande de renne séchée et fumée, les tisanes arctiques, le pain de seigle et d’autres pains locaux, ainsi que les chocolats aux baies du Nord. Ils se conservent bien et supportent le voyage, ce qui en fait des cadeaux pratiques.',
+        'Parmi les souvenirs comestibles prisés figurent les confitures de plaquebières et d’airelles, le sirop de bouleau, la viande de renne séchée et fumée, les tisanes arctiques, le pain de seigle et d’autres pains locaux, ainsi que les chocolats aux baies du Nord. Ils se conservent bien et supportent le voyage, ce qui en fait des cadeaux pratiques.',
       aHtml:
-        'Parmi les souvenirs comestibles prisés figurent les confitures de mûres arctiques et d’airelles, le sirop de bouleau, la viande de renne séchée et fumée, les tisanes arctiques, le pain de seigle et d’autres pains locaux, ainsi que les chocolats aux baies du Nord. Ils se conservent bien et supportent le voyage, ce qui en fait des cadeaux pratiques.',
+        'Parmi les souvenirs comestibles prisés figurent les confitures de plaquebières et d’airelles, le sirop de bouleau, la viande de renne séchée et fumée, les tisanes arctiques, le pain de seigle et d’autres pains locaux, ainsi que les chocolats aux baies du Nord. Ils se conservent bien et supportent le voyage, ce qui en fait des cadeaux pratiques.',
     },
     {
       q: 'Pourquoi acheter auprès d’artisans locaux de Laponie plutôt que dans des boutiques de souvenirs génériques ?',
