@@ -88,7 +88,7 @@ const COPY = {
     { title: 'Uma lembrancinha que dura', body: 'Um presente ou lembrancinha da Lapônia continua contando sua história. Muitas boutiques oferecem embrulho para presente.' },
   ],
   'zh-CN': [
-    { title: '正宗商品', body: '每家精品店都经过独立核实。只收录拉普兰本地企业,资料来源均有记录。' },
+    { title: '正宗商品', body: '每家精品店都经过独立核实。只收录拉普兰本地企业，资料来源均有记录。' },
     { title: '送货到家', body: '九家精品店开设线上商店，可直接下单送到您家门口，其中数家也发往芬兰境外。' },
     { title: '支持本地', body: '您的购物款项直接送达拉普兰的工匠或商家。没有中间商。' },
     { title: '历久弥新的礼物', body: '来自拉普兰的礼物或纪念品会继续讲述它的故事。许多精品店提供礼品包装。' },
