@@ -246,9 +246,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Quais produtos são realmente feitos na Lapônia?',
       aPlain:
-        'Os produtos genuinamente lapões são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula-frisada, malhas de lã, joias de prata de inspiração sami e alimentos árticos como geleia de amora-ártica, geleia de oxicoco-vermelho, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
+        'Os produtos genuinamente lapões são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula encaracolada, malhas de lã, joias de prata de inspiração sámi e alimentos árticos como geleia de amora ártica, geleia de airela-vermelha, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
       aHtml:
-        'Os produtos genuinamente lapões são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula-frisada, malhas de lã, joias de prata de inspiração sami e alimentos árticos como geleia de amora-ártica, geleia de oxicoco-vermelho, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
+        'Os produtos genuinamente lapões são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula encaracolada, malhas de lã, joias de prata de inspiração sámi e alimentos árticos como geleia de amora ártica, geleia de airela-vermelha, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
     },
     {
       q: 'Vocês enviam produtos da Lapônia para o exterior?',
@@ -260,23 +260,23 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'O que é um artesanato tradicional lapão ou sami?',
       aPlain:
-        'A tradição artesanal sami chama-se Duodji. Abrange objetos funcionais feitos à mão e enraizados na cultura sami: facas, objetos de madeira, peças de couro de rena, chifre e osso, faixas tecidas e joias de prata. O Duodji é feito à mão com materiais naturais, e seus padrões e técnicas são transmitidos dentro das comunidades sami.',
+        'A tradição artesanal sámi chama-se Duodji. Abrange objetos funcionais feitos à mão e enraizados na cultura sámi: facas, objetos de madeira, peças de couro de rena, chifre e osso, faixas tecidas e joias de prata. O Duodji é feito à mão com materiais naturais, e seus padrões e técnicas são transmitidos dentro das comunidades sámi.',
       aHtml:
-        'A tradição artesanal sami chama-se Duodji. Abrange objetos funcionais feitos à mão e enraizados na cultura sami: facas, objetos de madeira, peças de couro de rena, chifre e osso, faixas tecidas e joias de prata. O Duodji é feito à mão com materiais naturais, e seus padrões e técnicas são transmitidos dentro das comunidades sami.',
+        'A tradição artesanal sámi chama-se Duodji. Abrange objetos funcionais feitos à mão e enraizados na cultura sámi: facas, objetos de madeira, peças de couro de rena, chifre e osso, faixas tecidas e joias de prata. O Duodji é feito à mão com materiais naturais, e seus padrões e técnicas são transmitidos dentro das comunidades sámi.',
     },
     {
       q: 'Como sei se um produto é autenticamente sami (o selo Sámi Duodji)?',
       aPlain:
-        'Procure a marca registrada Sámi Duodji. É um selo de autenticidade, administrado pela organização Sámi Duodji, que certifica que uma peça foi feita por um artesão sami segundo métodos tradicionais. O selo ajuda a distinguir o artesanato sami genuíno das imitações produzidas em massa e vendidas como lembrancinhas.',
+        'Procure a marca registrada Sámi Duodji. É um selo de autenticidade, administrado pela organização Sámi Duodji, que certifica que uma peça foi feita por um artesão sámi segundo métodos tradicionais. O selo ajuda a distinguir o artesanato sámi genuíno das imitações produzidas em massa e vendidas como lembrancinhas.',
       aHtml:
-        'Procure a marca registrada Sámi Duodji. É um selo de autenticidade, administrado pela organização Sámi Duodji, que certifica que uma peça foi feita por um artesão sami segundo métodos tradicionais. O selo ajuda a distinguir o artesanato sami genuíno das imitações produzidas em massa e vendidas como lembrancinhas.',
+        'Procure a marca registrada Sámi Duodji. É um selo de autenticidade, administrado pela organização Sámi Duodji, que certifica que uma peça foi feita por um artesão sámi segundo métodos tradicionais. O selo ajuda a distinguir o artesanato sámi genuíno das imitações produzidas em massa e vendidas como lembrancinhas.',
     },
     {
       q: 'Quais alimentos da Lapônia são populares para comprar?',
       aPlain:
-        'Entre as lembrancinhas comestíveis populares estão as geleias de amora-ártica e oxicoco-vermelho, o xarope de bétula, a carne de rena seca e defumada, os chás de ervas árticos, o pão de centeio e outros pães locais, e os chocolates com frutas vermelhas do norte. Eles se conservam bem e aguentam a viagem, o que os torna presentes práticos.',
+        'Entre as lembrancinhas comestíveis populares estão as geleias de amora ártica e airela-vermelha, o xarope de bétula, a carne de rena seca e defumada, os chás de ervas árticos, o pão de centeio e outros pães locais, e os chocolates com frutas vermelhas do norte. Eles se conservam bem e aguentam a viagem, o que os torna presentes práticos.',
       aHtml:
-        'Entre as lembrancinhas comestíveis populares estão as geleias de amora-ártica e oxicoco-vermelho, o xarope de bétula, a carne de rena seca e defumada, os chás de ervas árticos, o pão de centeio e outros pães locais, e os chocolates com frutas vermelhas do norte. Eles se conservam bem e aguentam a viagem, o que os torna presentes práticos.',
+        'Entre as lembrancinhas comestíveis populares estão as geleias de amora ártica e airela-vermelha, o xarope de bétula, a carne de rena seca e defumada, os chás de ervas árticos, o pão de centeio e outros pães locais, e os chocolates com frutas vermelhas do norte. Eles se conservam bem e aguentam a viagem, o que os torna presentes práticos.',
     },
     {
       q: 'Por que comprar de produtores locais da Lapônia em vez de lojas de souvenir genéricas?',
