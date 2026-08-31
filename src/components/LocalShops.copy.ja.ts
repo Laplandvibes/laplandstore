@@ -12,7 +12,7 @@ const copy: CopyShape = {
   directoryCta: 'ブティック一覧をすべて見る',
   onlineBadge: 'オンライン',
   physicalBadge: '実店舗',
-  ctaHeading: 'ラップランドで店舗やオンラインショップを運営していますか?',
+  ctaHeading: 'ラップランドで店舗やオンラインショップを運営していますか？',
   ctaBody: 'LaplandStore.fiへの掲載は、ラップランドの事業者の方には無料です。',
   ctaButton: 'お問い合わせ →',
   ctaSubject: 'LaplandStore.fi 提携について',

@@ -41,7 +41,7 @@ export const TOWN_NAMES: Record<Lang, Record<TownId, string>> = {
   "en": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },
   "fi": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },
   "de": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },
-  "ja": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },
+  "ja": { rovaniemi: "ロヴァニエミ", inari: "イナリ", posio: "ポシオ", levi: "レヴィ", sodankyla: "ソダンキュラ", yllas: "ユッラス", saariselka: "サーリセルカ", enontekio: "エノンテキオ", utsjoki: "ウツヨキ" },
   "es": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },
   "pt-BR": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },
   "zh-CN": { rovaniemi: "Rovaniemi", inari: "Inari", posio: "Posio", levi: "Levi", sodankyla: "Sodankylä", yllas: "Ylläs", saariselka: "Saariselkä", enontekio: "Enontekiö", utsjoki: "Utsjoki" },

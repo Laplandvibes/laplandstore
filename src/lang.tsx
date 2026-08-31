@@ -116,12 +116,12 @@ export function footerDict(lang: Lang) {
         body: 'フィンランド・ラップランドの決定版ガイド、オーロラから白夜まで。厳選された体験とインサイダーの視点、出典を明記した情報で、北極の旅の計画を支えます。',
         badge: '独立運営 · 出典明記',
       },
-      spottedError: { title: '誤りを見つけた場合', body: '修正が必要なものに気づきましたか?ご連絡ください。すぐに修正いたします。', cta: '誤りを報告 →' },
+      spottedError: { title: '誤りを見つけた場合', body: '修正が必要なものに気づきましたか？ご連絡ください。すぐに修正いたします。', cta: '誤りを報告 →' },
       partner: { title: 'パートナーシップ', body: '21以上のラップランド関連サイトでの広告や提携。', cta: 'お問い合わせ →' },
       press: { title: 'プレス・メディア', body: '編集パートナーシップとプレスキット。', cta: 'プレスのお問い合わせ →' },
       affiliate: 'このサイトにはアフィリエイトリンクが含まれます。リンク経由でご予約いただいた場合、追加費用なしでLaplandVibesに手数料が支払われることがあります。',
       copyright: '© {{year}} #LaplandVibes、#LaplandVibesネットワークの一部',
-      websiteBy: 'ウェブサイト制作: Yrityspaketit.fi',
+      websiteBy: 'ウェブサイト制作：Yrityspaketit.fi',
       legal: { privacy: 'プライバシーポリシー', cookie: 'クッキーポリシー', terms: '利用規約', contact: 'お問い合わせ' },
     }
   }

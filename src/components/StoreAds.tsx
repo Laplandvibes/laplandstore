@@ -274,7 +274,7 @@ const SO_COPY: ProductAdCopy = {
     en: 'Coming to Lapland? Sort warm layers and boots before you fly, from Scandinavian Outdoor.',
     fi: 'Tulossa Lappiin? Hanki lämpimät vaatteet ja talvikengät jo ennen lähtöä, Scandinavian Outdoorilta.',
     de: 'Sie kommen nach Lappland? Besorgen Sie warme Lagen und Stiefel schon vor dem Flug, bei Scandinavian Outdoor.',
-    ja: 'ラップランドへ?出発前に、暖かいレイヤーとブーツを Scandinavian Outdoor で揃えておきましょう。',
+    ja: 'ラップランドへ？出発前に、暖かいレイヤーとブーツを Scandinavian Outdoor で揃えておきましょう。',
     es: '¿Viene a Laponia? Consiga capas de abrigo y botas antes de volar, en Scandinavian Outdoor.',
     'pt-BR': 'Vindo para a Lapônia? Garanta camadas quentes e botas antes de voar, na Scandinavian Outdoor.',
     'zh-CN': '要来拉普兰吗?出发前先在 Scandinavian Outdoor 备好保暖内层和靴子。',

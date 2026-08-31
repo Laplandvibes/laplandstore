@@ -126,29 +126,29 @@ const FOOTER_PILLARS_SV = [
 ];
 
 const FOOTER_NOTE_FI =
-  'Sivustoa ylläpitää itsenäisesti Lapeso Oy · viimeksi tarkistettu huhtikuussa 2026 · listaus on ilmainen lappilaisille yrittäjille.';
+  'Sivustoa ylläpitää itsenäisesti LaPeso Oy · viimeksi tarkistettu huhtikuussa 2026 · listaus on ilmainen lappilaisille yrittäjille.';
 const FOOTER_NOTE_EN =
-  'Independently maintained by Lapeso Oy · last reviewed April 2026 · listings are free for Lapland-based entrepreneurs.';
+  'Independently maintained by LaPeso Oy · last reviewed April 2026 · listings are free for Lapland-based entrepreneurs.';
 const FOOTER_NOTE_DE =
-  'Redaktionell betreut von Lapeso Oy · zuletzt geprüft im April 2026 · Eintragungen sind für Unternehmen aus Lappland kostenfrei.';
+  'Redaktionell betreut von LaPeso Oy · zuletzt geprüft im April 2026 · Eintragungen sind für Unternehmen aus Lappland kostenfrei.';
 const FOOTER_NOTE_JA =
-  'Lapeso Oy が独立して運営 · 最終確認 2026年4月 · ラップランドの事業者は無料で掲載いただけます。';
+  'LaPeso Oy が独立して運営 · 最終確認 2026年4月 · ラップランドの事業者は無料で掲載いただけます。';
 const FOOTER_NOTE_ES =
-  'Mantenido de forma independiente por Lapeso Oy · última revisión en abril de 2026 · el alta es gratuita para los emprendedores de la Laponia finlandesa.';
+  'Mantenido de forma independiente por LaPeso Oy · última revisión en abril de 2026 · el alta es gratuita para los emprendedores de la Laponia finlandesa.';
 const FOOTER_NOTE_PT =
-  'Mantido de forma independente pela Lapeso Oy · última revisão em abril de 2026 · o cadastro é gratuito para empreendedores da Lapônia finlandesa.';
+  'Mantido de forma independente pela LaPeso Oy · última revisão em abril de 2026 · o cadastro é gratuito para empreendedores da Lapônia finlandesa.';
 const FOOTER_NOTE_ZH =
-  '由 Lapeso Oy 独立运营 · 最后审阅:2026年4月 · 来自拉普兰的商家可免费列入。';
+  '由 LaPeso Oy 独立运营 · 最后审阅:2026年4月 · 来自拉普兰的商家可免费列入。';
 const FOOTER_NOTE_KO =
-  'Lapeso Oy가 독립적으로 운영 · 최종 검토 2026년 4월 · 라플란드 사업자는 무료로 등재됩니다.';
+  'LaPeso Oy가 독립적으로 운영 · 최종 검토 2026년 4월 · 라플란드 사업자는 무료로 등재됩니다.';
 const FOOTER_NOTE_FR =
-  'Édité de façon indépendante par Lapeso Oy · dernière vérification avril 2026 · les inscriptions sont gratuites pour les entrepreneurs de Laponie finlandaise.';
+  'Édité de façon indépendante par LaPeso Oy · dernière vérification avril 2026 · les inscriptions sont gratuites pour les entrepreneurs de Laponie finlandaise.';
 const FOOTER_NOTE_IT =
-  'Gestito in modo indipendente da Lapeso Oy · ultima revisione aprile 2026 · l\'iscrizione è gratuita per gli imprenditori della Lapponia finlandese.';
+  'Gestito in modo indipendente da LaPeso Oy · ultima revisione aprile 2026 · l\'iscrizione è gratuita per gli imprenditori della Lapponia finlandese.';
 const FOOTER_NOTE_NL =
-  'Onafhankelijk beheerd door Lapeso Oy · laatst beoordeeld in april 2026 · vermeldingen zijn gratis voor ondernemers uit Fins Lapland.';
+  'Onafhankelijk beheerd door LaPeso Oy · laatst beoordeeld in april 2026 · vermeldingen zijn gratis voor ondernemers uit Fins Lapland.';
 const FOOTER_NOTE_SV =
-  'Oberoende drivet av Lapeso Oy · senast granskat i april 2026 · det är gratis att listas för företagare i finska Lappland.';
+  'Oberoende drivet av LaPeso Oy · senast granskat i april 2026 · det är gratis att listas för företagare i finska Lappland.';
 
 /**
  * 🔴 The app layout's landmark, EXCEPT on /terms.
