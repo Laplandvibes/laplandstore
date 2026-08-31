@@ -8,7 +8,7 @@ const copy: CopyShape = {
     `${n}곳의 엄선한 라플란드 상점과 부티크입니다. 설명이 포함된 전체 목록은 LaplandGifts에 있습니다.`,
   onlineHeading: '집으로 배송합니다',
   physicalHeading: '직접 방문',
-  physicalSub: '이곳들은 직접 방문하는 매장입니다. 배송은 하지 않습니다.',
+  physicalSub: '아래 매장들은 직접 방문 전용이며 배송은 하지 않습니다.',
   directoryCta: '전체 부티크 목록 보기',
   onlineBadge: '온라인',
   physicalBadge: '오프라인',

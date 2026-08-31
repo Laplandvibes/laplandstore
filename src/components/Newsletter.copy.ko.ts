@@ -4,7 +4,7 @@ import type { CopyShape } from './Newsletter.copy.en';
 const copy: CopyShape = {
   heading: '최신 소식 받기',
   intro:
-    '뉴스레터를 구독하시면 새로운 라플란드의 발견, 그 뒤에 있는 장인들의 이야기, 그리고 디렉터리에 새로 합류하는 부티크 소식을 전해드립니다.',
+    '뉴스레터를 구독하시면 라플란드의 새로운 발견, 그 뒤에 있는 장인들의 이야기, 그리고 디렉터리에 새로 합류하는 부티크 소식을 전해드립니다.',
   placeholder: 'your@email.com',
   cta: '구독하기',
   loading: '등록 중…',
