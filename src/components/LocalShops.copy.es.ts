@@ -12,8 +12,8 @@ const copy: CopyShape = {
   directoryCta: 'Ver el directorio completo de boutiques',
   onlineBadge: 'EN LÍNEA',
   physicalBadge: 'EN TIENDA',
-  ctaHeading: '¿Tiene una tienda o tienda en línea en Laponia?',
-  ctaBody: 'El alta en LaplandStore.fi es gratuita para todos los emprendedores laponios.',
+  ctaHeading: '¿Tiene una tienda física o en línea en Laponia?',
+  ctaBody: 'El alta en LaplandStore.fi es gratuita para todos los emprendedores de Laponia.',
   ctaButton: 'Ponerse en contacto →',
   ctaSubject: 'Colaboración con LaplandStore.fi',
 };

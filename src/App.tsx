@@ -58,7 +58,7 @@ const FOOTER_PILLARS_ES = [
   { name: 'Recomendamos', href: '/es#suosittelemme' },
   { name: 'Boutiques', href: '/es#putiikit' },
   { name: 'Historia', href: '/es#tarina' },
-  { name: 'Tienda online: LaplandGifts', href: 'https://laplandgifts.com' },
+  { name: 'Tienda en línea: LaplandGifts', href: 'https://laplandgifts.com' },
   { name: 'Navidad en Laponia', href: 'https://laplandchristmas.com' },
 ];
 

@@ -38,8 +38,8 @@ const NEWSLETTER_PRIVACY: Record<
     privacy: 'プライバシーポリシー',
   },
   es: {
-    lead: 'Cómo tratamos tus datos:',
-    link: 'Política de Privacidad',
+    lead: 'Cómo tratamos sus datos:',
+    link: 'Política de privacidad',
     consent:
       'Acepto recibir en mi correo el boletín de LaplandVibes (consejos de viaje, información de temporada y ofertas) y confirmo que tengo al menos 18 años.',
     privacy: 'Política de privacidad',

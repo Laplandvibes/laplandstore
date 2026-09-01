@@ -57,10 +57,10 @@ const COPY = {
     cta: 'laplandgifts.com へ',
   },
   es: {
-    eyebrow: 'La tienda online',
-    heading: 'Nuestra tienda online está abierta',
+    eyebrow: 'La tienda en línea',
+    heading: 'Nuestra tienda en línea está abierta',
     body:
-      'LaplandGifts es la tienda online de la red: regalos, delicias y artesanía finlandesa enviados a tu casa, también al extranjero. Esta página responde a la otra mitad de la pregunta, dónde comprar en la propia Laponia.',
+      'LaplandGifts es la tienda en línea de la red: regalos, delicias y artesanía de Finlandia enviados a su casa, también al extranjero. Esta página responde a la otra mitad de la pregunta, dónde comprar en la propia Laponia.',
     cta: 'Ir a laplandgifts.com',
   },
   'pt-BR': {

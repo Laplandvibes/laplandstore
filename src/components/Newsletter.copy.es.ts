@@ -12,7 +12,7 @@ const copy: CopyShape = {
     'Sus datos no se comparten con terceros. Cancele la suscripción cuando quiera.',
   successHeadline: 'Ya casi.',
   successBody:
-    'Confirma tu suscripción desde el correo que acabamos de enviarte.',
+    'Confirme su suscripción desde el correo que acabamos de enviarle.',
   alreadyHeadline: 'Ya está suscrito',
   alreadyBody:
     'Ya está en la lista. Gracias por seguir el proyecto.',

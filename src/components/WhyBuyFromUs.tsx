@@ -77,7 +77,7 @@ const COPY = {
   ],
   es: [
     { title: 'Productos auténticos', body: 'Cada boutique se verifica de forma independiente. Solo empresas de Laponia, con las fuentes documentadas.' },
-    { title: 'Pide a domicilio', body: 'Nueve boutiques tienen tienda en línea: pides directamente, y varias envían también al extranjero.' },
+    { title: 'Pida a domicilio', body: 'Nueve boutiques tienen tienda en línea: usted pide directamente, y varias envían también al extranjero.' },
     { title: 'Apoye lo local', body: 'Su compra va directamente al artesano o emprendedor de Laponia. Sin intermediarios.' },
     { title: 'Un regalo que dura', body: 'Un regalo o recuerdo de Laponia sigue contando su historia. Muchas boutiques ofrecen empaquetado de regalo.' },
   ],

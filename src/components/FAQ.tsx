@@ -236,9 +236,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: '¿Por qué comprar a productores locales de Laponia en vez de en tiendas de recuerdos genéricas?',
       aPlain:
-        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y obtiene una pieza de origen conocido en lugar de una imitación importada. Muchos recuerdos genéricos se fabrican en serie en el extranjero. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
+        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y usted se lleva una pieza de origen conocido en lugar de una imitación importada. Muchos recuerdos genéricos se fabrican en serie en el extranjero. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
       aHtml:
-        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y obtiene una pieza de origen conocido en lugar de una imitación importada. Muchos recuerdos genéricos se fabrican en serie en el extranjero. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
+        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y usted se lleva una pieza de origen conocido en lugar de una imitación importada. Muchos recuerdos genéricos se fabrican en serie en el extranjero. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
     },
   ],
 
