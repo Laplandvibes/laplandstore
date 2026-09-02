@@ -15,7 +15,7 @@ const copy: CopyShape = {
     'Bekräfta din prenumeration i mejlet vi just skickade.',
   alreadyHeadline: 'Redan prenumerant',
   alreadyBody:
-    'Du finns redan på listan. Tack för att du håller fast vid projektet.',
+    'Du finns redan på listan. Tack för att du följer projektet.',
   errorGeneric: 'Prenumerationen misslyckades. Försök igen.',
 };
 
