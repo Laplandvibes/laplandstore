@@ -471,9 +471,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Welke producten worden echt in Lapland gemaakt?',
       aPlain:
-        'Echt Laplandse producten worden in Fins Lapland gemaakt van lokale materialen en tradities: artikelen van rendierleer en gewei, handgesmede puukko-messen, houtwerk van jeneverbes en gevlamd berken, wollen breiwerk, op de Sami-cultuur geïnspireerde zilveren sieraden en Arctische levensmiddelen zoals kruipbraamjam, vossenbessenjam, berkensiroop en kruidenthee. Elke hier vermelde boutique wordt onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
+        'Echt Laplandse producten worden in Fins Lapland gemaakt van lokale materialen en tradities: artikelen van rendierleer en gewei, handgesmede puukko-messen, houtwerk van jeneverbes en gevlamd berkenhout, wollen breiwerk, op de Sami-cultuur geïnspireerde zilveren sieraden en Arctische levensmiddelen zoals kruipbraamjam, vossenbessenjam, berkensiroop en kruidenthee. Elke hier vermelde boutique wordt onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
       aHtml:
-        'Echt Laplandse producten worden in Fins Lapland gemaakt van lokale materialen en tradities: artikelen van rendierleer en gewei, handgesmede puukko-messen, houtwerk van jeneverbes en gevlamd berken, wollen breiwerk, op de Sami-cultuur geïnspireerde zilveren sieraden en Arctische levensmiddelen zoals kruipbraamjam, vossenbessenjam, berkensiroop en kruidenthee. Elke hier vermelde boutique wordt onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
+        'Echt Laplandse producten worden in Fins Lapland gemaakt van lokale materialen en tradities: artikelen van rendierleer en gewei, handgesmede puukko-messen, houtwerk van jeneverbes en gevlamd berkenhout, wollen breiwerk, op de Sami-cultuur geïnspireerde zilveren sieraden en Arctische levensmiddelen zoals kruipbraamjam, vossenbessenjam, berkensiroop en kruidenthee. Elke hier vermelde boutique wordt onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
     },
     {
       q: 'Verzendt u Lapland-producten naar het buitenland?',
