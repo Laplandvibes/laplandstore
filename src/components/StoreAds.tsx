@@ -27,7 +27,7 @@ const KC_COPY: ProductAdCopy = {
     en: 'Looking for a real Finnish gift? Kalevala jewellery and Nordic watches at Kulta-Center.',
     fi: 'Etsitkö aitoa suomalaista lahjaa? Kulta-Centeristä löydät Kalevala-korut ja pohjoismaiset kellot.',
     de: 'Auf der Suche nach einem echten finnischen Geschenk? Kalevala-Schmuck und nordische Uhren bei Kulta-Center.',
-    ja: '本物のフィンランドの贈り物をお探しですか?Kulta-Center にカレワラのジュエリーと北欧の時計が揃います。',
+    ja: '本物のフィンランドの贈り物をお探しですか？Kulta-Center にカレワラのジュエリーと北欧の時計が揃います。',
     es: '¿Busca un regalo finlandés de verdad? Joyas Kalevala y relojes nórdicos en Kulta-Center.',
     'pt-BR': 'Procurando um presente finlandês de verdade? Joias Kalevala e relógios nórdicos na Kulta-Center.',
     'zh-CN': '想找一份真正的芬兰礼物？Kulta-Center 有 Kalevala 珠宝与北欧腕表。',
