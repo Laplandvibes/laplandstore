@@ -7,13 +7,19 @@ import FAQ, { FAQ_BY_LANG } from '../components/FAQ';
 import RelatedSites from '../components/RelatedSites';
 import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
-import { ScandinavianOutdoorAd } from '../components/StoreAds';
 import ProductRail from '../shared/ads/ProductRail';
 import suomikauppaRail from '../shared/ads/rails/suomikauppa';
 import suomikauppaPicks from '../shared/ads/data/suomikauppaPicks';
 import ivaloRail from '../shared/ads/rails/ivalo';
 import ivaloPicks from '../shared/ads/data/ivaloPicks';
-import NordicbuddiesAd from '../components/NordicbuddiesAd';
+import nordicbuddiesRail from '../shared/ads/rails/nordicbuddies';
+import nordicbuddiesPicks from '../shared/ads/data/nordicbuddiesPicks';
+import scandinavianoutdoorRail from '../shared/ads/rails/scandinavianoutdoor';
+import scandinavianoutdoorPicks from '../shared/ads/data/scandinavianoutdoorPicks';
+import finlaysonRail from '../shared/ads/rails/finlayson';
+import finlaysonPicks from '../shared/ads/data/finlaysonPicks';
+import nansoRail from '../shared/ads/rails/nanso';
+import nansoPicks from '../shared/ads/data/nansoPicks';
 import KalevalaRail from '../shared/ads/KalevalaRail';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
@@ -144,6 +150,11 @@ export default function Home() {
           <KalevalaRail lang={lang} sid="home_kalevala" variant="light" />
         </div>
       </section>
+      <section className="px-4 py-10 sm:py-14 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <ProductRail partner={nansoRail} snapshot={nansoPicks} lang={lang} sid="home_nanso" variant="light" />
+        </div>
+      </section>
       <ArtisanStory />
       <LocalShops />
       {/* Suomikauppa (Daisycon) — placed DIRECTLY after the boutique directory
@@ -161,6 +172,14 @@ export default function Home() {
           <ProductRail partner={ivaloRail} snapshot={ivaloPicks} lang={lang} sid="after_boutiques" variant="light" />
         </div>
       </section>
+      {/* Finlayson ja Nanso — kaksi suomalaista tekstiilitaloa, kumpikin oma
+          yksikkönsä eri kohdassa sivua. EI vierekkäin: kaksi samankaltaista
+          mainosta peräkkäin on sama virhe kuin Kulta-Center kahdesti. */}
+      <section className="px-4 py-10 sm:py-14 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <ProductRail partner={finlaysonRail} snapshot={finlaysonPicks} lang={lang} sid="home_finlayson" variant="light" />
+        </div>
+      </section>
       <GiftsHubBanner />
 
       {/* Nordicbuddies (Daisycon 20538). Sits after the gifts banner and before
@@ -169,13 +188,13 @@ export default function Home() {
           Media laplandstore.fi (424061) approved 2026-08-24. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <NordicbuddiesAd sid="home_character_design" />
+          <ProductRail partner={nordicbuddiesRail} snapshot={nordicbuddiesPicks} lang={lang} sid="home_character_design" variant="light" />
         </div>
       </section>
       {/* Mapped product ad — Scandinavian Outdoor (pack for the trip), ships worldwide. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <ScandinavianOutdoorAd sid="pack_for_trip" />
+          <ProductRail partner={scandinavianoutdoorRail} snapshot={scandinavianoutdoorPicks} lang={lang} sid="pack_for_trip" variant="light" />
         </div>
       </section>
       <FAQ />
