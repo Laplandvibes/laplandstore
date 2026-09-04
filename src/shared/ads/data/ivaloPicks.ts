@@ -41,7 +41,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "54352481911107",
-      "name": "Bessette Mekko Tummansininen",
+      "name": "Bessette Mekko Tummansininen Raidallinen",
       "shelf": "linen",
       "category": "Dress",
       "brand": "KOMODO",
@@ -52,7 +52,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "54118772834627",
-      "name": "Alma Neule",
+      "name": "Alma Neule Raidallinen",
       "shelf": "knit",
       "category": "Knit",
       "brand": "KOMODO",
@@ -63,7 +63,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "54352455532867",
-      "name": "Pocket Neule",
+      "name": "Pocket Neule Tummansininen",
       "shelf": "knit",
       "category": "Knit",
       "brand": "KOMODO",
@@ -96,7 +96,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "53655328784707",
-      "name": "Cole Velvet Takki",
+      "name": "Cole Velvet Takki Oliivi",
       "shelf": "outer",
       "category": "Jacket",
       "brand": "KOMODO",

@@ -52,7 +52,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "62349730546051",
-      "name": "Finlayson Reilu pyyhe",
+      "name": "Finlayson Reilu pyyhe Harmaa",
       "shelf": "kylpypyyhkeet",
       "category": "Yksiväriset kylpypyyhkeet",
       "brand": "Finlayson - Luomu",
@@ -74,7 +74,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "57622936355203",
-      "name": "Finlayson",
+      "name": "Finlayson Lintsi-kylpypyyhe",
       "shelf": "vallila",
       "category": "Vallila",
       "brand": "Finlayson",
@@ -96,7 +96,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "55916768395651",
-      "name": "Finlayson Elefantti vapaa pussilakanasetti Beige /",
+      "name": "Finlayson Elefantti vapaa pussilakanasetti Beige / Tummanharmaa",
       "shelf": "palttinasetit",
       "category": "Palttinasetit",
       "brand": "Finlayson FI",

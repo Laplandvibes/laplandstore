@@ -19,7 +19,7 @@ const picks: PartnerSnapshot = {
   "products": [
     {
       "sku": "NA  -01-28844--2699-XS",
-      "name": "Nanso OODI pitkä hihaton yöpaita -",
+      "name": "Nanso OODI pitkä hihaton yöpaita - sininen",
       "shelf": "naisten-mekko",
       "category": "Naisten mekko",
       "brand": "Nanso",
@@ -41,7 +41,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "NA  -01-29209--3660-XS",
-      "name": "Nanso BABETTE tunika -",
+      "name": "Nanso BABETTE tunika - sininen",
       "shelf": "naisten-tunika",
       "category": "Naisten tunika",
       "brand": "Nanso",
@@ -52,7 +52,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "NA  -01-29340--1000-XS",
-      "name": "Nanso JUHANNUS pyjamahousut -",
+      "name": "Nanso JUHANNUS pyjamahousut - valkoinen",
       "shelf": "naisten-housut",
       "category": "Naisten housut",
       "brand": "Nanso",
@@ -63,7 +63,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "NA  -01-28906--1421-34",
-      "name": "Nanso PIENI FLORISTI paitapusero -",
+      "name": "Nanso PIENI FLORISTI paitapusero - mustavalkoinen",
       "shelf": "naisten-paitapusero",
       "category": "Naisten paitapusero",
       "brand": "Nanso",
@@ -74,7 +74,7 @@ const picks: PartnerSnapshot = {
     },
     {
       "sku": "NA  -01-28827--9086-L",
-      "name": "Nanso COLETTA neulepusero -",
+      "name": "Nanso COLETTA neulepusero - ruskea",
       "shelf": "naisten-neulepusero",
       "category": "Naisten neulepusero",
       "brand": "Nanso",
