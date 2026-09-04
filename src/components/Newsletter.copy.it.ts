@@ -12,7 +12,7 @@ const copy: CopyShape = {
     'I Suoi dati non vengono condivisi con terzi. Si disiscriva quando vuole.',
   successHeadline: 'Ci siamo quasi.',
   successBody:
-    'Conferma l\'iscrizione dall\'e-mail che Le abbiamo appena inviato.',
+    'Confermi l\'iscrizione dall\'e-mail che Le abbiamo appena inviato.',
   alreadyHeadline: 'Già iscritto/a',
   alreadyBody:
     'È già nella nostra lista. Grazie per seguire il progetto.',

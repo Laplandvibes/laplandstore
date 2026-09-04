@@ -21,9 +21,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'What products are genuinely made in Lapland?',
       aPlain:
-        'Genuinely Lappish products are crafted in Finnish Lapland from local materials and traditions: reindeer leather and antler items, hand-forged puukko knives, carved juniper and curly-birch woodware, woollen knits, Sámi-inspired silver jewellery and Arctic food products such as cloudberry preserve, lingonberry jam, birch syrup and herbal teas. Each boutique listed here is independently verified, with sources on file.',
+        'Genuinely Lappish products are crafted in Finnish Lapland from local materials and traditions: reindeer leather and antler items, hand-forged puukko knives, carved juniper and curly-birch woodware, woollen knits, Sámi-inspired silver jewellery and Arctic food products such as cloudberry preserve, lingonberry preserve, birch syrup and herbal teas. Each boutique listed here is independently verified, with sources on file.',
       aHtml:
-        'Genuinely Lappish products are crafted in Finnish Lapland from local materials and traditions: reindeer leather and antler items, hand-forged puukko knives, carved juniper and curly-birch woodware, woollen knits, Sámi-inspired silver jewellery and Arctic food products such as cloudberry preserve, lingonberry jam, birch syrup and herbal teas. Each boutique listed here is independently verified, with sources on file.',
+        'Genuinely Lappish products are crafted in Finnish Lapland from local materials and traditions: reindeer leather and antler items, hand-forged puukko knives, carved juniper and curly-birch woodware, woollen knits, Sámi-inspired silver jewellery and Arctic food products such as cloudberry preserve, lingonberry preserve, birch syrup and herbal teas. Each boutique listed here is independently verified, with sources on file.',
     },
     {
       q: 'Do you ship Lapland products internationally?',
@@ -71,7 +71,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Aidosti lappilaiset tuotteet valmistetaan Suomen Lapissa paikallisista materiaaleista ja perinteistä: poronnahka- ja sarviesineet, käsin taotut puukot, kataja- ja visakoivuesineet, villaneuleet, saamelaisvaikutteiset hopeakorut sekä arktiset elintarvikkeet kuten lakkahillo, puolukkahillo, koivusiirappi ja yrttiteet. Jokainen tässä esitelty putiikki on käsin valittu, lähteet näkyvillä.',
     },
     {
-      q: 'Toimitatteko Lapin tuotteita ulkomaille?',
+      q: 'Toimitetaanko Lapin tuotteita ulkomaille?',
       aPlain:
         'Se riippuu putiikista. LaplandStore on käsin koottu hakemisto eikä yksi yhteinen kassa, joten toimituksesta vastaa kukin tekijä itse. Moni pitää omaa verkkokauppaa ja postittaa Suomen sisällä; osa toimittaa EU-alueelle tai maailmanlaajuisesti. Tarkista kunkin kaupan toimitusehdot tai ota suoraan yhteyttä ennen tilausta.',
       aHtml:
@@ -175,7 +175,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'サーミの工芸の伝統は「ドゥオッジ(Duodji)」と呼ばれます。サーミ文化に根ざした実用的な手作りの品々、ナイフ、木工品、トナカイ革・角・骨の製品、織りのバンド、シルバージュエリーなどを指します。ドゥオッジは天然素材から手作業で作られ、その文様や技法はサーミの共同体の中で受け継がれています。',
     },
     {
-      q: '商品が本物のサーミ製であることをどう見分けますか（サーミ・ドゥオッジのマーク）?',
+      q: '商品が本物のサーミ製であることをどう見分けますか（サーミ・ドゥオッジのマーク）？',
       aPlain:
         'サーミ・ドゥオッジ(Sámi Duodji)の商標を探してください。これはSámi Duodji団体が管理する登録された真正性のマークで、その品がサーミの職人によって伝統的な手法で作られたことを証明します。このマークは、本物のサーミ工芸と、土産物として売られる大量生産の模倣品とを見分ける助けになります。',
       aHtml:
@@ -258,7 +258,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Depende da boutique. O LaplandStore é um diretório selecionado, não um caixa único, então cada produtor cuida do próprio envio. Muitos têm loja online própria e enviam dentro da Finlândia; alguns enviam para a UE ou para o mundo todo. Confira as condições de envio de cada loja, ou entre em contato diretamente, antes de comprar.',
     },
     {
-      q: 'O que é um artesanato tradicional lapão ou sami?',
+      q: 'O que é um artesanato tradicional lapão ou sámi?',
       aPlain:
         'A tradição artesanal sámi chama-se Duodji. Abrange objetos funcionais feitos à mão e enraizados na cultura sámi: facas, objetos de madeira, peças de couro de rena, chifre e osso, faixas tecidas e joias de prata. O Duodji é feito à mão com materiais naturais, e seus padrões e técnicas são transmitidos dentro das comunidades sámi.',
       aHtml:
@@ -381,9 +381,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Quels produits sont réellement fabriqués en Laponie ?',
       aPlain:
-        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de plaquebières (mûres arctiques), la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, sources documentées.',
+        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de plaquebières (mûres arctiques), la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, avec ses sources documentées.',
       aHtml:
-        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de plaquebières (mûres arctiques), la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, sources documentées.',
+        'Les produits authentiquement lapons sont fabriqués en Laponie finlandaise à partir de matériaux et de traditions locales : articles en cuir de renne et en bois de renne, couteaux puukko forgés à la main, objets en bois de genévrier et de bouleau madré, tricots de laine, bijoux en argent d’inspiration sâme et produits alimentaires arctiques comme la confiture de plaquebières (mûres arctiques), la confiture d’airelles, le sirop de bouleau et les tisanes. Chaque boutique présentée ici est vérifiée de façon indépendante, avec ses sources documentées.',
     },
     {
       q: 'Expédiez-vous les produits de Laponie à l’étranger ?',
@@ -426,9 +426,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Quali prodotti sono davvero fatti in Lapponia?',
       aPlain:
-        'I prodotti autenticamente lapponi sono realizzati nella Lapponia finlandese con materiali e tradizioni locali: articoli in pelle di renna e corno, coltelli puukko forgiati a mano, oggetti in legno di ginepro e betulla fiammata, maglieria di lana, gioielli d’argento di ispirazione sami e alimenti artici come confettura di lampone artico, marmellata di mirtillo rosso, sciroppo di betulla e tisane. Ogni boutique qui presentata è verificata in modo indipendente, con le fonti documentate.',
+        'I prodotti autenticamente lapponi sono realizzati nella Lapponia finlandese con materiali e tradizioni locali: articoli in pelle di renna e corno, coltelli puukko forgiati a mano, oggetti in legno di ginepro e betulla fiammata, maglieria di lana, gioielli d’argento di ispirazione sami e alimenti artici come confettura di camemoro (mora artica), marmellata di mirtillo rosso, sciroppo di betulla e tisane. Ogni boutique qui presentata è verificata in modo indipendente, con le fonti documentate.',
       aHtml:
-        'I prodotti autenticamente lapponi sono realizzati nella Lapponia finlandese con materiali e tradizioni locali: articoli in pelle di renna e corno, coltelli puukko forgiati a mano, oggetti in legno di ginepro e betulla fiammata, maglieria di lana, gioielli d’argento di ispirazione sami e alimenti artici come confettura di lampone artico, marmellata di mirtillo rosso, sciroppo di betulla e tisane. Ogni boutique qui presentata è verificata in modo indipendente, con le fonti documentate.',
+        'I prodotti autenticamente lapponi sono realizzati nella Lapponia finlandese con materiali e tradizioni locali: articoli in pelle di renna e corno, coltelli puukko forgiati a mano, oggetti in legno di ginepro e betulla fiammata, maglieria di lana, gioielli d’argento di ispirazione sami e alimenti artici come confettura di camemoro (mora artica), marmellata di mirtillo rosso, sciroppo di betulla e tisane. Ogni boutique qui presentata è verificata in modo indipendente, con le fonti documentate.',
     },
     {
       q: 'Spedisce i prodotti della Lapponia all’estero?',

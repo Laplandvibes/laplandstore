@@ -49,7 +49,7 @@ const COPY = {
     titleA: 'Cuando usted compra en Laponia,',
     titleB: 'sostiene una forma de vida.',
     body:
-      'Cada cuchillo, cada joya y cada tarro de mermelada llevan una historia: la de un artesano que aprendió el oficio de sus abuelos, la de un taller al norte del Círculo Polar, la de una empresa para la que Laponia es hogar y no decorado. Cada boutique de esta página se verifica de forma independiente, con las fuentes documentadas.',
+      'Cada cuchillo, cada joya y cada tarro de mermelada llevan una historia: la de un artesano que aprendió el oficio de sus abuelos, la de un taller al norte del Círculo Polar Ártico, la de una empresa para la que Laponia es hogar y no decorado. Cada boutique de esta página se verifica de forma independiente, con las fuentes documentadas.',
     statA: 'años de tradición artesanal',
     statB: 'boutiques en el directorio',
     statC: 'ofrecen también tienda en línea',
@@ -89,7 +89,7 @@ const COPY = {
     titleA: 'Quand vous achetez en Laponie,',
     titleB: 'vous soutenez un mode de vie.',
     body:
-      "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire : celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, sources documentées.",
+      "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire : celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, avec ses sources documentées.",
     statA: "années de tradition artisanale",
     statB: 'boutiques dans l’annuaire',
     statC: 'proposent également une boutique en ligne',

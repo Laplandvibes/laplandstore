@@ -15,7 +15,7 @@ const copy: CopyShape = {
     'Käy vahvistamassa tilaus sähköpostiisi tulleesta viestistä.',
   alreadyHeadline: 'Olet jo listalla',
   alreadyBody:
-    'Sähköpostisi on jo mukana. Kiitos että pysyt mukana.',
+    'Sähköpostisi on jo mukana. Kiitos, että pysyt mukana.',
   errorGeneric: 'Tilaus ei mennyt läpi. Kokeile vielä kerran.',
 };
 

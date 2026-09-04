@@ -9,7 +9,7 @@ const copy: CopyShape = {
   cta: 'Abonneren',
   loading: 'Inschrijven…',
   fineprint:
-    'Uw gegevens worden niet gedeeld met derden. Op elk moment uit te schrijven.',
+    'Uw gegevens worden niet gedeeld met derden. U kunt zich op elk moment uitschrijven.',
   successHeadline: 'Bijna klaar.',
   successBody:
     'Bevestig uw aanmelding via de e-mail die we net hebben gestuurd.',
