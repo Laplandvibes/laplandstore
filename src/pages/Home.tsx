@@ -7,7 +7,7 @@ import FAQ, { FAQ_BY_LANG } from '../components/FAQ';
 import RelatedSites from '../components/RelatedSites';
 import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
-import { KultaCenterAd, IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
+import { IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
 import SuomikauppaAd from '../components/SuomikauppaAd';
 import NordicbuddiesAd from '../components/NordicbuddiesAd';
 import KalevalaRail from '../shared/ads/KalevalaRail';
@@ -125,17 +125,19 @@ export default function Home() {
       {/* Kumppaniosio heti ensimmäisen kategoriabändin jälkeen:
           kakkospääkumppani + 6 premium-paikkaa (house-adit kun vapaat) */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} surface="light" />
-      {/* Mapped product ad — Kulta-Center (jewellery gift), skinned in their brand.
-          The brand card makes the argument (who they are, what shipping costs);
-          the rail underneath is the proof — eight real Kalevala pieces with the
-          partner's own photos, live prices and a deep link each. Same advertiser,
-          so they belong in ONE section rather than scattered down the page as if
-          they were two different shops (Vesa 2026-09-03: the site linked to a
-          category and never showed a single piece of jewellery). */}
+      {/* Kulta-Center — the product rail ONLY. The brand card that used to sit
+          directly above it is gone (Vesa 2026-09-04: "huh huh mitä paskaa. kaksi
+          saman firman mainosta perätysten?"). He is right and the rule was already
+          written down: ads must be proportional in size and distributed, never
+          stacked back-to-back. Two units for ONE advertiser, one after the other,
+          each about a screen tall, is the worst case of it — and the second one
+          repeated the first one's argument almost word for word.
+          🔴 Do not reintroduce <KultaCenterAd> on this page. The rail carries the
+          same brand facts and the same delivery terms in its fine print, plus
+          eight actual pieces with prices. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <KultaCenterAd sid="after_featured" />
-          <KalevalaRail lang={lang} sid="home_kalevala" variant="light" className="mt-6" />
+          <KalevalaRail lang={lang} sid="home_kalevala" variant="light" />
         </div>
       </section>
       <ArtisanStory />

@@ -86,6 +86,11 @@ interface RailCopy {
   ctaAll: string
   /** "Prices checked on {date}" — {date} is substituted, never hardcoded. */
   priceNote: string
+  /** Kulta-Center's delivery terms, carried over from the brand card that this
+   *  rail replaced on laplandstore (commit c5c209f native-reviewed them; an
+   *  earlier version had claimed free shipping across Europe, which was wrong).
+   *  Removing an ad unit must not silently remove a correction made to it. */
+  shipping: string
 }
 
 // Every fact in `sub` is read from a primary source, not summarised from memory:
@@ -106,6 +111,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Katso koru',
     ctaAll: 'Selaa kaikkia Kalevala-koruja',
     priceNote: 'Hinnat tarkistettu {date}. Ajantasainen hinta näkyy Kulta-Centerin sivulla.',
+    shipping: "Ilmainen toimitus Suomessa yli 50 €; ulkomaille toimituskulut sovitaan Kulta-Centerin kanssa erikseen.",
   },
   en: {
     eyebrow: 'Finnish jewellery design',
@@ -115,6 +121,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'View piece',
     ctaAll: 'Browse all Kalevala jewellery',
     priceNote: 'Prices checked {date}. The current price is shown on Kulta-Center’s own page.',
+    shipping: "Free delivery within Finland over €50; for orders abroad, shipping is agreed with Kulta-Center separately.",
   },
   sv: {
     eyebrow: 'Finsk smyckedesign',
@@ -124,6 +131,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Se smycket',
     ctaAll: 'Bläddra bland alla Kalevala-smycken',
     priceNote: 'Priserna kontrollerade {date}. Aktuellt pris visas på Kulta-Centers egen sida.',
+    shipping: "Fri frakt inom Finland över 50 €; för beställningar utomlands avtalas frakten separat med Kulta-Center.",
   },
   de: {
     eyebrow: 'Finnisches Schmuckdesign',
@@ -133,6 +141,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Schmuckstück ansehen',
     ctaAll: 'Allen Kalevala-Schmuck ansehen',
     priceNote: 'Preise geprüft am {date}. Den aktuellen Preis zeigt die Seite von Kulta-Center.',
+    shipping: "Versandkostenfrei innerhalb Finnlands ab 50 €; für Bestellungen ins Ausland wird der Versand separat mit Kulta-Center vereinbart.",
   },
   fr: {
     eyebrow: 'Design de bijoux finlandais',
@@ -142,6 +151,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Voir le bijou',
     ctaAll: 'Voir tous les bijoux Kalevala',
     priceNote: 'Prix vérifiés le {date}. Le prix actuel figure sur la page de Kulta-Center.',
+    shipping: "Livraison gratuite en Finlande à partir de 50 € ; pour l’étranger, les frais sont convenus directement avec Kulta-Center.",
   },
   it: {
     eyebrow: 'Design di gioielli finlandese',
@@ -151,6 +161,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Vedi il gioiello',
     ctaAll: 'Sfoglia tutti i gioielli Kalevala',
     priceNote: 'Prezzi verificati il {date}. Il prezzo aggiornato è sulla pagina di Kulta-Center.',
+    shipping: "Spedizione gratuita in Finlandia sopra i 50 €; per l’estero le spese si concordano direttamente con Kulta-Center.",
   },
   es: {
     eyebrow: 'Diseño de joyería finlandesa',
@@ -160,6 +171,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Ver la joya',
     ctaAll: 'Ver todas las joyas Kalevala',
     priceNote: 'Precios comprobados el {date}. El precio actual aparece en la página de Kulta-Center.',
+    shipping: "Envío gratuito dentro de Finlandia a partir de 50 €; para pedidos al extranjero, el envío se acuerda directamente con Kulta-Center.",
   },
   'pt-BR': {
     eyebrow: 'Design de joias finlandês',
@@ -169,6 +181,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Ver a joia',
     ctaAll: 'Ver todas as joias Kalevala',
     priceNote: 'Preços verificados em {date}. O preço atual aparece na página da Kulta-Center.',
+    shipping: "Frete grátis na Finlândia acima de 50 €; para pedidos ao exterior, o frete é combinado diretamente com a Kulta-Center.",
   },
   nl: {
     eyebrow: 'Fins sieraadontwerp',
@@ -178,6 +191,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'Bekijk het sieraad',
     ctaAll: 'Alle Kalevala-sieraden bekijken',
     priceNote: 'Prijzen gecontroleerd op {date}. De actuele prijs staat op de pagina van Kulta-Center.',
+    shipping: "Gratis verzending binnen Finland boven € 50; voor bestellingen naar het buitenland wordt de verzending apart met Kulta-Center afgesproken.",
   },
   ja: {
     eyebrow: 'フィンランドのジュエリーデザイン',
@@ -188,6 +202,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: 'この一点を見る',
     ctaAll: 'カレワラのジュエリーをすべて見る',
     priceNote: '価格は{date}時点のものです。最新の価格は Kulta-Center のページでご確認ください。',
+    shipping: "フィンランド国内は50ユーロ以上で送料無料。海外への発送は Kulta-Center と個別に取り決めます。",
   },
   'zh-CN': {
     eyebrow: '芬兰珠宝设计',
@@ -198,6 +213,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: '查看这件',
     ctaAll: '浏览全部 Kalevala 珠宝',
     priceNote: '价格核对于 {date}。最新价格以 Kulta-Center 页面为准。',
+    shipping: "芬兰境内满 50 欧元免运费；寄往国外的运费需与 Kulta-Center 单独商定。",
   },
   ko: {
     eyebrow: '핀란드 주얼리 디자인',
@@ -208,6 +224,7 @@ const COPY: Record<RailLang, RailCopy> = {
     cta: '제품 보기',
     ctaAll: '칼레발라 주얼리 전체 보기',
     priceNote: '가격은 {date} 기준입니다. 최신 가격은 Kulta-Center 페이지에서 확인하세요.',
+    shipping: "핀란드 국내는 50유로 이상 무료 배송이며, 해외 배송비는 Kulta-Center와 개별적으로 협의합니다.",
   },
 }
 
@@ -258,36 +275,57 @@ export default function KalevalaRail({
         style={{ background: GOLD }}
       />
 
-      <div className="relative p-6 sm:p-8">
-        <div className="mb-1 flex items-center gap-2.5">
-          <span
-            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl"
-            style={{ backgroundColor: dark ? 'rgba(184,137,58,0.18)' : 'rgba(184,137,58,0.12)' }}
-          >
-            <Gem className="h-4 w-4" style={{ color: GOLD }} aria-hidden="true" />
-          </span>
-          <span
-            className="text-xs font-semibold uppercase tracking-[0.2em]"
+      <div className="relative p-5 sm:p-6">
+        {/* Header is ONE row on desktop: identity left, "browse all" right.
+            🔴 Vesa 2026-09-04: "tuntuu aika massiivisilta nämä mainokset
+            kooltaan". It was: eyebrow row + 30px heading + 3-line paragraph +
+            a 2×4 product GRID + a full pill button + fine print ≈ 1150 px, i.e.
+            more than a phone screen for one advertiser. An ad unit taller than
+            the article it sits in stops reading as an ad and starts reading as
+            the site — which is exactly what the network rule forbids
+            ("proportional size, NOT oversized vs body"). */}
+        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+          <div className="flex items-center gap-2">
+            <Gem className="h-3.5 w-3.5 shrink-0" style={{ color: GOLD }} aria-hidden="true" />
+            <span
+              className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+              style={{ color: dark ? '#D9B478' : '#8A5A1E' }}
+            >
+              {c.eyebrow}
+            </span>
+          </div>
+          <a
+            href={linkFor(CATEGORY_URL[shop], `${sid}_all`)}
+            target="_blank"
+            rel="sponsored nofollow noopener"
+            onClick={() =>
+              onCtaClick?.('kultacenter', `kalevala_rail:${sid}_all`, linkFor(CATEGORY_URL[shop], `${sid}_all`))
+            }
+            className="group inline-flex items-center gap-1 text-xs font-semibold no-underline underline-offset-4 hover:underline"
             style={{ color: dark ? '#D9B478' : '#8A5A1E' }}
           >
-            {c.eyebrow}
-          </span>
+            {c.ctaAll}
+            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+          </a>
         </div>
 
         <h2
-          className={`font-heading text-2xl sm:text-3xl tracking-wide leading-tight mt-3 mb-3 max-w-2xl text-balance ${
+          className={`font-heading text-xl sm:text-2xl tracking-wide leading-tight mt-1.5 ${
             dark ? 'text-snow' : 'text-[#1B1710]'
           }`}
         >
           {headline ?? c.headline}
         </h2>
-        <p className={`text-sm sm:text-base leading-relaxed max-w-2xl ${dark ? 'text-white/70' : 'text-black/70'}`}>
+        <p
+          className={`mt-1.5 text-[13px] leading-snug max-w-2xl ${dark ? 'text-white/65' : 'text-black/65'}`}
+        >
           {c.sub}
         </p>
 
-        {/* Horizontal scroll on phones, grid from sm up. overflow-x-auto keeps
-            the page body from ever scrolling sideways. */}
-        <ul className="mt-6 -mx-1 flex snap-x snap-mandatory gap-4 overflow-x-auto px-1 pb-2 sm:mx-0 sm:grid sm:grid-cols-2 sm:gap-5 sm:overflow-visible sm:px-0 lg:grid-cols-4">
+        {/* ONE row at every width, scrolled sideways — not a grid that grows
+            downward. All eight pieces stay reachable, the unit stays ~one third
+            of its old height, and it reads as the carousel it is. */}
+        <ul className="mt-4 -mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-2">
           {picks.products.map((p) => {
             // shop → English → Finnish. `urls` only ever holds store views that
             // genuinely exist (the sync drops the partner's mislabelled ones), so
@@ -297,7 +335,7 @@ export default function KalevalaRail({
             const placement = `${sid}_${p.sku}`
             const href = linkFor(dest, placement)
             return (
-              <li key={p.sku} className="w-[62vw] max-w-[15rem] shrink-0 snap-start sm:w-auto sm:max-w-none">
+              <li key={p.sku} className="w-[46vw] max-w-[10.5rem] shrink-0 snap-start sm:w-[10.5rem]">
                 <a
                   href={href}
                   target="_blank"
@@ -320,36 +358,31 @@ export default function KalevalaRail({
                       className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.04]"
                     />
                   </div>
-                  <div className="flex flex-1 flex-col gap-2 p-3.5">
+                  {/* Two lines, not three: the per-card "Katso koru →" was the
+                      same promise the whole card already makes by being a link,
+                      and eight copies of it cost real height for nothing. */}
+                  <div className="flex flex-1 flex-col gap-1 p-2.5">
                     <span
-                      className={`text-sm font-semibold leading-snug ${dark ? 'text-snow' : 'text-[#1B1710]'}`}
+                      className={`line-clamp-2 text-[12px] font-semibold leading-snug ${
+                        dark ? 'text-snow' : 'text-[#1B1710]'
+                      }`}
                     >
                       {p.name}
                     </span>
-                    <span className="mt-auto flex items-baseline gap-1.5">
+                    <span className="mt-auto flex items-baseline gap-1">
                       {c.from && !c.fromAfter ? (
-                        <span className={`text-[11px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
+                        <span className={`text-[10px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
                           {c.from}
                         </span>
                       ) : null}
-                      <span className="text-base font-bold" style={{ color: dark ? '#D9B478' : '#8A5A1E' }}>
+                      <span className="text-[13px] font-bold" style={{ color: dark ? '#D9B478' : '#8A5A1E' }}>
                         {fmtPrice(p.price)}
                       </span>
                       {c.from && c.fromAfter ? (
-                        <span className={`text-[11px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
+                        <span className={`text-[10px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
                           {c.from}
                         </span>
                       ) : null}
-                    </span>
-                    <span
-                      className="inline-flex items-center gap-1 text-xs font-semibold"
-                      style={{ color: dark ? '#D9B478' : '#8A5A1E' }}
-                    >
-                      {c.cta}
-                      <ArrowRight
-                        className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5"
-                        aria-hidden="true"
-                      />
                     </span>
                   </div>
                 </a>
@@ -358,27 +391,16 @@ export default function KalevalaRail({
           })}
         </ul>
 
-        <div className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3">
-          <a
-            href={linkFor(CATEGORY_URL[shop], `${sid}_all`)}
-            target="_blank"
-            rel="sponsored nofollow noopener"
-            onClick={() =>
-              onCtaClick?.('kultacenter', `kalevala_rail:${sid}_all`, linkFor(CATEGORY_URL[shop], `${sid}_all`))
-            }
-            className="group inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-white font-semibold no-underline shadow-lg transition-all duration-200 hover:-translate-y-0.5 active:translate-y-0"
-            style={{ backgroundColor: '#8A5A1E' }}
-          >
-            {c.ctaAll}
-            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
-          </a>
-        </div>
-
-        <p className={`mt-4 text-[11px] leading-relaxed ${dark ? 'text-white/45' : 'text-black/45'}`}>
-          {c.priceNote.replace('{date}', picks.fetchedAt)}
+        {/* The full-width pill CTA is gone — the same link now sits in the
+            header row, where it costs no vertical space. Fine print carries the
+            price date AND the delivery terms the removed brand card used to
+            state; both were native-reviewed (commit c5c209f) and must not be
+            lost just because the card they lived on was taken away. */}
+        <p className={`mt-3 text-[11px] leading-snug ${dark ? 'text-white/45' : 'text-black/45'}`}>
+          {c.priceNote.replace('{date}', picks.fetchedAt)} {c.shipping}
         </p>
 
-        {disclosure ? <div className="mt-5">{disclosure}</div> : null}
+        {disclosure ? <div className="mt-3">{disclosure}</div> : null}
       </div>
 
       <span
