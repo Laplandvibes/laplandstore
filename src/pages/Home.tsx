@@ -7,8 +7,12 @@ import FAQ, { FAQ_BY_LANG } from '../components/FAQ';
 import RelatedSites from '../components/RelatedSites';
 import Newsletter from '../components/Newsletter';
 import GiftsHubBanner from '../components/GiftsHubBanner';
-import { IvaloAd, ScandinavianOutdoorAd } from '../components/StoreAds';
-import SuomikauppaAd from '../components/SuomikauppaAd';
+import { ScandinavianOutdoorAd } from '../components/StoreAds';
+import ProductRail from '../shared/ads/ProductRail';
+import suomikauppaRail from '../shared/ads/rails/suomikauppa';
+import suomikauppaPicks from '../shared/ads/data/suomikauppaPicks';
+import ivaloRail from '../shared/ads/rails/ivalo';
+import ivaloPicks from '../shared/ads/data/ivaloPicks';
 import NordicbuddiesAd from '../components/NordicbuddiesAd';
 import KalevalaRail from '../shared/ads/KalevalaRail';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
@@ -148,13 +152,13 @@ export default function Home() {
           posts abroad. Moved anywhere else the headline stops being true. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <SuomikauppaAd sid="after_boutiques_ships_home" />
+          <ProductRail partner={suomikauppaRail} snapshot={suomikauppaPicks} lang={lang} sid="after_boutiques_ships_home" variant="light" />
         </div>
       </section>
       {/* Mapped product ad — IVALO.COM (Finnish design, delivered), skinned in their brand. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">
-          <IvaloAd sid="after_boutiques" />
+          <ProductRail partner={ivaloRail} snapshot={ivaloPicks} lang={lang} sid="after_boutiques" variant="light" />
         </div>
       </section>
       <GiftsHubBanner />
