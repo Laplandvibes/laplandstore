@@ -72,18 +72,36 @@ interface RailCopy {
   eyebrow: string
   headline: string
   sub: string
+  /** "alk." / "from". Empty string renders no qualifier at all. */
   from: string
+  /** 🔴 ja/zh/ko put the "starting from" marker AFTER the number (41 €〜,
+   *  41 €起, 41 €부터), where fi/en/de put it before (alk. 41 €). Rendering it
+   *  in front in those three languages is not a style choice, it is wrong —
+   *  which is why the first version simply left them blank, and those locales
+   *  then showed a bare price that promised more precision than we have: the
+   *  sync picks the CHEAPEST variant of each design, so the basket price can
+   *  only go up. */
+  fromAfter?: boolean
   cta: string
   ctaAll: string
   /** "Prices checked on {date}" — {date} is substituted, never hardcoded. */
   priceNote: string
 }
 
+// Every fact in `sub` is read from a primary source, not summarised from memory:
+//   • 1937, 40 pieces, replicas, National Museum collections
+//     → kalevala.fi/pages/kalevala-korun-tarina (luettu 2026-09-03): "Rahaa
+//       päätettiin kerätä valmistamalla muinaiskorujen jäljennöksiä.
+//       Kansallismuseon kokoelmista valittiin 40 korua…" first shown 8.12.1937.
+//   • "kotimainen perheyritys ja kultasepänliike … vuonna 1933"
+//     → kulta-center.com/fi front page, verbatim.
+// 🔴 Non-Finnish locales say FINNISH National Museum on purpose: "the National
+// Museum" alone means a different building in every reader's country.
 const COPY: Record<RailLang, RailCopy> = {
   fi: {
     eyebrow: 'Suomalaista korumuotoilua',
     headline: 'Kalevala-korut Kulta-Centeristä',
-    sub: 'Kalevala Koru on tehnyt samoja malleja vuosikymmeniä, ja moni niistä on alun perin muinaislöydön kopio. Kulta-Center on suomalainen kultasepänliike vuodesta 1933 ja myy niitä verkosta.',
+    sub: 'Kalevala Koru syntyi 1937, kun Kansallismuseon kokoelmista valittiin 40 muinaiskorua ja niistä tehtiin jäljennöksiä. Kulta-Center on kotimainen perheyritys ja kultasepänliike vuodesta 1933, ja myy Kalevalan koruja verkosta.',
     from: 'alk.',
     cta: 'Katso koru',
     ctaAll: 'Selaa kaikkia Kalevala-koruja',
@@ -92,7 +110,7 @@ const COPY: Record<RailLang, RailCopy> = {
   en: {
     eyebrow: 'Finnish jewellery design',
     headline: 'Kalevala jewellery from Kulta-Center',
-    sub: 'Kalevala Koru has been making the same designs for decades, and many began as copies of archaeological finds. Kulta-Center is a Finnish jeweller founded in 1933 and sells them online.',
+    sub: 'Kalevala Koru began in 1937, when 40 ancient pieces were picked from the collections of the Finnish National Museum and made as replicas. Kulta-Center is a Finnish family jeweller trading since 1933 and sells them online.',
     from: 'from',
     cta: 'View piece',
     ctaAll: 'Browse all Kalevala jewellery',
@@ -101,7 +119,7 @@ const COPY: Record<RailLang, RailCopy> = {
   sv: {
     eyebrow: 'Finsk smyckedesign',
     headline: 'Kalevala-smycken från Kulta-Center',
-    sub: 'Kalevala Koru har tillverkat samma modeller i decennier, och många av dem är kopior av arkeologiska fynd. Kulta-Center är en finsk guldsmed sedan 1933 och säljer dem på nätet.',
+    sub: 'Kalevala Koru började 1937, när 40 forntida smycken valdes ur Finlands nationalmuseums samlingar och tillverkades som kopior. Kulta-Center är en finsk familjeägd guldsmedsbutik sedan 1933 och säljer dem på nätet.',
     from: 'fr.',
     cta: 'Se smycket',
     ctaAll: 'Bläddra bland alla Kalevala-smycken',
@@ -110,7 +128,7 @@ const COPY: Record<RailLang, RailCopy> = {
   de: {
     eyebrow: 'Finnisches Schmuckdesign',
     headline: 'Kalevala-Schmuck von Kulta-Center',
-    sub: 'Kalevala Koru fertigt dieselben Modelle seit Jahrzehnten, viele davon nach archäologischen Funden. Kulta-Center ist ein finnischer Juwelier seit 1933 und verkauft sie online.',
+    sub: 'Kalevala Koru begann 1937: 40 vorgeschichtliche Schmuckstücke aus den Sammlungen des Finnischen Nationalmuseums wurden als Repliken gefertigt. Kulta-Center ist seit 1933 ein finnischer Familienjuwelier und verkauft sie online.',
     from: 'ab',
     cta: 'Schmuckstück ansehen',
     ctaAll: 'Allen Kalevala-Schmuck ansehen',
@@ -119,7 +137,7 @@ const COPY: Record<RailLang, RailCopy> = {
   fr: {
     eyebrow: 'Design de bijoux finlandais',
     headline: 'Bijoux Kalevala de Kulta-Center',
-    sub: 'Kalevala Koru fabrique les mêmes modèles depuis des décennies, et beaucoup reprennent des trouvailles archéologiques. Kulta-Center est un bijoutier finlandais depuis 1933 et les vend en ligne.',
+    sub: 'Kalevala Koru est né en 1937 : 40 bijoux anciens choisis dans les collections du Musée national finlandais ont été reproduits. Kulta-Center est un bijoutier familial finlandais depuis 1933 et les vend en ligne.',
     from: 'dès',
     cta: 'Voir le bijou',
     ctaAll: 'Voir tous les bijoux Kalevala',
@@ -128,7 +146,7 @@ const COPY: Record<RailLang, RailCopy> = {
   it: {
     eyebrow: 'Design di gioielli finlandese',
     headline: 'Gioielli Kalevala da Kulta-Center',
-    sub: 'Kalevala Koru produce gli stessi modelli da decenni e molti nascono da ritrovamenti archeologici. Kulta-Center è un gioielliere finlandese dal 1933 e li vende online.',
+    sub: 'Kalevala Koru nasce nel 1937: 40 gioielli antichi scelti dalle collezioni del Museo nazionale finlandese furono riprodotti come copie. Kulta-Center è una gioielleria di famiglia finlandese dal 1933 e li vende online.',
     from: 'da',
     cta: 'Vedi il gioiello',
     ctaAll: 'Sfoglia tutti i gioielli Kalevala',
@@ -137,7 +155,7 @@ const COPY: Record<RailLang, RailCopy> = {
   es: {
     eyebrow: 'Diseño de joyería finlandesa',
     headline: 'Joyas Kalevala de Kulta-Center',
-    sub: 'Kalevala Koru fabrica los mismos modelos desde hace décadas y muchos parten de hallazgos arqueológicos. Kulta-Center es una joyería finlandesa desde 1933 y los vende en línea.',
+    sub: 'Kalevala Koru nació en 1937: se eligieron 40 joyas antiguas de las colecciones del Museo Nacional de Finlandia y se hicieron réplicas. Kulta-Center es una joyería familiar finlandesa desde 1933 y las vende en línea.',
     from: 'desde',
     cta: 'Ver la joya',
     ctaAll: 'Ver todas las joyas Kalevala',
@@ -146,7 +164,7 @@ const COPY: Record<RailLang, RailCopy> = {
   'pt-BR': {
     eyebrow: 'Design de joias finlandês',
     headline: 'Joias Kalevala da Kulta-Center',
-    sub: 'A Kalevala Koru faz os mesmos modelos há décadas, e muitos partem de achados arqueológicos. A Kulta-Center é uma joalheria finlandesa desde 1933 e os vende pela internet.',
+    sub: 'A Kalevala Koru nasceu em 1937: 40 joias antigas foram escolhidas nas coleções do Museu Nacional da Finlândia e reproduzidas como réplicas. A Kulta-Center é uma joalheria familiar finlandesa desde 1933 e as vende pela internet.',
     from: 'a partir de',
     cta: 'Ver a joia',
     ctaAll: 'Ver todas as joias Kalevala',
@@ -155,7 +173,7 @@ const COPY: Record<RailLang, RailCopy> = {
   nl: {
     eyebrow: 'Fins sieraadontwerp',
     headline: 'Kalevala-sieraden van Kulta-Center',
-    sub: 'Kalevala Koru maakt dezelfde modellen al decennia, en veel ervan gaan terug op archeologische vondsten. Kulta-Center is sinds 1933 een Finse juwelier en verkoopt ze online.',
+    sub: 'Kalevala Koru begon in 1937: 40 oude sieraden uit de collecties van het Fins Nationaal Museum werden als replica’s gemaakt. Kulta-Center is sinds 1933 een Finse familiejuwelier en verkoopt ze online.',
     from: 'vanaf',
     cta: 'Bekijk het sieraad',
     ctaAll: 'Alle Kalevala-sieraden bekijken',
@@ -164,8 +182,9 @@ const COPY: Record<RailLang, RailCopy> = {
   ja: {
     eyebrow: 'フィンランドのジュエリーデザイン',
     headline: 'Kulta-Center のカレワラ・ジュエリー',
-    sub: 'カレワラ・コルは同じデザインを何十年もつくり続けており、その多くは考古学的な出土品の写しです。Kulta-Center は1933年創業のフィンランドの宝飾店で、オンラインで販売しています。',
-    from: '',
+    sub: 'カレワラ・コルは1937年、フィンランド国立博物館の収蔵品から選ばれた40点の古代装身具を復刻することから始まりました。Kulta-Center は1933年から続くフィンランドの家族経営の宝飾店で、オンラインで販売しています。',
+    from: '〜',
+    fromAfter: true,
     cta: 'この一点を見る',
     ctaAll: 'カレワラのジュエリーをすべて見る',
     priceNote: '価格は{date}時点のものです。最新の価格は Kulta-Center のページでご確認ください。',
@@ -173,8 +192,9 @@ const COPY: Record<RailLang, RailCopy> = {
   'zh-CN': {
     eyebrow: '芬兰珠宝设计',
     headline: 'Kulta-Center 的 Kalevala 珠宝',
-    sub: 'Kalevala Koru 几十年来一直制作同样的款式，其中不少源自考古出土文物的复刻。Kulta-Center 是 1933 年创立的芬兰珠宝店，在网上销售这些作品。',
-    from: '',
+    sub: 'Kalevala Koru 始于 1937 年：从芬兰国家博物馆的藏品中选出 40 件古代首饰，复刻成可以佩戴的珠宝。Kulta-Center 是 1933 年开业的芬兰家族珠宝店，在网上销售这些作品。',
+    from: '起',
+    fromAfter: true,
     cta: '查看这件',
     ctaAll: '浏览全部 Kalevala 珠宝',
     priceNote: '价格核对于 {date}。最新价格以 Kulta-Center 页面为准。',
@@ -182,8 +202,9 @@ const COPY: Record<RailLang, RailCopy> = {
   ko: {
     eyebrow: '핀란드 주얼리 디자인',
     headline: 'Kulta-Center의 칼레발라 주얼리',
-    sub: '칼레발라 코루는 수십 년째 같은 디자인을 만들어 왔고, 상당수는 고고학 출토품을 본뜬 것입니다. Kulta-Center는 1933년에 문을 연 핀란드 보석상이며 온라인으로 판매합니다.',
-    from: '',
+    sub: '칼레발라 코루는 1937년, 핀란드 국립박물관 소장품에서 고른 고대 장신구 40점을 복제하면서 시작됐습니다. Kulta-Center는 1933년부터 이어온 핀란드 가족 보석상이며 온라인으로 판매합니다.',
+    from: '부터',
+    fromAfter: true,
     cta: '제품 보기',
     ctaAll: '칼레발라 주얼리 전체 보기',
     priceNote: '가격은 {date} 기준입니다. 최신 가격은 Kulta-Center 페이지에서 확인하세요.',
@@ -306,7 +327,7 @@ export default function KalevalaRail({
                       {p.name}
                     </span>
                     <span className="mt-auto flex items-baseline gap-1.5">
-                      {c.from ? (
+                      {c.from && !c.fromAfter ? (
                         <span className={`text-[11px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
                           {c.from}
                         </span>
@@ -314,6 +335,11 @@ export default function KalevalaRail({
                       <span className="text-base font-bold" style={{ color: dark ? '#D9B478' : '#8A5A1E' }}>
                         {fmtPrice(p.price)}
                       </span>
+                      {c.from && c.fromAfter ? (
+                        <span className={`text-[11px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
+                          {c.from}
+                        </span>
+                      ) : null}
                     </span>
                     <span
                       className="inline-flex items-center gap-1 text-xs font-semibold"
