@@ -296,7 +296,7 @@ export default function KalevalaRail({
             advertiser; this stays under 500 px with the same eight pieces. */}
         <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
           {brand?.logo ? (
-            <span className={`inline-flex h-11 items-center rounded-xl px-3 ${dark ? 'bg-white shadow-[0_6px_16px_-8px_rgba(0,0,0,0.6)]' : ''}`}>
+            <span className={`inline-flex h-11 items-center rounded-xl px-3 ${dark && brand.logoTone !== 'light' ? 'bg-white shadow-[0_6px_16px_-8px_rgba(0,0,0,0.6)]' : !dark && brand.logoTone === 'light' ? 'bg-[#141413] shadow-[0_6px_16px_-8px_rgba(15,23,42,0.5)]' : ''}`}>
               <img
                 src={brand.logo}
                 alt={c.eyebrow}
