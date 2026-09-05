@@ -1,0 +1,87 @@
+{
+  "version": "20260905",
+  "domain": "laplandstore.fi",
+  "brand": "STORE",
+  "tagline": "Authentic Lapland gifts and crafts",
+  "generated": "2026-09-05T21:51:04.159Z",
+  "staticFallbackSeason": "summer",
+  "seasons": {
+    "summer": {
+      "heroUrl": "https://laplandstore.fi/img/hero-market.jpg",
+      "heroAlt": "A Lapland artisan market",
+      "heroSha": "a09db34647e686f6",
+      "bytes": 131066,
+      "sha256": "95e26db34e6934992bbc35a0060ce8ffa4cfead64db411f5e31c52a4673e2fca",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 15859,
+      "inkBox": [
+        362,
+        493,
+        837,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 38.7,
+      "centerSq": 33.3,
+      "photoRegion": 39.3,
+      "photoRegionRef": 39.3,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 477,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": []
+    },
+    "winter": {
+      "heroUrl": "https://laplandstore.fi/img/hero-market.jpg",
+      "heroAlt": "A Lapland artisan market",
+      "heroSha": "a09db34647e686f6",
+      "bytes": 131066,
+      "sha256": "95e26db34e6934992bbc35a0060ce8ffa4cfead64db411f5e31c52a4673e2fca",
+      "bandH": 168,
+      "photoPct": 73.3,
+      "ink": 15859,
+      "inkBox": [
+        362,
+        493,
+        837,
+        603
+      ],
+      "safe": true,
+      "accentP10": 5.06,
+      "accentMed": 5.06,
+      "whiteP10": 17.08,
+      "whiteMed": 17.08,
+      "mean": 38.7,
+      "centerSq": 33.3,
+      "photoRegion": 39.3,
+      "photoRegionRef": 39.3,
+      "overlayPixels": 0,
+      "maxDiff": 0,
+      "fit": {
+        "size": 74,
+        "lines": 1,
+        "ts": 30,
+        "tagW": 477,
+        "fits": true,
+        "bandH": 168
+      },
+      "contrastOk": true,
+      "zeroOverlay": true,
+      "errors": [],
+      "sameAsSummer": true
+    }
+  }
+}
