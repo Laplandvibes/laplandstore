@@ -109,7 +109,7 @@ export default function Hero() {
           <span className="text-amber-light">{t.titleHi}</span>{t.titleB}
         </h1>
 
-        <p className="text-[15px] sm:text-lg md:text-xl text-white/90 font-body mt-3 sm:mt-4 max-w-xl mx-auto leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)] [text-wrap:pretty]">
+        <p className="text-[15px] sm:text-lg md:text-xl text-white/90 font-body mt-3 sm:mt-4 max-w-xl md:max-w-2xl mx-auto leading-relaxed [text-shadow:0_1px_2px_rgba(0,0,0,0.5)] [text-wrap:pretty]">
           {/* Välilyönti sub1+sub2-saumaan: <sm piilotettu <br> liitti lauseet
               yhteen ilman väliä ("purkissa.Jokaisella") kaikilla kielillä. */}
           {t.sub1}{' '}
