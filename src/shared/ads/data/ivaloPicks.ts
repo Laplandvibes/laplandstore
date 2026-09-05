@@ -1,7 +1,7 @@
 // GENEROITU TIEDOSTO — älä muokkaa käsin.
 // Lähde: adtraction -tuotesyöte, IVALO.COM (ohjelma 2052140531).
 // Päivitä: node scripts/sync_partner_feeds.mjs ivalo --refresh
-// Hinnat ovat 2026-09-04 hintoja ja ne renderöidään tarkistuspäivän kanssa.
+// Hinnat ovat 2026-09-05 hintoja ja ne renderöidään tarkistuspäivän kanssa.
 
 import type { PartnerSnapshot } from './partnerTypes'
 
@@ -15,95 +15,95 @@ const picks: PartnerSnapshot = {
     "cookieDays": 45
   },
   "route": "/go/ivalo",
-  "fetchedAt": "2026-09-04",
+  "fetchedAt": "2026-09-05",
   "products": [
     {
-      "sku": "53751437361475",
-      "name": "Organic Essential T-paita Trendsplant Blue",
+      "sku": "54448643080515",
+      "name": "Clover Pointelle Neule Sinapinkeltainen",
+      "shelf": "knit",
+      "category": "Knit",
+      "brand": "KOMODO",
+      "price": 64.8,
+      "currency": "EUR",
+      "url": "https://ivalo.com/products/clover-pointelle-neule-sinapinkeltainen?variant=54448643080515",
+      "image": "/images/partners/ivalo/54448643080515.webp"
+    },
+    {
+      "sku": "54691933323587",
+      "name": "Alisa Liivi Keltainen Raidallinen",
+      "shelf": "linen",
+      "category": "Vest",
+      "brand": "Thinking MU",
+      "price": 69.9,
+      "currency": "EUR",
+      "url": "https://ivalo.com/products/alisa-liivi-keltainen-raidallinen?variant=54691933323587",
+      "image": "/images/partners/ivalo/54691933323587.webp"
+    },
+    {
+      "sku": "54352485384515",
+      "name": "Rugs Collegepusero Sininen",
       "shelf": "top",
-      "category": "T-Shirt",
-      "brand": "Trendsplant",
-      "price": 40,
-      "currency": "EUR",
-      "url": "https://ivalo.com/products/organic-essential-t-paita-trendsplant-blue?variant=53751437361475",
-      "image": "/images/partners/ivalo/53751437361475.webp"
-    },
-    {
-      "sku": "53727567642947",
-      "name": "Miesten Raidallinen Kauluspaita Sand / Ecru",
-      "shelf": "linen",
-      "category": "Button-up Shirt",
-      "brand": "Organication",
-      "price": 50.34,
-      "currency": "EUR",
-      "url": "https://ivalo.com/products/miesten-raidallinen-kauluspaita-sand-ecru?variant=53727567642947",
-      "image": "/images/partners/ivalo/53727567642947.webp"
-    },
-    {
-      "sku": "54352481911107",
-      "name": "Bessette Mekko Tummansininen Raidallinen",
-      "shelf": "linen",
-      "category": "Dress",
+      "category": "Sweatshirt",
       "brand": "KOMODO",
-      "price": 52.2,
+      "price": 72,
       "currency": "EUR",
-      "url": "https://ivalo.com/products/bessette-mekko-tummansininen-raidallinen?variant=54352481911107",
-      "image": "/images/partners/ivalo/54352481911107.webp"
+      "url": "https://ivalo.com/products/rugs-collegepusero-sininen?variant=54352485384515",
+      "image": "/images/partners/ivalo/54352485384515.webp"
     },
     {
-      "sku": "54118772834627",
-      "name": "Alma Neule Raidallinen",
-      "shelf": "knit",
-      "category": "Knit",
-      "brand": "KOMODO",
-      "price": 60.6,
-      "currency": "EUR",
-      "url": "https://ivalo.com/products/alma-neule-raidallinen?variant=54118772834627",
-      "image": "/images/partners/ivalo/54118772834627.webp"
-    },
-    {
-      "sku": "54352455532867",
-      "name": "Pocket Neule Tummansininen",
-      "shelf": "knit",
-      "category": "Knit",
-      "brand": "KOMODO",
-      "price": 60.6,
-      "currency": "EUR",
-      "url": "https://ivalo.com/products/pocket-neule-tummansininen?variant=54352455532867",
-      "image": "/images/partners/ivalo/54352455532867.webp"
-    },
-    {
-      "sku": "52702650761539",
-      "name": "Lasten Hannia Kietaisumekko Vichy",
+      "sku": "54329088278851",
+      "name": "Marlene Mekko Vihreä",
       "shelf": "dress",
       "category": "Dress",
-      "brand": "TIRALAHILACHA",
-      "price": 62,
+      "brand": "AYANI",
+      "price": 75.9,
       "currency": "EUR",
-      "url": "https://ivalo.com/products/kietaisumekko-lasten-hannia-vichy?variant=52702650761539",
-      "image": "/images/partners/ivalo/52702650761539.webp"
+      "url": "https://ivalo.com/products/marlene-classy-wrap-dress-in-green?variant=54329088278851",
+      "image": "/images/partners/ivalo/54329088278851.webp"
     },
     {
-      "sku": "54269126279491",
-      "name": "Mie Mekko Musta",
-      "shelf": "dress",
-      "category": "Dress",
-      "brand": "SUITE13LAB",
-      "price": 63,
+      "sku": "54767235825987",
+      "name": "Joustinlakana Pellava Charcoal Grey",
+      "shelf": "linen",
+      "category": "Bed Sheet",
+      "brand": "AmourLinen",
+      "price": 108,
       "currency": "EUR",
-      "url": "https://ivalo.com/products/mie-naisten-mekko-musta?variant=54269126279491",
-      "image": "/images/partners/ivalo/54269126279491.webp"
+      "url": "https://ivalo.com/products/joustinlakana-pellava-charcoal-grey?variant=54767235825987",
+      "image": "/images/partners/ivalo/54767235825987.webp"
     },
     {
-      "sku": "53655328784707",
-      "name": "Cole Velvet Takki Oliivi",
+      "sku": "48105325822275",
+      "name": "Nelly Cotton Jacket Blue",
       "shelf": "outer",
       "category": "Jacket",
       "brand": "KOMODO",
-      "price": 82.2,
+      "price": 108.6,
       "currency": "EUR",
-      "url": "https://ivalo.com/products/cole-velvet-takki-oliivi?variant=53655328784707",
-      "image": "/images/partners/ivalo/53655328784707.webp"
+      "url": "https://ivalo.com/products/komodo-nelly-jacket-blue?variant=48105325822275",
+      "image": "/images/partners/ivalo/48105325822275.webp"
+    },
+    {
+      "sku": "52710585794883",
+      "name": "Haya Neuletoppi Ruskea",
+      "shelf": "knit",
+      "category": "Knit",
+      "brand": "TIRALAHILACHA",
+      "price": 115,
+      "currency": "EUR",
+      "url": "https://ivalo.com/products/haya-naisten-neuletoppi-ruskea?variant=52710585794883",
+      "image": "/images/partners/ivalo/52710585794883.webp"
+    },
+    {
+      "sku": "54494729306435",
+      "name": "Tulula Mekko Musta",
+      "shelf": "dress",
+      "category": "Dress",
+      "brand": "Rita Row",
+      "price": 140,
+      "currency": "EUR",
+      "url": "https://ivalo.com/products/tulula-mekko-musta?variant=54494729306435",
+      "image": "/images/partners/ivalo/54494729306435.webp"
     }
   ]
 }

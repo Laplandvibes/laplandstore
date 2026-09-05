@@ -1,7 +1,7 @@
 // GENEROITU TIEDOSTO — älä muokkaa käsin.
 // Lähde: adtraction -tuotesyöte, Sukkamestarit (ohjelma 1930327023).
 // Päivitä: node scripts/sync_partner_feeds.mjs sukkamestarit --refresh
-// Hinnat ovat 2026-09-04 hintoja ja ne renderöidään tarkistuspäivän kanssa.
+// Hinnat ovat 2026-09-05 hintoja ja ne renderöidään tarkistuspäivän kanssa.
 
 import type { PartnerSnapshot } from './partnerTypes'
 
@@ -15,7 +15,7 @@ const picks: PartnerSnapshot = {
     "cookieDays": 45
   },
   "route": "/go/sukkamestarit",
-  "fetchedAt": "2026-09-04",
+  "fetchedAt": "2026-09-05",
   "products": [
     {
       "sku": "56976316596602",
@@ -29,59 +29,15 @@ const picks: PartnerSnapshot = {
       "image": "/images/partners/sukkamestarit/56976316596602.webp"
     },
     {
-      "sku": "56976316498298",
-      "name": "Combat bamboo - tekniset bambusukat tactical-käyttöön, Suomalaiset sukat, 35-38",
-      "shelf": "213",
-      "category": "213",
-      "brand": "UphillSport",
-      "price": 15.1,
-      "currency": "EUR",
-      "url": "https://sukkamestarit.com/products/combat_bamboo?variant=56976316498298&ab_version=B",
-      "image": "/images/partners/sukkamestarit/56976316498298.webp"
-    },
-    {
-      "sku": "56368269525370",
-      "name": "Merinovillasukka, Suomalaiset sukat, 36-38",
-      "shelf": "213",
-      "category": "213",
-      "brand": "Sukkamestarit",
-      "price": 15.9,
-      "currency": "EUR",
-      "url": "https://sukkamestarit.com/products/sotkan_siipi?variant=56368269525370&ab_version=A",
-      "image": "/images/partners/sukkamestarit/56368269525370.webp"
-    },
-    {
-      "sku": "56368269459834",
-      "name": "Kalevala Sotkan siipi - tennissukat, merinovillaa, Suomalaiset sukat, 36-38",
-      "shelf": "213",
-      "category": "213",
-      "brand": "Sukkamestarit",
-      "price": 15.9,
-      "currency": "EUR",
-      "url": "https://sukkamestarit.com/products/sotkan_siipi?variant=56368269459834&ab_version=B",
-      "image": "/images/partners/sukkamestarit/56368269459834.webp"
-    },
-    {
-      "sku": "56359093436794",
-      "name": "Kalevala Jättihauki - tennissukat, merinovillaa, Suomalaiset sukat, 40-42",
-      "shelf": "213",
-      "category": "213",
-      "brand": "Sukkamestarit",
-      "price": 15.9,
-      "currency": "EUR",
-      "url": "https://sukkamestarit.com/products/jaettihauki?variant=56359093436794&ab_version=B",
-      "image": "/images/partners/sukkamestarit/56359093436794.webp"
-    },
-    {
-      "sku": "45185488322816",
-      "name": "Laajo - saapassukat, merinovillaa, Suomalaiset sukat, 35-38",
+      "sku": "55404296503674",
+      "name": "Classic Women Dots - pukusukat, merinovillaa, Suomalaiset sukat, 36-38",
       "shelf": "213",
       "category": "213",
       "brand": "Sukkamestarit",
       "price": 16.9,
       "currency": "EUR",
-      "url": "https://sukkamestarit.com/products/laajo?variant=45185488322816&ab_version=B",
-      "image": "/images/partners/sukkamestarit/45185488322816.webp"
+      "url": "https://sukkamestarit.com/products/classic_women_dots?variant=55404296503674&ab_version=B",
+      "image": "/images/partners/sukkamestarit/55404296503674.webp"
     },
     {
       "sku": "45660866150656",
@@ -95,15 +51,59 @@ const picks: PartnerSnapshot = {
       "image": "/images/partners/sukkamestarit/45660866150656.webp"
     },
     {
-      "sku": "45660866412800",
-      "name": "Classic Man - pukusukat, merinovillaa, Suomalaiset sukat, 40-42",
+      "sku": "56361477472634",
+      "name": "Classic Merino-Tencel W - pukusukat, merinovillaa, Suomalaiset sukat, 36-38",
       "shelf": "213",
       "category": "213",
       "brand": "Sukkamestarit",
       "price": 16.9,
       "currency": "EUR",
-      "url": "https://sukkamestarit.com/products/classic_man?variant=45660866412800&ab_version=B",
-      "image": "/images/partners/sukkamestarit/45660866412800.webp"
+      "url": "https://sukkamestarit.com/products/classic_merino-tencel_w?variant=56361477472634&ab_version=B",
+      "image": "/images/partners/sukkamestarit/56361477472634.webp"
+    },
+    {
+      "sku": "45185652883712",
+      "name": "Saani - kiristämättömät sukat, alpakanvillaa, Suomalaiset sukat, 35-38",
+      "shelf": "213",
+      "category": "213",
+      "brand": "Sukkamestarit",
+      "price": 16.9,
+      "currency": "EUR",
+      "url": "https://sukkamestarit.com/products/saani?variant=45185652883712&ab_version=B",
+      "image": "/images/partners/sukkamestarit/45185652883712.webp"
+    },
+    {
+      "sku": "56195963027834",
+      "name": "Polyamidisukka, Suomalaiset sukat, 43-46",
+      "shelf": "213",
+      "category": "213",
+      "brand": "UphillSport",
+      "price": 17.1,
+      "currency": "EUR",
+      "url": "https://sukkamestarit.com/products/frost_trail?variant=56195963027834&ab_version=A",
+      "image": "/images/partners/sukkamestarit/56195963027834.webp"
+    },
+    {
+      "sku": "55047920025978",
+      "name": "Ordinary - tekniset merinovillasukat tactical-käyttöön, Suomalaiset sukat, 35-38",
+      "shelf": "213",
+      "category": "213",
+      "brand": "Sukkamestarit",
+      "price": 17.94,
+      "currency": "EUR",
+      "url": "https://sukkamestarit.com/products/ordinary?variant=55047920025978&ab_version=B",
+      "image": "/images/partners/sukkamestarit/55047920025978.webp"
+    },
+    {
+      "sku": "45185603371264",
+      "name": "Combat merino - tekniset merinovillasukat tactical-käyttöön, Suomalaiset sukat, 43-46",
+      "shelf": "213",
+      "category": "213",
+      "brand": "UphillSport",
+      "price": 19.9,
+      "currency": "EUR",
+      "url": "https://sukkamestarit.com/products/combat_merino?variant=45185603371264&ab_version=B",
+      "image": "/images/partners/sukkamestarit/45185603371264.webp"
     }
   ]
 }

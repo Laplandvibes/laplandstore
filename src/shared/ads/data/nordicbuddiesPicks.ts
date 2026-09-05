@@ -1,7 +1,7 @@
 // GENEROITU TIEDOSTO — älä muokkaa käsin.
 // Lähde: daisycon -tuotesyöte, Nordicbuddies (ohjelma 20538).
 // Päivitä: node scripts/sync_partner_feeds.mjs nordicbuddies --refresh
-// Hinnat ovat 2026-09-04 hintoja ja ne renderöidään tarkistuspäivän kanssa.
+// Hinnat ovat 2026-09-05 hintoja ja ne renderöidään tarkistuspäivän kanssa.
 
 import type { PartnerSnapshot } from './partnerTypes'
 
@@ -15,95 +15,95 @@ const picks: PartnerSnapshot = {
     "cookieDays": 30
   },
   "route": "/go/nordicbuddies",
-  "fetchedAt": "2026-09-04",
+  "fetchedAt": "2026-09-05",
   "products": [
     {
-      "sku": "SNUFKIN61A",
-      "name": "Snufkin",
+      "sku": "MOOMIN61A",
+      "name": "Moomintroll Angry Poster",
       "shelf": "posters-prints-visual-ar",
       "category": "Posters, Prints, & Visual Artwork",
       "brand": "Moomin By Nordicbuddies",
       "price": 16.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/snufkin-poster?variant=51072842727761&currency=EUR",
-      "image": "/images/partners/nordicbuddies/SNUFKIN61A.webp"
+      "url": "https://nordicbuddies.com/products/moomintroll-angry-poster-beige?variant=47536875798865&currency=EUR",
+      "image": "/images/partners/nordicbuddies/MOOMIN61A.webp"
     },
     {
-      "sku": "STINKY88B",
-      "name": "Stinky Bucket Hat",
-      "shelf": "hats",
-      "category": "Hats",
-      "brand": "Moomin By Nordicbuddies",
-      "price": 17.94,
-      "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/stinky-bucket-hat-5676?&currency=EUR",
-      "image": "/images/partners/nordicbuddies/STINKY88B.webp"
-    },
-    {
-      "sku": "MOOMIN2G",
-      "name": "Moomintroll Snowstorm Tote Bag",
+      "sku": "MOOMIN2J",
+      "name": "Moominvalley Tote Bag - Mint",
       "shelf": "luggage-bags",
       "category": "Luggage & Bags",
       "brand": "Moomin By Nordicbuddies",
       "price": 19.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/moomintroll-snowstorm-tote-bag-5046?&currency=EUR",
-      "image": "/images/partners/nordicbuddies/MOOMIN2G.webp"
+      "url": "https://nordicbuddies.com/products/moominvalley-tote-bag-mint?&currency=EUR",
+      "image": "/images/partners/nordicbuddies/MOOMIN2J.webp"
     },
     {
-      "sku": "TOOT17C, TOOT17D",
-      "name": "Moomin SS25 Combo",
-      "shelf": "apparel-accessories",
-      "category": "Apparel & Accessories",
+      "sku": "LMY89B",
+      "name": "Little My Kids Flat Cap",
+      "shelf": "hats",
+      "category": "Baby & Toddler Hats",
       "brand": "Moomin By Nordicbuddies",
-      "price": 20.45,
+      "price": 24.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/moomin-ss25-combo-4615?variant=51094488973649&currency=EUR",
-      "image": "/images/partners/nordicbuddies/TOOT17C, TOOT17D.webp"
+      "url": "https://nordicbuddies.com/products/little-my-kids-flat-cap?&currency=EUR",
+      "image": "/images/partners/nordicbuddies/LMY89B.webp"
     },
     {
-      "sku": "MOOMIN13R",
-      "name": "Moomintroll Big Character Kids Cap",
+      "sku": "LMY13B",
+      "name": "Little My Happy Kids Cap",
       "shelf": "baby-toddler-hats",
       "category": "Baby & Toddler Hats",
       "brand": "Moomin By Nordicbuddies",
-      "price": 21.16,
+      "price": 24.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/moomintroll-big-character-kids-cap-5390?&currency=EUR",
-      "image": "/images/partners/nordicbuddies/MOOMIN13R.webp"
+      "url": "https://nordicbuddies.com/products/little-my-happy-kids-cap-4935?&currency=EUR",
+      "image": "/images/partners/nordicbuddies/LMY13B.webp"
     },
     {
-      "sku": "MKIDS52F-104-116",
-      "name": "Moomintroll Explorer Kids",
+      "sku": "MKIDS52J-128-140",
+      "name": "Moomintroll Hiking Club Kids T-shirt",
       "shelf": "baby-toddler-outfits",
       "category": "Baby & Toddler Outfits",
       "brand": "Moomin By Nordicbuddies",
       "price": 34.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/moomintroll-explorer-kids-t-shirt?variant=54123621417297&currency=EUR",
-      "image": "/images/partners/nordicbuddies/MKIDS52F-104-116.webp"
+      "url": "https://nordicbuddies.com/products/moomin-hiking-club-kids-t-shirt-1?variant=54123652022609&currency=EUR",
+      "image": "/images/partners/nordicbuddies/MKIDS52J-128-140.webp"
     },
     {
-      "sku": "MPAPPA52C-XS",
-      "name": "Organic Premium T-Shirt",
+      "sku": "PIPPI15D PIPPI18C",
+      "name": "Pippi Beanie and Mittens Combo",
+      "shelf": "apparel-accessories",
+      "category": "Apparel & Accessories",
+      "brand": "Pippi Longstocking By Nordicbuddies",
+      "price": 44.8,
+      "currency": "EUR",
+      "url": "https://nordicbuddies.com/products/pippi-beanie-and-mittens-combo-4584?&currency=EUR",
+      "image": "/images/partners/nordicbuddies/PIPPI15D-PIPPI18C.webp"
+    },
+    {
+      "sku": "MOOMIN53E-XXL",
+      "name": "Moomintroll's Temper Heavy T-Shirt",
       "shelf": "shirts-tops",
       "category": "Shirts & Tops",
       "brand": "Moomin By Nordicbuddies",
-      "price": 35.92,
+      "price": 44.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/organic-premium-t-shirt-moominpappa?variant=40993031979162&currency=EUR",
-      "image": "/images/partners/nordicbuddies/MPAPPA52C-XS.webp"
+      "url": "https://nordicbuddies.com/products/moomintrolls-temper-t-shirt-unisex?variant=49790781817169&currency=EUR",
+      "image": "/images/partners/nordicbuddies/MOOMIN53E-XXL.webp"
     },
     {
-      "sku": "MOOMIN53R-M",
-      "name": "Moomin Friends",
+      "sku": "MOOMIN53O-XL",
+      "name": "Moomintroll Temperament T-Shirt",
       "shelf": "baby-toddler-tops",
       "category": "Baby & Toddler Tops",
       "brand": "Moomin By Nordicbuddies",
       "price": 44.9,
       "currency": "EUR",
-      "url": "https://nordicbuddies.com/products/moomin-friends-t-shirt?variant=53662151999825&currency=EUR",
-      "image": "/images/partners/nordicbuddies/MOOMIN53R-M.webp"
+      "url": "https://nordicbuddies.com/products/moomintroll-temperament-t-shirt?variant=53662151377233&currency=EUR",
+      "image": "/images/partners/nordicbuddies/MOOMIN53O-XL.webp"
     }
   ]
 }

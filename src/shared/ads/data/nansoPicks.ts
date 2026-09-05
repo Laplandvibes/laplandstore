@@ -1,7 +1,7 @@
 // GENEROITU TIEDOSTO — älä muokkaa käsin.
 // Lähde: adtraction -tuotesyöte, Nanso (ohjelma 1953198679).
 // Päivitä: node scripts/sync_partner_feeds.mjs nanso --refresh
-// Hinnat ovat 2026-09-04 hintoja ja ne renderöidään tarkistuspäivän kanssa.
+// Hinnat ovat 2026-09-05 hintoja ja ne renderöidään tarkistuspäivän kanssa.
 
 import type { PartnerSnapshot } from './partnerTypes'
 
@@ -15,95 +15,95 @@ const picks: PartnerSnapshot = {
     "cookieDays": 30
   },
   "route": "/go/nanso",
-  "fetchedAt": "2026-09-04",
+  "fetchedAt": "2026-09-05",
   "products": [
     {
-      "sku": "NA  -01-28844--2699-XS",
-      "name": "Nanso OODI pitkä hihaton yöpaita - sininen",
-      "shelf": "naisten-mekko",
-      "category": "Naisten mekko",
-      "brand": "Nanso",
-      "price": 60.99,
-      "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-mekko-oodi-sininen",
-      "image": "/images/partners/nanso/NA  -01-28844--2699-XS.webp"
-    },
-    {
-      "sku": "NA  -01-29632--0650-XS",
-      "name": "Nanso PIENI RUUSU trikoopusero - vihreä",
+      "sku": "NA  -01-29545--9311-XS",
+      "name": "Nanso EBBA trikoopusero - musta-beige",
       "shelf": "naisten-pusero",
       "category": "Naisten pusero",
       "brand": "Nanso",
-      "price": 60.99,
+      "price": 70.99,
       "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-pusero-pieni-ruusu-vihrea",
-      "image": "/images/partners/nanso/NA  -01-29632--0650-XS.webp"
+      "url": "http://nanso.com/products/naisten-pusero-ebba-musta-beige",
+      "image": "/images/partners/nanso/NA--01-29545--9311-XS.webp"
     },
     {
-      "sku": "NA  -01-29209--3660-XS",
-      "name": "Nanso BABETTE tunika - sininen",
+      "sku": "NA  -01-29422--5659-XS",
+      "name": "Nanso KORALLI trikootunika - monivärinen",
       "shelf": "naisten-tunika",
       "category": "Naisten tunika",
       "brand": "Nanso",
-      "price": 60.99,
+      "price": 70.99,
       "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-tunika-babette-sininen",
-      "image": "/images/partners/nanso/NA  -01-29209--3660-XS.webp"
+      "url": "http://nanso.com/products/naisten-tunika-koralli-monivarinen",
+      "image": "/images/partners/nanso/NA--01-29422--5659-XS.webp"
     },
     {
-      "sku": "NA  -01-29340--1000-XS",
-      "name": "Nanso JUHANNUS pyjamahousut - valkoinen",
+      "sku": "NA  -01-29443--1427-34",
+      "name": "Nanso FARO housut - mustavalkoinen",
       "shelf": "naisten-housut",
       "category": "Naisten housut",
       "brand": "Nanso",
-      "price": 65.99,
+      "price": 100.99,
       "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-housut-juhannus-valkoinen",
-      "image": "/images/partners/nanso/NA  -01-29340--1000-XS.webp"
+      "url": "http://nanso.com/products/naisten-housut-faro-mustavalkoinen",
+      "image": "/images/partners/nanso/NA--01-29443--1427-34.webp"
     },
     {
-      "sku": "NA  -01-28906--1421-34",
-      "name": "Nanso PIENI FLORISTI paitapusero - mustavalkoinen",
-      "shelf": "naisten-paitapusero",
-      "category": "Naisten paitapusero",
-      "brand": "Nanso",
-      "price": 80.99,
-      "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-paitapusero-pieni-floristi-mustavalkoinen",
-      "image": "/images/partners/nanso/NA  -01-28906--1421-34.webp"
-    },
-    {
-      "sku": "NA  -01-28827--9086-L",
-      "name": "Nanso COLETTA neulepusero - ruskea",
-      "shelf": "naisten-neulepusero",
-      "category": "Naisten neulepusero",
-      "brand": "Nanso",
-      "price": 90.99,
-      "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-neulepusero-coletta-ruskea",
-      "image": "/images/partners/nanso/NA  -01-28827--9086-L.webp"
-    },
-    {
-      "sku": "NA  -01-29008--1210-34",
-      "name": "Nanso MILLA hame - musta",
-      "shelf": "naisten-hame",
-      "category": "Naisten hame",
+      "sku": "NA  -01-29147--1210-S",
+      "name": "Nanso OPERA mekko - musta",
+      "shelf": "naisten-mekko",
+      "category": "Naisten mekko",
       "brand": "Nanso",
       "price": 112.99,
       "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-hame-milla-musta",
-      "image": "/images/partners/nanso/NA  -01-29008--1210-34.webp"
+      "url": "http://nanso.com/products/naisten-midi-mekko-opera-musta",
+      "image": "/images/partners/nanso/NA--01-29147--1210-S.webp"
     },
     {
-      "sku": "NA  -01-29226--0248-34",
-      "name": "Nanso LEVEE farkut - tummanvihreä",
+      "sku": "NA  -01-29572--1450-34",
+      "name": "Nanso KIDE paitapusero - musta-ruskea",
+      "shelf": "naisten-paitapusero",
+      "category": "Naisten paitapusero",
+      "brand": "Nanso",
+      "price": 112.99,
+      "currency": "EUR",
+      "url": "http://nanso.com/products/naisten-paitapusero-kide-musta",
+      "image": "/images/partners/nanso/NA--01-29572--1450-34.webp"
+    },
+    {
+      "sku": "NA  -01-27786--1210-38",
+      "name": "Nanso LIINE kietaisumallinen pellavahame - musta",
+      "shelf": "naisten-hame",
+      "category": "Naisten hame",
+      "brand": "Nanso",
+      "price": 122.99,
+      "currency": "EUR",
+      "url": "http://nanso.com/products/naisten-pellavahame-liine-musta",
+      "image": "/images/partners/nanso/NA--01-27786--1210-38.webp"
+    },
+    {
+      "sku": "NA  -01-29603--9052-XS",
+      "name": "Nanso VILLIS FRILLA neulepusero - meleerattu beige",
+      "shelf": "naisten-neulepusero",
+      "category": "Naisten neulepusero",
+      "brand": "Nanso",
+      "price": 142.99,
+      "currency": "EUR",
+      "url": "http://nanso.com/products/naisten-neulepusero-villis-frilla-meleerattu-beige",
+      "image": "/images/partners/nanso/NA--01-29603--9052-XS.webp"
+    },
+    {
+      "sku": "NA  -01-29254--3260-34",
+      "name": "Nanso RENTO barrel farkut - tummansininen",
       "shelf": "naisten-farkut",
       "category": "Naisten farkut",
       "brand": "Nanso",
       "price": 152.99,
       "currency": "EUR",
-      "url": "http://nanso.com/products/naisten-farkut-levee-tummanvihrea-1",
-      "image": "/images/partners/nanso/NA  -01-29226--0248-34.webp"
+      "url": "http://nanso.com/products/naisten-farkut-rento-tummansininen",
+      "image": "/images/partners/nanso/NA--01-29254--3260-34.webp"
     }
   ]
 }

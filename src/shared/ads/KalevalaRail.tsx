@@ -1,5 +1,6 @@
 import { ArrowRight, Gem } from 'lucide-react'
 import picks from "./data/kalevalaPicks"
+import partnerBrand from './data/partnerBrand'
 
 // ─────────────────────────────────────────────────────────────────────────────
 // KalevalaRail — a PRODUCT rail for Kulta-Center's Kalevala Koru range.
@@ -243,7 +244,12 @@ export interface KalevalaRailProps {
   headline?: string
 }
 
-const GOLD = '#B8893A'
+/** 🔴 Vesa 5.9.2026: ei keksittyjä brändivärejä. Kulta-Centerin logo on
+ *  mustavalkoinen (mitattu scripts/partner_logos.mjs), joten rivi on mustetta
+ *  ja brändin kantaa logo. Vanha kultasävy GOLD oli meidän arvaus. */
+const INK = '#141413'
+const SNOW = '#F9FAFB'
+const EASE = 'cubic-bezier(0.23, 1, 0.32, 1)'
 
 export default function KalevalaRail({
   lang, sid, variant = 'light', disclosure, onCtaClick, className = '', headline,
@@ -261,93 +267,96 @@ export default function KalevalaRail({
       style: 'currency', currency: 'EUR', maximumFractionDigits: 0,
     }).format(n)
 
+  const brand = partnerBrand.kalevala
+  const accent = dark ? SNOW : INK
+  const pillText = dark ? INK : SNOW
+  const ink = dark ? 'text-snow' : 'text-[#141413]'
+  const muted = dark ? 'text-white/60' : 'text-black/55'
+  const faint = dark ? 'text-white/40' : 'text-black/40'
+  const allHref = linkFor(CATEGORY_URL[shop], `${sid}_all`)
+
   return (
     <section
-      className={`relative overflow-hidden rounded-2xl border ${
-        dark ? 'border-white/10 bg-white/[0.04]' : 'border-black/10 bg-[#FFFDF8]'
+      className={`relative isolate overflow-hidden rounded-[28px] ${
+        dark
+          ? 'bg-white/[0.045] shadow-[0_1px_0_rgba(255,255,255,0.06)_inset,0_28px_56px_-28px_rgba(0,0,0,0.65)]'
+          : 'bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04),0_28px_56px_-30px_rgba(15,23,42,0.28)]'
       } ${className}`}
       aria-label={`${c.headline} — ${AD_LABEL[lang] ?? 'Ad'}`}
     >
-      {/* Warm gold wash, the advertiser's own accent. Decorative only. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-16 -top-16 h-56 w-56 rounded-full opacity-[0.18] blur-3xl"
-        style={{ background: GOLD }}
+        className="pointer-events-none absolute -right-20 -top-24 h-72 w-72 rounded-full blur-3xl"
+        style={{ background: INK, opacity: dark ? 0.16 : 0.07 }}
       />
 
-      <div className="relative p-5 sm:p-6">
-        {/* Header is ONE row on desktop: identity left, "browse all" right.
-            🔴 Vesa 2026-09-04: "tuntuu aika massiivisilta nämä mainokset
-            kooltaan". It was: eyebrow row + 30px heading + 3-line paragraph +
-            a 2×4 product GRID + a full pill button + fine print ≈ 1150 px, i.e.
-            more than a phone screen for one advertiser. An ad unit taller than
-            the article it sits in stops reading as an ad and starts reading as
-            the site — which is exactly what the network rule forbids
-            ("proportional size, NOT oversized vs body"). */}
-        <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
-          <div className="flex items-center gap-2">
-            <Gem className="h-3.5 w-3.5 shrink-0" style={{ color: GOLD }} aria-hidden="true" />
-            <span
-              className="text-[11px] font-semibold uppercase tracking-[0.18em]"
-              style={{ color: dark ? '#D9B478' : '#8A5A1E' }}
-            >
-              {c.eyebrow}
+      <div className="relative p-6 sm:p-8">
+        {/* Header is ONE row: the advertiser's own logo left, "browse all" pill
+            right. Vesa 2026-09-04: the grid version was ~1150 px tall for one
+            advertiser; this stays under 500 px with the same eight pieces. */}
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+          {brand?.logo ? (
+            <span className={`inline-flex h-11 items-center rounded-xl px-3 ${dark ? 'bg-white shadow-[0_6px_16px_-8px_rgba(0,0,0,0.6)]' : ''}`}>
+              <img
+                src={brand.logo}
+                alt={c.eyebrow}
+                width={brand.logoW}
+                height={brand.logoH}
+                loading="eager"
+                decoding="async"
+                className="h-7 w-auto max-w-[9.5rem] object-contain"
+              />
             </span>
-          </div>
+          ) : (
+            <span className="inline-flex items-center gap-2">
+              <Gem className="h-3.5 w-3.5 shrink-0" style={{ color: accent }} aria-hidden="true" />
+              <span className="text-[11px] font-semibold uppercase tracking-[0.18em]" style={{ color: accent }}>
+                {c.eyebrow}
+              </span>
+            </span>
+          )}
           <a
-            href={linkFor(CATEGORY_URL[shop], `${sid}_all`)}
+            href={allHref}
             target="_blank"
             rel="sponsored nofollow noopener"
-            onClick={() =>
-              onCtaClick?.('kultacenter', `kalevala_rail:${sid}_all`, linkFor(CATEGORY_URL[shop], `${sid}_all`))
-            }
-            className="group inline-flex items-center gap-1 text-xs font-semibold no-underline underline-offset-4 hover:underline"
-            style={{ color: dark ? '#D9B478' : '#8A5A1E' }}
+            onClick={() => onCtaClick?.('kultacenter', `kalevala_rail:${sid}_all`, allHref)}
+            className="group/cta hidden min-h-10 items-center gap-1.5 rounded-full px-4 text-[13px] font-semibold no-underline sm:inline-flex shadow-[0_8px_20px_-12px_rgba(15,23,42,0.45)] transition-[transform,box-shadow] duration-200 hover:shadow-[0_14px_28px_-14px_rgba(15,23,42,0.5)] active:scale-[0.97] motion-reduce:transition-none"
+            style={{ backgroundColor: accent, color: pillText, transitionTimingFunction: EASE }}
           >
             {c.ctaAll}
-            <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" aria-hidden="true" />
+            <ArrowRight className="h-3.5 w-3.5 transition-transform duration-200 group-hover/cta:translate-x-0.5 motion-reduce:transition-none" aria-hidden="true" />
           </a>
         </div>
 
-        <h2
-          className={`font-heading text-xl sm:text-2xl tracking-wide leading-tight mt-1.5 ${
-            dark ? 'text-snow' : 'text-[#1B1710]'
-          }`}
-        >
+        <h2 className={`mt-5 max-w-xl font-heading text-2xl leading-none tracking-wide text-balance sm:text-[1.9rem] ${ink}`}>
           {headline ?? c.headline}
         </h2>
-        <p
-          className={`mt-1.5 text-[13px] leading-snug max-w-2xl ${dark ? 'text-white/65' : 'text-black/65'}`}
-        >
-          {c.sub}
-        </p>
+        <p className={`mt-2 max-w-xl text-[14px] leading-snug text-pretty ${muted}`}>{c.sub}</p>
 
         {/* ONE row at every width, scrolled sideways — not a grid that grows
-            downward. All eight pieces stay reachable, the unit stays ~one third
-            of its old height, and it reads as the carousel it is. */}
-        <ul className="mt-4 -mx-1 flex snap-x snap-mandatory gap-3 overflow-x-auto px-1 pb-2">
+            downward. */}
+        <ul className="-mx-2 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-2 pb-4 pt-1 [scrollbar-width:thin]">
           {picks.products.map((p) => {
             // shop → English → Finnish. `urls` only ever holds store views that
-            // genuinely exist (the sync drops the partner's mislabelled ones), so
-            // a missing key here means that translation is not published and the
-            // Finnish product page is the deepest honest link we have.
+            // genuinely exist (the sync drops the partner's mislabelled ones).
             const dest = p.urls[shop] ?? p.urls.en ?? p.urls.fi
             const placement = `${sid}_${p.sku}`
             const href = linkFor(dest, placement)
             return (
-              <li key={p.sku} className="w-[46vw] max-w-[10.5rem] shrink-0 snap-start sm:w-[10.5rem]">
+              <li key={p.sku} className="w-[48vw] max-w-[11rem] shrink-0 snap-start sm:w-[11rem]">
                 <a
                   href={href}
                   target="_blank"
                   rel="sponsored nofollow noopener"
                   onClick={() => onCtaClick?.('kultacenter', `kalevala_rail:${placement}`, href)}
-                  className={`group flex h-full flex-col overflow-hidden rounded-xl border no-underline transition-all duration-200 hover:-translate-y-0.5 ${
+                  className={`group flex h-full flex-col overflow-hidden rounded-[20px] bg-white no-underline transition-[transform,box-shadow] duration-200 hover:-translate-y-[3px] active:scale-[0.98] motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${
                     dark
-                      ? 'border-white/10 bg-white/[0.03] hover:border-white/25'
-                      : 'border-black/[0.08] bg-white hover:border-[#B8893A]/45 hover:shadow-lg'
+                      ? 'shadow-[0_10px_24px_-14px_rgba(0,0,0,0.7)] hover:shadow-[0_22px_40px_-18px_rgba(0,0,0,0.75)]'
+                      : 'shadow-[0_1px_2px_rgba(15,23,42,0.05),0_12px_28px_-16px_rgba(15,23,42,0.28)] hover:shadow-[0_2px_4px_rgba(15,23,42,0.05),0_24px_40px_-18px_rgba(15,23,42,0.34)]'
                   }`}
+                  style={{ transitionTimingFunction: EASE }}
                 >
-                  <div className="aspect-square w-full overflow-hidden bg-white">
+                  <div className="aspect-square w-full overflow-hidden bg-white p-3">
                     <img
                       src={p.image}
                       alt={p.name}
@@ -355,34 +364,16 @@ export default function KalevalaRail({
                       decoding="async"
                       width={640}
                       height={640}
-                      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.04]"
+                      className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-[1.04] motion-reduce:transition-none"
+                      style={{ transitionTimingFunction: EASE }}
                     />
                   </div>
-                  {/* Two lines, not three: the per-card "Katso koru →" was the
-                      same promise the whole card already makes by being a link,
-                      and eight copies of it cost real height for nothing. */}
-                  <div className="flex flex-1 flex-col gap-1 p-2.5">
-                    <span
-                      className={`line-clamp-2 text-[12px] font-semibold leading-snug ${
-                        dark ? 'text-snow' : 'text-[#1B1710]'
-                      }`}
-                    >
-                      {p.name}
-                    </span>
+                  <div className="flex flex-1 flex-col gap-1.5 px-3.5 pb-3.5 pt-1">
+                    <span className="line-clamp-2 text-[12.5px] font-semibold leading-snug text-[#141413]">{p.name}</span>
                     <span className="mt-auto flex items-baseline gap-1">
-                      {c.from && !c.fromAfter ? (
-                        <span className={`text-[10px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
-                          {c.from}
-                        </span>
-                      ) : null}
-                      <span className="text-[13px] font-bold" style={{ color: dark ? '#D9B478' : '#8A5A1E' }}>
-                        {fmtPrice(p.price)}
-                      </span>
-                      {c.from && c.fromAfter ? (
-                        <span className={`text-[10px] ${dark ? 'text-white/50' : 'text-black/45'}`}>
-                          {c.from}
-                        </span>
-                      ) : null}
+                      {c.from && !c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
+                      <span className="text-[14px] font-bold text-[#141413]">{fmtPrice(p.price)}</span>
+                      {c.from && c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
                     </span>
                   </div>
                 </a>
@@ -391,27 +382,34 @@ export default function KalevalaRail({
           })}
         </ul>
 
-        {/* The full-width pill CTA is gone — the same link now sits in the
-            header row, where it costs no vertical space. Fine print carries the
-            price date AND the delivery terms the removed brand card used to
-            state; both were native-reviewed (commit c5c209f) and must not be
-            lost just because the card they lived on was taken away. */}
-        <p className={`mt-3 text-[11px] leading-snug ${dark ? 'text-white/45' : 'text-black/45'}`}>
-          {c.priceNote.replace('{date}', picks.fetchedAt)} {c.shipping}
-        </p>
+        {/* Fine print carries the price date AND the delivery terms the removed
+            brand card used to state; both were native-reviewed (commit c5c209f). */}
+        {/* Kapealla ruudulla otsikkorivi ei mahdu: logo + pilleri kiertyivät
+            niin että pilleri jäi yksin otsikon yläpuolelle. Siksi CTA on
+            mobiilissa listan alla täysleveänä, sm:stä ylöspäin otsikkorivillä. */}
+        <a
+          href={allHref}
+          target="_blank"
+          rel="sponsored nofollow noopener"
+          onClick={() => onCtaClick?.('kultacenter', `kalevala_rail:${sid}_all`, allHref)}
+          className="mb-4 inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-full px-4 text-[14px] font-semibold no-underline shadow-[0_8px_20px_-12px_rgba(15,23,42,0.45)] transition-transform duration-200 active:scale-[0.97] motion-reduce:transition-none sm:hidden"
+          style={{ backgroundColor: accent, color: pillText, transitionTimingFunction: EASE }}
+        >
+          {c.ctaAll}
+          <ArrowRight className="h-4 w-4" aria-hidden="true" />
+        </a>
+
+        <div className="mt-2 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
+          <p className={`max-w-xl text-[11px] leading-snug ${faint}`}>
+            {c.priceNote.replace('{date}', picks.fetchedAt)} {c.shipping}
+          </p>
+          <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] ${dark ? 'bg-white/10 text-white/60' : 'bg-black/[0.05] text-black/50'}`}>
+            {AD_LABEL[lang] ?? 'Ad'}
+          </span>
+        </div>
 
         {disclosure ? <div className="mt-3">{disclosure}</div> : null}
       </div>
-
-      <span
-        className="absolute bottom-3.5 right-4 z-10 inline-flex items-center rounded-full px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-[0.16em]"
-        style={{
-          backgroundColor: dark ? 'rgba(255,255,255,0.10)' : 'rgba(0,0,0,0.06)',
-          color: dark ? 'rgba(255,255,255,0.65)' : 'rgba(0,0,0,0.55)',
-        }}
-      >
-        {AD_LABEL[lang] ?? 'Ad'}
-      </span>
     </section>
   )
 }
