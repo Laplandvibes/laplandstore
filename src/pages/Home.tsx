@@ -25,6 +25,8 @@ import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
 import { useLang, type Lang } from '../lang';
 import { AppPromoHero } from '../components/AppPromo';
+import ReadyBaskets from '../components/ReadyBaskets';
+import ActivitiesRail from '../components/ActivitiesRail';
 
 const BCP47: Record<Lang, string> = {
   en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES',
@@ -132,6 +134,10 @@ export default function Home() {
           tyhjänä kompakti house-ad → LV Media -portaali (cream-pinta → light) */}
       <MainPartnerBanner config={AD_SLOTS} locale={lang} surface="light" />
       <WhyBuyFromUs />
+      {/* Valmis kori (Vesa 5.9.2026): koko kerrasto yhdellä klikillä kumppanin
+          ostoskoriin, kokovalitsin vaihtaa kaikki rivit. Heti sen jälkeen, kun
+          sivu on kertonut miksi täältä ostetaan. */}
+      <ReadyBaskets />
       {/* Kumppaniosio heti ensimmäisen kategoriabändin jälkeen:
           kakkospääkumppani + 6 premium-paikkaa (house-adit kun vapaat) */}
       <HomeAdSlots config={AD_SLOTS} locale={lang} surface="light" />
@@ -166,6 +172,10 @@ export default function Home() {
           <ProductRail partner={suomikauppaRail} snapshot={suomikauppaPicks} lang={lang} sid="after_boutiques_ships_home" variant="light" />
         </div>
       </section>
+      {/* Aktiviteetit (Vesa 5.9.2026: "juuri ne aktiviteetit siellä
+          laplandstoressa"): putiikkien ja kotiin toimittavan kaupan jälkeen,
+          ennen seuraavaa tuoteriviä, jotta sivu vuorottelee kauppa → tekeminen. */}
+      <ActivitiesRail />
       {/* Mapped product ad — IVALO.COM (Finnish design, delivered), skinned in their brand. */}
       <section className="px-4 py-10 sm:py-14 bg-cream">
         <div className="max-w-5xl mx-auto">
