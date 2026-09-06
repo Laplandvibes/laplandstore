@@ -27,90 +27,100 @@ import { useLang } from '../lang';
  * footer network links (monorepo 9c7bca9).
  */
 
+/**
+ * 🔴 REWRITTEN AGAIN 2026-09-06 (Vesa: "eikö tämä ole aika tuhraa? kuka edes
+ * tiesi että se oli kiinni?"). The 10.8. fix replaced "coming soon" with "our
+ * shop is open" — but "open" is only news to someone who thought it was
+ * closed, and nobody did. An announcement is not a benefit. The heading now
+ * says what the reader gets (a gift delivered home) and the body draws the
+ * line between the two sites in one breath: this page = where to buy in
+ * Lapland, LaplandGifts = the rest. The eyebrow is the domain itself, so the
+ * button's destination is never a surprise.
+ */
 const COPY = {
   fi: {
-    eyebrow: 'Verkkokauppa',
-    heading: 'Verkkokauppamme on auki',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Lahja kotiin toimitettuna',
     body:
-      'LaplandGifts on LaplandVibes-verkoston verkkokauppa: suomalaiset lahjat, herkut ja käsityöt kotiin toimitettuna, myös ulkomaille. Tämä sivu kertoo, mistä ostat Lapissa paikan päällä.',
-    cta: 'Siirry osoitteeseen laplandgifts.com',
+      'Kaiken ei tarvitse mahtua matkalaukkuun. LaplandGifts toimittaa suomalaiset lahjat, herkut ja käsityöt kotiovelle, myös ulkomaille. Tämä sivu kertoo, mistä ostat paikan päällä; loput hoitaa LaplandGifts.',
+    cta: 'Selaa lahjoja',
   },
   en: {
-    eyebrow: 'The online shop',
-    heading: 'Our online shop is open',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Gifts delivered to your door',
     body:
-      'LaplandGifts is the network’s online shop: Finnish gifts, treats and crafts delivered to your door, abroad included. This page answers the other half of the question: where to buy in Lapland itself.',
-    cta: 'Go to laplandgifts.com',
+      'Not everything has to fit in the suitcase. LaplandGifts ships Finnish gifts, treats and crafts to your home, abroad included. This page tells you where to buy in Lapland itself; LaplandGifts handles the rest.',
+    cta: 'Browse the gifts',
   },
   de: {
-    eyebrow: 'Der Onlineshop',
-    heading: 'Unser Onlineshop ist geöffnet',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Geschenke bis vor die Haustür',
     body:
-      'LaplandGifts ist der Onlineshop des Netzwerks: finnische Geschenke, Delikatessen und Handwerk, nach Hause geliefert, auch ins Ausland. Diese Seite beantwortet die andere Hälfte der Frage, wo man in Lappland selbst einkauft.',
-    cta: 'Zu laplandgifts.com',
+      'Nicht alles muss in den Koffer passen. LaplandGifts liefert finnische Geschenke, Delikatessen und Handwerk nach Hause, auch ins Ausland. Diese Seite zeigt, wo Sie in Lappland selbst einkaufen; den Rest übernimmt LaplandGifts.',
+    cta: 'Geschenke ansehen',
   },
   ja: {
-    eyebrow: 'オンラインショップ',
-    heading: 'オンラインショップは開いています',
+    eyebrow: 'laplandgifts.com',
+    heading: 'ギフトはご自宅までお届け',
     body:
-      'LaplandGifts はネットワークのオンラインショップです。フィンランドのギフト、食品、工芸品を海外にもお届けします。このページはもう半分の問い、ラップランドの現地でどこで買うかにお答えします。',
-    cta: 'laplandgifts.com へ',
+      'すべてをスーツケースに詰める必要はありません。LaplandGifts はフィンランドのギフト、食品、工芸品を海外を含むご自宅までお届けします。このページは現地でどこで買うかをご案内し、残りは LaplandGifts が引き受けます。',
+    cta: 'ギフトを見る',
   },
   es: {
-    eyebrow: 'La tienda en línea',
-    heading: 'Nuestra tienda en línea está abierta',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Regalos entregados en su casa',
     body:
-      'LaplandGifts es la tienda en línea de la red: regalos, delicias y artesanía de Finlandia enviados a su casa, también al extranjero. Esta página responde a la otra mitad de la pregunta, dónde comprar en la propia Laponia.',
-    cta: 'Ir a laplandgifts.com',
+      'No todo tiene que caber en la maleta. LaplandGifts envía regalos, delicias y artesanía de Finlandia a su domicilio, también al extranjero. Esta página le dice dónde comprar en la propia Laponia; del resto se ocupa LaplandGifts.',
+    cta: 'Ver los regalos',
   },
   'pt-BR': {
-    eyebrow: 'A loja online',
-    heading: 'Nossa loja online está aberta',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Presentes entregues na sua porta',
     body:
-      'A LaplandGifts é a loja online da rede: presentes, guloseimas e artesanato finlandês entregues na sua porta, inclusive no exterior. Esta página responde à outra metade da pergunta, onde comprar na própria Lapônia.',
-    cta: 'Ir para laplandgifts.com',
+      'Nem tudo precisa caber na mala. A LaplandGifts envia presentes, guloseimas e artesanato finlandês para a sua casa, inclusive no exterior. Esta página mostra onde comprar na própria Lapônia; do resto cuida a LaplandGifts.',
+    cta: 'Ver os presentes',
   },
   'zh-CN': {
-    eyebrow: '线上商店',
-    heading: '我们的线上商店已经开张',
+    eyebrow: 'laplandgifts.com',
+    heading: '礼物直接送到家',
     body:
-      'LaplandGifts 是本网络的线上商店：芬兰的礼品、美味与手工艺品送货到家，也寄往国外。本页回答的是另一半问题，在拉普兰当地该去哪里买。',
-    cta: '前往 laplandgifts.com',
+      '不必什么都塞进行李箱。LaplandGifts 把芬兰的礼品、美味和手工艺品送到您家，也寄往国外。本页告诉您在拉普兰当地去哪里买，其余的交给 LaplandGifts。',
+    cta: '挑选礼物',
   },
   ko: {
-    eyebrow: '온라인 상점',
-    heading: '온라인 상점이 열려 있습니다',
+    eyebrow: 'laplandgifts.com',
+    heading: '선물은 집으로 배송',
     body:
-      'LaplandGifts는 네트워크의 온라인 상점입니다. 핀란드의 선물, 먹거리, 수공예품을 해외까지 배송합니다. 이 페이지는 나머지 절반의 질문, 라플란드 현지에서 어디서 살 수 있는지에 답합니다.',
-    cta: 'laplandgifts.com으로 이동',
+      '모든 것을 여행 가방에 넣을 필요는 없습니다. LaplandGifts가 핀란드의 선물, 먹거리, 수공예품을 해외까지 집으로 배송합니다. 이 페이지는 라플란드 현지에서 어디서 살지 알려 드리고, 나머지는 LaplandGifts가 맡습니다.',
+    cta: '선물 보기',
   },
   fr: {
-    eyebrow: 'La boutique en ligne',
-    heading: 'Notre boutique en ligne est ouverte',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Des cadeaux livrés chez vous',
     body:
-      'LaplandGifts est la boutique en ligne du réseau : cadeaux, gourmandises et artisanat finlandais livrés chez vous, y compris à l’étranger. Cette page répond à l’autre moitié de la question, où acheter en Laponie même.',
-    cta: 'Aller sur laplandgifts.com',
+      'Tout ne doit pas tenir dans la valise. LaplandGifts livre cadeaux, gourmandises et artisanat finlandais à domicile, y compris à l’étranger. Cette page vous dit où acheter en Laponie même ; LaplandGifts s’occupe du reste.',
+    cta: 'Voir les cadeaux',
   },
   it: {
-    eyebrow: 'Il negozio online',
-    heading: 'Il nostro negozio online è aperto',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Regali consegnati a casa',
     body:
-      'LaplandGifts è il negozio online della rete: regali, specialità e artigianato finlandese consegnati a casa, estero compreso. Questa pagina risponde all’altra metà della domanda, dove comprare in Lapponia di persona.',
-    cta: 'Vai su laplandgifts.com',
+      'Non tutto deve entrare in valigia. LaplandGifts consegna regali, specialità e artigianato finlandese a casa, estero compreso. Questa pagina dice dove comprare in Lapponia di persona; al resto pensa LaplandGifts.',
+    cta: 'Vedi i regali',
   },
   nl: {
-    eyebrow: 'De webshop',
-    heading: 'Onze webshop is open',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Cadeaus thuisbezorgd',
     body:
-      'LaplandGifts is de webshop van het netwerk: Finse cadeaus, lekkernijen en ambacht thuisbezorgd, ook in het buitenland. Deze pagina beantwoordt de andere helft van de vraag, waar u in Lapland zelf koopt.',
-    cta: 'Naar laplandgifts.com',
+      'Niet alles hoeft in de koffer te passen. LaplandGifts bezorgt Finse cadeaus, lekkernijen en ambacht aan huis, ook in het buitenland. Deze pagina vertelt waar u in Lapland zelf koopt; de rest regelt LaplandGifts.',
+    cta: 'Bekijk de cadeaus',
   },
   sv: {
-    eyebrow: 'Webbutiken',
-    heading: 'Vår webbutik är öppen',
+    eyebrow: 'laplandgifts.com',
+    heading: 'Presenter levererade hem',
     body:
-      'LaplandGifts är nätverkets webbutik: finska presenter, delikatesser och hantverk hemlevererat, även utomlands. Den här sidan svarar på den andra halvan av frågan, var man handlar i Lappland på plats.',
-    cta: 'Gå till laplandgifts.com',
+      'Allt behöver inte få plats i resväskan. LaplandGifts levererar finska presenter, delikatesser och hantverk hem till dig, även utomlands. Den här sidan berättar var du handlar i Lappland på plats; resten sköter LaplandGifts.',
+    cta: 'Se presenterna',
   },
 } as const;
 
