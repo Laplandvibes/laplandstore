@@ -426,69 +426,105 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
   const [size, setSize] = useState(basket.defaultSize);
   const total = basket.items.reduce((s, it) => s + it.price, 0);
   return (
-    <article className="grid gap-6 rounded-[32px] bg-white p-5 shadow-[0_28px_56px_-32px_rgba(15,23,42,0.35)] sm:p-7 md:grid-cols-12 md:items-center md:gap-10 md:p-9">
-      {/* Kumppanin tuotekuvat: iso pääkuva + kaksi pientä, ei stockia. Vuorottelu vasen/oikea. */}
-      <div className={`md:col-span-5 ${flip ? 'md:order-2' : ''}`}>
-        <div className="grid grid-cols-2 gap-2 sm:gap-3">
-          {basket.items.map((it, i) => (
-            <figure key={it.name} className={`overflow-hidden rounded-2xl bg-[#F6F7FA] ${i === 0 ? 'col-span-2 aspect-[4/3]' : 'aspect-square'}`}>
-              <img
-                src={`/img/baskets/${it.image}.webp`}
-                srcSet={`/img/baskets/${it.image}-400.webp 400w, /img/baskets/${it.image}.webp 800w`}
-                sizes={i === 0 ? '(min-width: 768px) 34vw, 90vw' : '(min-width: 768px) 16vw, 44vw'}
-                alt={it.name}
-                loading="lazy"
-                decoding="async"
-                width={800}
-                height={800}
-                className="h-full w-full object-contain p-3 mix-blend-multiply"
-              />
-            </figure>
-          ))}
+    <article className="rounded-[32px] bg-white p-5 shadow-[0_28px_56px_-32px_rgba(15,23,42,0.35)] sm:p-7 md:p-9">
+      {/* Kuva ja tarina rinnakkain jo tabletista (sm, 640 px) alkaen — Vesa 6.9.:
+          "tablet-näkymässä ainakin rinnakkain, tästä tulisi matalampi ja näin kompaktimpi".
+          Pinottuna kuvalohko yksin oli ~800 px 740 px:n leveydellä ja yksi kori ~1 600 px.
+          Sama sommittelu kaikilla leveyksillä sm:stä ylös (vain mitat skaalautuvat),
+          puhelimessa kuvat päällä ja tarina alla. */}
+      <div className="grid gap-5 sm:grid-cols-12 sm:items-center sm:gap-6 md:gap-10">
+        {/* Kumppanin tuotekuvat: iso pääkuva + kaksi pientä, ei stockia. Vuorottelu vasen/oikea. */}
+        <div className={`sm:col-span-5 ${flip ? 'sm:order-2' : ''}`}>
+          <div className="grid grid-cols-2 gap-2 sm:gap-3">
+            {basket.items.map((it, i) => (
+              <figure key={it.name} className={`overflow-hidden rounded-2xl bg-[#F6F7FA] ${i === 0 ? 'col-span-2 aspect-[4/3]' : 'aspect-square'}`}>
+                <img
+                  src={`/img/baskets/${it.image}.webp`}
+                  srcSet={`/img/baskets/${it.image}-400.webp 400w, /img/baskets/${it.image}.webp 800w`}
+                  sizes={i === 0 ? '(min-width: 640px) 34vw, 90vw' : '(min-width: 640px) 16vw, 44vw'}
+                  alt={it.name}
+                  loading="lazy"
+                  decoding="async"
+                  width={800}
+                  height={800}
+                  className="h-full w-full object-contain p-3 mix-blend-multiply"
+                />
+              </figure>
+            ))}
+          </div>
+        </div>
+        <div className={`sm:col-span-7 ${flip ? 'sm:order-1' : ''}`}>
+          <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-vibe-pink">{basket.shopName}</p>
+          <h3 className="mt-2 font-heading text-4xl leading-[0.95] text-night sm:text-5xl [text-wrap:balance]">{c.scene}</h3>
+          {/* Tarina ennen tuotetta: kaksi kappaletta artikkelin tapaan. */}
+          <div className="mt-4 max-w-prose space-y-3 text-[15px] leading-relaxed text-slate-700 sm:text-base">
+            <p className="first-letter:float-left first-letter:mr-2 first-letter:font-heading first-letter:text-5xl first-letter:leading-[0.8] first-letter:text-night">{c.story[0]}</p>
+            <p>{c.story[1]}</p>
+          </div>
         </div>
       </div>
-      <div className={`md:col-span-7 ${flip ? 'md:order-1' : ''}`}>
-        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-vibe-pink">{basket.shopName}</p>
-        <h3 className="mt-2 font-heading text-4xl leading-[0.95] text-night sm:text-5xl [text-wrap:balance]">{c.scene}</h3>
-        {/* Tarina ennen tuotetta: kaksi kappaletta artikkelin tapaan. */}
-        <div className="mt-4 max-w-prose space-y-3 text-[15px] leading-relaxed text-slate-700 sm:text-base">
-          <p className="first-letter:float-left first-letter:mr-2 first-letter:font-heading first-letter:text-5xl first-letter:leading-[0.8] first-letter:text-night">{c.story[0]}</p>
-          <p>{c.story[1]}</p>
-        </div>
-        <p className="mt-5 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">{t.contents}: {c.name}</p>
-        <ul className="mt-2 divide-y divide-slate-100 border-y border-slate-100 text-sm">
+      {/* Kori omana esineenään tarinan jälkeen, koko kortin levyisenä: rivit ovat
+          kortteja pikkukuvalla, hinnat mustetta eikä harmaata, summa Bebasilla ja nappi
+          varjolla. Vesa 6.9.: "teksteistä ja listauksista puuttuu varjostusta, viimeinen
+          firm ote, loogisuus ja selkeys". Tabletista ylös kolme riviä rinnakkain, puhelimessa
+          allekkain (nimet 15–37 merkkiä ⇒ rinnakkain vain kun sarakkeelle jää ≥ 170 px). */}
+      <div className="mt-5 rounded-2xl bg-[#F6F7FA] p-3 ring-1 ring-night/5 sm:mt-6 sm:p-4">
+        <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">{t.contents}: {c.name}</p>
+        <ul className="mt-3 grid gap-2 sm:grid-cols-3 sm:gap-3">
           {basket.items.map((it) => (
-            <li key={it.name} className="flex items-baseline justify-between gap-4 py-2">
-              <span className="text-slate-700">{it.name}</span>
-              <span className="shrink-0 tabular-nums text-slate-500">{money(it.price, lang)}</span>
+            <li key={it.name} className="flex items-center gap-3 rounded-xl bg-white p-2.5 shadow-[0_10px_24px_-18px_rgba(15,23,42,0.5)] ring-1 ring-night/5">
+              <span className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-[#F6F7FA]">
+                <img
+                  src={`/img/baskets/${it.image}-400.webp`}
+                  alt=""
+                  loading="lazy"
+                  decoding="async"
+                  width={400}
+                  height={400}
+                  className="h-full w-full object-contain p-1 mix-blend-multiply"
+                />
+              </span>
+              <span className="flex min-w-0 flex-1 items-center justify-between gap-3 sm:block">
+                <span className="text-[13px] font-medium leading-snug text-night">{it.name}</span>
+                <span className="shrink-0 text-[13px] font-semibold tabular-nums text-night sm:mt-0.5 sm:block sm:font-medium sm:text-slate-600">{money(it.price, lang)}</span>
+              </span>
             </li>
           ))}
         </ul>
-        <div className="mt-5 flex flex-wrap items-center gap-3">
+        <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-night/10 pt-3">
           <label className="flex items-center gap-2 text-sm text-slate-700">
             <span>{t.size}</span>
-            <select
-              value={size}
-              onChange={(e) => setSize(e.target.value)}
-              className="rounded-full border border-slate-300 bg-white px-3 py-2 text-sm text-night focus:outline-none focus:ring-2 focus:ring-vibe-pink/40"
-            >
-              {basket.sizes.map((s) => (
-                <option key={s} value={s}>{s}</option>
-              ))}
-            </select>
+            <span className="relative">
+              <select
+                value={size}
+                onChange={(e) => setSize(e.target.value)}
+                className="appearance-none rounded-full border border-slate-300 bg-white py-2 pl-3 pr-8 text-sm font-semibold text-night focus:outline-none focus:ring-2 focus:ring-vibe-pink/40"
+              >
+                {basket.sizes.map((s) => (
+                  <option key={s} value={s}>{s}</option>
+                ))}
+              </select>
+              {/* Oma nuoli: appearance-none ilman nuolta on laatikko, jota kukaan ei tunnista valitsimeksi (laplandwork 4.9.). */}
+              <svg aria-hidden="true" viewBox="0 0 16 16" className="pointer-events-none absolute right-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500">
+                <path d="M4 6l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
           </label>
+          <span className="ml-auto flex items-baseline gap-2 text-sm text-slate-600">
+            {t.total}
+            <b className="font-heading text-2xl font-normal tracking-wide text-night">{money(total, lang)}</b>
+          </span>
           <a
             href={cartHref(basket, size)}
             target="_blank"
             rel={REL}
-            className="inline-flex items-center gap-2 rounded-full bg-[#DB2777] px-5 py-2.5 text-sm font-semibold text-white transition-[transform,background-color] duration-150 hover:bg-[#BE185D] active:scale-[0.97]"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#DB2777] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_14px_30px_-12px_rgba(219,39,119,0.75)] transition-[transform,background-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:bg-[#BE185D] active:scale-[0.97] sm:w-auto"
           >
             {t.cta(basket.shopName)}
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
           </a>
-          <span className="text-sm font-semibold text-night">{t.total} {money(total, lang)}</span>
         </div>
-        <p className="mt-3 text-xs text-slate-500">{c.shipping}</p>
+        <p className="mt-2.5 text-xs text-slate-500">{c.shipping}</p>
       </div>
     </article>
   );

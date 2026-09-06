@@ -9,9 +9,8 @@ const COPY = {
     titleB: 'tuet elämäntapaa.',
     body:
       'Jokaisella puukolla, korulla ja hillopurkilla on tarina. Tekijä, joka oppi taidon isovanhemmiltaan. Paja napapiirin pohjoispuolella. Yritys, jolle Lappi on koti eikä lavaste. Joka putiikki tällä sivulla on lappilainen, ja lähteet ovat näkyvillä.',
-    statA: 'vuotta käsityöperinnettä',
-    statB: 'putiikkia hakemistossa',
-    statC: 'tarjoaa myös verkkokaupan',
+    facts: 'Hakemistossa on {n} lappilaista putiikkia, ja {m} niistä toimittaa myös verkkokaupasta.',
+    browse: 'Selaa putiikkeja',
   },
   en: {
     eyebrow: 'Stories behind the products',
@@ -19,9 +18,8 @@ const COPY = {
     titleB: 'you support a way of life.',
     body:
       'Every knife, piece of jewellery and jar of preserve carries a story. A maker who learned the craft from their grandparents. A workshop north of the Arctic Circle. A business that treats Lapland as home, not as a backdrop. Every boutique on this page is a real Lapland business, and we keep the sources on file.',
-    statA: 'years of craft tradition',
-    statB: 'boutiques in the directory',
-    statC: 'also offer an online store',
+    facts: 'The directory lists {n} Lapland boutiques, and {m} of them also ship from an online store.',
+    browse: 'Browse the boutiques',
   },
   de: {
     eyebrow: 'Geschichten hinter den Produkten',
@@ -29,9 +27,8 @@ const COPY = {
     titleB: 'unterstützt eine Lebensweise.',
     body:
       'Jedes Messer, jedes Schmuckstück, jedes Glas Konfitüre erzählt eine Geschichte: von einer Handwerkerin, die das Handwerk von den Großeltern gelernt hat, von einer Werkstatt nördlich des Polarkreises, von einem Betrieb, für den Lappland Alltag ist und keine Kulisse. Alle Boutiquen auf dieser Seite werden redaktionell geprüft, die Quellen sind dokumentiert.',
-    statA: 'Jahre Handwerkstradition',
-    statB: 'Boutiquen im Verzeichnis',
-    statC: 'mit eigenem Online-Shop',
+    facts: 'Das Verzeichnis führt {n} Boutiquen aus Lappland, {m} davon mit eigenem Online-Shop.',
+    browse: 'Boutiquen ansehen',
   },
 
   ja: {
@@ -40,9 +37,8 @@ const COPY = {
     titleB: 'ここでの暮らしを支えることです。',
     body:
       'すべてのナイフ、すべての装飾品、すべての保存食の瓶には物語があります：祖父母から技を受け継いだ職人、北極圏より北の工房、ラップランドを背景ではなく日常の家として扱う事業者の物語です。このページの各ブティックは独立して検証され、出典も記録に残しています。',
-    statA: '年に及ぶ工芸の伝統',
-    statB: 'ブティックを掲載',
-    statC: 'がオンラインショップも併設',
+    facts: 'ディレクトリには{n}軒のラップランドのブティックを掲載しており、そのうち{m}軒はオンラインショップも運営しています。',
+    browse: 'ブティックを見る',
   },
   es: {
     eyebrow: 'Historias detrás de los productos',
@@ -50,9 +46,8 @@ const COPY = {
     titleB: 'sostiene una forma de vida.',
     body:
       'Cada cuchillo, cada joya y cada tarro de mermelada llevan una historia: la de un artesano que aprendió el oficio de sus abuelos, la de un taller al norte del Círculo Polar Ártico, la de una empresa para la que Laponia es hogar y no decorado. Cada boutique de esta página se verifica de forma independiente, con las fuentes documentadas.',
-    statA: 'años de tradición artesanal',
-    statB: 'boutiques en el directorio',
-    statC: 'ofrecen también tienda en línea',
+    facts: 'El directorio reúne {n} boutiques de Laponia, y {m} de ellas también envían desde su tienda en línea.',
+    browse: 'Ver las boutiques',
   },
   'pt-BR': {
     eyebrow: 'As histórias por trás dos produtos',
@@ -60,9 +55,8 @@ const COPY = {
     titleB: 'você sustenta um modo de vida.',
     body:
       'Cada faca, cada joia, cada vidro de geleia carrega uma história: a do artesão que aprendeu o ofício com os avós, a da oficina ao norte do Círculo Polar, a do negócio para o qual a Lapônia é casa, não cenário. Cada boutique desta página é verificada de forma independente, com as fontes documentadas.',
-    statA: 'anos de tradição artesanal',
-    statB: 'boutiques no diretório',
-    statC: 'oferecem também loja online',
+    facts: 'O diretório reúne {n} boutiques da Lapônia, e {m} delas também vendem em loja on-line.',
+    browse: 'Ver as boutiques',
   },
   'zh-CN': {
     eyebrow: '产品背后的故事',
@@ -70,9 +64,8 @@ const COPY = {
     titleB: '您支持的是一种生活方式。',
     body:
       '每一把刀、每一件饰品、每一罐果酱都承载着故事：从祖辈传承手艺的工匠、北极圈以北的工作坊，以及把拉普兰当作家园而非背景板的小企业。本页面的每家精品店都经过独立核实，资料来源均有记录。',
-    statA: '年的工艺传承',
-    statB: '家精品店收录其中',
-    statC: '家同时经营线上商店',
+    facts: '目录收录了 {n} 家拉普兰精品店，其中 {m} 家也提供网上商店。',
+    browse: '浏览精品店',
   },
   ko: {
     eyebrow: '상품 뒤에 숨겨진 이야기',
@@ -80,9 +73,8 @@ const COPY = {
     titleB: '하나의 삶의 방식을 지켜 나가는 데 힘을 보태는 것입니다.',
     body:
       '칼 한 자루, 장신구 하나, 잼 한 병마다 이야기가 담겨 있습니다: 조부모로부터 기술을 배운 장인, 북극권 이북의 공방, 라플란드를 배경이 아닌 일상의 터전으로 여기는 사업체. 이 페이지의 모든 부티크는 독립적으로 검증되었으며 출처가 기록되어 있습니다.',
-    statA: '년의 공예 전통',
-    statB: '개의 부티크 수록',
-    statC: '곳은 온라인 상점도 운영',
+    facts: '디렉터리에는 라플란드 부티크 {n}곳이 실려 있으며, 그중 {m}곳은 온라인 상점도 운영합니다.',
+    browse: '부티크 보기',
   },
   fr: {
     eyebrow: 'Les histoires derrière les produits',
@@ -90,9 +82,8 @@ const COPY = {
     titleB: 'vous soutenez un mode de vie.',
     body:
       "Chaque couteau, chaque bijou, chaque pot de confiture porte une histoire : celle d'un artisan qui a appris le métier de ses grands-parents, celle d'un atelier au nord du cercle polaire, celle d'une entreprise pour qui la Laponie est un chez-soi et non un décor. Chaque boutique de cette page est vérifiée de façon indépendante, avec ses sources documentées.",
-    statA: "années de tradition artisanale",
-    statB: 'boutiques dans l’annuaire',
-    statC: 'proposent également une boutique en ligne',
+    facts: 'L’annuaire recense {n} boutiques de Laponie, dont {m} disposent aussi d’une boutique en ligne.',
+    browse: 'Voir les boutiques',
   },
   it: {
     eyebrow: 'Le storie dietro i prodotti',
@@ -100,9 +91,8 @@ const COPY = {
     titleB: 'sostiene un modo di vivere.',
     body:
       "Ogni coltello, ogni gioiello, ogni vasetto di marmellata porta una storia: quella di un artigiano che ha imparato il mestiere dai nonni, di un laboratorio a nord del Circolo Polare, di un'attività per cui la Lapponia è casa, non scenografia. Ogni boutique di questa pagina è verificata in modo indipendente, con le fonti documentate.",
-    statA: 'anni di tradizione artigianale',
-    statB: 'boutique nella directory',
-    statC: 'offrono anche un negozio online',
+    facts: 'L’elenco raccoglie {n} boutique della Lapponia, {m} delle quali hanno anche un negozio online.',
+    browse: 'Vedi le boutique',
   },
   nl: {
     eyebrow: 'De verhalen achter de producten',
@@ -110,9 +100,8 @@ const COPY = {
     titleB: 'steunt u een manier van leven.',
     body:
       'Elk mes, elk sieraad, elke pot jam draagt een verhaal: van een maker die het ambacht leerde van zijn grootouders, van een werkplaats ten noorden van de poolcirkel, van een bedrijf dat Lapland als thuis ziet en niet als decor. Elke boutique op deze pagina is onafhankelijk geverifieerd, met de bronnen gedocumenteerd.',
-    statA: 'jaar ambachtelijke traditie',
-    statB: 'boetieks in de gids',
-    statC: 'bieden ook een online winkel',
+    facts: 'De gids bevat {n} Laplandse boetieks, waarvan er {m} ook een webshop hebben.',
+    browse: 'Bekijk de boetieks',
   },
   sv: {
     eyebrow: 'Berättelserna bakom produkterna',
@@ -120,9 +109,8 @@ const COPY = {
     titleB: 'stödjer du ett sätt att leva.',
     body:
       'Varje kniv, varje smycke och varje burk sylt bär en berättelse. En hantverkare som lärde sig yrket av sina mor- och farföräldrar. En verkstad norr om polcirkeln. Ett företag som har Lappland som hem, inte som kuliss. Varje butik på den här sidan är ett verkligt Lappland-företag, och vi sparar källorna.',
-    statA: 'år av hantverkstradition',
-    statB: 'butiker i katalogen',
-    statC: 'har även en webbutik',
+    facts: 'Katalogen listar {n} butiker i Lappland, och {m} av dem har även en webbutik.',
+    browse: 'Se butikerna',
   },
 } as const;
 
@@ -132,6 +120,7 @@ export default function ArtisanStory() {
   const onlineCount = BOUTIQUES.filter((b) => b.hasOnlineStore).length;
   const { lang } = useLang();
   const t = COPY[lang];
+  const facts = t.facts.replace('{n}', String(BOUTIQUES.length)).replace('{m}', String(onlineCount));
 
   return (
     <section id="tarina" className="relative py-28 overflow-hidden">
@@ -185,21 +174,28 @@ export default function ArtisanStory() {
           <p className="text-white/85 text-lg mt-8 leading-relaxed [text-wrap:pretty]">
             {t.body}
           </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mt-12 max-w-3xl">
-          <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-            <p className="text-4xl font-heading font-bold text-amber-light">100+</p>
-            <p className="text-white/60 text-sm mt-1">{t.statA}</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-            <p className="text-4xl font-heading font-bold text-amber-light">{BOUTIQUES.length}</p>
-            <p className="text-white/60 text-sm mt-1">{t.statB}</p>
-          </div>
-          <div className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-2xl p-6">
-            <p className="text-4xl font-heading font-bold text-amber-light">{onlineCount}</p>
-            <p className="text-white/60 text-sm mt-1">{t.statC}</p>
-          </div>
+          {/* Luvut yhtenä virkkeenä tekstin jatkona, ei kolmena lasilaattana. Vesa 6.9.:
+              "tämä osio on lukujen osalta visuaalisesti todella AI slop". Laatat olivat
+              geneerinen laskeutumissivun kuvio, ja niiden ensimmäinen luku ("100+ vuotta
+              käsityöperinnettä") oli väite, jolle ei ole lähdettä — se on pudotettu
+              (CLAUDE.md: ei keksittyjä tilastoja). Jäljelle jäävät kaksi lukua tulevat
+              datasta ja johtavat hakemistoon, jossa ne voi tarkistaa. */}
+          <p className="text-white/85 text-lg mt-6 leading-relaxed [text-wrap:pretty]">
+            {facts.split(/(\d+)/).map((part, i) =>
+              /^\d+$/.test(part) ? (
+                <b key={i} className="font-semibold text-amber-light">{part}</b>
+              ) : (
+                part
+              ),
+            )}
+          </p>
+          <a
+            href="#putiikit"
+            className="mt-7 inline-flex min-h-[44px] items-center gap-2 rounded-full border border-amber-light/70 bg-night/30 px-5 text-sm font-semibold text-amber-light shadow-[0_12px_28px_-14px_rgba(0,0,0,0.7)] backdrop-blur-sm transition-[background-color,color,transform] duration-150 hover:-translate-y-0.5 hover:bg-amber-light hover:text-night active:scale-[0.97]"
+          >
+            {t.browse}
+            <span aria-hidden="true">→</span>
+          </a>
         </div>
       </div>
     </section>

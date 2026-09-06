@@ -54,25 +54,28 @@ export default function ActivitiesRail() {
         <p className="mt-3 max-w-2xl text-slate-600">{t.intro(GYG_PRICE_AS_OF)}</p>
         <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {HUB_PICKS.map((p, i) => (
-            <li key={p.path} className="flex flex-col rounded-[24px] border border-slate-200/70 bg-white p-5 shadow-[0_18px_40px_-26px_rgba(15,23,42,0.35)]">
+            // Sama "firm" käsiala kuin Valmis korin korilla (Vesa 6.9.: listauksista puuttuu
+            // varjostus ja viimeinen ote): kesto chipinä, hinta ja nappi omalla alarivillään
+            // viivan alla, nappi pinkkinä pillerinä varjolla eikä tekstilinkkinä.
+            <li key={p.path} className="flex flex-col rounded-[24px] bg-white p-5 shadow-[0_18px_40px_-26px_rgba(15,23,42,0.35)] ring-1 ring-night/5">
               <span className="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">
                 <MapPin className="h-3.5 w-3.5" aria-hidden="true" />
                 {p.place}
               </span>
-              <h3 className="mt-2 text-base font-semibold leading-snug text-night">{p.title}</h3>
+              <h3 className="mt-2 text-[17px] font-semibold leading-snug text-night [text-wrap:pretty]">{p.title}</h3>
               {p.duration && (
-                <span className="mt-2 inline-flex items-center gap-1.5 text-xs text-slate-500">
+                <span className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-[#F6F7FA] px-2.5 py-1 text-xs font-medium text-slate-600 ring-1 ring-night/5">
                   <Clock className="h-3.5 w-3.5" aria-hidden="true" />
                   {p.duration}
                 </span>
               )}
-              <div className="mt-auto pt-4">
-                {p.price && <p className="text-sm font-semibold text-night">{t.from(p.price)}</p>}
+              <div className="mt-auto flex items-center justify-between gap-3 border-t border-night/10 pt-4">
+                {p.price ? <p className="text-[15px] font-semibold tabular-nums text-night">{t.from(p.price)}</p> : <span />}
                 <a
                   href={gygHref(p, lang, `store_home_activity_${i + 1}`)}
                   target="_blank"
                   rel={REL}
-                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-vibe-pink hover:underline"
+                  className="inline-flex shrink-0 items-center gap-1.5 rounded-full bg-[#DB2777] px-4 py-2 text-[13px] font-semibold text-white shadow-[0_12px_26px_-12px_rgba(219,39,119,0.7)] transition-[transform,background-color] duration-150 hover:-translate-y-0.5 hover:bg-[#BE185D] active:scale-[0.97]"
                 >
                   {t.cta}
                   <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
