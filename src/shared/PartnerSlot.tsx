@@ -575,11 +575,25 @@ export default function PartnerSlot({ partner, variant, locale, className, place
               {badge}
             </span>
           </div>
-          <p className="font-heading text-lg sm:text-xl text-snow tracking-wide leading-tight group-hover:text-pink-400 transition-colors truncate">
+          {/* 🔴 Musteet PINNAN mukaan. Nämä kaksi riviä olivat kovakoodatut
+              `text-snow` / `text-snow/65`, eli valkoista — ja vaalealla sivustolla
+              (surface="light") maksavan kumppanin nimi ja iskulause renderöityivät
+              VALKOISENA VALKOISELLA. Mitattu laplandstoren dististä 6.9.2026:
+              rgb(255,255,255) taustalla rgb(255,255,255). Vika näkyi vasta nyt,
+              koska tämä oli ensimmäinen kerta kun vaalean sivuston pääkumppani-
+              paikkaan tuli oikea kumppani — aiemmin siinä oli house-ad, jolla on
+              omat värinsä. Sama ansa kuin logojen polariteetissa (CLAUDE.md). */}
+          <p
+            className={`font-heading text-lg sm:text-xl tracking-wide leading-tight transition-colors truncate ${
+              lightCard ? 'text-[#0F172A] group-hover:text-[#BE185D]' : 'text-snow group-hover:text-pink-400'
+            }`}
+          >
             {partner.name}
           </p>
           {tagline && (
-            <p className="text-snow/65 text-xs sm:text-sm leading-snug truncate">{tagline}</p>
+            <p className={`text-xs sm:text-sm leading-snug truncate ${lightCard ? 'text-[#0F172A]/70' : 'text-snow/65'}`}>
+              {tagline}
+            </p>
           )}
         </div>
 
