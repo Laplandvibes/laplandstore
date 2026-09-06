@@ -1,10 +1,19 @@
 /**
  * Etusivun standardit mainospaikat (LV Media -inventaari) — laplandstore.fi
  *
- * JAETTU MALLI:
- *   sponsors[0] = pääkumppani     → <MainPartnerBanner> heti heron alla
- *   sponsors[1] = kakkospääkumppani → <HomeAdSlots>-osion kortti
+ * JAETTU MALLI (shared/HomeAdSlots v3):
+ *   mainPartner = pääkumppani → <MainPartnerBanner> heti heron alla
+ *                 (tyhjänä kompakti house-ad → LV Media -portaali)
+ *   cards[0..1] = etusivun kortit A/B → <HomeAdSlots>-osio
  *   spots       = 6 kohdekohtaista premium-paikkaa (oletusjako)
+ *
+ * 🔴🔴 Legacy-kenttä `sponsors` EI toimi niin kuin sen nimi lupaa: HomeAdSlots
+ * lukee sponsors[0]:n kortiksi A JA MainPartnerBanner lukee saman sponsors[0]:n
+ * banneriksi ⇒ sama kumppani kahdesti samalla sivulla. Juuri niin kävi Keloalle
+ * 6.9.2026 (Vesa: "teki turhan mainoksen keloasta kun siellä oli alempana jo
+ * hyvä mainos"). Yksi kumppani = yksi yksikkö: käytä `cards`-kenttää, ja
+ * `mainPartner`ia vain, jos kumppani on ostanut nimenomaan bannerin. Gifts
+ * (sama Keloa-objekti) renderöi vain <HomeAdSlots>-kortin — sama lopputulos.
  *
  * Tyhjä paikka (null) renderöi house-adin → LV Media -portaali
  * (https://laplandvibes.com/media/site/laplandstore) + GA4 advertise_here_click.
@@ -18,7 +27,10 @@ import type { Partner } from '../shared/PartnerSlot';
 import { DEFAULT_PREMIUM_SPOTS } from '../shared/PremiumSpotGrid';
 
 /**
- * Keloa Eyewear, Sodankylä — PÄÄKUMPPANI (sponsors[0], banneri heti heron alla).
+ * Keloa Eyewear, Sodankylä — kumppanikortti (cards[0], <HomeAdSlots>-osio:
+ * kuva, esittely, CTA ja artikkelilinkki). EI lisäksi banneria heron alla —
+ * Vesa 6.9.2026 piti kompaktia banneria turhana, kun sama kumppani on jo
+ * kunnolla esillä kortissa alempana.
  *
  * Yksi kymmenestä maksuttomasta kumppanipaikasta (Vesa 10.8.2026: "Laskua ei
  * tule kummastakaan"), mutta SAMA tuote kuin maksavalla: artikkeli hubissa +
@@ -75,6 +87,6 @@ const KELOA: Partner = {
 
 export const AD_SLOTS: HomeAdSlotsConfig = {
   siteSlug: 'laplandstore',
-  sponsors: [KELOA, null],
+  cards: [KELOA, null],
   spots: DEFAULT_PREMIUM_SPOTS,
 };
