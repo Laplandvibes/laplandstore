@@ -1,6 +1,7 @@
 import { ArrowUpRight, Clock, MapPin } from 'lucide-react';
 import { HUB_PICKS, GYG_PRICE_AS_OF, gygHref } from '../shared/gyg/picks';
 import { useLang, type Lang } from '../lang';
+import AiDisclosure from './AiDisclosure';
 
 /**
  * Aktiviteetit hakemistosivulla.
@@ -257,14 +258,35 @@ export default function ActivitiesRail() {
             const e = expOf(p.path);
             const c = t.exp[e];
             return (
-              <li key={p.path} className="flex flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_18px_40px_-26px_rgba(15,23,42,0.35)] ring-1 ring-night/5">
-                {/* Juliste: kokemuksen nimi Bebasilla omalla värillään. Ei kuvaa — ks. otsake. */}
-                <div className="relative flex min-h-[168px] flex-col justify-end p-5 text-white sm:min-h-[184px]" style={{ background: POSTER[e] }}>
-                  <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 ring-1 ring-white/20 backdrop-blur-sm">
+              <li key={p.path} className="group flex flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_18px_40px_-26px_rgba(15,23,42,0.35)] ring-1 ring-night/5">
+                {/* Juliste: kokemuksen AI-kuva (Vesa 6.9.: "eikö näihin vaikka AI-kuvat saada"),
+                    värigradientti pohjalla siltä varalta ettei kuva lataudu, ja scrim
+                    eksplisiittisillä stopeilla otsikon alle. Kuvat: Picsart seedream-4.5,
+                    kohdekohtainen kehote (ei tyyppikehote), public/img/activities/<key>.webp
+                    1200×800 + 600×400. Art. 50 -merkintä <AiDisclosure />, koska kuva esittää
+                    oikeaa paikkaa valokuvamaisesti. */}
+                <div className="relative flex aspect-[16/10] min-h-[184px] flex-col justify-end overflow-hidden p-5 text-white" style={{ background: POSTER[e] }}>
+                  <img
+                    src={`/img/activities/${e}.webp`}
+                    srcSet={`/img/activities/${e}-600.webp 600w, /img/activities/${e}.webp 1200w`}
+                    sizes="(min-width: 1024px) 24vw, (min-width: 640px) 46vw, 92vw"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    width={1200}
+                    height={800}
+                    className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                  <div aria-hidden="true" className="absolute inset-0" style={{ background: 'linear-gradient(to top, #0F172A 0%, rgba(15,23,42,0.72) 42%, rgba(15,23,42,0.18) 70%, rgba(15,23,42,0.05) 100%)' }} />
+                  <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-black/35 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.16em] text-white/90 ring-1 ring-white/20 backdrop-blur-sm">
                     <MapPin className="h-3 w-3" aria-hidden="true" />
                     {p.place}
                   </span>
-                  <h3 className="font-heading text-[28px] leading-[0.95] tracking-wide [text-wrap:balance] drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)] sm:text-3xl">{c.title}</h3>
+                  {/* lg = neljä saraketta, kortin sisäleveys ~200 px: 30 px:n Bebas katkoi
+                      "Huskyvaljakolla" ja "vesiputoukset" kesken sanan (mitattu 1280 px:ssä),
+                      joten siellä 26 px. AI-merkintä ylös oikealle, jotta otsikko saa koko leveyden. */}
+                  <h3 className="relative font-heading text-[28px] leading-[0.95] tracking-wide [text-wrap:balance] drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] sm:text-3xl lg:text-[26px]">{c.title}</h3>
+                  <AiDisclosure className="!bottom-auto !top-3" />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <p className="text-[14px] leading-relaxed text-slate-700 [text-wrap:pretty]">{c.hook}</p>

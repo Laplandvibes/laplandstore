@@ -17,6 +17,9 @@ import { useLang, type Lang } from '../lang';
  * documentary:
  *   /img/hero-market.jpg   — a Lapland craft market that does not exist
  *   /img/artisan-hands.jpg — an "artisan at work" who is not a real person
+ *   /img/activities/*.webp — four tour posters (aurora over Rovaniemi, icebreaker
+ *                            off Kemi, husky trail at Levi, Korouoma canyon), 6.9.2026:
+ *                            photorealistic depictions of real places, so in scope
  *
  * Two surfaces, because a footer line alone does not meet "at the latest at
  * the time of the first exposure":

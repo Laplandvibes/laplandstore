@@ -146,7 +146,7 @@ export default function GiftsHubBanner() {
           }}
         />
 
-        <div className="relative px-6 sm:px-10 py-10 sm:py-14 grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 md:gap-10 items-center">
+        <div className="relative px-6 sm:px-10 py-10 sm:py-14 grid grid-cols-1 md:grid-cols-[1fr_minmax(280px,42%)] gap-8 md:gap-10 items-center">
           <div>
             <div className="inline-flex items-center gap-2 text-[#7DD3FC] text-xs font-bold tracking-[0.25em] uppercase">
               <Store className="w-3.5 h-3.5" />
@@ -158,16 +158,51 @@ export default function GiftsHubBanner() {
             <p className="text-white/75 text-base mt-4 leading-relaxed max-w-xl [text-wrap:pretty]">
               {t.body}
             </p>
+            <a
+              href="https://laplandgifts.com"
+              target="_blank"
+              rel="noopener"
+              className="group mt-7 inline-flex items-center gap-2 px-7 py-3.5 bg-[#EC4899] text-white font-bold rounded-full hover:bg-[#DB2777] transition-colors shadow-[0_14px_30px_-12px_rgba(236,72,153,0.8)] whitespace-nowrap min-h-[44px]"
+            >
+              {t.cta}
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </a>
           </div>
 
+          {/* The shop itself, as a framed capture of laplandgifts.com's front page with light
+              behind it (Vesa 6.9.: "mikset tähän ota kuvaa gifts etusivulta ja liitä tähän,
+              vähän valoja päälle"). A capture of our own site is a new asset, so the
+              one-image-one-site rule is not touched. Same idiom as the app promo's phone. */}
           <a
             href="https://laplandgifts.com"
             target="_blank"
             rel="noopener"
-            className="group inline-flex items-center gap-2 px-7 py-3.5 bg-[#EC4899] text-white font-bold rounded-full hover:bg-[#DB2777] transition-colors shadow-lg whitespace-nowrap min-h-[44px]"
+            aria-label={t.cta}
+            className="group relative block"
           >
-            {t.cta}
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <div aria-hidden className="absolute -inset-6 rounded-[36px] bg-[#EC4899]/30 blur-3xl" />
+            <div aria-hidden className="absolute -right-6 -top-6 h-40 w-40 rounded-full bg-[#06B6D4]/35 blur-3xl" />
+            <div aria-hidden className="absolute -bottom-8 left-6 h-32 w-48 rounded-full bg-[#34D399]/25 blur-3xl" />
+            <div className="relative overflow-hidden rounded-[18px] border border-white/20 bg-[#0F172A] shadow-[0_30px_70px_-30px_rgba(0,0,0,0.85)] transition-transform duration-300 group-hover:-translate-y-1">
+              {/* Browser chrome: three dots and the address, so the capture reads as a live site. */}
+              <div className="flex items-center gap-2 border-b border-white/10 bg-white/[0.06] px-3 py-2">
+                <span className="h-2 w-2 rounded-full bg-white/25" />
+                <span className="h-2 w-2 rounded-full bg-white/25" />
+                <span className="h-2 w-2 rounded-full bg-white/25" />
+                <span className="ml-2 truncate rounded-md bg-white/10 px-2 py-0.5 text-[10px] font-medium tracking-wide text-white/70">laplandgifts.com</span>
+              </div>
+              <img
+                src="/img/gifts/gifts-front.webp"
+                srcSet="/img/gifts/gifts-front-640.webp 640w, /img/gifts/gifts-front.webp 1280w"
+                sizes="(min-width: 768px) 40vw, 90vw"
+                alt="laplandgifts.com — Lapin tuliaiset ja suomalaiset lahjat"
+                width={1280}
+                height={760}
+                loading="lazy"
+                decoding="async"
+                className="block h-auto w-full"
+              />
+            </div>
           </a>
         </div>
       </div>
