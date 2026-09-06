@@ -334,8 +334,40 @@ export default function KalevalaRail({
         <p className={`mt-2 max-w-xl text-[14px] leading-snug text-pretty ${muted}`}>{c.sub}</p>
 
         {/* ONE row at every width, scrolled sideways — not a grid that grows
-            downward. */}
-        <ul className="-mx-2 mt-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-2 pb-4 pt-1 [scrollbar-width:thin]">
+            downward.
+
+            🔴 KEHYS JA RAJAUS (Vesa 2026-09-06: "mobiilissa tuo karuselli
+            Kalevalan koruista tarvitsee jonkin kehikon, rajauksen, liian
+            epäselvä nyt"). Mitattu laplandchristmas.com:ista: 360 px:n
+            leveydellä rivi on 1510 px leveä 296 px:n ikkunassa, joten toinen
+            kortti katkesi kesken sanan suoraan osion reunaan — ilman
+            häivytystä tai kehystä se lukee renderöintivirheenä, ei
+            vieritettävänä rivinä. Sama vika kuin appikuvan alareunassa, joka
+            korjattiin 2026-08-07 häivytyksellä; sama lääke tähän.
+
+            Kolme asiaa yhdessä, jokainen omasta syystään:
+              1) rivillä on OMA kehys (rengas + hiukan taustaa) ⇒ se on yksi
+                 esine, ei irrallisia valkoisia kortteja tummalla pohjalla,
+              2) molemmat reunat häivytetään maskilla ⇒ katkennut kortti lukee
+                 "jatkuu tuonne", ei katkaistuna. Vasen häivytys on kapea (12 px)
+                 ja jää padding-alueelle, joten lepotilassa se ei näy,
+              3) `pl-3 pr-10` ei ole symmetrinen vahingossa: oikea puoli varaa
+                 tilan häivytykselle, jotta viimeinenkään kortti ei jää
+                 puoliksi haalistuneeksi kun rivi on vieritetty loppuun. */}
+        <div
+          className={`relative mt-6 rounded-[22px] ${
+            dark ? 'bg-white/[0.04] ring-1 ring-white/10' : 'bg-black/[0.02] ring-1 ring-black/[0.07]'
+          }`}
+        >
+        <ul
+          className="flex snap-x snap-mandatory gap-4 overflow-x-auto py-3 pl-3 pr-10 [scrollbar-width:thin]"
+          style={{
+            maskImage:
+              'linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 40px), transparent 100%)',
+            WebkitMaskImage:
+              'linear-gradient(to right, transparent 0, #000 12px, #000 calc(100% - 40px), transparent 100%)',
+          }}
+        >
           {picks.products.map((p) => {
             // shop → English → Finnish. `urls` only ever holds store views that
             // genuinely exist (the sync drops the partner's mislabelled ones).
@@ -356,6 +388,13 @@ export default function KalevalaRail({
                   }`}
                   style={{ transitionTimingFunction: EASE }}
                 >
+                  {/* 🔴 Kuvalaatta pysyy VALKOISENA vaikka sävytetty pohja
+                      erottaisi korun paremmin: kumppanin syötekuvat ovat
+                      läpinäkymättömiä valkopohjaisia JPEG-lähtöisiä, joten
+                      sävy piirtäisi valkoisen suorakaiteen kuvan ympärille.
+                      Rajaus tehdään sen sijaan hiusviivalla kuvan ja tekstin
+                      väliin — se erottaa esineen ja nimen ilman että kuvaan
+                      kosketaan. */}
                   <div className="aspect-square w-full overflow-hidden bg-white p-3">
                     <img
                       src={p.image}
@@ -368,7 +407,7 @@ export default function KalevalaRail({
                       style={{ transitionTimingFunction: EASE }}
                     />
                   </div>
-                  <div className="flex flex-1 flex-col gap-1.5 px-3.5 pb-3.5 pt-1">
+                  <div className="flex flex-1 flex-col gap-1.5 border-t border-black/[0.06] px-3.5 pb-3.5 pt-2.5">
                     <span className="line-clamp-2 text-[12.5px] font-semibold leading-snug text-[#141413]">{p.name}</span>
                     <span className="mt-auto flex items-baseline gap-1">
                       {c.from && !c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
@@ -381,6 +420,7 @@ export default function KalevalaRail({
             )
           })}
         </ul>
+        </div>
 
         {/* Fine print carries the price date AND the delivery terms the removed
             brand card used to state; both were native-reviewed (commit c5c209f). */}
@@ -392,7 +432,7 @@ export default function KalevalaRail({
           target="_blank"
           rel="sponsored nofollow noopener"
           onClick={() => onCtaClick?.('kultacenter', `kalevala_rail:${sid}_all`, allHref)}
-          className="mb-4 inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-full px-4 text-[14px] font-semibold no-underline shadow-[0_8px_20px_-12px_rgba(15,23,42,0.45)] transition-transform duration-200 active:scale-[0.97] motion-reduce:transition-none sm:hidden"
+          className="mb-4 mt-4 inline-flex min-h-11 w-full items-center justify-center gap-1.5 rounded-full px-4 text-[14px] font-semibold no-underline shadow-[0_8px_20px_-12px_rgba(15,23,42,0.45)] transition-transform duration-200 active:scale-[0.97] motion-reduce:transition-none sm:hidden"
           style={{ backgroundColor: accent, color: pillText, transitionTimingFunction: EASE }}
         >
           {c.ctaAll}
