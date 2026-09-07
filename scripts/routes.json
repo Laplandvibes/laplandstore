@@ -8,6 +8,7 @@
       "src/components/Hero.copy.{lang}.ts",
       "src/components/LocalShops.copy.{lang}.ts",
       "src/components/Newsletter.copy.{lang}.ts",
+      "src/components/ReadyBaskets.tsx",
       "src/components/ArtisanStory.tsx",
       "src/components/FAQ.tsx"
     ]

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ChevronDown, ExternalLink } from 'lucide-react';
 import { useLang, type Lang } from '../lang';
 
 /**
@@ -408,6 +408,37 @@ const COPY: Record<Lang, Copy> = {
   },
 };
 
+/**
+ * Taiton nappi. 🔴 Miksi (Vesa 7.9.2026): "tuo valmis kori osio, niin se voisi
+ * olla taittona että katso lisää valmiiksi etsittyjä tuotteita, varsinkin
+ * mobiilissa nyt liian pitkä sama seinä ja tuntuu että sivulla ei muuta ole."
+ * Mitattu livenä 390 x 844 px ennen korjausta: osio 6 014 px = 7,1 ruudullista,
+ * neljä lähes samannäköistä korttia (1 339 / 1 339 / 1 324 / 1 334 px) peräkkäin
+ * ja koko etusivu 26 388 px. Yksi kori auki + nappi vie ~1 900 px, eli seinästä
+ * lähtee ~4 100 px (~4,9 ruutua) pois ilman että yhtään tarinaa poistetaan.
+ *
+ * 🔴 Loput korit RENDERÖIDÄÄN aina ja piilotetaan display:nonella, jotta tarinat
+ * pysyvät prerenderin HTML:ssä. Ehdollinen renderöinti ({open && ...}) veisi
+ * kolme uniikkia tarinaa pois indeksoitavasta rungosta — thin content on
+ * verkoston tunnettu ongelma, eikä sitä lisätä taiton takia.
+ * 🔴 Suljettuna elementillä on VAIN 'hidden'-luokka: jos samalla olisi 'flex',
+ * kahden yhtä spesifisen utilityn järjestys ratkaisisi näkyvyyden.
+ */
+const FOLD: Record<Lang, { more: (n: number) => string; less: string }> = {
+  fi: { more: (n) => `Katso ${n} muuta valmista koria`, less: 'Näytä vähemmän' },
+  en: { more: (n) => `See ${n} more baskets`, less: 'Show less' },
+  de: { more: (n) => `${n} weitere fertige Körbe ansehen`, less: 'Weniger anzeigen' },
+  ja: { more: (n) => `ほかの${n}つのセットを見る`, less: '閉じる' },
+  es: { more: (n) => `Ver ${n} cestas más`, less: 'Ver menos' },
+  'pt-BR': { more: (n) => `Ver mais ${n} cestas`, less: 'Ver menos' },
+  'zh-CN': { more: (n) => `查看另外 ${n} 个搭配好的组合`, less: '收起' },
+  ko: { more: (n) => `다른 세트 ${n}개 보기`, less: '접기' },
+  fr: { more: (n) => `Voir ${n} autres paniers`, less: 'Voir moins' },
+  it: { more: (n) => `Vedi altri ${n} carrelli`, less: 'Mostra meno' },
+  nl: { more: (n) => `Bekijk ${n} andere manden`, less: 'Toon minder' },
+  sv: { more: (n) => `Se ${n} fler färdiga korgar`, less: 'Visa mindre' },
+};
+
 const REL = 'sponsored nofollow noopener';
 
 function money(n: number, lang: Lang): string {
@@ -533,17 +564,35 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
 export default function ReadyBaskets() {
   const { lang } = useLang();
   const t = COPY[lang];
+  const f = FOLD[lang];
+  const [open, setOpen] = useState(false);
+  const [first, ...rest] = BASKETS;
   return (
     <section className="bg-cream px-4 py-14 sm:py-20" aria-labelledby="ready-baskets-title">
       <div className="mx-auto max-w-5xl">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-vibe-pink">{t.eyebrow}</p>
         <h2 id="ready-baskets-title" className="mt-1 font-heading text-5xl leading-[0.95] text-night sm:text-6xl [text-wrap:balance]">{t.title}</h2>
         <p className="mt-5 max-w-prose text-base leading-relaxed text-slate-700 sm:text-lg">{t.lead}</p>
-        <div className="mt-10 flex flex-col gap-6 sm:gap-8">
-          {BASKETS.map((b, i) => (
-            <BasketStory key={b.key} basket={b} lang={lang} flip={i % 2 === 1} />
+        <div className="mt-10">
+          <BasketStory basket={first} lang={lang} flip={false} />
+        </div>
+        {/* flip={i % 2 === 0}: rest alkaa koko listan indeksistä 1, joten
+            vuorottelu kuva vasen / kuva oikea jatkuu katkeamatta. */}
+        <div id="ready-baskets-more" className={open ? 'mt-6 flex flex-col gap-6 sm:gap-8' : 'hidden'}>
+          {rest.map((b, i) => (
+            <BasketStory key={b.key} basket={b} lang={lang} flip={i % 2 === 0} />
           ))}
         </div>
+        <button
+          type="button"
+          onClick={() => setOpen((v) => !v)}
+          aria-expanded={open}
+          aria-controls="ready-baskets-more"
+          className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 font-heading text-xl tracking-wide text-night shadow-[0_18px_38px_-24px_rgba(15,23,42,0.55)] ring-1 ring-night/10 transition-[transform,box-shadow,background-color] duration-150 hover:-translate-y-0.5 hover:bg-[#FBFBFD] active:scale-[0.99] sm:w-auto"
+        >
+          {open ? f.less : f.more(rest.length)}
+          <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
+        </button>
         <p className="mt-6 text-xs text-slate-500">
           {t.fine} ({PRICES_AS_OF})
         </p>
