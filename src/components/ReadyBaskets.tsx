@@ -30,6 +30,30 @@ import { useLang, type Lang } from '../lang';
  * Koko: kerrasto ja sukat ovat kokoriippuvaisia, joten korissa on yksi
  * kokovalitsin, joka vaihtaa KAIKKIEN rivien variantit kerralla.
  *
+ * 🔴🔴 KAKSI KORISARJAA KIELEN MUKAAN (Vesa 8.9.2026, valinta A): "eikö tämä ole
+ * nyt väärin kun laplandstore.fi englannin kielellä ohjaa halti.fi sivulle joka
+ * ei toimita ulkomaille?" Oli. Halti toimittaa vain Suomeen, ja meillä on vain
+ * Adtractionin FI-ohjelma (halti.com:lla ei ole kumppaniohjelmaa ja se toimittaa
+ * vain EU:hun). Siksi /fi näyttää Halti-korit ja KAIKKI muut kielet korit
+ * Scandinavian Outdoorista (scandinavianoutdoor.com: toimitus Suomesta
+ * kaikkialle maailmaan, 5–14 pv; sama Adtraction-ohjelma hyväksyy .com-
+ * syvälinkin — mitattu 8.9.2026: meta refresh kohteeseen at_gd-evästeellä).
+ * Sukkamestarit toimittaa myös ulkomaille, joten sukkakori on molemmissa.
+ *
+ * 🔴 Scandinavian Outdoor on Nuxt-kauppa, EI Shopify: koripermalinkkiä ei ole.
+ * Siksi SO-korissa jokainen rivi on oma linkkinsä tuotesivulle (väri ja koko
+ * esivalittuina `select-color`/`select-size`-parametreilla, jotka kaupan oma
+ * ld+json käyttää) ja päänappi avaa ensimmäisen tuotteen. Hinnat ovat kaupan
+ * listahintoja ILMAN alv:tä: SO lisää kohdemaan alv:n kassalla (toimitusehdot
+ * 8.9.2026), mikä sanotaan jokaisen SO-korin toimitusrivillä.
+ *
+ * SO-tuotteet valittu varaston mukaan 8.9.2026: Haltin Hossa-setit olivat SO:lla
+ * lähes loppu (miesten vain XXXL), joten aluskerrasto on Devold Duo Active
+ * Merino 205 (kaikki koot varastossa), sukat Helsingin Villasukkatehtaalta
+ * (tarina lupaa kaksi paria ⇒ qty 2), hanskat Haltin Viiri (sama tuote kuin
+ * FI-korissa), laskettelusukat X-Socks, pipo Haltin Runko-merinopipo.
+ * Kuvat kumppanin omasta imgix-CDN:stä (`?fm=webp`), ei stockia eikä AI:ta.
+ *
  * Kuvat: public/img/baskets/*.webp = kumppanin omat tuotekuvat (Shopify
  * products/<handle>.js, varianttikohtainen kuva kun korin väri ei ole
  * oletusväri), ei stockia eikä AI:ta (CLAUDE.md: kumppanin tuote on aina
@@ -49,22 +73,29 @@ interface BasketItem {
   price: number;
   /** Kumppanin tuotekuva public/img/baskets/<image>.webp */
   image: string;
-  /** kokoavain → variantId; '*' = sama variantti joka koolle (esim. pipo). */
+  /** Shopify: kokoavain → variantId; '*' = sama variantti joka koolle (esim. pipo).
+   *  Scandinavian Outdoor: kokoavain → select-size-arvo; '' = ei esivalintaa (koko valitaan kaupassa). */
   variants: Record<string, string>;
+  /** Scandinavian Outdoor: tuotesivun polku ja select-color-arvo. */
+  path?: string;
+  color?: string;
+  /** Kappalemäärä, kun tarina lupaa kaksi paria; hinta kerrotaan tällä. */
+  qty?: number;
 }
 
 interface Basket {
   key: string;
-  shop: 'halti' | 'sukkamestarit';
+  shop: 'halti' | 'sukkamestarit' | 'scandinavianoutdoor';
   shopName: string;
-  cartBase: string;
+  /** Shopify-kaupat: koripermalinkin juuri. SO:lla ei ole koria, joten ei arvoa. */
+  cartBase?: string;
   sizes: string[];
   /** Oletuskoko prerenderissä ja ennen valintaa. */
   defaultSize: string;
   items: BasketItem[];
 }
 
-const BASKETS: Basket[] = [
+const BASKETS_FI: Basket[] = [
   {
     key: 'merino_men',
     shop: 'halti',
@@ -118,6 +149,106 @@ const BASKETS: Basket[] = [
     ],
   },
 ];
+
+const SO_BASE = 'https://scandinavianoutdoor.com';
+const SO_PRICES_AS_OF = '2026-09-08';
+const SO_SOCKS = {
+  name: 'Helsingin Villasukkatehdas Wool socks',
+  price: 21.43,
+  qty: 2,
+  path: '/helsingin-villasukkatehdas/clothing/socks/wool-socks/villasukat/',
+  variants: { '*': '' },
+} as const;
+
+/** Muut kielet kuin suomi: Scandinavian Outdoor + Sukkamestarit. Hinnat SO:n listahintoja ilman alv:tä (8.9.2026). */
+const BASKETS_INTL: Basket[] = [
+  {
+    key: 'merino_men',
+    shop: 'scandinavianoutdoor',
+    shopName: 'Scandinavian Outdoor',
+    sizes: ['S', 'M', 'L', 'XL', 'XXL'],
+    defaultSize: 'M',
+    items: [
+      { name: 'Devold Duo Active Merino 205 Zip Neck Man', price: 83.67, image: 'so-devold-zip-men', path: '/devold/clothing/base-and-mid-layer/merino-wool-base-layers/duo-active-zip-neck-men/', color: 'black', variants: { S: 'S', M: 'M', L: 'L', XL: 'XL', XXL: 'XXL' } },
+      { name: 'Devold Duo Active Merino 205 Long Johns Man', price: 70.92, image: 'so-devold-johns-men', path: '/devold/clothing/base-and-mid-layer/merino-wool-base-layers/duo-active-man-long-johns-with-fly/', color: 'black', variants: { S: 'S', M: 'M', L: 'L', XL: 'XL', XXL: 'XXL' } },
+      { ...SO_SOCKS, image: 'so-hvt-socks-red', color: 'red' },
+    ],
+  },
+  {
+    key: 'merino_women',
+    shop: 'scandinavianoutdoor',
+    shopName: 'Scandinavian Outdoor',
+    sizes: ['XS', 'S', 'M', 'L', 'XL'],
+    defaultSize: 'M',
+    items: [
+      { name: 'Devold Duo Active Merino 205 Zip Neck Woman', price: 83.67, image: 'so-devold-zip-women', path: '/devold/clothing/base-and-mid-layer/merino-wool-base-layers/duo-active-zip-neck-woman/', color: 'green', variants: { XS: 'XS', S: 'S', M: 'M', L: 'L', XL: 'XL' } },
+      { name: 'Devold Duo Active Merino 205 Long Johns Woman', price: 70.92, image: 'so-devold-johns-women', path: '/devold/clothing/base-and-mid-layer/merino-wool-base-layers/duo-active-woman-long-johns-with-fly/', color: 'green', variants: { XS: 'XS', S: 'S', M: 'M', L: 'L', XL: 'XL' } },
+      { ...SO_SOCKS, image: 'so-hvt-socks-vadelma', color: 'pink' },
+    ],
+  },
+  {
+    key: 'hands_feet',
+    shop: 'scandinavianoutdoor',
+    shopName: 'Scandinavian Outdoor',
+    sizes: ['S', 'M', 'L', 'XL'],
+    defaultSize: 'M',
+    items: [
+      // Haltin hanskakoot S–XL ovat SO:lla numeroina 7–10 (11 = XXL).
+      { name: 'Halti Viiri Gloves', price: 27.81, image: 'so-viiri-gloves', path: '/halti/clothing/gloves/viiri-gloves/', color: 'black', variants: { S: '7', M: '8', L: '9', XL: '10' } },
+      { name: 'X-Socks XC Performance Merino Crew', price: 27.89, image: 'so-xsocks-xc', path: '/x-socks/clothing/socks/skiing-and-other-socks/xc-perf-merino-crew/', color: 'black', variants: { '*': '' } },
+      { name: 'Halti Runko Beanie', price: 31.87, image: 'so-runko-beanie-beige', path: '/halti/clothing/headwear/runko-beanie/', color: 'beige', variants: { '*': '' } },
+    ],
+  },
+  BASKETS_FI[3],
+];
+
+const basketsFor = (lang: Lang): Basket[] => (lang === 'fi' ? BASKETS_FI : BASKETS_INTL);
+
+// scandinavianoutdoor.com/page/customer-service/order-delivery/ 8.9.2026: "All orders are shipped
+// from Finland", kiinteä hinta maittain (EU, NO, CH, UK, USA/CA, rest of the world), 5–14 päivää;
+// EU-maan alv lisätään kassalla, EU:n ulkopuolelle alv vähennetään ja tullit maksaa vastaanottaja.
+const SO_SHIP: Record<Lang, string> = {
+  fi: 'Toimitus Suomesta kaikkialle maailmaan, 5–14 päivää. Hinnat ilman arvonlisäveroa; kauppa lisää kohdemaan alv:n kassalla.',
+  en: 'Ships worldwide from Finland, 5–14 days. Prices without VAT; the shop adds your country’s VAT at checkout.',
+  de: 'Versand aus Finnland weltweit, 5–14 Tage. Preise ohne MwSt.; der Shop rechnet die MwSt. Ihres Landes an der Kasse hinzu.',
+  ja: 'フィンランドから世界各国へ発送、5〜14日。価格は税抜きで、お届け先の付加価値税はレジで加算されます。',
+  es: 'Envío desde Finlandia a todo el mundo, 5–14 días. Precios sin IVA; la tienda añade el IVA de su país al pagar.',
+  'pt-BR': 'Envio da Finlândia para o mundo todo, 5–14 dias. Preços sem IVA; a loja adiciona o imposto do seu país no checkout.',
+  'zh-CN': '从芬兰发货至全球，5–14 天。价格不含增值税，店铺会在结账时加上您所在国家的增值税。',
+  ko: '핀란드에서 전 세계 배송, 5–14일. 가격은 부가세 별도이며, 결제 시 해당 국가의 부가세가 추가됩니다.',
+  fr: 'Expédition depuis la Finlande dans le monde entier, 5–14 jours. Prix hors TVA ; la boutique ajoute la TVA de votre pays au paiement.',
+  it: 'Spedizione dalla Finlandia in tutto il mondo, 5–14 giorni. Prezzi senza IVA; il negozio aggiunge l’IVA del tuo Paese al pagamento.',
+  nl: 'Verzending vanuit Finland naar de hele wereld, 5–14 dagen. Prijzen zonder btw; de shop rekent de btw van uw land bij het afrekenen.',
+  sv: 'Skickas från Finland till hela världen, 5–14 dagar. Priser utan moms; butiken lägger till ditt lands moms i kassan.',
+};
+const SO_CTA: Record<Lang, string> = {
+  fi: 'Osta nämä Scandinavian Outdoorilta',
+  en: 'Shop these at Scandinavian Outdoor',
+  de: 'Diese Artikel bei Scandinavian Outdoor kaufen',
+  ja: 'Scandinavian Outdoor で購入する',
+  es: 'Comprar estos en Scandinavian Outdoor',
+  'pt-BR': 'Comprar na Scandinavian Outdoor',
+  'zh-CN': '在 Scandinavian Outdoor 购买这些',
+  ko: 'Scandinavian Outdoor에서 구매하기',
+  fr: 'Acheter ces articles chez Scandinavian Outdoor',
+  it: 'Acquista questi da Scandinavian Outdoor',
+  nl: 'Deze kopen bij Scandinavian Outdoor',
+  sv: 'Köp dessa hos Scandinavian Outdoor',
+};
+const SO_NOTE: Record<Lang, string> = {
+  fi: 'Jokainen rivi avaa tuotteen kaupan sivulle uuteen välilehteen; lisää ne koriin siellä yksi kerrallaan.',
+  en: 'Each row opens its product on the shop’s page in a new tab; add them to the shop’s basket there one by one.',
+  de: 'Jede Zeile öffnet ihr Produkt im Shop in einem neuen Tab; legen Sie sie dort nacheinander in den Warenkorb.',
+  ja: '各行は新しいタブでショップの商品ページを開きます。そこで1点ずつカートに入れてください。',
+  es: 'Cada fila abre su producto en la tienda en una pestaña nueva; añádalos allí a la cesta uno por uno.',
+  'pt-BR': 'Cada linha abre o produto na loja em uma nova aba; adicione-os ao carrinho lá, um por um.',
+  'zh-CN': '每一行都会在新标签页中打开店铺的商品页；请在那里逐个加入购物车。',
+  ko: '각 행은 새 탭에서 상점의 상품 페이지를 엽니다. 거기서 하나씩 장바구니에 담으세요.',
+  fr: 'Chaque ligne ouvre son produit dans la boutique, dans un nouvel onglet ; ajoutez-les au panier un par un.',
+  it: 'Ogni riga apre il suo prodotto nel negozio in una nuova scheda; aggiungili al carrello uno alla volta.',
+  nl: 'Elke rij opent het product in de shop in een nieuw tabblad; voeg ze daar één voor één toe aan het mandje.',
+  sv: 'Varje rad öppnar sin produkt i butiken i en ny flik; lägg dem i korgen där en i taget.',
+};
 
 interface BasketCopy {
   /** Kohtauksen otsikko, ei tuotenimi. */
@@ -445,7 +576,21 @@ function money(n: number, lang: Lang): string {
   return new Intl.NumberFormat(lang === 'pt-BR' ? 'pt-BR' : lang, { style: 'currency', currency: 'EUR', maximumFractionDigits: 2, minimumFractionDigits: 0 }).format(n);
 }
 
+/** Scandinavian Outdoor: rivin oma linkki tuotesivulle, väri ja koko esivalittuina. */
+function itemHref(b: Basket, it: BasketItem, size: string, i: number): string | null {
+  if (b.shop !== 'scandinavianoutdoor' || !it.path) return null;
+  const params = new URLSearchParams();
+  if (it.color) params.set('select-color', it.color);
+  const sel = it.variants[size] ?? it.variants['*'] ?? '';
+  if (sel) params.set('select-size', sel);
+  const qs = params.toString();
+  const dest = `${SO_BASE}${it.path}${qs ? `?${qs}` : ''}`;
+  return `https://go.laplandvibes.com/go/${b.shop}?sid=${encodeURIComponent(`store_basket_${b.key}_${i + 1}`)}&dest=${encodeURIComponent(dest)}`;
+}
+
 function cartHref(b: Basket, size: string): string {
+  // SO:lla ei ole koripermalinkkiä: päänappi avaa ensimmäisen tuotteen, rivit loput.
+  if (b.shop === 'scandinavianoutdoor') return itemHref(b, b.items[0], size, 0) ?? SO_BASE;
   const ids = b.items.map((it) => (it.variants[size] ?? it.variants['*']) + ':1').join(',');
   const dest = `${b.cartBase}/cart/${ids}`;
   return `https://go.laplandvibes.com/go/${b.shop}?sid=${encodeURIComponent(`store_basket_${b.key}`)}&dest=${encodeURIComponent(dest)}`;
@@ -455,7 +600,8 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
   const t = COPY[lang];
   const c = t.baskets[basket.key];
   const [size, setSize] = useState(basket.defaultSize);
-  const total = basket.items.reduce((s, it) => s + it.price, 0);
+  const so = basket.shop === 'scandinavianoutdoor';
+  const total = basket.items.reduce((s, it) => s + it.price * (it.qty ?? 1), 0);
   return (
     <article className="rounded-[32px] bg-white p-5 shadow-[0_28px_56px_-32px_rgba(15,23,42,0.35)] sm:p-7 md:p-9">
       {/* Kuva ja tarina rinnakkain jo tabletista (sm, 640 px) alkaen — Vesa 6.9.:
@@ -502,8 +648,15 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
       <div className="mt-5 rounded-2xl bg-[#F6F7FA] p-3 ring-1 ring-night/5 sm:mt-6 sm:p-4">
         <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-500">{t.contents}: {c.name}</p>
         <ul className="mt-3 grid gap-2 sm:grid-cols-3 sm:gap-3">
-          {basket.items.map((it) => (
-            <li key={it.name} className="flex items-center gap-3 rounded-xl bg-white p-2.5 shadow-[0_10px_24px_-18px_rgba(15,23,42,0.5)] ring-1 ring-night/5">
+          {basket.items.map((it, i) => {
+            const href = itemHref(basket, it, size, i);
+            const Row: 'a' | 'li' = href ? 'a' : 'li';
+            return (
+            <Row
+              key={it.name}
+              {...(href ? { href, target: '_blank', rel: REL } : {})}
+              className={`flex items-center gap-3 rounded-xl bg-white p-2.5 shadow-[0_10px_24px_-18px_rgba(15,23,42,0.5)] ring-1 ring-night/5${href ? ' transition-shadow hover:ring-vibe-pink/50 hover:shadow-[0_14px_28px_-16px_rgba(219,39,119,0.45)]' : ''}`}
+            >
               <span className="h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-[#F6F7FA]">
                 <img
                   src={`/img/baskets/${it.image}-400.webp`}
@@ -516,11 +669,18 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
                 />
               </span>
               <span className="flex min-w-0 flex-1 items-center justify-between gap-3 sm:block">
-                <span className="text-[13px] font-medium leading-snug text-night">{it.name}</span>
-                <span className="shrink-0 text-[13px] font-semibold tabular-nums text-night sm:mt-0.5 sm:block sm:font-medium sm:text-slate-600">{money(it.price, lang)}</span>
+                <span className="text-[13px] font-medium leading-snug text-night">
+                  {it.name}
+                  {(it.qty ?? 1) > 1 && <span className="text-slate-500"> × {it.qty}</span>}
+                </span>
+                <span className="shrink-0 text-[13px] font-semibold tabular-nums text-night sm:mt-0.5 sm:block sm:font-medium sm:text-slate-600">
+                  {money(it.price * (it.qty ?? 1), lang)}
+                  {href && <ExternalLink className="ml-1.5 inline h-3.5 w-3.5 text-vibe-pink" aria-hidden="true" />}
+                </span>
               </span>
-            </li>
-          ))}
+            </Row>
+            );
+          })}
         </ul>
         <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-3 border-t border-night/10 pt-3">
           <label className="flex items-center gap-2 text-sm text-slate-700">
@@ -551,11 +711,12 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
             rel={REL}
             className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#DB2777] px-5 py-2.5 text-sm font-semibold text-white shadow-[0_14px_30px_-12px_rgba(219,39,119,0.75)] transition-[transform,background-color,box-shadow] duration-150 hover:-translate-y-0.5 hover:bg-[#BE185D] active:scale-[0.97] sm:w-auto"
           >
-            {t.cta(basket.shopName)}
+            {so ? SO_CTA[lang] : t.cta(basket.shopName)}
             <ExternalLink className="h-4 w-4" aria-hidden="true" />
           </a>
         </div>
-        <p className="mt-2.5 text-xs text-slate-500">{c.shipping}</p>
+        <p className="mt-2.5 text-xs text-slate-500">{so ? SO_SHIP[lang] : c.shipping}</p>
+        {so && <p className="mt-1 text-xs text-slate-500">{SO_NOTE[lang]}</p>}
       </div>
     </article>
   );
@@ -566,7 +727,7 @@ export default function ReadyBaskets() {
   const t = COPY[lang];
   const f = FOLD[lang];
   const [open, setOpen] = useState(false);
-  const [first, ...rest] = BASKETS;
+  const [first, ...rest] = basketsFor(lang);
   return (
     <section className="bg-cream px-4 py-14 sm:py-20" aria-labelledby="ready-baskets-title">
       <div className="mx-auto max-w-5xl">
@@ -594,7 +755,7 @@ export default function ReadyBaskets() {
           <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />
         </button>
         <p className="mt-6 text-xs text-slate-500">
-          {t.fine} ({PRICES_AS_OF})
+          {t.fine} ({lang === 'fi' ? PRICES_AS_OF : `${PRICES_AS_OF}; Scandinavian Outdoor ${SO_PRICES_AS_OF}`})
         </p>
       </div>
     </section>
