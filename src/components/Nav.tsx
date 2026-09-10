@@ -1,11 +1,12 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect} from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, ShoppingBag, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, ShoppingBag} from 'lucide-react';
 import { useLang, type Lang } from '../lang';
 
 import enCopy, { type CopyShape } from './Nav.copy.en';
 import { useCopy } from '../i18n/useCopy';
 import EcosystemMenu from '../shared/EcosystemMenu';
+import LanguageSwitcher from '../i18n/LanguageSwitcher';
 
 
 const loaders = {
@@ -24,26 +25,10 @@ const loaders = {
 
 const cache: Partial<Record<import('../lang').Lang, CopyShape>> = { en: enCopy };
 
-const LANG_OPTIONS: { code: Lang; label: string; native: string }[] = [
-  { code: 'en', label: 'EN', native: 'English' },
-  { code: 'fi', label: 'FI', native: 'Suomi' },
-  { code: 'de', label: 'DE', native: 'Deutsch' },
-  { code: 'ja', label: 'JA', native: '日本語' },
-  { code: 'es', label: 'ES', native: 'Español' },
-  { code: 'pt-BR', label: 'BR', native: 'Português' },
-  { code: 'zh-CN', label: 'CN', native: '中文' },
-  { code: 'ko', label: 'KR', native: '한국어' },
-  { code: 'fr', label: 'FR', native: 'Français' },
-  { code: 'it', label: 'IT', native: 'Italiano' },
-  { code: 'nl', label: 'NL', native: 'Nederlands' },
-  { code: 'sv', label: 'SV', native: 'Svenska' },
-];
 
 export default function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [langOpen, setLangOpen] = useState(false);
-  const langRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
   const { lang, setLang } = useLang();
   const t = useCopy<CopyShape>(enCopy, lang, loaders, cache);
@@ -59,19 +44,6 @@ export default function Nav() {
     setOpen(false);
   }, [location.pathname]);
 
-  useEffect(() => {
-    if (!langOpen) return;
-    const onClick = (e: MouseEvent) => {
-      if (!langRef.current?.contains(e.target as Node)) setLangOpen(false);
-    };
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setLangOpen(false); };
-    document.addEventListener('mousedown', onClick);
-    document.addEventListener('keydown', onKey);
-    return () => {
-      document.removeEventListener('mousedown', onClick);
-      document.removeEventListener('keydown', onKey);
-    };
-  }, [langOpen]);
 
   // Strip locale prefix to detect "are we on the home page?".
   const bare =
@@ -134,48 +106,8 @@ export default function Nav() {
             ))}
 
             {/* Lang dropdown */}
-            <div className="relative ml-2" ref={langRef}>
-              <button
-                type="button"
-                onClick={() => setLangOpen((o) => !o)}
-                aria-haspopup="listbox"
-                aria-expanded={langOpen}
-                aria-label="Select language"
-                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold tracking-wider uppercase border transition-colors ${
-                  scrolled
-                    ? 'border-warm-gray/30 text-night/80 hover:border-amber hover:text-amber'
-                    : 'border-white/30 text-white/90 hover:border-amber hover:text-amber'
-                }`}
-              >
-                <Globe className="w-3.5 h-3.5" />
-                {LANG_OPTIONS.find((l) => l.code === lang)?.label ?? 'EN'}
-                <ChevronDown className={`w-3 h-3 transition-transform ${langOpen ? 'rotate-180' : ''}`} />
-              </button>
-              {langOpen && (
-                <ul
-                  role="listbox"
-                  aria-label="Select language"
-                  className="absolute right-0 top-full mt-2 min-w-[180px] py-1 bg-cream border border-warm-gray/15 rounded-lg shadow-xl z-50 max-h-[80vh] overflow-y-auto"
-                >
-                  {LANG_OPTIONS.map((l) => {
-                    const isActive = l.code === lang;
-                    return (
-                      <li key={l.code} role="option" aria-selected={isActive}>
-                        <button
-                          type="button"
-                          onClick={() => { setLang(l.code); setLangOpen(false); }}
-                          className={`w-full flex items-center gap-2 px-3 py-2 text-left text-sm transition-colors ${
-                            isActive ? 'bg-amber/15 text-amber font-bold' : 'text-night/85 hover:bg-warm-gray/10'
-                          }`}
-                        >
-                          <span className="w-8 text-xs font-bold tracking-wider">{l.label}</span>
-                          <span>{l.native}</span>
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              )}
+            <div className="relative ml-2">
+              <LanguageSwitcher tone={scrolled ? 'light' : 'dark'} />
             </div>
 
             <a
@@ -193,26 +125,7 @@ export default function Nav() {
           {/* Mobile lang dropdown + hamburger */}
           <div className="lg:hidden flex items-center gap-2">
             <div className="relative inline-flex items-center">
-              <select
-                value={lang}
-                onChange={(e) => setLang(e.target.value as Lang)}
-                aria-label="Language"
-                className={`appearance-none bg-transparent border rounded pl-2 pr-6 py-1 text-xs font-bold uppercase ${scrolled ? 'border-warm-gray/30 text-night' : 'border-white/40 text-white'}`}
-              >
-                <option value="en" className="bg-cream text-night">EN</option>
-                <option value="fi" className="bg-cream text-night">FI</option>
-                <option value="de" className="bg-cream text-night">DE</option>
-                <option value="ja" className="bg-cream text-night">JA</option>
-                <option value="es" className="bg-cream text-night">ES</option>
-                <option value="pt-BR" className="bg-cream text-night">BR</option>
-                <option value="zh-CN" className="bg-cream text-night">CN</option>
-                <option value="ko" className="bg-cream text-night">KR</option>
-                <option value="fr" className="bg-cream text-night">FR</option>
-                <option value="it" className="bg-cream text-night">IT</option>
-                <option value="nl" className="bg-cream text-night">NL</option>
-                <option value="sv" className="bg-cream text-night">SV</option>
-              </select>
-              <ChevronDown aria-hidden="true" className={`pointer-events-none absolute right-2 top-1/2 -translate-y-1/2 w-3 h-3 ${scrolled ? 'text-night' : 'text-white'}`} />
+              <LanguageSwitcher tone={scrolled ? 'light' : 'dark'} />
             </div>
             <button
               className={`p-2 rounded-lg transition-colors ${scrolled ? 'text-night' : 'text-white'}`}
