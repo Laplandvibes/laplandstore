@@ -1,0 +1,53 @@
+name: Deploy to Cloudflare Pages
+
+# Lisatty 10.9.2026. Tasta reposta PUUTTUI workflow kokonaan, joten `git push`
+# ei julkaissut mitaan — muutokset elivat vain gitissa ja live jai vanhaksi,
+# kunnes joku muisti ajaa wranglerin kasin. Ks. muisti julkaisu-ei-ole-yksi-reitti.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # 🔴🔴 FAIL-CLOSED. Ilman tokenia wrangler-action kaatuu vasta buildin
+      # jalkeen epaselvaan virheeseen, ja aiemmin taalla oli fail-open-portteja
+      # jotka sammuttivat itsensa juuri kun niita olisi tarvittu. Sano se heti
+      # ja selvasti: punainen = ei julkaistu.
+      - name: Tarkista julkaisusalaisuudet
+        env:
+          TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          missing=""
+          [ -z "$TOKEN" ] && missing="$missing CLOUDFLARE_API_TOKEN"
+          [ -z "$ACCOUNT" ] && missing="$missing CLOUDFLARE_ACCOUNT_ID"
+          if [ -n "$missing" ]; then
+            echo "::error::Repon saloista puuttuu:$missing — sivusto EI julkaistu. Lisaa: gh secret set <NIMI> -R Laplandvibes/<repo>"
+            exit 1
+          fi
+          echo "Salaisuudet kunnossa."
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - name: Deploy to Cloudflare Pages (production)
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy dist --project-name=laplandstore --branch=main
