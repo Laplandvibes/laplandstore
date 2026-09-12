@@ -103,7 +103,7 @@ export default function Hero() {
         <h1 // Otsikko on heron suurin elementti selvällä erolla (Vesa 5.9.: "kaikki muu
         // ympärillä isompaa"): 60 px kapealla, 136 px leveällä. Varjo on kaksi
         // kevyttä kerrosta, ei mustaa sumua — scrim hoitaa kontrastin.
-        className="font-heading text-[3.75rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.9] tracking-[0.01em] mb-4 sm:mb-5 [text-shadow:0_1px_1px_rgba(0,0,0,0.35),0_10px_32px_rgba(0,0,0,0.45)] [text-wrap:balance]">
+        className="font-heading text-[3.75rem] sm:text-7xl md:text-8xl lg:text-[7.5rem] xl:text-[8.5rem] leading-[0.9] tracking-[0.01em] mb-4 sm:mb-5 [text-shadow:0_1px_1px_rgba(0,0,0,0.35),0_10px_32px_rgba(0,0,0,0.45)] [text-wrap:balance] xl:text-[clamp(136px,2.125vw_+_108.8px,163.2px)]">
           {t.titleA}
           <br />
           <span className="text-amber-light">{t.titleHi}</span>{t.titleB}
