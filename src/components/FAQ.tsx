@@ -653,7 +653,7 @@ export default function FAQ() {
                       <a
                         key={key}
                         href={`#${key}`}
-                        className="inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-amber hover:text-night transition-colors"
+                        className="lv-tap inline-flex items-center gap-1.5 text-sm font-semibold uppercase tracking-wider text-amber hover:text-night transition-colors"
                       >
                         {labels[key]} <span aria-hidden="true">→</span>
                       </a>

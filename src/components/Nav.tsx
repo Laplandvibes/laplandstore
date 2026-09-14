@@ -77,7 +77,7 @@ export default function Nav() {
             <EcosystemMenu lang={lang} currentDomain="laplandstore.fi" variant={scrolled ? 'light' : 'dark'} />
             <Link
               to={localePrefix || '/'}
-              className="flex items-center shrink-0"
+              className="flex items-center shrink-0 min-h-11"
               aria-label="LaplandStore home"
             >
               {/* NETWORK RULE (Vesa 2026-07-24): wordmark aina Bebas (--font-logo), otsikot pysyvät Playfairissa. */}
@@ -128,7 +128,7 @@ export default function Nav() {
               <LanguageSwitcher tone={scrolled ? 'light' : 'dark'} />
             </div>
             <button
-              className={`p-2 rounded-lg transition-colors ${scrolled ? 'text-night' : 'text-white'}`}
+              className={`inline-flex items-center justify-center min-h-11 min-w-11 p-2 rounded-lg transition-colors ${scrolled ? 'text-night' : 'text-white'}`}
               onClick={() => setOpen(!open)}
               aria-label={open ? t.close : t.menu}
               aria-expanded={open}

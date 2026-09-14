@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://laplandstore.fi/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -21,7 +21,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fi/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -39,7 +39,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/de/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -57,7 +57,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/ja/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -75,7 +75,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/es/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -93,7 +93,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/br/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -111,7 +111,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/cn/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -129,7 +129,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/kr/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -147,7 +147,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fr/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -165,7 +165,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/it/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -183,7 +183,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/nl/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -201,7 +201,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/sv/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.9</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/" />
@@ -219,7 +219,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -237,7 +237,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fi/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -255,7 +255,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/de/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -273,7 +273,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/ja/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -291,7 +291,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/es/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -309,7 +309,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/br/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -327,7 +327,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/cn/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -345,7 +345,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/kr/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -363,7 +363,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fr/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -381,7 +381,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/it/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -399,7 +399,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/nl/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -417,7 +417,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/sv/cookie-policy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/cookie-policy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/cookie-policy/" />
@@ -435,7 +435,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -453,7 +453,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fi/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -471,7 +471,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/de/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -489,7 +489,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/ja/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -507,7 +507,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/es/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -525,7 +525,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/br/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -543,7 +543,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/cn/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -561,7 +561,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/kr/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -579,7 +579,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fr/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -597,7 +597,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/it/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -615,7 +615,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/nl/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -633,7 +633,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/sv/privacy/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/privacy/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/privacy/" />
@@ -651,7 +651,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.3</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -669,7 +669,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fi/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -687,7 +687,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/de/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -705,7 +705,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/ja/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -723,7 +723,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/es/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -741,7 +741,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/br/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -759,7 +759,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/cn/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -777,7 +777,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/kr/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -795,7 +795,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/fr/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -813,7 +813,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/it/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -831,7 +831,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/nl/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
@@ -849,7 +849,7 @@
   </url>
   <url>
     <loc>https://laplandstore.fi/sv/terms/</loc>
-    <lastmod>2026-06-10</lastmod>
+    <lastmod>2026-09-13</lastmod>
     <priority>0.2</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://laplandstore.fi/terms/" />
     <xhtml:link rel="alternate" hreflang="fi" href="https://laplandstore.fi/fi/terms/" />
