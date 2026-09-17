@@ -30,19 +30,25 @@ export default function LocaleHead() {
     document.documentElement.lang = BCP47[lang];
     const cleanPath = stripLocalePath(pathname);
 
-    document.head.querySelectorAll('link[rel="alternate"][data-seo-hreflang]').forEach((el) => el.remove());
+    // 🔴 17.9.2026: sama muoto kuin prerenderin staattinen HTML ja sitemap —
+    // LYHYET koodit (fi, pt-BR, ko) ja kauttaviivallinen osoite. Ennen tätä tämä
+    // lisäsi staattisten 13:n perään 13 BCP-47-koodia (fi-FI, ko-KR) kauttaviivattomin
+    // osoittein (308) ⇒ Googlelle sama kieli kahdella eri osoitteella, ja
+    // ristiriitaiset hreflangit se jättää huomiotta. Siksi myös staattiset poistetaan.
+    const withSlash = (u: string) => u.replace(/\/?$/, '/');
+    document.head.querySelectorAll('link[rel="alternate"][hreflang]').forEach((el) => el.remove());
     SUPPORTED.forEach((l) => {
       const lnk = document.createElement('link');
       lnk.setAttribute('rel', 'alternate');
-      lnk.setAttribute('hreflang', BCP47[l]);
-      lnk.setAttribute('href', SITE_URL + URL_PREFIX_OF[l] + (cleanPath === '/' ? '' : cleanPath));
+      lnk.setAttribute('hreflang', l);
+      lnk.setAttribute('href', withSlash(SITE_URL + URL_PREFIX_OF[l] + (cleanPath === '/' ? '' : cleanPath)));
       lnk.setAttribute('data-seo-hreflang', 'true');
       document.head.appendChild(lnk);
     });
     const xd = document.createElement('link');
     xd.setAttribute('rel', 'alternate');
     xd.setAttribute('hreflang', 'x-default');
-    xd.setAttribute('href', SITE_URL + (cleanPath === '/' ? '/' : cleanPath));
+    xd.setAttribute('href', withSlash(SITE_URL + (cleanPath === '/' ? '' : cleanPath)));
     xd.setAttribute('data-seo-hreflang', 'true');
     document.head.appendChild(xd);
 
