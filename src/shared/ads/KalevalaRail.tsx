@@ -282,7 +282,7 @@ export default function KalevalaRail({
           ? 'bg-white/[0.045] shadow-[0_1px_0_rgba(255,255,255,0.06)_inset,0_28px_56px_-28px_rgba(0,0,0,0.65)]'
           : 'bg-white shadow-[0_1px_2px_rgba(15,23,42,0.04),0_28px_56px_-30px_rgba(15,23,42,0.28)]'
       } ${className}`}
-      aria-label={`${c.headline} — ${AD_LABEL[lang] ?? 'Ad'}`}
+      aria-label={`${c.headline} (${AD_LABEL[lang] ?? 'Ad'})`}
     >
       <div
         aria-hidden="true"
