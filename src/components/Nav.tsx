@@ -54,7 +54,8 @@ export default function Nav() {
 
   // Anchor links work only on the home page; on legal pages they navigate to /
   // first via React Router, then the browser handles the hash.
-  const link = (anchor: string) => (onHome ? `#${anchor}` : `${localePrefix || '/'}#${anchor}`);
+  // `/es/#x`, ei `/es#x`: kauttaviivaton kielietusivu on 308-ohjaus (18.9.2026).
+  const link = (anchor: string) => (onHome ? `#${anchor}` : `${localePrefix}/#${anchor}`);
 
   const links: { href: string; label: string }[] = [
     { href: link('top'), label: t.home },
