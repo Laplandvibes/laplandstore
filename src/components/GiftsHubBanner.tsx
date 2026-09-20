@@ -162,7 +162,7 @@ export default function GiftsHubBanner() {
               href="https://laplandgifts.com"
               target="_blank"
               rel="noopener"
-              className="group mt-7 inline-flex items-center gap-2 px-7 py-3.5 bg-[#EC4899] text-white font-bold rounded-full hover:bg-[#DB2777] transition-colors shadow-[0_14px_30px_-12px_rgba(236,72,153,0.8)] whitespace-nowrap min-h-[44px]"
+              className="group mt-7 inline-flex items-center gap-2 px-7 py-3.5 bg-[#DB2777] text-white font-bold rounded-full hover:bg-[#DB2777] transition-colors shadow-[0_14px_30px_-12px_rgba(236,72,153,0.8)] whitespace-nowrap min-h-[44px]"
             >
               {t.cta}
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
