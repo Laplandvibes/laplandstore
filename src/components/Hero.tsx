@@ -64,7 +64,7 @@ export default function Hero() {
         className="absolute inset-0"
         style={{
           background:
-            'linear-gradient(to top, rgba(15,23,42,0.84) 0%, rgba(15,23,42,0.56) 45%, rgba(15,23,42,0.34) 100%)',
+            'linear-gradient(to top, rgba(15,23,42,0.88) 0%, rgba(15,23,42,0.72) 45%, rgba(15,23,42,0.56) 100%)',
         }}
       />
 
@@ -88,13 +88,13 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
         {/* Trust badges */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-5 sm:mb-7">
-          <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-amber/20 backdrop-blur-sm border border-amber/30 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-amber-light">
+          <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-black/45 backdrop-blur-sm border border-amber/40 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-amber-light">
             <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {t.badge1(BOUTIQUES.length)}
           </span>
-          <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-white/80">
+          <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-black/45 backdrop-blur-sm border border-white/25 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-white/80">
             <Gift className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {t.badge2}
           </span>
-          <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-white/80">
+          <span className="inline-flex items-center gap-1 sm:gap-1.5 bg-black/45 backdrop-blur-sm border border-white/25 rounded-full px-3 sm:px-4 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold text-white/80">
             <ShoppingBag className="w-3 h-3 sm:w-3.5 sm:h-3.5" /> {t.badge3}
           </span>
         </div>
@@ -121,7 +121,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mt-7 sm:mt-9">
           <a
             href="#putiikit"
-            className="group inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 bg-amber text-white font-bold rounded-full hover:bg-amber-light hover:scale-[1.03] transition-all duration-300 text-[15px] sm:text-base shadow-lg shadow-black/30"
+            className="group inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-3.5 bg-amber text-night font-bold rounded-full hover:bg-amber-light hover:scale-[1.03] transition-all duration-300 text-[15px] sm:text-base shadow-lg shadow-black/30"
           >
             <ShoppingBag className="w-5 h-5" />
             {t.cta1}

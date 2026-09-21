@@ -337,7 +337,7 @@ export default function PartnerSlot({ partner, variant, locale, className, place
   /** Pieni badge-pilleri, aina näkyvissä kuluttajansuojalain edellyttämänä */
   function Badge() {
     return (
-      <span className="absolute top-2 left-2 z-10 inline-flex items-center gap-1 rounded-full bg-pink-600/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
+      <span className="absolute top-2 left-2 z-10 inline-flex items-center gap-1 rounded-full bg-pink-600 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
         {badge}
       </span>
     );
@@ -597,7 +597,7 @@ export default function PartnerSlot({ partner, variant, locale, className, place
         {/* Teksti */}
         <div className="flex flex-col gap-0.5 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center rounded-full bg-pink-600/90 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
+            <span className="inline-flex items-center rounded-full bg-pink-600 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-widest text-white shadow-sm">
               {badge}
             </span>
           </div>
