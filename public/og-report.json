@@ -1,12 +1,13 @@
 {
-  "version": "20260905",
+  "version": "20260921",
   "domain": "laplandstore.fi",
   "brand": "STORE",
   "tagline": "Authentic Lapland gifts and crafts",
-  "generated": "2026-09-21T08:31:06.467Z",
+  "generated": "2026-09-21T11:35:29.526Z",
   "staticFallbackSeason": "summer",
   "seasons": {
     "summer": {
+      "tagline": "Authentic Lapland gifts and crafts",
       "heroUrl": "https://laplandstore.fi/img/hero-market.jpg",
       "heroAlt": "A Lapland artisan market",
       "heroSha": "a656bb0b52c75111",
@@ -45,6 +46,7 @@
       "errors": []
     },
     "winter": {
+      "tagline": "Authentic Lapland gifts and crafts",
       "heroUrl": "https://laplandstore.fi/img/hero-market.jpg",
       "heroAlt": "A Lapland artisan market",
       "heroSha": "a656bb0b52c75111",
