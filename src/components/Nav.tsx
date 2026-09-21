@@ -96,7 +96,7 @@ export default function Nav() {
               <a
                 key={l.href}
                 href={l.href}
-                className={`px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
+                className={`inline-flex items-center min-h-11 px-3 py-1.5 text-sm font-medium rounded-lg transition-colors ${
                   scrolled
                     ? 'text-night/70 hover:text-amber hover:bg-amber/5'
                     : 'text-white/85 hover:text-white hover:bg-white/10'

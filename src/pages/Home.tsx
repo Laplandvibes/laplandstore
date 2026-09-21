@@ -35,51 +35,51 @@ const BCP47: Record<Lang, string> = {
 
 const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   'en': {
-    seoTitle: 'LaplandStore: Authentic Lapland gifts, crafts & souvenirs',
+    seoTitle: 'Lapland Gifts, Crafts and Souvenirs: Where to Buy',
     seoDescription: 'A curated directory of Lapland boutiques from Rovaniemi to Utsjoki: crafts, jewellery, reindeer antler, ceramics and Lapland delicacies. Some ship to you.',
   },
   'fi': {
-    seoTitle: 'LaplandStore: Aitoja Lapin lahjoja ja käsitöitä',
+    seoTitle: 'Aitoja Lapin lahjoja ja käsitöitä',
     seoDescription: 'Kuratoitu hakemisto lappilaisista putiikeista Rovaniemeltä Utsjoelle: käsityötä, koruja, poronsarvea, keramiikkaa ja Lapin herkkuja. Osa toimittaa kotiin.',
   },
   'de': {
-    seoTitle: 'LaplandStore: Echte Lappland-Geschenke & Souvenirs',
+    seoTitle: 'Echte Lappland-Geschenke & Souvenirs',
     seoDescription: 'Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentiergeweih, Keramik und Delikatessen. Manche versenden.',
   },
   'ja': {
-    seoTitle: 'LaplandStore：本物のラップランド土産・工芸品・ギフト',
+    seoTitle: '本物のラップランド土産・工芸品・ギフト',
     seoDescription: 'ロヴァニエミからウツヨキまで、ラップランドのブティックを厳選したディレクトリ。工芸品、ジュエリー、トナカイの角、陶器、ラップランドの味覚。配送する店もあります。',
   },
   'es': {
-    seoTitle: 'LaplandStore: Regalos y artesanía auténticos de Laponia',
+    seoTitle: 'Regalos y artesanía auténticos de Laponia',
     seoDescription: 'Directorio seleccionado de boutiques de Laponia, de Rovaniemi a Utsjoki: artesanía, joyas, asta de reno, cerámica y delicias laponas. Algunas hacen envíos.',
   },
   'pt-BR': {
-    seoTitle: 'LaplandStore: Presentes e artesanato autênticos da Lapônia',
+    seoTitle: 'Presentes e artesanato autênticos da Lapônia',
     seoDescription: 'Diretório curado de boutiques da Lapônia, de Rovaniemi a Utsjoki: artesanato, joias, chifre de rena, cerâmica e iguarias. Algumas fazem entregas.',
   },
   'zh-CN': {
-    seoTitle: 'LaplandStore：正宗拉普兰礼物、手工艺与纪念品',
+    seoTitle: '正宗拉普兰礼物、手工艺与纪念品',
     seoDescription: '精选拉普兰精品店名录，从罗瓦涅米到乌茨约基：手工艺品、饰品、驯鹿角、陶器与拉普兰美味。部分商店可寄送。',
   },
   'ko': {
-    seoTitle: 'LaplandStore: 라플란드 정통 선물·공예품·기념품 가이드',
+    seoTitle: '라플란드 정통 선물·공예품·기념품 가이드',
     seoDescription: '로바니에미에서 우츠요키까지, 라플란드 부티크를 엄선한 디렉터리입니다. 공예품, 장신구, 순록 뿔, 도자기, 라플란드 먹거리. 일부는 배송합니다.',
   },
   'fr': {
-    seoTitle: 'LaplandStore : Cadeaux et artisanat authentiques de Laponie',
+    seoTitle: 'Cadeaux et artisanat authentiques de Laponie',
     seoDescription: 'Annuaire sélectif de boutiques de Laponie, de Rovaniemi à Utsjoki : artisanat, bijoux, bois de renne, céramique et spécialités. Certaines expédient.',
   },
   'it': {
-    seoTitle: 'LaplandStore: Regali e artigianato autentici della Lapponia',
+    seoTitle: 'Regali e artigianato autentici della Lapponia',
     seoDescription: 'Directory curata di boutique della Lapponia, da Rovaniemi a Utsjoki: artigianato, gioielli, corno di renna, ceramica e specialità. Alcune spediscono.',
   },
   'nl': {
-    seoTitle: 'LaplandStore: Authentieke geschenken en ambacht uit Lapland',
+    seoTitle: 'Authentieke geschenken en ambacht uit Lapland',
     seoDescription: 'Samengestelde gids met Lapland-boetieks van Rovaniemi tot Utsjoki: ambacht, sieraden, rendiergewei, keramiek en lekkernijen. Sommige verzenden.',
   },
   'sv': {
-    seoTitle: 'LaplandStore: Äkta presenter och hantverk från Lappland',
+    seoTitle: 'Äkta presenter och hantverk från Lappland',
     seoDescription: 'Handplockad katalog över butiker i Lappland, från Rovaniemi till Utsjoki: hantverk, smycken, renhorn, keramik och delikatesser. Vissa skickar hem.',
   },
 };
