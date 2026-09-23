@@ -15,14 +15,14 @@
   },
   {
     "path": "/privacy",
-    "fallbackTitle": "Privacy Policy | LaplandStore",
+    "fallbackTitle": "Privacy Policy",
     "harvestFiles": [
       "src/shared/Legal/PrivacyContent.tsx"
     ]
   },
   {
     "path": "/terms",
-    "fallbackTitle": "Terms of Service | LaplandStore",
+    "fallbackTitle": "Terms of Service",
     "harvestFiles": [
       "src/shared/Legal/TermsContent.tsx",
       "src/pages/Terms.tsx"
@@ -30,7 +30,7 @@
   },
   {
     "path": "/cookie-policy",
-    "fallbackTitle": "Cookie Policy | LaplandStore",
+    "fallbackTitle": "Cookie Policy",
     "harvestFiles": [
       "src/shared/Legal/CookieContent.tsx",
       "src/pages/CookiePolicy.tsx"
