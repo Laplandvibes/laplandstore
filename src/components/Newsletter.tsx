@@ -48,7 +48,7 @@ const NEWSLETTER_PRIVACY: Record<
     lead: 'Como tratamos seus dados:',
     link: 'Política de Privacidade',
     consent:
-      'Aceito receber a newsletter da LaplandVibes no e-mail informado, com dicas de viagem, informações de temporada e ofertas. Tenho 18 anos ou mais.',
+      'Aceito receber a newsletter do LaplandVibes no e-mail informado, com dicas de viagem, informações de temporada e ofertas. Tenho 18 anos ou mais.',
     privacy: 'Política de Privacidade',
   },
   'zh-CN': {
