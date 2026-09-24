@@ -296,7 +296,7 @@ export default function Newsletter() {
             <span>
               {NEWSLETTER_PRIVACY[lang].consent}{' '}
               <a
-                href={`${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/privacy`}
+                href={`${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/privacy/`}
                 target="_blank"
                 rel="noopener"
                 className="underline hover:text-amber"
