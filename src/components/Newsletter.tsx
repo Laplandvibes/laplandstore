@@ -98,6 +98,7 @@ const NEWSLETTER_PRIVACY: Record<
 import enCopy, { type CopyShape } from './Newsletter.copy.en';
 import { useCopy } from '../i18n/useCopy';
 import FounderByline from '../shared/FounderByline';
+import { SUPABASE_URL, SUPABASE_ANON_KEY as SUPABASE_KEY } from '../lib/supabase';
 
 /**
  * [LV-FUNNEL 2026-08-21] Lomakesuppilon eventit Umamiin — paikallinen apuri,
@@ -111,8 +112,6 @@ function track(event: string, data?: Record<string, unknown>) {
 }
 
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
 const SOURCE = 'laplandstore-newsletter';
 
 const loaders = {

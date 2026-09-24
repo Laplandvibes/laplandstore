@@ -5,9 +5,8 @@ import { POPUP_THEME, POPUP_COPY } from './newsletterPopupSite';
 // 9.8.2026 kielto koski katteettomia lupauksia (hälytykset, lähetystahti), ei
 // sivustokohtaista tekstiä. Lupauskielto pätee yhä.
 import { useLang } from '../lang';
+import { SUPABASE_URL, SUPABASE_ANON_KEY as SUPABASE_KEY } from '../lib/supabase';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL as string | undefined;
-const SUPABASE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY as string | undefined;
 
 // Founder popup (2026-08-09): the per-locale dict/headline tables are gone —
 // the shared founder default (Vesa + spiral avatar + social links) is the
