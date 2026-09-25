@@ -246,9 +246,9 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
     {
       q: 'Quais produtos são realmente feitos na Lapônia?',
       aPlain:
-        'Os produtos genuinamente lapões são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula encaracolada, malhas de lã, joias de prata de inspiração sámi e alimentos árticos como geleia de amora ártica, geleia de airela-vermelha, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
+        'Os produtos genuínos da região são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula encaracolada, malhas de lã, joias de prata de inspiração sámi e alimentos árticos como geleia de amora ártica, geleia de airela-vermelha, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
       aHtml:
-        'Os produtos genuinamente lapões são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula encaracolada, malhas de lã, joias de prata de inspiração sámi e alimentos árticos como geleia de amora ártica, geleia de airela-vermelha, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
+        'Os produtos genuínos da região são feitos na Lapônia finlandesa com materiais e tradições locais: itens de couro de rena e chifre, facas puukko forjadas à mão, objetos de madeira de zimbro e bétula encaracolada, malhas de lã, joias de prata de inspiração sámi e alimentos árticos como geleia de amora ártica, geleia de airela-vermelha, xarope de bétula e chás de ervas. Cada boutique aqui listada é verificada de forma independente, com as fontes documentadas.',
     },
     {
       q: 'Vocês enviam produtos da Lapônia para o exterior?',
@@ -258,7 +258,7 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Depende da boutique. O LaplandStore é um diretório selecionado, não um caixa único, então cada produtor cuida do próprio envio. Muitos têm loja online própria e enviam dentro da Finlândia; alguns enviam para a UE ou para o mundo todo. Confira as condições de envio de cada loja, ou entre em contato diretamente, antes de comprar.',
     },
     {
-      q: 'O que é um artesanato tradicional lapão ou sámi?',
+      q: 'O que é artesanato tradicional da Lapônia ou sámi?',
       aPlain:
         'A tradição artesanal sámi chama-se Duodji. Abrange objetos funcionais feitos à mão e enraizados na cultura sámi: facas, objetos de madeira, peças de couro de rena, chifre e osso, faixas tecidas e joias de prata. O Duodji é feito à mão com materiais naturais, e seus padrões e técnicas são transmitidos dentro das comunidades sámi.',
       aHtml:
