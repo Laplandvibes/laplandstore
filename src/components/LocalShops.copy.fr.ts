@@ -13,7 +13,7 @@ const copy: CopyShape = {
   onlineBadge: 'EN LIGNE',
   physicalBadge: 'EN MAGASIN',
   ctaHeading: 'Vous gérez un commerce ou une boutique en ligne en Laponie ?',
-  ctaBody: "L'inscription sur LaplandStore.fi est gratuite pour tous les entrepreneurs lapons.",
+  ctaBody: "L'inscription sur LaplandStore.fi est gratuite pour tous les entrepreneurs de Laponie.",
   ctaButton: 'Nous contacter →',
   ctaSubject: 'Partenariat LaplandStore.fi',
 };

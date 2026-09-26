@@ -412,7 +412,7 @@ const COPY: Record<Lang, Copy> = {
   fr: {
     eyebrow: 'Panier prêt',
     title: 'Le froid ne demande pas ce que vous avez emporté',
-    lead: 'Il y a un moment de l\'hiver lapon dont tout le monde se souvient : la porte s\'ouvre, l\'air est si sec et si clair qu\'on le sent dans le nez, et la neige crisse sous les bottes. Après cela, tout dépend de ce qui touche la peau. Le coton se mouille et refroidit, le mérinos tient chaud même humide, et les gants décident du temps qu\'on peut passer à regarder le ciel. Nous avons mis quatre paniers directement dans le panier de la boutique. Choisissez une taille et ouvrez le panier, il ne reste que l\'adresse et le paiement.',
+    lead: 'Il y a un moment de l\'hiver en Laponie dont tout le monde se souvient : la porte s\'ouvre, l\'air est si sec et si clair qu\'on le sent dans le nez, et la neige crisse sous les bottes. Après cela, tout dépend de ce qui touche la peau. Le coton se mouille et refroidit, le mérinos tient chaud même humide, et les gants décident du temps qu\'on peut passer à regarder le ciel. Nous avons mis quatre paniers directement dans le panier de la boutique. Choisissez une taille et ouvrez le panier, il ne reste que l\'adresse et le paiement.',
     contents: 'Dans le panier',
     size: 'Taille',
     cta: (s) => `Ouvrir le panier chez ${s}`,
@@ -428,7 +428,7 @@ const COPY: Record<Lang, Copy> = {
   es: {
     eyebrow: 'Cesta lista',
     title: 'El frío no pregunta qué metiste en la maleta',
-    lead: 'Hay un momento del invierno lapón que todo el mundo recuerda: se abre la puerta, el aire es tan seco y tan claro que se nota en la nariz, y la nieve cruje bajo las botas. A partir de ahí, todo depende de lo que va pegado a la piel. El algodón se moja y se enfría, la merina se mantiene caliente incluso húmeda, y los guantes deciden cuánto tiempo aguantas mirando al cielo. Pusimos cuatro cestas directamente en el carrito de la tienda. Elija una talla y abra la cesta, solo quedan la dirección y el pago.',
+    lead: 'Hay un momento del invierno en Laponia que todo el mundo recuerda: se abre la puerta, el aire es tan seco y tan claro que se nota en la nariz, y la nieve cruje bajo las botas. A partir de ahí, todo depende de lo que va pegado a la piel. El algodón se moja y se enfría, la merina se mantiene caliente incluso húmeda, y los guantes deciden cuánto tiempo aguantas mirando al cielo. Pusimos cuatro cestas directamente en el carrito de la tienda. Elija una talla y abra la cesta, solo quedan la dirección y el pago.',
     contents: 'En la cesta',
     size: 'Talla',
     cta: (s) => `Abrir la cesta en ${s}`,
@@ -444,7 +444,7 @@ const COPY: Record<Lang, Copy> = {
   it: {
     eyebrow: 'Carrello pronto',
     title: 'Il freddo non chiede cosa avete messo in valigia',
-    lead: 'C\'è un momento dell\'inverno lappone che tutti ricordano: la porta si apre, l\'aria è così secca e limpida che la si sente nel naso, e la neve scricchiola sotto gli scarponi. Da lì in poi tutto dipende da ciò che sta sulla pelle. Il cotone si bagna e si raffredda, il merino resta caldo anche umido, e i guanti decidono per quanto si riesce a guardare il cielo. Abbiamo messo quattro carrelli direttamente nel carrello del negozio. Scegliete la taglia e aprite il carrello, restano solo indirizzo e pagamento.',
+    lead: 'C\'è un momento dell\'inverno in Lapponia che tutti ricordano: la porta si apre, l\'aria è così secca e limpida che la si sente nel naso, e la neve scricchiola sotto gli scarponi. Da lì in poi tutto dipende da ciò che sta sulla pelle. Il cotone si bagna e si raffredda, il merino resta caldo anche umido, e i guanti decidono per quanto si riesce a guardare il cielo. Abbiamo messo quattro carrelli direttamente nel carrello del negozio. Scegliete la taglia e aprite il carrello, restano solo indirizzo e pagamento.',
     contents: 'Nel carrello',
     size: 'Taglia',
     cta: (s) => `Apri il carrello da ${s}`,

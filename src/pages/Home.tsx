@@ -52,7 +52,7 @@ const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
   },
   'es': {
     seoTitle: 'Regalos y artesanía auténticos de Laponia',
-    seoDescription: 'Directorio seleccionado de boutiques de Laponia, de Rovaniemi a Utsjoki: artesanía, joyas, asta de reno, cerámica y delicias laponas. Algunas hacen envíos.',
+    seoDescription: 'Directorio seleccionado de boutiques de Laponia, de Rovaniemi a Utsjoki: artesanía, joyas, asta de reno, cerámica y delicias locales. Algunas hacen envíos.',
   },
   'pt-BR': {
     seoTitle: 'Presentes e artesanato autênticos da Lapônia',
