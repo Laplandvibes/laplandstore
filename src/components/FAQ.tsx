@@ -54,11 +54,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Popular edible souvenirs include cloudberry and lingonberry preserves, birch syrup, dried and smoked reindeer meat, Arctic herbal teas, rye and other local breads, and chocolates flavoured with northern berries. They travel well and keep, which makes them practical gifts to bring home.',
     },
     {
-      q: 'Why buy from local Lapland makers instead of generic souvenir shops?',
+      q: 'Why buy from local Lapland makers?',
       aPlain:
-        'Buying from local makers keeps the money with the craftsperson and the region, and you get an item with a known origin rather than an imported imitation. Many generic souvenirs are mass-produced abroad. Every boutique on this page is a Lapland-based business, listed with its sources on file.',
+        'Buying from local makers keeps the money with the craftsperson and the region, and you get an item with a known origin. Every boutique on this page is a Lapland-based business, listed with its sources on file.',
       aHtml:
-        'Buying from local makers keeps the money with the craftsperson and the region, and you get an item with a known origin rather than an imported imitation. Many generic souvenirs are mass-produced abroad. Every boutique on this page is a Lapland-based business, listed with its sources on file.',
+        'Buying from local makers keeps the money with the craftsperson and the region, and you get an item with a known origin. Every boutique on this page is a Lapland-based business, listed with its sources on file.',
     },
   ],
 
@@ -99,11 +99,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Suosittuja syötäviä matkamuistoja ovat lakka- ja puolukkahillot, koivusiirappi, kuivattu ja savustettu poronliha, arktiset yrttiteet, ruisleipä ja muut paikalliset leivät sekä pohjoisen marjoilla maustetut suklaat. Ne säilyvät ja kestävät matkan, joten ne ovat käteviä tuliaisia.',
     },
     {
-      q: 'Miksi ostaa paikallisilta lappilaisilta tekijöiltä eikä tavallisesta matkamuistokaupasta?',
+      q: 'Miksi ostaa paikallisilta lappilaisilta tekijöiltä?',
       aPlain:
-        'Paikalliselta tekijältä ostaminen pitää rahan käsityöläisellä ja alueella, ja saat esineen, jonka alkuperä tunnetaan, tuontijäljitelmän sijaan. Monet tavalliset matkamuistot tehdään massatuotantona ulkomailla. Jokainen tämän sivun putiikki on lappilainen yritys, ja lähteet ovat näkyvillä.',
+        'Paikalliselta tekijältä ostaminen pitää rahan käsityöläisellä ja alueella, ja saat esineen, jonka alkuperä tunnetaan. Jokainen tämän sivun putiikki on lappilainen yritys, ja lähteet ovat näkyvillä.',
       aHtml:
-        'Paikalliselta tekijältä ostaminen pitää rahan käsityöläisellä ja alueella, ja saat esineen, jonka alkuperä tunnetaan, tuontijäljitelmän sijaan. Monet tavalliset matkamuistot tehdään massatuotantona ulkomailla. Jokainen tämän sivun putiikki on lappilainen yritys, ja lähteet ovat näkyvillä.',
+        'Paikalliselta tekijältä ostaminen pitää rahan käsityöläisellä ja alueella, ja saat esineen, jonka alkuperä tunnetaan. Jokainen tämän sivun putiikki on lappilainen yritys, ja lähteet ovat näkyvillä.',
     },
   ],
 
@@ -144,11 +144,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Beliebte essbare Souvenirs sind Moltebeeren- und Preiselbeerkonfitüre, Birkensirup, getrocknetes und geräuchertes Rentierfleisch, arktische Kräutertees, Roggen- und andere regionale Brote sowie Schokolade mit nordischen Beeren. Sie sind haltbar und überstehen die Reise gut, was sie zu praktischen Geschenken macht.',
     },
     {
-      q: 'Warum bei lokalen Herstellern in Lappland kaufen statt im üblichen Souvenirladen?',
+      q: 'Warum bei lokalen Herstellern in Lappland kaufen?',
       aPlain:
-        'Der Kauf bei lokalen Herstellern lässt das Geld bei der Handwerkerin oder dem Handwerker und in der Region, und Sie erhalten ein Stück mit bekannter Herkunft statt einer importierten Nachahmung. Viele übliche Souvenirs werden im Ausland in Massenproduktion gefertigt. Jede Boutique auf dieser Seite ist ein Betrieb aus Lappland, mit dokumentierten Quellen.',
+        'Der Kauf bei lokalen Herstellern lässt das Geld bei der Handwerkerin oder dem Handwerker und in der Region, und Sie erhalten ein Stück mit bekannter Herkunft. Jede Boutique auf dieser Seite ist ein Betrieb aus Lappland, mit dokumentierten Quellen.',
       aHtml:
-        'Der Kauf bei lokalen Herstellern lässt das Geld bei der Handwerkerin oder dem Handwerker und in der Region, und Sie erhalten ein Stück mit bekannter Herkunft statt einer importierten Nachahmung. Viele übliche Souvenirs werden im Ausland in Massenproduktion gefertigt. Jede Boutique auf dieser Seite ist ein Betrieb aus Lappland, mit dokumentierten Quellen.',
+        'Der Kauf bei lokalen Herstellern lässt das Geld bei der Handwerkerin oder dem Handwerker und in der Region, und Sie erhalten ein Stück mit bekannter Herkunft. Jede Boutique auf dieser Seite ist ein Betrieb aus Lappland, mit dokumentierten Quellen.',
     },
   ],
 
@@ -189,11 +189,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         '人気の食べられるお土産には、クラウドベリーやリンゴンベリーのジャム、白樺シロップ、乾燥・燻製のトナカイ肉、北極圏のハーブティー、ライ麦パンなどの地元のパン、北国のベリーで風味づけしたチョコレートがあります。日持ちがして持ち運びにも向くため、実用的な贈り物になります。',
     },
     {
-      q: '一般的な土産物店ではなく、地元ラップランドの作り手から買う理由は？',
+      q: '地元ラップランドの作り手から買う理由は？',
       aPlain:
-        '地元の作り手から買うと、代金が職人と地域に残り、輸入された模倣品ではなく出所のわかる品が手に入ります。一般的な土産物の多くは海外で大量生産されています。このページの各ブティックはいずれもラップランドの事業者で、出典も記録に残しています。',
+        '地元の作り手から買うと、代金が職人と地域に残り、出所のわかる品が手に入ります。このページの各ブティックはいずれもラップランドの事業者で、出典も記録に残しています。',
       aHtml:
-        '地元の作り手から買うと、代金が職人と地域に残り、輸入された模倣品ではなく出所のわかる品が手に入ります。一般的な土産物の多くは海外で大量生産されています。このページの各ブティックはいずれもラップランドの事業者で、出典も記録に残しています。',
+        '地元の作り手から買うと、代金が職人と地域に残り、出所のわかる品が手に入ります。このページの各ブティックはいずれもラップランドの事業者で、出典も記録に残しています。',
     },
   ],
 
@@ -234,11 +234,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Entre los recuerdos comestibles populares están las mermeladas de mora ártica y arándano rojo, el sirope de abedul, la carne de reno seca y ahumada, las infusiones árticas, el pan de centeno y otros panes locales, y los chocolates con bayas del norte. Se conservan bien y aguantan el viaje, lo que los hace regalos prácticos.',
     },
     {
-      q: '¿Por qué comprar a productores locales de Laponia en vez de en tiendas de recuerdos genéricas?',
+      q: '¿Por qué comprar a productores locales de Laponia?',
       aPlain:
-        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y usted se lleva una pieza de origen conocido en lugar de una imitación importada. Muchos recuerdos genéricos se fabrican en serie en el extranjero. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
+        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y usted se lleva una pieza de origen conocido. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
       aHtml:
-        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y usted se lleva una pieza de origen conocido en lugar de una imitación importada. Muchos recuerdos genéricos se fabrican en serie en el extranjero. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
+        'Comprar a productores locales hace que el dinero quede con el artesano y la región, y usted se lleva una pieza de origen conocido. Cada boutique de esta página es una empresa de Laponia, listada con sus fuentes documentadas.',
     },
   ],
 
@@ -279,11 +279,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Entre as lembrancinhas comestíveis populares estão as geleias de amora ártica e airela-vermelha, o xarope de bétula, a carne de rena seca e defumada, os chás de ervas árticos, o pão de centeio e outros pães locais, e os chocolates com frutas vermelhas do norte. Eles se conservam bem e aguentam a viagem, o que os torna presentes práticos.',
     },
     {
-      q: 'Por que comprar de produtores locais da Lapônia em vez de lojas de souvenir genéricas?',
+      q: 'Por que comprar de produtores locais da Lapônia?',
       aPlain:
-        'Comprar de produtores locais mantém o dinheiro com o artesão e a região, e você leva uma peça de origem conhecida, não uma imitação importada. Muitos souvenires genéricos são fabricados em massa no exterior. Cada boutique desta página é uma empresa da Lapônia, listada com as fontes documentadas.',
+        'Comprar de produtores locais mantém o dinheiro com o artesão e a região, e você leva uma peça de origem conhecida. Cada boutique desta página é uma empresa da Lapônia, listada com as fontes documentadas.',
       aHtml:
-        'Comprar de produtores locais mantém o dinheiro com o artesão e a região, e você leva uma peça de origem conhecida, não uma imitação importada. Muitos souvenires genéricos são fabricados em massa no exterior. Cada boutique desta página é uma empresa da Lapônia, listada com as fontes documentadas.',
+        'Comprar de produtores locais mantém o dinheiro com o artesão e a região, e você leva uma peça de origem conhecida. Cada boutique desta página é uma empresa da Lapônia, listada com as fontes documentadas.',
     },
   ],
 
@@ -324,11 +324,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         '受欢迎的可食用纪念品包括云莓和越橘果酱、桦树糖浆、风干和烟熏的驯鹿肉、北极草本茶、黑麦面包及其他本地面包，以及用北方浆果调味的巧克力。它们易于保存、耐得住旅途，因此是实用的伴手礼。',
     },
     {
-      q: '为什么要向拉普兰本地制作者购买，而不是去普通的纪念品店？',
+      q: '为什么要向拉普兰本地制作者购买？',
       aPlain:
-        '向本地制作者购买，会让钱留在工匠和当地手中，你买到的是一件来源明确的物品，而不是进口的仿制品。许多普通纪念品是在国外大批量生产的。本页面的每家精品店都是拉普兰本地企业，并附有资料来源。',
+        '向本地制作者购买，会让钱留在工匠和当地手中，你买到的是一件来源明确的物品。本页面的每家精品店都是拉普兰本地企业，并附有资料来源。',
       aHtml:
-        '向本地制作者购买，会让钱留在工匠和当地手中，你买到的是一件来源明确的物品，而不是进口的仿制品。许多普通纪念品是在国外大批量生产的。本页面的每家精品店都是拉普兰本地企业，并附有资料来源。',
+        '向本地制作者购买，会让钱留在工匠和当地手中，你买到的是一件来源明确的物品。本页面的每家精品店都是拉普兰本地企业，并附有资料来源。',
     },
   ],
 
@@ -369,11 +369,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         '인기 있는 먹거리 기념품으로는 클라우드베리와 링곤베리 잼, 자작나무 시럽, 말린 훈제 순록 고기, 북극 허브차, 호밀빵과 그 밖의 현지 빵, 북방 베리로 맛을 낸 초콜릿이 있습니다. 보관이 쉽고 이동에도 잘 견뎌 실용적인 선물이 됩니다.',
     },
     {
-      q: '일반 기념품 가게 대신 라플란드 현지 제작자에게서 사야 하는 이유는 무엇인가요?',
+      q: '라플란드 현지 제작자에게서 사야 하는 이유는 무엇인가요?',
       aPlain:
-        '현지 제작자에게서 사면 돈이 장인과 지역에 남고, 수입 모조품이 아니라 출처가 분명한 물건을 얻게 됩니다. 일반 기념품의 상당수는 해외에서 대량 생산됩니다. 이 페이지의 모든 부티크는 라플란드에 기반을 둔 사업체이며 출처가 함께 기록되어 있습니다.',
+        '현지 제작자에게서 사면 돈이 장인과 지역에 남고, 출처가 분명한 물건을 얻게 됩니다. 이 페이지의 모든 부티크는 라플란드에 기반을 둔 사업체이며 출처가 함께 기록되어 있습니다.',
       aHtml:
-        '현지 제작자에게서 사면 돈이 장인과 지역에 남고, 수입 모조품이 아니라 출처가 분명한 물건을 얻게 됩니다. 일반 기념품의 상당수는 해외에서 대량 생산됩니다. 이 페이지의 모든 부티크는 라플란드에 기반을 둔 사업체이며 출처가 함께 기록되어 있습니다.',
+        '현지 제작자에게서 사면 돈이 장인과 지역에 남고, 출처가 분명한 물건을 얻게 됩니다. 이 페이지의 모든 부티크는 라플란드에 기반을 둔 사업체이며 출처가 함께 기록되어 있습니다.',
     },
   ],
 
@@ -414,11 +414,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Parmi les souvenirs comestibles prisés figurent les confitures de plaquebières et d’airelles, le sirop de bouleau, la viande de renne séchée et fumée, les tisanes arctiques, le pain de seigle et d’autres pains locaux, ainsi que les chocolats aux baies du Nord. Ils se conservent bien et supportent le voyage, ce qui en fait des cadeaux pratiques.',
     },
     {
-      q: 'Pourquoi acheter auprès d’artisans locaux de Laponie plutôt que dans des boutiques de souvenirs génériques ?',
+      q: 'Pourquoi acheter auprès d’artisans locaux de Laponie ?',
       aPlain:
-        'Acheter auprès d’artisans locaux fait rester l’argent chez l’artisan et dans la région, et vous obtenez une pièce d’origine connue plutôt qu’une imitation importée. Beaucoup de souvenirs génériques sont produits en série à l’étranger. Chaque boutique de cette page est une entreprise de Laponie, présentée avec ses sources documentées.',
+        'Acheter auprès d’artisans locaux fait rester l’argent chez l’artisan et dans la région, et vous obtenez une pièce d’origine connue. Chaque boutique de cette page est une entreprise de Laponie, présentée avec ses sources documentées.',
       aHtml:
-        'Acheter auprès d’artisans locaux fait rester l’argent chez l’artisan et dans la région, et vous obtenez une pièce d’origine connue plutôt qu’une imitation importée. Beaucoup de souvenirs génériques sont produits en série à l’étranger. Chaque boutique de cette page est une entreprise de Laponie, présentée avec ses sources documentées.',
+        'Acheter auprès d’artisans locaux fait rester l’argent chez l’artisan et dans la région, et vous obtenez une pièce d’origine connue. Chaque boutique de cette page est une entreprise de Laponie, présentée avec ses sources documentées.',
     },
   ],
 
@@ -459,11 +459,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Tra i souvenir gastronomici apprezzati ci sono le confetture di lampone artico e mirtillo rosso, lo sciroppo di betulla, la carne di renna essiccata e affumicata, le tisane artiche, il pane di segale e altri pani locali, e i cioccolatini ai frutti di bosco del Nord. Si conservano bene e resistono al viaggio, il che li rende regali pratici.',
     },
     {
-      q: 'Perché acquistare da artigiani locali della Lapponia invece che nei comuni negozi di souvenir?',
+      q: 'Perché acquistare da artigiani locali della Lapponia?',
       aPlain:
-        'Acquistare da artigiani locali fa restare il denaro all’artigiano e alla regione, e si ottiene un oggetto di origine nota anziché un’imitazione importata. Molti souvenir comuni sono prodotti in serie all’estero. Ogni boutique di questa pagina è un’attività della Lapponia, presentata con le fonti documentate.',
+        'Acquistare da artigiani locali fa restare il denaro all’artigiano e alla regione, e si ottiene un oggetto di origine nota. Ogni boutique di questa pagina è un’attività della Lapponia, presentata con le fonti documentate.',
       aHtml:
-        'Acquistare da artigiani locali fa restare il denaro all’artigiano e alla regione, e si ottiene un oggetto di origine nota anziché un’imitazione importata. Molti souvenir comuni sono prodotti in serie all’estero. Ogni boutique di questa pagina è un’attività della Lapponia, presentata con le fonti documentate.',
+        'Acquistare da artigiani locali fa restare il denaro all’artigiano e alla regione, e si ottiene un oggetto di origine nota. Ogni boutique di questa pagina è un’attività della Lapponia, presentata con le fonti documentate.',
     },
   ],
 
@@ -504,11 +504,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Populaire eetbare souvenirs zijn kruipbraam- en vossenbessenjam, berkensiroop, gedroogd en gerookt rendiervlees, Arctische kruidenthee, roggebrood en ander lokaal brood, en chocolade met noordelijke bessen. Ze zijn goed houdbaar en bestand tegen de reis, wat ze praktische cadeaus maakt.',
     },
     {
-      q: 'Waarom kopen bij lokale Laplandse makers in plaats van bij gewone souvenirwinkels?',
+      q: 'Waarom kopen bij lokale Laplandse makers?',
       aPlain:
-        'Kopen bij lokale makers houdt het geld bij de ambachtsman en de regio, en u krijgt een stuk met een bekende herkomst in plaats van een geïmporteerde imitatie. Veel gewone souvenirs worden in het buitenland massaal geproduceerd. Elke boutique op deze pagina is een in Lapland gevestigd bedrijf, vermeld met de bronnen gedocumenteerd.',
+        'Kopen bij lokale makers houdt het geld bij de ambachtsman en de regio, en u krijgt een stuk met een bekende herkomst. Elke boutique op deze pagina is een in Lapland gevestigd bedrijf, vermeld met de bronnen gedocumenteerd.',
       aHtml:
-        'Kopen bij lokale makers houdt het geld bij de ambachtsman en de regio, en u krijgt een stuk met een bekende herkomst in plaats van een geïmporteerde imitatie. Veel gewone souvenirs worden in het buitenland massaal geproduceerd. Elke boutique op deze pagina is een in Lapland gevestigd bedrijf, vermeld met de bronnen gedocumenteerd.',
+        'Kopen bij lokale makers houdt het geld bij de ambachtsman en de regio, en u krijgt een stuk met een bekende herkomst. Elke boutique op deze pagina is een in Lapland gevestigd bedrijf, vermeld met de bronnen gedocumenteerd.',
     },
   ],
 
@@ -549,11 +549,11 @@ export const FAQ_BY_LANG: Record<Lang, StoreFaq[]> = {
         'Populära ätbara souvenirer är hjortron- och lingonsylt, björksirap, torkat och rökt renkött, arktiska örtteer, råg- och annat lokalt bröd samt choklad smaksatt med nordliga bär. De håller sig bra och tål resan, vilket gör dem till praktiska presenter att ta med hem.',
     },
     {
-      q: 'Varför köpa av lokala tillverkare i Lappland i stället för i vanliga souvenirbutiker?',
+      q: 'Varför köpa av lokala tillverkare i Lappland?',
       aPlain:
-        'När du köper av lokala tillverkare stannar pengarna hos hantverkaren och i regionen, och du får ett föremål med känt ursprung i stället för en importerad imitation. Många vanliga souvenirer massproduceras utomlands. Varje butik på den här sidan är ett företag i Lappland, listat med sina källor sparade.',
+        'När du köper av lokala tillverkare stannar pengarna hos hantverkaren och i regionen, och du får ett föremål med känt ursprung. Varje butik på den här sidan är ett företag i Lappland, listat med sina källor sparade.',
       aHtml:
-        'När du köper av lokala tillverkare stannar pengarna hos hantverkaren och i regionen, och du får ett föremål med känt ursprung i stället för en importerad imitation. Många vanliga souvenirer massproduceras utomlands. Varje butik på den här sidan är ett företag i Lappland, listat med sina källor sparade.',
+        'När du köper av lokala tillverkare stannar pengarna hos hantverkaren och i regionen, och du får ett föremål med känt ursprung. Varje butik på den här sidan är ett företag i Lappland, listat med sina källor sparade.',
     },
   ],
 };
