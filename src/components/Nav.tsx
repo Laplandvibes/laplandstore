@@ -7,6 +7,11 @@ import enCopy, { type CopyShape } from './Nav.copy.en';
 import { useCopy } from '../i18n/useCopy';
 import EcosystemMenu from '../shared/EcosystemMenu';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
+import type { CSSProperties } from 'react';
+
+// Sanamerkin leveys 1 px:n fontilla (Bebas Neue + tracking-wide). Puhelin- ja tablettinavissa koko lasketaan
+// tästä ja vapaasta tilasta (index.css LV-NAV-SANAMERKKI): 24 px (tabletilla 30 px), pienempi vain kun ei mahdu.
+const WM_STYLE = { '--lv-wm-k': 5.36, '--lv-wm-max-md': '30px' } as CSSProperties;
 
 
 const loaders = {
@@ -73,21 +78,23 @@ export default function Nav() {
             : 'bg-gradient-to-b from-black/40 to-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
-          <div className="flex items-center gap-3 sm:gap-5 shrink-0">
+        <div className="lv-navrivi max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
+          <div className="lv-navvasen flex items-center gap-3 sm:gap-5 shrink-0">
             <EcosystemMenu lang={lang} currentDomain="laplandstore.fi" variant={scrolled ? 'light' : 'dark'} />
-            <Link
-              to={localePrefix || '/'}
-              className="flex items-center shrink-0 min-h-11"
-              aria-label="LaplandStore home"
-            >
-              {/* NETWORK RULE (Vesa 2026-07-24): wordmark aina Bebas (--font-logo), otsikot pysyvät Playfairissa. */}
-              <span className="font-logo tracking-wide leading-none text-2xl sm:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]">
-                <span className="text-amber">#</span>
-                <span className={scrolled ? 'text-night' : 'text-white'}>LAPLAND</span>
-                <span className="text-amber">STORE</span>
-              </span>
-            </Link>
+            <div className="lv-wm-paikka">
+              <Link
+                to={localePrefix || '/'}
+                className="flex items-center shrink-0 min-h-11"
+                aria-label="LaplandStore home"
+              >
+                {/* NETWORK RULE (Vesa 2026-07-24): wordmark aina Bebas (--font-logo), otsikot pysyvät Playfairissa. */}
+                <span className="lv-wm font-logo tracking-wide leading-none text-2xl sm:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]" data-lv-sanamerkki="" style={WM_STYLE}>
+                  <span className="text-amber">#</span>
+                  <span className={scrolled ? 'text-night' : 'text-white'}>LAPLAND</span>
+                  <span className="text-amber">STORE</span>
+                </span>
+              </Link>
+            </div>
           </div>
 
           {/* Desktop links */}
