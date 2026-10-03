@@ -114,12 +114,28 @@ const COPY = {
   },
 } as const;
 
+/* ja/zh/ko: otsikon kaksi lausetta ovat 2–3 kertaa latinalaisten kielten mittaisia, joten 60 px:n otsikko 672 px:n
+ * palstassa jatkui 3–5 riville ja katkesi kesken sanan ("ラップランドでお買 / い物をすることは、", mitattu 3.10.2026).
+ * sm+: koko = clamp(2rem, palstaan mahtuva, suunniteltu), keep-all. Latinalaiset kielet ennallaan (mahtuvat jo).
+ * ko:n jälkimmäinen lause (26 em) mahtuisi riville vasta 25 px:llä, joten se saa kaksi tasattua riviä (~45 px) —
+ * kolme riviä yhteensä, kunnes lyhyempi natiiviteksti on tarkistettu. */
+const CJK_CHAR = /[　-ヿ㐀-鿿가-힯＀-￯]/;
+/** Rivin leveysarvio em-yksiköinä: CJK-merkki ja -välimerkki (、。) 1,05 em, välilyönti 0,25, muu 0,4. */
+const emWidth = (s: string): number =>
+  [...s].reduce((w, ch) => w + (CJK_CHAR.test(ch) ? 1.05 : ch === ' ' ? 0.25 : 0.4), 0);
+/** Tätä pidempi lause jaetaan kahdelle riville: 672 px / 21 em = 32 px, pienin sallittu koko. */
+const ONE_LINE_MAX_EM = 21;
+
 export default function ArtisanStory() {
   // 🔴 Luvut luetaan datasta. Kovakoodattuna ne ajautuivat erilleen:
   // sivu lupasi 16 putiikkia kun niitä oli 15.
   const onlineCount = BOUTIQUES.filter((b) => b.hasOnlineStore).length;
   const { lang } = useLang();
   const t = COPY[lang];
+  const cjk = CJK_CHAR.test(t.titleA);
+  const emB = emWidth(t.titleB);
+  // 1,5 em varaa: kahden rivin katko osuu sanaväliin, ei tasan puoliväliin.
+  const h2Em = Math.max(emWidth(t.titleA), emB > ONE_LINE_MAX_EM ? emB / 2 + 1.5 : emB);
   const facts = t.facts.replace('{n}', String(BOUTIQUES.length)).replace('{m}', String(onlineCount));
 
   return (
@@ -160,15 +176,21 @@ export default function ArtisanStory() {
       <div className="absolute inset-0 bg-gradient-to-t from-night/40 via-transparent to-night/20" />
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-white">
-        <div className="max-w-2xl">
+        {/* @container: CJK-otsikon koko lasketaan tämän palstan leveydestä (100cqi). */}
+        <div className="@container max-w-2xl">
           <span className="text-sm tracking-[0.3em] uppercase text-amber-light font-bold">
             {t.eyebrow}
           </span>
 
-          <h2 className="font-heading text-4xl sm:text-5xl md:text-6xl mt-4 leading-tight [text-wrap:balance]">
+          <h2
+            className={`font-heading text-4xl mt-4 leading-tight [text-wrap:balance] ${cjk ? `${lang === 'ko' ? '[word-break:keep-all]' : 'sm:[word-break:keep-all]'} [overflow-wrap:anywhere] sm:[--h2-max:3rem] md:[--h2-max:3.75rem] sm:[font-size:clamp(2rem,calc(100cqi/var(--h2-em)),var(--h2-max))]` : 'sm:text-5xl md:text-6xl'}`}
+            style={cjk ? { ['--h2-em' as string]: h2Em.toFixed(2) } : undefined}
+          >
+            {/* Puhelimessa (kiinteä 36 px) ja/zh-lause ei mahdu riville, ja keep-all jättäisi välimerkin yksin
+                ("购物时 / ，"); ko katkeaa sanavälistä kaikilla leveyksillä. */}
+            {/* block (ei <br> + inline): jälkimmäinen lause tasataan omana lohkonaan, jos se rivittyy. */}
             {t.titleA}
-            <br />
-            <span className="text-amber-light">{t.titleB}</span>
+            <span className="block text-amber-light">{t.titleB}</span>
           </h2>
 
           <p className="text-white/85 text-lg mt-8 leading-relaxed [text-wrap:pretty]">
