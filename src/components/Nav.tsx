@@ -120,7 +120,7 @@ export default function Nav() {
 
             <a
               href={link('putiikit')}
-              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 text-white text-sm font-bold rounded-full transition-colors"
+              className="ml-2 inline-flex items-center gap-1.5 px-4 py-2 text-white text-sm font-semibold rounded-full transition-colors"
               // Valkoinen teksti #D97706:lla oli 3,2:1 ja hoverin #F59E0B:llä 2,2:1. Saman meripihkan tummemmat
               // asteet: #B45309 = 5,0:1, hover #92400E = 7,1:1 (hoteldealsin pinkin ennakkotapaus).
               style={{ background: '#B45309' }}
@@ -167,7 +167,7 @@ export default function Nav() {
             <a
               href={link('putiikit')}
               onClick={() => setOpen(false)}
-              className="mt-4 inline-flex items-center justify-center gap-2 px-4 py-3.5 text-white text-base font-bold rounded-xl text-center min-h-[44px]"
+              className="mt-4 inline-flex items-center justify-center gap-2 px-4 py-3.5 text-white text-base font-semibold rounded-xl text-center min-h-[44px]"
               style={{ background: '#B45309' }}
             >
               <ShoppingBag className="w-4 h-4" />
