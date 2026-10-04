@@ -1,5 +1,5 @@
 import { ArrowUpRight, Clock, MapPin } from 'lucide-react';
-import { HUB_PICKS, GYG_PRICE_AS_OF, gygHref } from '../shared/gyg/picks';
+import { HUB_PICKS, GYG_PRICE_AS_OF, gygFreshPrice, gygHref } from '../shared/gyg/picks';
 import { useLang, type Lang } from '../lang';
 import AiDisclosure from './AiDisclosure';
 
@@ -48,6 +48,8 @@ interface Copy {
   from: (price: string) => string;
   cta: string;
   fine: (date: string) => string;
+  /** Sama ilman hintalausetta, kun yksikään hinta ei ole tuore (Vesa 4.10.2026: yli 7 vrk vanha hinta ei näy). */
+  fineNoPrice: string;
   exp: Record<Exp, ExpCopy>;
 }
 
@@ -79,6 +81,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `alk. ${p}`,
     cta: 'Varaa retki',
     fine: (d) => `Varaus tehdään GetYourGuiden sivulla uudessa välilehdessä. Hinnat ovat GetYourGuiden omia, luettu ${d}, ja saatamme saada varauksesta palkkion.`,
+    fineNoPrice: 'Varaus tehdään GetYourGuiden sivulla uudessa välilehdessä. Saatamme saada varauksesta palkkion.',
     exp: {
       aurora: { title: 'Revontulet Rovaniemen taivaalla', hook: 'Opas seuraa pilvikarttoja ja ajaa sinne, missä taivas on selkeä. Ilta kuluu nuotiolla odottaen, ja kun vihreä kaari syttyy, kaikki hiljenevät.' },
       icebreaker: { title: 'Jäänmurtaja Sampo ja kellunta jäissä', hook: 'Laiva murtaa Perämeren jäätä Kemin edustalla, ja railossa kellutaan pelastuspuvussa. Sampo on yksi harvoista matkustajia kuljettavista jäänmurtajista.' },
@@ -93,6 +96,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `from ${p}`,
     cta: 'Book the tour',
     fine: (d) => `Booking opens on GetYourGuide in a new tab. Prices are GetYourGuide's own, read on ${d}, and we may earn a commission on a booking.`,
+    fineNoPrice: 'Booking opens on GetYourGuide in a new tab. We may earn a commission on a booking.',
     exp: {
       aurora: { title: 'Northern lights over Rovaniemi', hook: 'A guide reads the cloud maps and drives to where the sky is clear. The evening passes by a campfire, and when the green arc lights up, everyone goes quiet.' },
       icebreaker: { title: 'Icebreaker Sampo and ice floating', hook: 'The ship breaks the sea ice off Kemi, and you float in the open channel in a survival suit. Sampo is one of the few icebreakers that carry passengers.' },
@@ -107,6 +111,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `ab ${p}`,
     cta: 'Tour buchen',
     fine: (d) => `Die Buchung öffnet sich bei GetYourGuide in einem neuen Tab. Die Preise sind die von GetYourGuide, gelesen am ${d}; für eine Buchung erhalten wir möglicherweise eine Provision.`,
+    fineNoPrice: 'Die Buchung öffnet sich bei GetYourGuide in einem neuen Tab. Für eine Buchung erhalten wir möglicherweise eine Provision.',
     exp: {
       aurora: { title: 'Nordlichter über Rovaniemi', hook: 'Ein Guide liest die Wolkenkarten und fährt dorthin, wo der Himmel klar ist. Der Abend vergeht am Lagerfeuer, und wenn der grüne Bogen aufleuchtet, wird es still.' },
       icebreaker: { title: 'Eisbrecher Sampo und Eisschwimmen', hook: 'Das Schiff bricht das Meereis vor Kemi, und Sie treiben im Überlebensanzug in der offenen Rinne. Die Sampo ist einer der wenigen Eisbrecher, die Passagiere mitnehmen.' },
@@ -121,6 +126,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `från ${p}`,
     cta: 'Boka turen',
     fine: (d) => `Bokningen öppnas hos GetYourGuide i en ny flik. Priserna är GetYourGuides egna, lästa ${d}, och vi kan få provision på en bokning.`,
+    fineNoPrice: 'Bokningen öppnas hos GetYourGuide i en ny flik. Vi kan få provision på en bokning.',
     exp: {
       aurora: { title: 'Norrsken över Rovaniemi', hook: 'En guide läser molnkartorna och kör dit himlen är klar. Kvällen går vid lägerelden, och när den gröna bågen tänds blir alla tysta.' },
       icebreaker: { title: 'Isbrytaren Sampo och isflytning', hook: 'Fartyget bryter havsisen utanför Kemi, och du flyter i räddningsdräkt i den öppna rännan. Sampo är en av få isbrytare som tar passagerare.' },
@@ -135,6 +141,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `dès ${p}`,
     cta: 'Réserver l’excursion',
     fine: (d) => `La réservation s’ouvre sur GetYourGuide dans un nouvel onglet. Les prix sont ceux de GetYourGuide, relevés le ${d}, et nous pouvons percevoir une commission sur une réservation.`,
+    fineNoPrice: 'La réservation s’ouvre sur GetYourGuide dans un nouvel onglet. Nous pouvons percevoir une commission sur une réservation.',
     exp: {
       aurora: { title: 'Aurores boréales au-dessus de Rovaniemi', hook: 'Un guide lit les cartes de nuages et roule jusqu’à un ciel dégagé. La soirée passe autour d’un feu, et quand l’arc vert s’allume, tout le monde se tait.' },
       icebreaker: { title: 'Brise-glace Sampo et flottaison sur la glace', hook: 'Le navire brise la banquise au large de Kemi, et vous flottez dans le chenal en combinaison de survie. Le Sampo est l’un des rares brise-glaces ouverts aux passagers.' },
@@ -149,6 +156,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `desde ${p}`,
     cta: 'Reservar la excursión',
     fine: (d) => `La reserva se abre en GetYourGuide en una pestaña nueva. Los precios son los de GetYourGuide, leídos el ${d}, y podemos recibir una comisión por una reserva.`,
+    fineNoPrice: 'La reserva se abre en GetYourGuide en una pestaña nueva. Podemos recibir una comisión por una reserva.',
     exp: {
       aurora: { title: 'Auroras boreales sobre Rovaniemi', hook: 'Un guía lee los mapas de nubes y conduce hasta donde el cielo está despejado. La noche pasa junto a una hoguera, y cuando se enciende el arco verde, todos callan.' },
       icebreaker: { title: 'Rompehielos Sampo y flotación en el hielo', hook: 'El barco rompe el hielo marino frente a Kemi y usted flota en el canal abierto con un traje de supervivencia. El Sampo es uno de los pocos rompehielos abiertos a pasajeros.' },
@@ -163,6 +171,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `da ${p}`,
     cta: 'Prenota l’escursione',
     fine: (d) => `La prenotazione si apre su GetYourGuide in una nuova scheda. I prezzi sono quelli di GetYourGuide, letti il ${d}, e potremmo ricevere una commissione su una prenotazione.`,
+    fineNoPrice: 'La prenotazione si apre su GetYourGuide in una nuova scheda. Potremmo ricevere una commissione su una prenotazione.',
     exp: {
       aurora: { title: 'Aurora boreale sopra Rovaniemi', hook: 'Una guida legge le mappe delle nuvole e guida fin dove il cielo è sereno. La serata passa accanto al fuoco e, quando si accende l’arco verde, tutti tacciono.' },
       icebreaker: { title: 'Rompighiaccio Sampo e bagno tra i ghiacci', hook: 'La nave rompe il ghiaccio marino al largo di Kemi e Lei galleggia nel canale aperto con una tuta di sopravvivenza. Il Sampo è uno dei pochi rompighiaccio aperti ai passeggeri.' },
@@ -177,6 +186,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `vanaf ${p}`,
     cta: 'Tocht boeken',
     fine: (d) => `De boeking opent bij GetYourGuide in een nieuw tabblad. De prijzen zijn die van GetYourGuide, gelezen op ${d}, en wij kunnen commissie ontvangen op een boeking.`,
+    fineNoPrice: 'De boeking opent bij GetYourGuide in een nieuw tabblad. Wij kunnen commissie ontvangen op een boeking.',
     exp: {
       aurora: { title: 'Noorderlicht boven Rovaniemi', hook: 'Een gids leest de wolkenkaarten en rijdt naar waar de hemel helder is. De avond verstrijkt bij een kampvuur, en als de groene boog oplicht, wordt iedereen stil.' },
       icebreaker: { title: 'IJsbreker Sampo en drijven in het ijs', hook: 'Het schip breekt het zee-ijs voor de kust van Kemi, en u drijft in een overlevingspak in de open geul. De Sampo is een van de weinige ijsbrekers die passagiers meenemen.' },
@@ -191,6 +201,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `a partir de ${p}`,
     cta: 'Reservar o passeio',
     fine: (d) => `A reserva abre no GetYourGuide em uma nova aba. Os preços são do GetYourGuide, lidos em ${d}, e podemos receber comissão por uma reserva.`,
+    fineNoPrice: 'A reserva abre no GetYourGuide em uma nova aba. Podemos receber comissão por uma reserva.',
     exp: {
       aurora: { title: 'Aurora boreal sobre Rovaniemi', hook: 'Um guia lê os mapas de nuvens e dirige até onde o céu está limpo. A noite passa ao redor de uma fogueira e, quando o arco verde acende, todos ficam em silêncio.' },
       icebreaker: { title: 'Quebra-gelo Sampo e flutuação no gelo', hook: 'O navio quebra o gelo do mar em frente a Kemi, e você flutua no canal aberto com uma roupa de sobrevivência. O Sampo é um dos poucos quebra-gelos abertos a passageiros.' },
@@ -205,6 +216,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `${p}から`,
     cta: 'ツアーを予約',
     fine: (d) => `予約はGetYourGuideのページが新しいタブで開きます。価格はGetYourGuideのもので、${d}に確認したものです。予約により当サイトが手数料を受け取ることがあります。`,
+    fineNoPrice: '予約はGetYourGuideのページが新しいタブで開きます。予約により当サイトが手数料を受け取ることがあります。',
     exp: {
       aurora: { title: 'ロヴァニエミの空にオーロラ', hook: 'ガイドが雲の地図を読み、空が晴れている場所まで車で向かいます。焚き火のそばで夜が更け、緑の弧が光ると皆が静かになります。' },
       icebreaker: { title: '砕氷船サンポ号と氷上浮遊', hook: '船がケミ沖の海氷を砕き、サバイバルスーツを着て開いた水路に浮かびます。サンポ号は乗客を乗せる数少ない砕氷船のひとつです。' },
@@ -219,6 +231,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `${p}起`,
     cta: '预订行程',
     fine: (d) => `预订会在新标签页中打开 GetYourGuide 页面。价格以 GetYourGuide 为准，读取于 ${d}，我们可能从预订中获得佣金。`,
+    fineNoPrice: '预订会在新标签页中打开 GetYourGuide 页面。我们可能从预订中获得佣金。',
     exp: {
       aurora: { title: '罗瓦涅米上空的极光', hook: '向导查看云图，开车前往天空晴朗的地方。夜晚在篝火旁度过，当绿色的光弧亮起，所有人都安静下来。' },
       icebreaker: { title: '桑波号破冰船与冰上漂浮', hook: '船在凯米外海破开海冰，您穿着救生服漂浮在开出的航道中。桑波号是少数搭载游客的破冰船之一。' },
@@ -233,6 +246,7 @@ const COPY: Record<Lang, Copy> = {
     from: (p) => `${p}부터`,
     cta: '투어 예약',
     fine: (d) => `예약은 새 탭에서 GetYourGuide 페이지로 열립니다. 가격은 GetYourGuide 기준이며 ${d}에 확인했습니다. 예약 시 저희가 수수료를 받을 수 있습니다.`,
+    fineNoPrice: '예약은 새 탭에서 GetYourGuide 페이지로 열립니다. 예약 시 저희가 수수료를 받을 수 있습니다.',
     exp: {
       aurora: { title: '로바니에미 하늘의 오로라', hook: '가이드가 구름 지도를 읽고 하늘이 맑은 곳까지 차로 이동합니다. 저녁은 모닥불 곁에서 흐르고, 초록 빛의 띠가 켜지면 모두가 조용해집니다.' },
       icebreaker: { title: '쇄빙선 삼포호와 얼음 위 수영', hook: '배가 케미 앞바다의 해빙을 깨고, 생존복을 입은 채 열린 물길에 떠 있습니다. 삼포호는 승객을 태우는 몇 안 되는 쇄빙선 중 하나입니다.' },
@@ -257,6 +271,7 @@ export default function ActivitiesRail() {
           {HUB_PICKS.map((p, i) => {
             const e = expOf(p.path);
             const c = t.exp[e];
+            const price = gygFreshPrice(p);
             return (
               <li key={p.path} className="group flex flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_18px_40px_-26px_rgba(15,23,42,0.35)] ring-1 ring-night/5">
                 {/* Juliste: kokemuksen AI-kuva (Vesa 6.9.: "eikö näihin vaikka AI-kuvat saada"),
@@ -295,7 +310,7 @@ export default function ActivitiesRail() {
                       "alk. 198 €" katkesi kahdelle riville napin viereen. */}
                   <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-night/10 pt-4">
                     <div className="min-w-0 whitespace-nowrap">
-                      {p.price && <p className="text-[15px] font-semibold tabular-nums text-night">{t.from(p.price)}</p>}
+                      {price && <p className="text-[15px] font-semibold tabular-nums text-night">{t.from(price)}</p>}
                       {p.duration && (
                         <p className="mt-0.5 inline-flex items-center gap-1 text-xs text-slate-500">
                           <Clock className="h-3.5 w-3.5" aria-hidden="true" />
@@ -318,7 +333,7 @@ export default function ActivitiesRail() {
             );
           })}
         </ul>
-        <p className="mt-5 text-xs text-slate-500">{t.fine(GYG_PRICE_AS_OF)}</p>
+        <p className="mt-5 text-xs text-slate-500">{HUB_PICKS.some((p) => gygFreshPrice(p)) ? t.fine(GYG_PRICE_AS_OF) : t.fineNoPrice}</p>
       </div>
     </section>
   );
