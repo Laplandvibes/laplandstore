@@ -19,5 +19,5 @@ export default function PrivacyPolicy() {
     desc.setAttribute('content', m.description);
   }, [m.title, m.description]);
 
-  return <PrivacyContent siteName="LaplandStore" lang={lang} />;
+  return <PrivacyContent siteName="LaplandStore" lang={lang} variant="shop" />;
 }
