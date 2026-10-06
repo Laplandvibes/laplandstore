@@ -1,0 +1,216 @@
+/**
+ * <title> and meta description per locale for every prerendered route: the home page and the three legal
+ * pages.
+ *
+ * ONE source: scripts/generate-prerender-meta.mjs writes these values into scripts/prerender-meta.json for
+ * the prerendered HTML, and the page components (Home, PrivacyPolicy, Terms, CookiePolicy) render the same
+ * values in the browser, so search results, social cards and the browser tab show one text.
+ *
+ * Descriptions are written to fit the prerender window as they are: 70-160 characters, or 100-200 width
+ * units where a CJK character counts as 2. Inside the window scripts/_prerender_routes.mjs neither extends
+ * nor clamps them, and generate-prerender-meta.mjs stops the build if one falls outside it.
+ *
+ * Plain ESM (.mjs) so the build script can import it under Node. Types: pageMeta.d.mts.
+ */
+export const PAGE_META = {
+  "/": {
+    en: {
+      title: "Lapland Gifts, Crafts and Souvenirs: Where to Buy",
+      description: "A curated directory of Lapland boutiques from Rovaniemi to Utsjoki: crafts, jewellery, reindeer antler, ceramics and Lapland delicacies. Some ship to you.",
+    },
+    fi: {
+      title: "Aitoja Lapin lahjoja ja käsitöitä",
+      description: "Kuratoitu hakemisto lappilaisista putiikeista Rovaniemeltä Utsjoelle: käsityötä, koruja, poronsarvea, keramiikkaa ja Lapin herkkuja. Osa toimittaa kotiin.",
+    },
+    de: {
+      title: "Echte Lappland-Geschenke & Souvenirs",
+      description: "Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentiergeweih, Keramik und Delikatessen. Manche versenden.",
+    },
+    ja: {
+      title: "本物のラップランド土産・工芸品・ギフト",
+      description: "ロヴァニエミからウツヨキまで、ラップランドのブティックを厳選したディレクトリ。工芸品、ジュエリー、トナカイの角、陶器、ラップランドの味覚。配送する店もあります。",
+    },
+    es: {
+      title: "Regalos y artesanía auténticos de Laponia",
+      description: "Directorio seleccionado de boutiques de Laponia, de Rovaniemi a Utsjoki: artesanía, joyas, asta de reno, cerámica y delicias locales. Algunas hacen envíos.",
+    },
+    "pt-BR": {
+      title: "Presentes e artesanato autênticos da Lapônia",
+      description: "Diretório curado de boutiques da Lapônia, de Rovaniemi a Utsjoki: artesanato, joias, chifre de rena, cerâmica e iguarias. Algumas fazem entregas.",
+    },
+    "zh-CN": {
+      title: "正宗拉普兰礼物、手工艺与纪念品",
+      description: "精选拉普兰精品店名录，从罗瓦涅米到乌茨约基：手工艺品、饰品、驯鹿角、陶器与拉普兰美味。部分商店可寄送。",
+    },
+    ko: {
+      title: "라플란드 정통 선물·공예품·기념품 가이드",
+      description: "로바니에미에서 우츠요키까지, 라플란드 부티크를 엄선한 디렉터리입니다. 공예품, 장신구, 순록 뿔, 도자기, 라플란드 먹거리. 일부는 배송합니다.",
+    },
+    fr: {
+      title: "Cadeaux et artisanat authentiques de Laponie",
+      description: "Annuaire sélectif de boutiques de Laponie, de Rovaniemi à Utsjoki : artisanat, bijoux, bois de renne, céramique et spécialités. Certaines expédient.",
+    },
+    it: {
+      title: "Regali e artigianato autentici della Lapponia",
+      description: "Directory curata di boutique della Lapponia, da Rovaniemi a Utsjoki: artigianato, gioielli, corno di renna, ceramica e specialità. Alcune spediscono.",
+    },
+    nl: {
+      title: "Authentieke geschenken en ambacht uit Lapland",
+      description: "Samengestelde gids met Lapland-boetieks van Rovaniemi tot Utsjoki: ambacht, sieraden, rendiergewei, keramiek en lekkernijen. Sommige verzenden.",
+    },
+    sv: {
+      title: "Äkta presenter och hantverk från Lappland",
+      description: "Handplockad katalog över butiker i Lappland, från Rovaniemi till Utsjoki: hantverk, smycken, renhorn, keramik och delikatesser. Vissa skickar hem.",
+    },
+  },
+  "/privacy": {
+    en: {
+      title: "Privacy Policy",
+      description: "How LaplandStore (LaPeso Oy) handles your data: Google Analytics 4 with Consent Mode v2, newsletter via Resend/Supabase and affiliate tracking.",
+    },
+    fi: {
+      title: "Tietosuojaseloste",
+      description: "Näin LaplandStore (LaPeso Oy) käsittelee tietojasi: Google Analytics 4 ja Consent Mode v2, uutiskirje Resendin/Supabasen kautta sekä affiliate-seuranta.",
+    },
+    de: {
+      title: "Datenschutzerklärung",
+      description: "So verarbeitet LaplandStore (LaPeso Oy) Ihre Daten: Google Analytics 4 mit Consent Mode v2, Newsletter über Resend/Supabase und Affiliate-Tracking.",
+    },
+    ja: {
+      title: "プライバシーポリシー",
+      description: "LaplandStore（LaPeso Oy）のデータ取り扱い：Consent Mode v2対応のGoogle Analytics 4、Resend/Supabase経由のニュースレター、アフィリエイト計測、わかりやすく解説。",
+    },
+    es: {
+      title: "Política de privacidad",
+      description: "Cómo LaplandStore (LaPeso Oy) trata sus datos: Google Analytics 4 con Consent Mode v2, boletín Resend/Supabase y seguimiento de afiliados.",
+    },
+    "pt-BR": {
+      title: "Política de privacidade",
+      description: "Como a LaplandStore (LaPeso Oy) trata seus dados: Google Analytics 4 com Consent Mode v2, newsletter via Resend/Supabase e rastreamento de afiliados.",
+    },
+    "zh-CN": {
+      title: "隐私政策",
+      description: "LaplandStore（LaPeso Oy）如何处理您的数据：Google Analytics 4 与 Consent Mode v2、通过 Resend/Supabase 的订阅邮件以及联盟跟踪，清晰说明。",
+    },
+    ko: {
+      title: "개인정보 처리방침",
+      description: "LaplandStore(LaPeso Oy)의 데이터 처리 방식: Consent Mode v2 기반 Google Analytics 4, Resend/Supabase 뉴스레터, 제휴 트래킹, 알기 쉽게 설명합니다.",
+    },
+    fr: {
+      title: "Politique de confidentialité",
+      description: "Comment LaplandStore (LaPeso Oy) traite vos données : Google Analytics 4 avec Consent Mode v2, newsletter via Resend/Supabase et suivi d'affiliation.",
+    },
+    it: {
+      title: "Informativa sulla privacy",
+      description: "Come LaplandStore (LaPeso Oy) tratta i Suoi dati: Google Analytics 4 con Consent Mode v2, newsletter via Resend/Supabase e tracciamento di affiliazione.",
+    },
+    nl: {
+      title: "Privacybeleid",
+      description: "Hoe LaplandStore (LaPeso Oy) uw gegevens verwerkt: Google Analytics 4 met Consent Mode v2, nieuwsbrief via Resend/Supabase en affiliate-tracking.",
+    },
+    sv: {
+      title: "Integritetspolicy",
+      description: "Så hanterar LaplandStore (LaPeso Oy) dina uppgifter: Google Analytics 4 med Consent Mode v2, nyhetsbrev via Resend/Supabase och partnerspårning.",
+    },
+  },
+  "/terms": {
+    en: {
+      title: "Terms of Service",
+      description: "The terms for using LaplandStore (LaPeso Oy): orders, shipping, returns, affiliate links and liability, set out in plain language.",
+    },
+    fi: {
+      title: "Käyttöehdot",
+      description: "LaplandStoren (LaPeso Oy) käyttöehdot: tilaukset, toimitus, palautukset, affiliate-linkit ja vastuut, selkeästi kerrottuna.",
+    },
+    de: {
+      title: "Nutzungsbedingungen",
+      description: "Die Bedingungen für die Nutzung von LaplandStore (LaPeso Oy): Bestellungen, Versand, Rückgabe, Affiliate-Links und Haftung, verständlich erklärt.",
+    },
+    ja: {
+      title: "利用規約",
+      description: "LaplandStore（LaPeso Oy）のご利用条件：注文、配送、返品、アフィリエイトリンク、責任についてわかりやすく説明します。",
+    },
+    es: {
+      title: "Condiciones de servicio",
+      description: "Las condiciones de uso de LaplandStore (LaPeso Oy): pedidos, envíos, devoluciones, enlaces de afiliados y responsabilidad, explicadas con claridad.",
+    },
+    "pt-BR": {
+      title: "Termos de serviço",
+      description: "As condições de uso da LaplandStore (LaPeso Oy): pedidos, envio, devoluções, links de afiliados e responsabilidade, explicados com clareza.",
+    },
+    "zh-CN": {
+      title: "服务条款",
+      description: "LaplandStore（LaPeso Oy）使用条款：订单、配送、退货、联盟链接及责任说明，清晰易懂。访问或使用本网站，即表示您同意本条款。",
+    },
+    ko: {
+      title: "이용약관",
+      description: "LaplandStore(LaPeso Oy) 이용 조건: 주문, 배송, 반품, 제휴 링크 및 책임을 알기 쉽게 설명합니다. 본 웹사이트에 접속하거나 이용하시는 것은 본 약관에 동의하시는 것입니다.",
+    },
+    fr: {
+      title: "Conditions d'utilisation",
+      description: "Les conditions d'utilisation de LaplandStore (LaPeso Oy) : commandes, livraison, retours, liens d'affiliation et responsabilité, expliquées clairement.",
+    },
+    it: {
+      title: "Condizioni di servizio",
+      description: "Le condizioni d'uso di LaplandStore (LaPeso Oy): ordini, spedizione, resi, link di affiliazione e responsabilità, spiegate con chiarezza.",
+    },
+    nl: {
+      title: "Gebruiksvoorwaarden",
+      description: "De voorwaarden voor het gebruik van LaplandStore (LaPeso Oy): bestellingen, verzending, retouren, affiliate-links en aansprakelijkheid, helder uitgelegd.",
+    },
+    sv: {
+      title: "Användarvillkor",
+      description: "Villkoren för att använda LaplandStore (LaPeso Oy): beställningar, leverans, returer, partnerlänkar och ansvar, förklarade på ett enkelt sätt.",
+    },
+  },
+  "/cookie-policy": {
+    en: {
+      title: "Cookie Policy",
+      description: "Which cookies LaplandStore (LaPeso Oy) uses and why: Consent Mode v2, Google Analytics 4 and affiliate attribution, and how to manage your choices.",
+    },
+    fi: {
+      title: "Evästekäytäntö",
+      description: "Mitä evästeitä LaplandStore (LaPeso Oy) käyttää ja miksi: Consent Mode v2, Google Analytics 4 ja affiliate-seuranta, sekä miten hallitset valintojasi.",
+    },
+    de: {
+      title: "Cookie-Richtlinie",
+      description: "Welche Cookies LaplandStore (LaPeso Oy) verwendet und warum: Consent Mode v2, Google Analytics 4 und Affiliate-Zuordnung. So verwalten Sie Ihre Auswahl.",
+    },
+    ja: {
+      title: "クッキーポリシー",
+      description: "LaplandStore（LaPeso Oy）が使用するクッキーとその目的：Consent Mode v2、Google Analytics 4、アフィリエイト計測、および設定の管理方法。",
+    },
+    es: {
+      title: "Política de cookies y consentimiento",
+      description: "Qué cookies usa LaplandStore (LaPeso Oy) y por qué: Consent Mode v2, Google Analytics 4 y atribución de afiliados, y cómo gestionar sus preferencias.",
+    },
+    "pt-BR": {
+      title: "Política de cookies",
+      description: "Quais cookies a LaplandStore (LaPeso Oy) usa e por quê: Consent Mode v2, Google Analytics 4 e atribuição de afiliados, e como gerenciar suas escolhas.",
+    },
+    "zh-CN": {
+      title: "Cookie 政策",
+      description: "LaplandStore（LaPeso Oy）使用哪些 Cookie 及其原因：Consent Mode v2、Google Analytics 4 和联盟归因，以及如何管理您的选择。",
+    },
+    ko: {
+      title: "쿠키 정책",
+      description: "LaplandStore(LaPeso Oy)가 사용하는 쿠키와 이유: Consent Mode v2, Google Analytics 4, 제휴 어트리뷰션, 그리고 설정을 관리하는 방법.",
+    },
+    fr: {
+      title: "Politique relative aux cookies",
+      description: "Quels cookies LaplandStore (LaPeso Oy) utilise et pourquoi : Consent Mode v2, Google Analytics 4 et attribution d'affiliation, et comment gérer vos choix.",
+    },
+    it: {
+      title: "Politica sui cookie",
+      description: "Quali cookie usa LaplandStore (LaPeso Oy) e perché: Consent Mode v2, Google Analytics 4 e attribuzione di affiliazione, e come gestire le Sue scelte.",
+    },
+    nl: {
+      title: "Cookiebeleid",
+      description: "Welke cookies LaplandStore (LaPeso Oy) gebruikt en waarom: Consent Mode v2, Google Analytics 4 en affiliate-attributie, en hoe u uw keuzes beheert.",
+    },
+    sv: {
+      title: "Cookiepolicy",
+      description: "Vilka cookies LaplandStore (LaPeso Oy) använder och varför: Consent Mode v2, Google Analytics 4 och partnerattribution, och hur du hanterar dina val.",
+    },
+  },
+};

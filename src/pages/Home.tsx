@@ -27,77 +27,28 @@ import { useLang, type Lang } from '../lang';
 import { AppPromoHero } from '../components/AppPromo';
 import ReadyBaskets from '../components/ReadyBaskets';
 import ActivitiesRail from '../components/ActivitiesRail';
+// Title and meta description: src/data/pageMeta.mjs, the same values the prerender writes into the static HTML.
+import { PAGE_META } from '../data/pageMeta.mjs';
 
 const BCP47: Record<Lang, string> = {
   en: 'en-US', fi: 'fi-FI', de: 'de-DE', ja: 'ja-JP', es: 'es-ES',
   'pt-BR': 'pt-BR', 'zh-CN': 'zh-CN', ko: 'ko-KR', fr: 'fr-FR', it: 'it-IT', nl: 'nl-NL', sv: 'sv-SE',
 };
 
-const META: Record<Lang, { seoTitle: string; seoDescription: string }> = {
-  'en': {
-    seoTitle: 'Lapland Gifts, Crafts and Souvenirs: Where to Buy',
-    seoDescription: 'A curated directory of Lapland boutiques from Rovaniemi to Utsjoki: crafts, jewellery, reindeer antler, ceramics and Lapland delicacies. Some ship to you.',
-  },
-  'fi': {
-    seoTitle: 'Aitoja Lapin lahjoja ja käsitöitä',
-    seoDescription: 'Kuratoitu hakemisto lappilaisista putiikeista Rovaniemeltä Utsjoelle: käsityötä, koruja, poronsarvea, keramiikkaa ja Lapin herkkuja. Osa toimittaa kotiin.',
-  },
-  'de': {
-    seoTitle: 'Echte Lappland-Geschenke & Souvenirs',
-    seoDescription: 'Kuratiertes Verzeichnis lappländischer Boutiquen von Rovaniemi bis Utsjoki: Handwerk, Schmuck, Rentiergeweih, Keramik und Delikatessen. Manche versenden.',
-  },
-  'ja': {
-    seoTitle: '本物のラップランド土産・工芸品・ギフト',
-    seoDescription: 'ロヴァニエミからウツヨキまで、ラップランドのブティックを厳選したディレクトリ。工芸品、ジュエリー、トナカイの角、陶器、ラップランドの味覚。配送する店もあります。',
-  },
-  'es': {
-    seoTitle: 'Regalos y artesanía auténticos de Laponia',
-    seoDescription: 'Directorio seleccionado de boutiques de Laponia, de Rovaniemi a Utsjoki: artesanía, joyas, asta de reno, cerámica y delicias locales. Algunas hacen envíos.',
-  },
-  'pt-BR': {
-    seoTitle: 'Presentes e artesanato autênticos da Lapônia',
-    seoDescription: 'Diretório curado de boutiques da Lapônia, de Rovaniemi a Utsjoki: artesanato, joias, chifre de rena, cerâmica e iguarias. Algumas fazem entregas.',
-  },
-  'zh-CN': {
-    seoTitle: '正宗拉普兰礼物、手工艺与纪念品',
-    seoDescription: '精选拉普兰精品店名录，从罗瓦涅米到乌茨约基：手工艺品、饰品、驯鹿角、陶器与拉普兰美味。部分商店可寄送。',
-  },
-  'ko': {
-    seoTitle: '라플란드 정통 선물·공예품·기념품 가이드',
-    seoDescription: '로바니에미에서 우츠요키까지, 라플란드 부티크를 엄선한 디렉터리입니다. 공예품, 장신구, 순록 뿔, 도자기, 라플란드 먹거리. 일부는 배송합니다.',
-  },
-  'fr': {
-    seoTitle: 'Cadeaux et artisanat authentiques de Laponie',
-    seoDescription: 'Annuaire sélectif de boutiques de Laponie, de Rovaniemi à Utsjoki : artisanat, bijoux, bois de renne, céramique et spécialités. Certaines expédient.',
-  },
-  'it': {
-    seoTitle: 'Regali e artigianato autentici della Lapponia',
-    seoDescription: 'Directory curata di boutique della Lapponia, da Rovaniemi a Utsjoki: artigianato, gioielli, corno di renna, ceramica e specialità. Alcune spediscono.',
-  },
-  'nl': {
-    seoTitle: 'Authentieke geschenken en ambacht uit Lapland',
-    seoDescription: 'Samengestelde gids met Lapland-boetieks van Rovaniemi tot Utsjoki: ambacht, sieraden, rendiergewei, keramiek en lekkernijen. Sommige verzenden.',
-  },
-  'sv': {
-    seoTitle: 'Äkta presenter och hantverk från Lappland',
-    seoDescription: 'Handplockad katalog över butiker i Lappland, från Rovaniemi till Utsjoki: hantverk, smycken, renhorn, keramik och delikatesser. Vissa skickar hem.',
-  },
-};
-
 export default function Home() {
   const { lang } = useLang();
-  const m = META[lang];
+  const m = PAGE_META['/'][lang];
 
   useEffect(() => {
-    document.title = m.seoTitle;
+    document.title = m.title;
     let desc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
     if (!desc) {
       desc = document.createElement('meta');
       desc.setAttribute('name', 'description');
       document.head.appendChild(desc);
     }
-    desc.setAttribute('content', m.seoDescription);
-  }, [m.seoTitle, m.seoDescription]);
+    desc.setAttribute('content', m.description);
+  }, [m.title, m.description]);
 
   // FAQPage rich-snippet JSON-LD, built from the same source as the visible FAQ.
   useEffect(() => {

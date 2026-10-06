@@ -1,61 +1,12 @@
 import { useEffect } from 'react';
 import TermsContent from '../shared/Legal/TermsContent';
-import { useLang, type Lang } from '../lang';
-
-const META: Record<Lang, { title: string; description: string }> = {
-  en: {
-    title: 'Terms of Service',
-    description: 'The terms for using LaplandStore (LaPeso Oy): orders, shipping, returns, affiliate links and liability, set out in plain language.',
-  },
-  fi: {
-    title: 'Käyttöehdot',
-    description: 'LaplandStoren (LaPeso Oy) käyttöehdot: tilaukset, toimitus, palautukset, affiliate-linkit ja vastuut, selkeästi kerrottuna.',
-  },
-  de: {
-    title: 'Nutzungsbedingungen',
-    description: 'Die Bedingungen für die Nutzung von LaplandStore (LaPeso Oy): Bestellungen, Versand, Rückgabe, Affiliate-Links und Haftung, verständlich erklärt.',
-  },
-  ja: {
-    title: '利用規約',
-    description: 'LaplandStore（LaPeso Oy）のご利用条件：注文、配送、返品、アフィリエイトリンク、責任についてわかりやすく説明します。',
-  },
-  es: {
-    title: 'Condiciones de servicio',
-    description: 'Las condiciones de uso de LaplandStore (LaPeso Oy): pedidos, envíos, devoluciones, enlaces de afiliados y responsabilidad, explicadas con claridad.',
-  },
-  'pt-BR': {
-    title: 'Termos de serviço',
-    description: 'As condições de uso da LaplandStore (LaPeso Oy): pedidos, envio, devoluções, links de afiliados e responsabilidade, explicados com clareza.',
-  },
-  'zh-CN': {
-    title: '服务条款',
-    description: 'LaplandStore（LaPeso Oy）使用条款：订单、配送、退货、联盟链接及责任说明，清晰易懂。',
-  },
-  ko: {
-    title: '이용약관',
-    description: 'LaplandStore(LaPeso Oy) 이용 조건: 주문, 배송, 반품, 제휴 링크 및 책임을 알기 쉽게 설명합니다.',
-  },
-  fr: {
-    title: "Conditions d'utilisation",
-    description: "Les conditions d'utilisation de LaplandStore (LaPeso Oy) : commandes, livraison, retours, liens d'affiliation et responsabilité, expliquées clairement.",
-  },
-  it: {
-    title: 'Condizioni di servizio',
-    description: "Le condizioni d'uso di LaplandStore (LaPeso Oy): ordini, spedizione, resi, link di affiliazione e responsabilità, spiegate con chiarezza.",
-  },
-  nl: {
-    title: 'Gebruiksvoorwaarden',
-    description: 'De voorwaarden voor het gebruik van LaplandStore (LaPeso Oy): bestellingen, verzending, retouren, affiliate-links en aansprakelijkheid, helder uitgelegd.',
-  },
-  sv: {
-    title: 'Användarvillkor',
-    description: 'Villkoren för att använda LaplandStore (LaPeso Oy): beställningar, leverans, returer, partnerlänkar och ansvar, förklarade på ett enkelt sätt.',
-  },
-};
+import { useLang } from '../lang';
+// Title and meta description: src/data/pageMeta.mjs, the same values the prerender writes into the static HTML.
+import { PAGE_META } from '../data/pageMeta.mjs';
 
 export default function Terms() {
   const { lang } = useLang();
-  const m = META[lang];
+  const m = PAGE_META['/terms'][lang];
 
   useEffect(() => {
     document.title = m.title;

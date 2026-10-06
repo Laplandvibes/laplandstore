@@ -1,154 +1,113 @@
 /**
  * generate-prerender-meta.mjs  (laplandstore)
  *
- * Emits scripts/prerender-meta.json with per-locale <title> + <meta description>
- * for the static legal pages (/privacy, /terms, /cookie-policy). Each legal page
- * component declares a per-locale `const META: Record<Lang, { title, description }>`
- * and applies it via document.title / meta[name=description]. We parse that META
- * object straight from SOURCE TEXT (no evaluation) and emit one entry per locale,
- * so the shared ../_prerender_routes.mjs picks it up via its --meta reader (tried
- * FIRST) and bakes localized meta into the prerendered HTML for every locale —
- * instead of the English routes.json fallback placeholder ("LaplandStore — Privacy.").
+ * Emits scripts/prerender-meta.json with the per-locale <title> + <meta description> of every
+ * prerendered route (/, /privacy, /terms, /cookie-policy). The values come from
+ * src/data/pageMeta.mjs, the same object the page components (Home, PrivacyPolicy, Terms,
+ * CookiePolicy) render in the browser, so the prerendered HTML and the hydrated page read one
+ * source. ./_prerender_routes.mjs picks the JSON up via its --meta reader (tried FIRST).
+ * Strings are kept verbatim (JA/ZH/KO full-width punctuation, FR apostrophes).
  *
- * Purely additive: ONLY the 3 legal routes are emitted. Every other route is
- * absent from the map, so the prerenderer resolves those exactly as before
- * (routes.json fallback). Strings are kept verbatim (JA/ZH/KO full-width
- * punctuation, FR apostrophes).
+ * Stops the build (exit 1), because each of these would publish a different text than the
+ * browser shows (gate:meta-hydraatio):
+ *  - A description outside the prerender window. _prerender_routes.mjs extends a description
+ *    under 70 characters / 100 width units with the page's own sentences and clamps one over
+ *    160 characters / 200 width units (ensureDescriptionLength + clampDescription; a CJK
+ *    character counts as 2). The browser shows the source text as it is. Fix the text in
+ *    src/data/pageMeta.mjs, never the prerender.
+ *  - A route in scripts/routes.json, or one of its locales, without a title or description in
+ *    src/data/pageMeta.mjs: the prerender would fall back to routes.json and harvested page text,
+ *    while the page renders pageMeta.mjs (or fails on the missing locale).
  *
- * STRICTLY READ-ONLY over src/. Always exits 0 so the build never breaks.
+ * STRICTLY READ-ONLY over src/.
  */
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { PAGE_META } from '../src/data/pageMeta.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = resolve(__dirname, '..');
 const OUT_FILE = resolve(__dirname, 'prerender-meta.json');
+const ROUTES_FILE = resolve(__dirname, 'routes.json');
 
-// Keep in sync with ../_prerender_routes.mjs FULL_LOCALE_LIST lang codes.
+// Keep in sync with ./_prerender_routes.mjs FULL_LOCALE_LIST lang codes and src/lang.tsx.
 const LANGS = ['en', 'fi', 'de', 'ja', 'es', 'pt-BR', 'zh-CN', 'ko', 'fr', 'it', 'nl', 'sv'];
 
-// route path → legal page component (each declares `const META: Record<Lang,…>`).
-const STATIC_PAGES = {
-  '/': 'src/pages/Home.tsx',
-  '/privacy': 'src/pages/PrivacyPolicy.tsx',
-  '/terms': 'src/pages/Terms.tsx',
-  '/cookie-policy': 'src/pages/CookiePolicy.tsx',
+// The prerender window: the same wide-character ranges and limits as ensureDescriptionLength()
+// and clampDescription() in ./_prerender_routes.mjs. Inside it the prerender leaves a
+// description untouched.
+const WIDE_RANGES = [
+  [0x1100, 0x11ff], [0x2e80, 0xa4cf], [0xa960, 0xa97f], [0xac00, 0xd7ff],
+  [0xf900, 0xfaff], [0xfe30, 0xfe4f], [0xff00, 0xff60], [0xffe0, 0xffe6],
+];
+const isWide = (ch) => {
+  const cp = ch.codePointAt(0);
+  return WIDE_RANGES.some(([a, b]) => cp >= a && cp <= b);
 };
+const width = (s) => [...s].reduce((n, ch) => n + (isWide(ch) ? 2 : 1), 0);
 
-function warn(msg) {
-  console.warn(`[meta] WARN: ${msg}`);
-}
-
-function unescapeJsString(s) {
-  return s
-    .replace(/\\n/g, ' ')
-    .replace(/\\t/g, ' ')
-    .replace(/\\'/g, "'")
-    .replace(/\\"/g, '"')
-    .replace(/\\`/g, '`')
-    .replace(/\\\\/g, '\\')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-// Single- and double-quoted JS string literals. The legal pages use double
-// quotes only where the text itself contains an apostrophe (e.g. FR
-// "suivi d'affiliation"); single quotes otherwise.
-const STR = `'((?:\\\\.|[^'\\\\])*)'`;
-const STR_DQ = `"((?:\\\\.|[^"\\\\])*)"`;
-
-// Pull `field: '…'` or `field: "…"` out of a flat object-literal block.
-function matchQuotedField(block, field) {
-  let m = block.match(new RegExp(`\\b${field}:\\s*${STR}`));
-  if (m) return unescapeJsString(m[1]);
-  m = block.match(new RegExp(`\\b${field}:\\s*${STR_DQ}`));
-  if (m) return unescapeJsString(m[1]);
+/** Why the prerender would change this description, or null when it is inside the window. */
+function outsideWindow(description) {
+  const s = description.replace(/\s+/g, ' ').trim();
+  const n = s.length;
+  const w = width(s);
+  if (n > 160 || w > 200 || [...s].length > 160) return `yli 160 merkkiä / 200 leveysyksikköä (${n} / ${w})`;
+  if (n < 70 && w < 100) return `alle 70 merkkiä / 100 leveysyksikköä (${n} / ${w})`;
   return null;
 }
 
-// Slice src from the '{' at openIdx through its matching '}', skipping braces
-// that appear inside string literals. Returns null if unbalanced.
-function sliceBalancedBraces(src, openIdx) {
-  let depth = 0;
-  let quote = null;
-  for (let i = openIdx; i < src.length; i++) {
-    const ch = src[i];
-    if (quote) {
-      if (ch === '\\') { i++; continue; }
-      if (ch === quote) quote = null;
-      continue;
-    }
-    if (ch === "'" || ch === '"' || ch === '`') { quote = ch; continue; }
-    if (ch === '{') depth++;
-    else if (ch === '}') { depth--; if (depth === 0) return src.slice(openIdx, i + 1); }
-  }
-  return null;
-}
-
-function escapeRe(s) {
-  return s.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
-}
-
-// Read the per-locale `const META: Record<Lang, {title, description}>` record
-// from a legal page component → { [lang]: { title, description } } or null.
-function extractLegalMeta(rel) {
-  const fp = resolve(ROOT, rel);
-  if (!existsSync(fp)) { warn(`page file missing: ${rel}`); return null; }
-  const src = readFileSync(fp, 'utf-8');
-  const decl = src.match(/const\s+META\b[^=]*=\s*\{/);
-  if (!decl) { warn(`no const META record found in ${rel}`); return null; }
-  const openIdx = decl.index + decl[0].length - 1; // the assignment '{'
-  const metaBlock = sliceBalancedBraces(src, openIdx);
-  if (!metaBlock) { warn(`${rel}: found const META but could not slice its object literal`); return null; }
-  const rec = {};
-  for (const lang of LANGS) {
-    // Key is bare (en:) or quoted ('pt-BR':); value is a flat object literal
-    // { title: '…', description: '…' } with no nested braces.
-    const entryRe = new RegExp(`(?:^|[\\s,{])['"]?${escapeRe(lang)}['"]?\\s*:\\s*(\\{[^{}]*\\})`);
-    const m = metaBlock.match(entryRe);
-    if (!m) { warn(`${rel}: META has no entry for lang '${lang}'`); continue; }
-    // Legal pages use title/description; Home.tsx uses seoTitle/seoDescription.
-    const title = matchQuotedField(m[1], 'title') ?? matchQuotedField(m[1], 'seoTitle');
-    const description = matchQuotedField(m[1], 'description') ?? matchQuotedField(m[1], 'seoDescription');
-    if (title || description) rec[lang] = { title, description };
-    else warn(`${rel}: META['${lang}'] has no title/description`);
-  }
-  return Object.keys(rec).length > 0 ? rec : null;
-}
+const nonEmpty = (v) => typeof v === 'string' && v.trim() !== '';
 
 function main() {
-  const meta = {};
-  let routeCount = 0;
-  let entries = 0;
-  for (const [routePath, rel] of Object.entries(STATIC_PAGES)) {
-    const rec = extractLegalMeta(rel);
-    if (!rec) continue;
-    const out = {};
+  const routes = JSON.parse(readFileSync(ROUTES_FILE, 'utf-8'));
+  const problems = [];
+
+  // Every prerendered route needs its title + description from the shared source.
+  for (const route of routes) {
+    const byLang = PAGE_META[route.path];
+    if (!byLang) {
+      problems.push(`  ${route.path}: reitti on scripts/routes.json:ssa mutta ei src/data/pageMeta.mjs:ssä`);
+      continue;
+    }
     for (const lang of LANGS) {
-      const m = rec[lang];
-      if (m && (m.title || m.description)) {
-        out[lang] = { title: m.title ?? null, description: m.description ?? null };
+      const m = byLang[lang];
+      if (!m || !nonEmpty(m.title) || !nonEmpty(m.description)) {
+        problems.push(`  ${lang.padEnd(5)} ${route.path}: otsikko tai kuvaus puuttuu src/data/pageMeta.mjs:stä`);
       }
     }
-    if (Object.keys(out).length > 0) { meta[routePath] = out; routeCount++; entries += Object.keys(out).length; }
   }
 
-  // Stable key order for clean diffs.
-  const sorted = {};
-  for (const p of Object.keys(meta).sort()) sorted[p] = meta[p];
-
-  writeFileSync(OUT_FILE, JSON.stringify(sorted, null, 2) + '\n', 'utf-8');
-  console.log(`[meta] wrote scripts/prerender-meta.json: ${routeCount} legal routes, ${entries} lang entries`);
-  if (entries === 0) {
-    console.error('[meta] WARNING: 0 legal entries extracted — prerender will use routes.json fallbacks!');
+  const meta = {};
+  let entries = 0;
+  for (const path of Object.keys(PAGE_META).sort()) {
+    const out = {};
+    for (const lang of LANGS) {
+      const m = PAGE_META[path][lang];
+      if (!m || !nonEmpty(m.title) || !nonEmpty(m.description)) continue;
+      out[lang] = { title: m.title, description: m.description };
+      const why = outsideWindow(m.description);
+      if (why) problems.push(`  ${lang.padEnd(5)} ${path}: ${why}\n        ${m.description}`);
+    }
+    if (Object.keys(out).length > 0) { meta[path] = out; entries += Object.keys(out).length; }
   }
-  const s = sorted['/privacy'];
+
+  writeFileSync(OUT_FILE, JSON.stringify(meta, null, 2) + '\n', 'utf-8');
+  console.log(`[meta] wrote scripts/prerender-meta.json: ${Object.keys(meta).length} routes, ${entries} lang entries`);
+  const s = meta['/privacy'];
   if (s) {
     console.log(`[meta] sample /privacy en: ${s.en?.title}`);
     console.log(`[meta] sample /privacy fi: ${s.fi?.title}`);
   }
+
+  if (problems.length) {
+    console.error(`\n[meta] ${problems.length} ongelmaa: palvelimen HTML näyttäisi eri otsikon tai kuvauksen kuin selain.`);
+    console.error(problems.join('\n'));
+    console.error('[meta] Korjaa src/data/pageMeta.mjs: jokaiselle reitille ja kielelle otsikko ja kuvaus, kuvaus omalla kielellään 70–160 merkkiin (CJK-merkki = 2, 100–200 leveysyksikköä).\n');
+    return false;
+  }
+  console.log(`[meta] OK: ${entries} kuvausta esirenderöinnin ikkunassa`);
+  return true;
 }
 
-main();
+process.exit(main() ? 0 : 1);
