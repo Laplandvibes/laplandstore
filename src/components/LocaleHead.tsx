@@ -60,14 +60,9 @@ export default function LocaleHead() {
     }
     og.setAttribute('content', OG_LOCALE[lang]);
 
-    document.head.querySelectorAll('meta[property="og:locale:alternate"][data-seo-alt]').forEach((el) => el.remove());
-    SUPPORTED.filter((l) => l !== lang).forEach((l) => {
-      const m = document.createElement('meta');
-      m.setAttribute('property', 'og:locale:alternate');
-      m.setAttribute('content', OG_LOCALE[l]);
-      m.setAttribute('data-seo-alt', 'true');
-      document.head.appendChild(m);
-    });
+    // og:locale:alternate EI täällä eikä staattisessa (8.10.2026): Facebook lukee vain staattisen HTML:n, ja siellä oli
+    // index.html-kuoren jäänne "en_US" jokaisella sivulla (myös englanninkielisellä, jonka og:locale on en_US), kun tämä
+    // hook lisäsi 11 muuta (gate:og-js "ristiriita"). Kielet ovat eri osoitteissa, ja ne kertoo hreflang.
 
     // Per-locale JSON-LD: Organization + WebSite carrying inLanguage (BCP-47 of the
     // current locale) so each locale URL signals the right language. The static
