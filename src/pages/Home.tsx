@@ -27,6 +27,10 @@ import { useLang, type Lang } from '../lang';
 import { AppPromoHero } from '../components/AppPromo';
 import ReadyBaskets from '../components/ReadyBaskets';
 import ActivitiesRail from '../components/ActivitiesRail';
+import PageCredits from '../components/PageCredits';
+
+/** Open-licence and stock photographs shown on the home page (credit line with the source links). */
+const PHOTOS = ['hero-market', 'artisan-hands', 'activities/aurora', 'activities/icebreaker', 'activities/husky', 'activities/korouoma'];
 // Title and meta description: src/data/pageMeta.mjs, the same values the prerender writes into the static HTML.
 import { PAGE_META } from '../data/pageMeta.mjs';
 
@@ -160,6 +164,9 @@ export default function Home() {
       </section>
       <FAQ />
       <RelatedSites />
+      <div className="bg-cream">
+        <PageCredits images={PHOTOS} />
+      </div>
       <Newsletter />
     </>
   );

@@ -13,7 +13,7 @@ import {
   type LucideIcon,
 } from 'lucide-react';
 import { useState } from 'react';
-import AiDisclosure from './AiDisclosure';
+import PhotoMark from './PhotoMark';
 
 export type PlaceholderTheme =
   | 'knives'
@@ -155,13 +155,12 @@ interface Props {
   imgSrc?: string;
   /** Loading hint for the overlaid image. Use 'eager' for above-the-fold heroes. */
   imgLoading?: 'lazy' | 'eager';
-  /**
-   * Mark `imgSrc` as AI-generated (EU AI Act art. 50). Set it only for
-   * photorealistic images that a reader could take for a real place, person
-   * or event — that is the deep-fake test in art. 3(60). A gradient or a
-   * genuine partner photo must NOT be marked.
-   */
-  aiGenerated?: boolean;
+  /** AVIF candidates for `imgSrc` (e.g. "/img/x-800.avif 800w, /img/x-1920.avif 1920w"); `imgSrc` stays the JPEG fallback. */
+  avifSrcSet?: string;
+  /** `sizes` for the AVIF candidates. */
+  sizes?: string;
+  /** Key in data/photoCredits.ts: prints the source line of an open-licence photograph on the picture. */
+  photoKey?: string;
 }
 
 export default function GradientPlaceholder({
@@ -172,12 +171,13 @@ export default function GradientPlaceholder({
   ariaLabel,
   imgSrc,
   imgLoading = 'lazy',
-  aiGenerated = false,
+  avifSrcSet,
+  sizes = '100vw',
+  photoKey,
 }: Props) {
   const t = THEMES[theme];
   const positionClasses = fill ? 'absolute inset-0 w-full h-full' : 'w-full h-full';
-  // If the image 404s we fall back to the bare gradient — and a gradient is
-  // not AI-generated content, so the badge has to disappear with it.
+  // If the image 404s we fall back to the bare gradient and the source line goes with it.
   const [imgFailed, setImgFailed] = useState(false);
 
   return (
@@ -197,19 +197,22 @@ export default function GradientPlaceholder({
         </div>
       )}
       {imgSrc && (
-        <img
-          src={imgSrc}
-          alt={ariaLabel || ''}
-          loading={imgLoading}
-          className="absolute inset-0 w-full h-full object-cover"
-          onError={(e) => {
-            // 404 → hide and let the gradient remain as a graceful fallback.
-            (e.currentTarget as HTMLImageElement).style.display = 'none';
-            setImgFailed(true);
-          }}
-        />
+        <picture>
+          {avifSrcSet && <source type="image/avif" srcSet={avifSrcSet} sizes={sizes} />}
+          <img
+            src={imgSrc}
+            alt={ariaLabel || ''}
+            loading={imgLoading}
+            className="absolute inset-0 w-full h-full object-cover"
+            onError={(e) => {
+              // 404 → hide and let the gradient remain as a graceful fallback.
+              (e.currentTarget as HTMLImageElement).style.display = 'none';
+              setImgFailed(true);
+            }}
+          />
+        </picture>
       )}
-      {imgSrc && aiGenerated && !imgFailed && <AiDisclosure />}
+      {imgSrc && photoKey && !imgFailed && <PhotoMark image={photoKey} />}
     </div>
   );
 }

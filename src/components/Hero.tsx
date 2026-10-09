@@ -42,37 +42,38 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-svh flex flex-col items-center justify-center overflow-hidden text-white">
-      {/* Background — warm wooden crafts / Lapland market (placeholder until AI hero image generated) */}
+      {/* Background — real photograph of Sámi kuksa mugs on a log wall (9.10.2026, was an AI render); source line on the picture, links in the page credit line */}
       <GradientPlaceholder
         theme="cabin"
         showIcon={false}
         imgSrc="/img/hero-market.jpg"
         imgLoading="eager"
-        aiGenerated
+        avifSrcSet="/img/hero-market-800.avif 800w, /img/hero-market-1200.avif 1200w, /img/hero-market-1920.avif 1920w, /img/hero-market-2560.avif 2560w"
+        photoKey="hero-market"
         ariaLabel={
           lang === 'fi'
-            ? 'Puisia kuksia, punaisia marjahillopurkkeja, villalapaset ja palava lyhty pöydällä hirsimökissä'
+            ? 'Puisia kuksia roikkumassa hirsiseinällä'
             : lang === 'de'
-            ? 'Hölzerne Kuksa-Becher, Gläser mit roter Beerenmarmelade, Wollhandschuhe und eine brennende Laterne auf einem Tisch in einer Blockhütte'
+            ? 'Hölzerne Kuksa-Becher hängen an einer Blockhauswand'
             : lang === 'ja'
-            ? 'ログキャビンのテーブルに並ぶ木製のククサ、赤いベリージャムの瓶、ウールのミトン、灯ったランタン'
+            ? '丸太の壁に掛けられた木製のククサ'
             : lang === 'es'
-            ? 'Tazas kuksa de madera, tarros de mermelada de bayas rojas, manoplas de lana y un farol encendido sobre una mesa en una cabaña de troncos'
+            ? 'Tazas kuksa de madera colgadas de una pared de troncos'
             : lang === 'pt-BR'
-            ? 'Canecas kuksa de madeira, potes de geleia de frutas vermelhas, luvas de lã e uma lanterna acesa sobre uma mesa em uma cabana de toras'
+            ? 'Canecas kuksa de madeira penduradas em uma parede de toras'
             : lang === 'zh-CN'
-            ? '原木小屋桌上的木制库克萨杯、红色浆果果酱罐、羊毛连指手套和一盏点亮的提灯'
+            ? '挂在原木墙上的木制库克萨杯'
             : lang === 'ko'
-            ? '통나무집 탁자 위의 나무 쿡사 컵, 붉은 베리 잼 병, 양모 벙어리장갑과 불 켜진 랜턴'
+            ? '통나무 벽에 걸린 나무 쿡사 컵'
             : lang === 'fr'
-            ? 'Des tasses kuksa en bois, des pots de confiture de baies rouges, des moufles en laine et une lanterne allumée sur une table dans un chalet en rondins'
+            ? 'Des tasses kuksa en bois suspendues à un mur en rondins'
             : lang === 'it'
-            ? 'Tazze kuksa di legno, vasetti di marmellata di bacche rosse, muffole di lana e una lanterna accesa su un tavolo in una baita di tronchi'
+            ? 'Tazze kuksa di legno appese a una parete di tronchi'
             : lang === 'nl'
-            ? 'Houten kuksa-bekers, potten met rode bessenjam, wollen wanten en een brandende lantaarn op een tafel in een blokhut'
+            ? 'Houten kuksa-bekers aan een blokhutwand'
             : lang === 'sv'
-            ? 'Kåsor av trä, burkar med röd bärsylt, vantar av ull och en tänd lykta på ett bord i en timmerstuga'
-            : 'Wooden kuksa cups, jars of red berry jam, woollen mittens and a lit lantern on a table in a log cabin'
+            ? 'Kåsor av trä hängande på en timmervägg'
+            : 'Wooden kuksa mugs hanging on a log wall'
         }
       />
       <div

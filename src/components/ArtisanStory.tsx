@@ -144,31 +144,32 @@ export default function ArtisanStory() {
         theme="wood"
         showIcon={false}
         imgSrc="/img/artisan-hands.jpg"
-        aiGenerated
+        avifSrcSet="/img/artisan-hands-800.avif 800w, /img/artisan-hands-1200.avif 1200w, /img/artisan-hands-1920.avif 1920w"
+        photoKey="artisan-hands"
         ariaLabel={
           lang === 'fi'
-            ? 'Lappilainen käsityöläinen työssään'
+            ? 'Veitsi nahkatupessa ja kirves kannon päällä'
             : lang === 'de'
-            ? 'Eine Handwerkerin aus Lappland bei der Arbeit'
+            ? 'Ein Messer in Lederscheide neben einer Axt auf einem Baumstumpf'
             : lang === 'ja'
-            ? '工房で働くラップランドの職人'
+            ? '切り株の上の革の鞘に入ったナイフと斧'
             : lang === 'es'
-            ? 'Un artesano de Laponia en su taller'
+            ? 'Un cuchillo en su funda de cuero junto a un hacha sobre un tocón'
             : lang === 'pt-BR'
-            ? 'Um artesão da Lapônia em seu trabalho'
+            ? 'Uma faca em bainha de couro ao lado de um machado sobre um toco de árvore'
             : lang === 'zh-CN'
-            ? '正在工作的拉普兰工匠'
+            ? '树桩上的皮鞘小刀和斧头'
             : lang === 'ko'
-            ? '작업 중인 라플란드 장인'
+            ? '나무 그루터기 위의 가죽 칼집에 든 칼과 도끼'
             : lang === 'fr'
-            ? "Un artisan de Laponie au travail"
+            ? 'Un couteau dans son étui en cuir à côté d’une hache sur une souche'
             : lang === 'it'
-            ? 'Un artigiano della Lapponia al lavoro'
+            ? 'Un coltello nella sua fodera di cuoio accanto a un’ascia su un ceppo'
             : lang === 'nl'
-            ? 'Een Laplandse ambachtsman aan het werk'
+            ? 'Een mes in een leren schede naast een bijl op een boomstronk'
             : lang === 'sv'
-            ? 'En hantverkare från Lappland i arbete'
-            : 'A Lapland artisan at work'
+            ? 'En kniv i läderslida bredvid en yxa på en stubbe'
+            : 'A knife in a leather sheath beside an axe on a tree stump'
         }
       />
       {/* Side-vignette: dark on left where text sits, lets the image breathe on the right */}

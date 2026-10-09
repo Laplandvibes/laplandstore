@@ -1,7 +1,7 @@
 import { ArrowUpRight, Clock, MapPin } from 'lucide-react';
 import { HUB_PICKS, GYG_PRICE_AS_OF, gygFreshPrice, gygHref } from '../shared/gyg/picks';
 import { useLang, type Lang } from '../lang';
-import AiDisclosure from './AiDisclosure';
+import PhotoMark from './PhotoMark';
 
 /**
  * Aktiviteetit hakemistosivulla.
@@ -19,7 +19,7 @@ import AiDisclosure from './AiDisclosure';
  * omalla tekstillä (mitä siellä tapahtuu, ei mitä tuote on nimeltään), ja
  * välittäjä mainitaan vain pienellä hinnan lähteenä. Kortin yläosa on
  * typografinen juliste kokemuksen omalla värillä (revontulivihreä, jäänsininen,
- * nuotion amber, jään vaaleansininen) — ei AI-kuvaa (Vesa 6.9.: "AI slop"),
+ * nuotion amber, jään vaaleansininen) — ei AI-kuvaa (Vesa 6.9.: "AI slop"; 6.9. lisätyt AI-julisteet vaihdettiin aitoihin valokuviin 9.10.),
  * ei GYG:n kuvia (kuuluvat järjestäjille), eikä heinäkuun kesäkuvia talviretkiin.
  *
  * Tekstit eivät väitä mitään, mitä tuotesivu ei sano: kesto ja lähtöpaikka
@@ -274,12 +274,11 @@ export default function ActivitiesRail() {
             const price = gygFreshPrice(p);
             return (
               <li key={p.path} className="group flex flex-col overflow-hidden rounded-[24px] bg-white shadow-[0_18px_40px_-26px_rgba(15,23,42,0.35)] ring-1 ring-night/5">
-                {/* Juliste: kokemuksen AI-kuva (Vesa 6.9.: "eikö näihin vaikka AI-kuvat saada"),
+                {/* Juliste: kokemuksen oma valokuva (9.10.2026: tekoälykuvat aidoiksi, Vesa 4.10.),
                     värigradientti pohjalla siltä varalta ettei kuva lataudu, ja scrim
-                    eksplisiittisillä stopeilla otsikon alle. Kuvat: Picsart seedream-4.5,
-                    kohdekohtainen kehote (ei tyyppikehote), public/img/activities/<key>.webp
-                    1200×800 + 600×400. Art. 50 -merkintä <AiDisclosure />, koska kuva esittää
-                    oikeaa paikkaa valokuvamaisesti. */}
+                    eksplisiittisillä stopeilla otsikon alle. Kuvat public/img/activities/<key>.webp
+                    1200 + 600 px, kuitit src/data/photoCredits.ts. Lähderivi kuvan päällä ylhäällä
+                    oikealla (paikkamerkki on vasemmalla), linkit sivun krediittirivillä. */}
                 <div className="relative flex aspect-[16/10] min-h-[184px] flex-col justify-end overflow-hidden p-5 text-white" style={{ background: POSTER[e] }}>
                   <img
                     src={`/img/activities/${e}.webp`}
@@ -301,7 +300,7 @@ export default function ActivitiesRail() {
                       "Huskyvaljakolla" ja "vesiputoukset" kesken sanan (mitattu 1280 px:ssä),
                       joten siellä 26 px. AI-merkintä ylös oikealle, jotta otsikko saa koko leveyden. */}
                   <h3 className="relative font-heading text-[28px] leading-[0.95] tracking-wide [text-wrap:balance] drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)] sm:text-3xl lg:text-[26px]">{c.title}</h3>
-                  <AiDisclosure className="!bottom-auto !top-3" />
+                  <PhotoMark image={`activities/${e}`} pos="top" />
                 </div>
                 <div className="flex flex-1 flex-col p-5">
                   <p className="text-[14px] leading-relaxed text-slate-700 [text-wrap:pretty]">{c.hook}</p>
