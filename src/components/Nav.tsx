@@ -11,6 +11,22 @@ import type { CSSProperties } from 'react';
 
 // Sanamerkin leveys 1 px:n fontilla (Bebas Neue + tracking-wide). Puhelin- ja tablettinavissa koko lasketaan
 // tästä ja vapaasta tilasta (index.css LV-NAV-SANAMERKKI): 24 px (tabletilla 30 px), pienempi vain kun ei mahdu.
+// Logolinkin ruudunlukijanimi kaikilla kielillä (verkoston yhteinen sanasto, gate:a11y-nimet 24.10.2026).
+const HOME_LABEL: Record<Lang, string> = {
+  en: 'LaplandStore home',
+  fi: 'LaplandStore, etusivu',
+  sv: 'LaplandStore, startsida',
+  de: 'LaplandStore, Startseite',
+  es: 'LaplandStore, página de inicio',
+  fr: 'LaplandStore, page d’accueil',
+  it: 'LaplandStore, pagina iniziale',
+  nl: 'LaplandStore, startpagina',
+  'pt-BR': 'LaplandStore, página inicial',
+  ja: 'LaplandStore ホーム',
+  ko: 'LaplandStore 홈',
+  'zh-CN': 'LaplandStore 首页',
+};
+
 const WM_STYLE = { '--lv-wm-k': 5.36, '--lv-wm-max-md': '30px' } as CSSProperties;
 
 
@@ -85,7 +101,7 @@ export default function Nav() {
               <Link
                 to={localePrefix || '/'}
                 className="flex items-center shrink-0 min-h-11"
-                aria-label="LaplandStore home"
+                aria-label={HOME_LABEL[lang]}
               >
                 {/* NETWORK RULE (Vesa 2026-07-24): wordmark aina Bebas (--font-logo), otsikot pysyvät Playfairissa. */}
                 <span className="lv-wm font-logo tracking-wide leading-none text-2xl sm:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]" data-lv-sanamerkki="" style={WM_STYLE}>

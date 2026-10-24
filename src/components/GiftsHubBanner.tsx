@@ -1,5 +1,5 @@
 import { Store, ArrowRight } from 'lucide-react';
-import { useLang } from '../lang';
+import { useLang, type Lang } from '../lang';
 
 /**
  * Cross-link to laplandgifts.com, the network's online shop.
@@ -37,6 +37,22 @@ import { useLang } from '../lang';
  * Lapland, LaplandGifts = the rest. The eyebrow is the domain itself, so the
  * button's destination is never a surprise.
  */
+// Kuvakaappauksen alt (laplandgifts.comin etusivu) kaikilla kielillä, gate:a11y-nimet 24.10.2026.
+const SHOT_ALT: Record<Lang, string> = {
+  en: 'laplandgifts.com: Lapland souvenirs and Finnish gifts',
+  fi: 'laplandgifts.com: Lapin tuliaiset ja suomalaiset lahjat',
+  sv: 'laplandgifts.com: souvenirer från Lappland och finska presenter',
+  de: 'laplandgifts.com: Mitbringsel aus Lappland und finnische Geschenke',
+  es: 'laplandgifts.com: recuerdos de Laponia y regalos finlandeses',
+  fr: 'laplandgifts.com : souvenirs de Laponie et cadeaux finlandais',
+  it: 'laplandgifts.com: souvenir dalla Lapponia e regali finlandesi',
+  nl: 'laplandgifts.com: souvenirs uit Lapland en Finse cadeaus',
+  'pt-BR': 'laplandgifts.com: lembranças da Lapônia e presentes finlandeses',
+  ja: 'laplandgifts.com：ラップランドのお土産とフィンランドのギフト',
+  ko: 'laplandgifts.com: 라플란드 기념품과 핀란드 선물',
+  'zh-CN': 'laplandgifts.com：拉普兰纪念品和芬兰礼物',
+};
+
 const COPY = {
   fi: {
     eyebrow: 'laplandgifts.com',
@@ -195,7 +211,7 @@ export default function GiftsHubBanner() {
                 src="/img/gifts/gifts-front.webp"
                 srcSet="/img/gifts/gifts-front-640.webp 640w, /img/gifts/gifts-front.webp 1280w"
                 sizes="(min-width: 768px) 40vw, 90vw"
-                alt="laplandgifts.com — Lapin tuliaiset ja suomalaiset lahjat"
+                alt={SHOT_ALT[lang]}
                 width={1280}
                 height={760}
                 loading="lazy"

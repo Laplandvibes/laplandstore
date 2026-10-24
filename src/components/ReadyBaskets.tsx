@@ -620,6 +620,7 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
                   srcSet={`/img/baskets/${it.image}-400.webp 400w, /img/baskets/${it.image}.webp 800w`}
                   sizes={i === 0 ? '(min-width: 640px) 34vw, 90vw' : '(min-width: 640px) 16vw, 44vw'}
                   alt={it.name}
+                  translate="no"
                   loading="lazy"
                   decoding="async"
                   width={800}
@@ -670,7 +671,7 @@ function BasketStory({ basket, lang, flip }: { basket: Basket; lang: Lang; flip:
               </span>
               <span className="flex min-w-0 flex-1 items-center justify-between gap-3 sm:block">
                 <span className="text-[13px] font-medium leading-snug text-night">
-                  {it.name}
+                  <span translate="no">{it.name}</span>
                   {(it.qty ?? 1) > 1 && <span className="text-slate-500"> × {it.qty}</span>}
                 </span>
                 <span className="shrink-0 text-[13px] font-semibold tabular-nums text-night sm:mt-0.5 sm:block sm:font-medium sm:text-slate-600">

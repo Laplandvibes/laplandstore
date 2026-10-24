@@ -59,7 +59,7 @@ function BoutiqueCard({
         {/* 🔴 Nimi on font-bodylla eikä font-headingilla: otsikkofontti on
             Bebas Neue eli versaali, ja "SAMEKKI" tai "MARIELLEN VAATEHUONE"
             olisi lukukelvoton. Sama päätös kuin giftsin tuotenimissä. */}
-        <h4 className="font-body font-semibold text-base leading-tight text-night transition-colors group-hover:text-amber">
+        <h4 className="font-body font-semibold text-base leading-tight text-night transition-colors group-hover:text-amber" translate="no">
           {boutique.name}
         </h4>
         <p className="mt-0.5 text-xs text-warm-gray">

@@ -399,6 +399,8 @@ export default function KalevalaRail({
                     <img
                       src={p.image}
                       alt={p.name}
+                      lang="fi"
+                      translate="no"
                       loading="lazy"
                       decoding="async"
                       width={640}
@@ -408,7 +410,7 @@ export default function KalevalaRail({
                     />
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5 border-t border-black/[0.06] px-3.5 pb-3.5 pt-2.5">
-                    <span className="line-clamp-2 text-[12.5px] font-semibold leading-snug text-[#141413]">{p.name}</span>
+                    <span className="line-clamp-2 text-[12.5px] font-semibold leading-snug text-[#141413]" lang="fi" translate="no">{p.name}</span>
                     <span className="mt-auto flex items-baseline gap-1">
                       {c.from && !c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
                       <span className="text-[14px] font-bold text-[#141413]">{fmtPrice(p.price)}</span>
