@@ -1,3 +1,13 @@
+function newsletterEmailLabel(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  return ({fi:'Sähköpostiosoite',en:'Email address',de:'E-Mail-Adresse',es:'Correo electrónico',fr:'Adresse e-mail',it:'Indirizzo email',nl:'E-mailadres',sv:'E-postadress',ja:'メールアドレス',ko:'이메일 주소',pt:'Endereço de e-mail',zh:'电子邮箱'} as Record<string,string>)[lang] || 'Email address';
+}
+
+function newsletterLanguageNotice(): string {
+  const lang = typeof document === 'undefined' ? 'en' : document.documentElement.lang.toLowerCase().split('-')[0];
+  const notes: Record<string, string> = {"fi":"Uutiskirjeet ovat suomeksi.","en":"Newsletters are in English.","de":"Die Newsletter werden auf Englisch versendet.","ja":"ニュースレターは英語でお届けします。","ko":"뉴스레터는 영어로 발송됩니다.","fr":"Les newsletters sont envoyées en anglais.","it":"Le newsletter sono inviate in inglese.","nl":"De nieuwsbrieven zijn in het Engels.","sv":"Nyhetsbreven skickas på engelska.","es":"Los boletines se envían en inglés.","pt":"As newsletters são enviadas em inglês.","zh":"订阅邮件以英语发送。"};
+  return notes[lang] || notes.en;
+}
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { Mail, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -245,8 +255,7 @@ export default function Newsletter() {
         <p className="text-warm-gray mt-4 leading-relaxed [text-wrap:pretty]">{t.intro}</p>
 
         <><FounderByline tone="light" />
-        <form
-          onSubmit={handleSubmit}
+        <form style={{ background: '#0F172A', color: '#F9FAFB', padding: 16, borderRadius: 16 }} onSubmit={handleSubmit}
           onInvalidCapture={(e) => {
             if (blockedTracked.current) return;
             blockedTracked.current = true;
@@ -256,7 +265,7 @@ export default function Newsletter() {
           }}
           className="mt-8 flex flex-col sm:flex-row sm:flex-wrap gap-3 max-w-md mx-auto"
         >
-          <input
+          <label style={{display:'flex',flexDirection:'column',gap:8,flex:'1 1 0%',minWidth:0,textAlign:'left',fontSize:14,color:'#F9FAFB'}}><span>{newsletterEmailLabel()}</span><span style={{fontSize:13,lineHeight:1.5}}>{newsletterLanguageNotice()}</span><input style={{ background: '#FFFFFF', color: '#1F2937', WebkitTextFillColor: '#1F2937', border: '1px solid #64748B' }}
             type="email"
             value={email}
             onFocus={trackStart}
@@ -267,8 +276,8 @@ export default function Newsletter() {
             disabled={status === 'loading'}
             autoComplete="email"
             className="flex-1 px-5 py-3 rounded-full border border-gray-300 bg-white text-night placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-amber/50 text-base disabled:opacity-50"
-          />
-          <button
+          /></label>
+          <button style={{ backgroundColor: '#BE185D', color: '#FFFFFF', alignSelf: 'end', minHeight: 48 }}
             type="submit"
             disabled={status === 'loading'}
             className="px-8 py-3 bg-amber text-white font-bold rounded-full hover:bg-amber-light transition-colors shadow-md inline-flex items-center justify-center gap-2 disabled:opacity-70"
@@ -283,7 +292,7 @@ export default function Newsletter() {
             )}
           </button>
           {/* GDPR: suostumus on annettava aktiivisesti — ruutu ei ole esivalittu. */}
-          <label className="w-full flex items-start gap-2.5 text-left text-xs text-warm-gray leading-relaxed">
+          <label style={{color:"#F9FAFB"}} className="w-full flex items-start gap-2.5 text-left text-xs text-warm-gray leading-relaxed">
             <input
               type="checkbox"
               checked={consented}
@@ -293,9 +302,9 @@ export default function Newsletter() {
               disabled={status === 'loading'}
               className="mt-0.5 w-4 h-4 shrink-0 rounded border-gray-300 accent-amber focus:outline-none focus:ring-2 focus:ring-amber/50 disabled:opacity-50"
             />
-            <span>
+            <span style={{color:"#F9FAFB"}}>
               {NEWSLETTER_PRIVACY[lang].consent}{' '}
-              <a
+              <a style={{color:"#BAE6FD",textDecoration:"underline"}} 
                 href={`${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/privacy/`}
                 target="_blank"
                 rel="noopener"
