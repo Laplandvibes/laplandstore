@@ -104,7 +104,7 @@ export default function Nav() {
                 aria-label={HOME_LABEL[lang]}
               >
                 {/* NETWORK RULE (Vesa 2026-07-24): wordmark aina Bebas (--font-logo), otsikot pysyvät Playfairissa. */}
-                <span className="lv-wm font-logo tracking-wide leading-none text-2xl sm:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]" data-lv-sanamerkki="" style={WM_STYLE}>
+                <span translate="no" className="notranslate lv-wm font-logo tracking-wide leading-none text-2xl sm:text-3xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.35)]" data-lv-sanamerkki="" style={WM_STYLE}>
                   <span className="text-amber">#</span>
                   <span className={scrolled ? 'text-night' : 'text-white'}>LAPLAND</span>
                   <span className="text-amber">STORE</span>
