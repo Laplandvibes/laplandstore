@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from 'react';
 import { Mail, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import { useLang, LANG_PREFIX, type Lang } from '../lang';
 
 // Uutiskirjeen kieliohje sivun kielestä (ei <html lang>:sta, joka on esirenderöinnissä aina 'en').
@@ -332,19 +331,10 @@ export default function Newsletter() {
           </p>
         )}
 
-        {/* Tietosuoja-asetuksen 13 art.: käsittelystä on kerrottava
-            keruuhetkellä, ei vasta alatunnisteen linkin takana.
-            Auditti 13.8.2026: lomake keräsi sähköpostit linkittämättä
-            selosteeseen lainkaan. */}
+        {/* Tietosuoja-asetuksen 13 art.: käsittelystä kerrotaan keruuhetkellä suostumusrivin linkillä
+            (auditti 13.8.2026). Tässä toistettu "Näin käsittelemme tietojasi" -linkki poistettu 1.11.2026. */}
         <p className="text-xs text-warm-gray mt-4">
-          {t.fineprint}{' '}
-          {NEWSLETTER_PRIVACY[lang].lead}{' '}
-          <Link
-            to={`${LANG_PREFIX[lang] ? `/${LANG_PREFIX[lang]}` : ''}/privacy`}
-            className="underline hover:text-amber"
-          >
-            {NEWSLETTER_PRIVACY[lang].link}
-          </Link>
+          {t.fineprint}
         </p>
       </div>
     </section>
