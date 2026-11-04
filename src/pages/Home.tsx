@@ -20,6 +20,8 @@ import finlaysonRail from '../shared/ads/rails/finlayson';
 import finlaysonPicks from '../shared/ads/data/finlaysonPicks';
 import nansoRail from '../shared/ads/rails/nanso';
 import nansoPicks from '../shared/ads/data/nansoPicks';
+import luckydiscsRail from '../shared/ads/rails/luckydiscs';
+import luckydiscsPicks from '../shared/ads/data/luckydiscsPicks';
 import KalevalaRail from '../shared/ads/KalevalaRail';
 import HomeAdSlots, { MainPartnerBanner } from '../shared/HomeAdSlots';
 import { AD_SLOTS } from '../data/adSlots';
@@ -146,6 +148,14 @@ export default function Home() {
         </div>
       </section>
       <GiftsHubBanner />
+      {/* Lucky Discs (suora kumppani, Vesa 4.11.2026): lahjabannerin jälkeen,
+          koska otsikko on lahja frisbeegolfaajalle. Vain fi + en: muilla kielillä
+          rivi ei renderöidy, koska kauppa on olemassa vain näillä kielillä. */}
+      <section className="px-4 py-10 sm:py-14 bg-cream">
+        <div className="max-w-5xl mx-auto">
+          <ProductRail partner={luckydiscsRail} snapshot={luckydiscsPicks} lang={lang} sid="home_gift_discs" variant="light" />
+        </div>
+      </section>
 
       {/* Nordicbuddies (Daisycon 20538). Sits after the gifts banner and before
           the outdoor card so the page keeps alternating shop → story → shop, and
