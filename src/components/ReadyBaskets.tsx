@@ -732,9 +732,9 @@ export default function ReadyBaskets() {
   return (
     <section className="bg-cream px-4 py-14 sm:py-20" aria-labelledby="ready-baskets-title">
       <div className="mx-auto max-w-5xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-vibe-pink">{t.eyebrow}</p>
-        <h2 id="ready-baskets-title" className="mt-1 font-heading text-5xl leading-[0.95] text-night sm:text-6xl [text-wrap:balance]">{t.title}</h2>
-        <p className="mt-5 max-w-prose text-base leading-relaxed text-slate-700 sm:text-lg">{t.lead}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-vibe-pink text-center lg:text-left">{t.eyebrow}</p>
+        <h2 id="ready-baskets-title" className="mt-1 font-heading text-5xl leading-[0.95] text-night sm:text-6xl [text-wrap:balance] text-center lg:text-left">{t.title}</h2>
+        <p className="mt-5 max-w-prose text-base leading-relaxed text-slate-700 sm:text-lg mx-auto w-fit lg:mx-0 lg:w-auto">{t.lead}</p>
         <div className="mt-10">
           <BasketStory basket={first} lang={lang} flip={false} />
         </div>
@@ -750,7 +750,7 @@ export default function ReadyBaskets() {
           onClick={() => setOpen((v) => !v)}
           aria-expanded={open}
           aria-controls="ready-baskets-more"
-          className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 font-heading text-xl tracking-wide text-night shadow-[0_18px_38px_-24px_rgba(15,23,42,0.55)] ring-1 ring-night/10 transition-[transform,box-shadow,background-color] duration-150 hover:-translate-y-0.5 hover:bg-[#FBFBFD] active:scale-[0.99] sm:w-auto"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-white px-6 py-3.5 sm:mx-auto sm:w-fit lg:mx-0 font-heading text-xl tracking-wide text-night shadow-[0_18px_38px_-24px_rgba(15,23,42,0.55)] ring-1 ring-night/10 transition-[transform,box-shadow,background-color] duration-150 hover:-translate-y-0.5 hover:bg-[#FBFBFD] active:scale-[0.99]"
         >
           {open ? f.less : f.more(rest.length)}
           <ChevronDown className={`h-5 w-5 transition-transform duration-200 ${open ? 'rotate-180' : ''}`} aria-hidden="true" />

@@ -618,7 +618,7 @@ export default function FAQ() {
           <h2 className="font-heading text-3xl sm:text-4xl text-night mt-3 leading-tight [text-wrap:balance]">
             {h.h2}
           </h2>
-          <p className="text-warm-gray text-base mt-4 leading-relaxed [text-wrap:pretty]">{h.lead}</p>
+          <p className="text-warm-gray text-base mt-4 leading-relaxed [text-wrap:pretty] max-lg:mx-auto max-lg:w-fit max-lg:text-left">{h.lead}</p>
         </div>
 
         <div className="space-y-4">

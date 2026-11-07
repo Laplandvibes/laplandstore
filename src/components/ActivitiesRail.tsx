@@ -264,9 +264,9 @@ export default function ActivitiesRail() {
   return (
     <section className="bg-cream px-4 py-12 sm:py-16" aria-labelledby="activities-title">
       <div className="mx-auto max-w-5xl">
-        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-vibe-pink">{t.eyebrow}</p>
-        <h2 id="activities-title" className="mt-1 font-heading text-4xl text-night sm:text-5xl">{t.title}</h2>
-        <p className="mt-3 max-w-2xl text-slate-700 [text-wrap:pretty]">{t.intro}</p>
+        <p className="text-xs font-semibold uppercase tracking-[0.18em] text-vibe-pink text-center lg:text-left">{t.eyebrow}</p>
+        <h2 id="activities-title" className="mt-1 font-heading text-4xl text-night sm:text-5xl text-center lg:text-left">{t.title}</h2>
+        <p className="mt-3 max-w-2xl text-slate-700 [text-wrap:pretty] mx-auto w-fit lg:mx-0 lg:w-auto">{t.intro}</p>
         <ul className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {HUB_PICKS.map((p, i) => {
             const e = expOf(p.path);

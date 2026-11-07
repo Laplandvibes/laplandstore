@@ -111,7 +111,7 @@ export default function LocalShops() {
           </h2>
           {/* Luku luetaan datasta. Copyyn kirjoitettu luku ajautui erilleen
               todellisuudesta: badge lupasi 16 kun putiikkeja oli 15. */}
-          <p className="mx-auto mt-4 max-w-xl text-warm-gray [text-wrap:pretty]">
+          <p className="mx-auto mt-4 max-w-xl text-warm-gray [text-wrap:pretty] max-lg:w-fit max-lg:text-left">
             {t.sub(BOUTIQUES.length)}
           </p>
         </div>

@@ -178,7 +178,7 @@ export default function ArtisanStory() {
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-12 text-white">
         {/* @container: CJK-otsikon koko lasketaan tämän palstan leveydestä (100cqi). */}
-        <div className="@container max-w-2xl">
+        <div className="@container max-w-2xl max-lg:mx-auto text-center lg:text-left">
           <span className="text-sm tracking-[0.3em] uppercase text-amber-light font-bold">
             {t.eyebrow}
           </span>
@@ -194,7 +194,7 @@ export default function ArtisanStory() {
             <span className="block text-amber-light">{t.titleB}</span>
           </h2>
 
-          <p className="text-white/85 text-lg mt-8 leading-relaxed [text-wrap:pretty]">
+          <p className="text-white/85 text-lg mt-8 leading-relaxed [text-wrap:pretty] text-left">
             {t.body}
           </p>
           {/* Luvut yhtenä virkkeenä tekstin jatkona, ei kolmena lasilaattana. Vesa 6.9.:
@@ -203,7 +203,7 @@ export default function ArtisanStory() {
               käsityöperinnettä") oli väite, jolle ei ole lähdettä — se on pudotettu
               (CLAUDE.md: ei keksittyjä tilastoja). Jäljelle jäävät kaksi lukua tulevat
               datasta ja johtavat hakemistoon, jossa ne voi tarkistaa. */}
-          <p className="text-white/85 text-lg mt-6 leading-relaxed [text-wrap:pretty]">
+          <p className="text-white/85 text-lg mt-6 leading-relaxed [text-wrap:pretty] text-left">
             {facts.split(/(\d+)/).map((part, i) =>
               /^\d+$/.test(part) ? (
                 <b key={i} className="font-semibold text-amber-light">{part}</b>

@@ -247,7 +247,7 @@ export default function Newsletter() {
           <h2 className="font-heading text-3xl sm:text-4xl text-night">
             {status === 'success' ? t.successHeadline : t.alreadyHeadline}
           </h2>
-          <p className="text-warm-gray mt-4 leading-relaxed">
+          <p className="text-warm-gray mt-4 leading-relaxed max-lg:mx-auto max-lg:w-fit max-lg:text-left">
             {status === 'success' ? t.successBody : t.alreadyBody}
           </p>
         </div>
@@ -266,7 +266,7 @@ export default function Newsletter() {
           {t.heading}
         </h2>
 
-        <p className="text-warm-gray mt-4 leading-relaxed [text-wrap:pretty]">{t.intro}</p>
+        <p className="text-warm-gray mt-4 leading-relaxed [text-wrap:pretty] max-lg:mx-auto max-lg:w-fit max-lg:text-left">{t.intro}</p>
 
         <><FounderByline tone="light" />
         {/* 4.11.2026 (Vesa: kenttä "leijuu" eikä "anna esimerkkiä taustalle"): Codexin 28.10. tumma laatikko pois, otsikko kentän yllä, kenttä ja nappi samalla rivillä, esimerkkiosoite kentässä. */}
