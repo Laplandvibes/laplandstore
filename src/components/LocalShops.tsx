@@ -122,7 +122,7 @@ export default function LocalShops() {
               <ShoppingBag className="h-5 w-5 text-amber" />
               {t.onlineHeading}
             </h3>
-            <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mb-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_0.5rem)]">
               {online.map((b) => (
                 <BoutiqueCard
                   key={b.slug}
@@ -143,7 +143,7 @@ export default function LocalShops() {
               {t.physicalHeading}
             </h3>
             <p className="mb-6 max-w-xl text-sm text-warm-gray">{t.physicalSub}</p>
-            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 sm:max-lg:[&>*:last-child:nth-child(odd)]:col-span-2 sm:max-lg:[&>*:last-child:nth-child(odd)]:justify-self-center sm:max-lg:[&>*:last-child:nth-child(odd)]:w-[calc(50%_-_0.5rem)]">
               {physicalOnly.map((b) => (
                 <BoutiqueCard
                   key={b.slug}
@@ -168,8 +168,8 @@ export default function LocalShops() {
         </div>
 
         <div className="mt-8 rounded-2xl bg-white p-6 text-center shadow-sm">
-          <p className="mb-2 font-heading text-xl text-night">{t.ctaHeading}</p>
-          <p className="mb-4 text-sm text-warm-gray">{t.ctaBody}</p>
+          <p className="mb-2 font-heading text-xl text-night max-lg:mx-auto max-lg:w-fit max-lg:text-left">{t.ctaHeading}</p>
+          <p className="mb-4 text-sm text-warm-gray max-lg:mx-auto max-lg:w-fit max-lg:text-left">{t.ctaBody}</p>
           <a
             href={`mailto:info@laplandvibes.com?subject=${encodeURIComponent(t.ctaSubject)}`}
             className="inline-flex min-h-11 items-center gap-2 rounded-full bg-amber px-6 font-bold text-white transition-colors hover:bg-amber-light"

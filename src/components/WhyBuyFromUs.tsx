@@ -174,9 +174,12 @@ export default function WhyBuyFromUs() {
             return (
               <div
                 key={r.title}
-                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center flex flex-col h-full"
+                className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-shadow duration-300 text-center max-lg:text-left flex flex-col h-full"
               >
-                <div className={`w-14 h-14 ${COLORS[i]} rounded-xl flex items-center justify-center mx-auto mb-4`}>
+                {/* Alle 1024 px kortin koko sisältö vasemmalle (Vesa 18.10.2026: korttien sisältö ja leipäteksti
+                    yhdestä reunasta; puhelimella kortti on ruudun levyinen ja 3–4-rivinen keskitetty teksti hyppi).
+                    Tietokoneella neljä kapeaa korttia rinnakkain keskitettyinä kuten ennen. */}
+                <div className={`w-14 h-14 ${COLORS[i]} rounded-xl flex items-center justify-center mx-auto max-lg:mx-0 mb-4`}>
                   <Icon className="w-7 h-7" />
                 </div>
                 <h3 className="font-heading text-xl text-night mb-2 [text-wrap:balance]">{r.title}</h3>
