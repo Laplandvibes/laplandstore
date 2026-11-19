@@ -49,19 +49,19 @@ import { DEFAULT_PREMIUM_SPOTS } from '../shared/PremiumSpotGrid';
  * liveen kuolleella reitillä, joten tarkistus tehdään joka kerta.
  *
  * 🔴🔴 KIELIVERSIO (Niina/Bear 2026-07-30 -sääntö, Vesa löysi rikon 4.9.):
- * linkin pitää viedä kumppanin OMAAN kieliversioon. keloa.fi ilmoittaa
- * hreflangissaan kaksi: fi = / ja en = /en/home/. `urlFi` menee Workerin
- * oletuspohjaan (suomenkielinen juuri), `url` — eli kaikki muut lokaalit —
- * kantaa `dest`-parametrin englanninkieliseen versioon. Worker hyväksyy
- * destin vain jos se alkaa reitin `base`illa, joten se ei ole avoin ohjaus.
- * Molemmat mitattu livenä 4.9.2026: HTTP 200.
+ * linkin pitää viedä kumppanin OMAAN kieliversioon. 4.9.2026 keloa.fi:llä oli
+ * kaksi (fi = / ja en = /en/home/), ja `url` kantoi `dest`-parametrin
+ * englanninkieliseen. 19.11.2026: keloa.fi on Shopifyssa yhdellä kieliversiolla
+ * juuressa, /en/home/ on 404 ⇒ `url` ja `urlFi` vievät molemmat Workerin
+ * oletuspohjaan (keloa.fi/). Kun Keloa julkaisee kieliversion, lisää dest takaisin
+ * vasta mitattuna (HTTP 200).
  */
 const KELOA: Partner = {
   name: 'Keloa',
   tagline: 'Käsintehdyt silmälasit tuohesta ja poronsarvesta',
   taglineEn: 'Handmade eyewear from birch bark and reindeer antler',
   taglineSv: 'Handgjorda glasögon av näver och renhorn',
-  url: 'https://go.laplandvibes.com/go/keloa?sid=laplandstore_home_main_partner&dest=https%3A%2F%2Fkeloa.fi%2Fen%2Fhome%2F',
+  url: 'https://go.laplandvibes.com/go/keloa?sid=laplandstore_home_main_partner',
   urlFi: 'https://go.laplandvibes.com/go/keloa?sid=laplandstore_home_main_partner',
   photoSrc: '/images/partners/keloa-atelier.webp',
   imageSrc: '/images/partners/keloa-atelier.webp',
@@ -89,8 +89,8 @@ const KELOA: Partner = {
   // Keloa-artikkelin omasta brandCard-lohkosta (laplandvibes/src/locales/
   // <kieli>/keloa.json), "pääkadulla" artikkelin atelier-kappaleesta ja
   // ylijäämävirke sen jewellery-kappaleesta: hubissa julkaistut käännökset,
-  // eivät uutta copya. Keloan oma sivusto on vain fi + en, joten `url` pysyy
-  // englanninkielisessä versiossa.
+  // eivät uutta copya. Keloan oma sivusto on yhdellä kieliversiolla juuressa
+  // (19.11.2026), joten `url` vie sinne kaikilla kielillä.
   i18n: {
     de: {
       tagline: 'Handgefertigte Brillen aus Birkenrinde und Rentiergeweih',
