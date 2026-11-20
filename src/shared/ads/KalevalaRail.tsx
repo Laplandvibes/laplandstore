@@ -1,4 +1,5 @@
-import { ArrowRight, Gem } from 'lucide-react'
+import { ArrowRight, Gem, Truck } from 'lucide-react'
+import { hintaTuore, ilmanPaivaa, lukupaiva } from './ProductRail'
 import picks from "./data/kalevalaPicks"
 import partnerBrand from './data/partnerBrand'
 
@@ -272,7 +273,11 @@ export default function KalevalaRail({
   const pillText = dark ? INK : SNOW
   const ink = dark ? 'text-snow' : 'text-[#141413]'
   const muted = dark ? 'text-white/60' : 'text-black/55'
-  const faint = dark ? 'text-white/40' : 'text-black/40'
+  // Pieni teksti on täysi virke ⇒ leipätekstiä: ≥ 16 px ja muste ≥ /75 (§33, sama kuin ProductRail).
+  const faint = dark ? 'text-white/75' : 'text-black/75'
+  // Hinta vain enintään 7 päivää vanhana (ProductRail HINTA_TUORE_PV, Vesa 20.11.2026).
+  const tuore = hintaTuore(picks.fetchedAt)
+  const note = tuore ? c.priceNote.replace('{date}', lukupaiva(picks.fetchedAt, lang)) : ilmanPaivaa(c.priceNote)
   const allHref = linkFor(CATEGORY_URL[shop], `${sid}_all`)
 
   return (
@@ -332,6 +337,12 @@ export default function KalevalaRail({
           {headline ?? c.headline}
         </h2>
         <p className={`mt-2 max-w-xl text-[14px] leading-snug text-pretty ${muted}`}>{c.sub}</p>
+        {/* Toimitusehto on ostopäätös (Vesa 20.11.2026: "ilmainen toimitus on ihan piilossa vaikka se
+            on ostopäätös"): ennen 11 px:n harmaa pikkuteksti rivin alla, nyt näkyvä rivi otsikon alla. */}
+        <p className={`mt-3 flex max-w-xl items-start gap-2 text-[15px] font-medium leading-snug text-pretty ${ink}`}>
+          <Truck className="mt-[3px] h-4 w-4 shrink-0" aria-hidden="true" />
+          <span>{c.shipping}</span>
+        </p>
 
         {/* ONE row at every width, scrolled sideways — not a grid that grows
             downward.
@@ -411,11 +422,13 @@ export default function KalevalaRail({
                   </div>
                   <div className="flex flex-1 flex-col gap-1.5 border-t border-black/[0.06] px-3.5 pb-3.5 pt-2.5">
                     <span className="line-clamp-2 text-[12.5px] font-semibold leading-snug text-[#141413]" lang="fi" translate="no">{p.name}</span>
-                    <span className="mt-auto flex items-baseline gap-1">
-                      {c.from && !c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
-                      <span className="text-[14px] font-bold text-[#141413]">{fmtPrice(p.price)}</span>
-                      {c.from && c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
-                    </span>
+                    {tuore ? (
+                      <span className="mt-auto flex items-baseline gap-1">
+                        {c.from && !c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
+                        <span className="text-[14px] font-bold text-[#141413]">{fmtPrice(p.price)}</span>
+                        {c.from && c.fromAfter ? <span className="text-[10.5px] text-black/45">{c.from}</span> : null}
+                      </span>
+                    ) : null}
                   </div>
                 </a>
               </li>
@@ -424,8 +437,8 @@ export default function KalevalaRail({
         </ul>
         </div>
 
-        {/* Fine print carries the price date AND the delivery terms the removed
-            brand card used to state; both were native-reviewed (commit c5c209f). */}
+        {/* Pieni teksti: hinnan lukupäivä (vain tuoreena). Toimitusehto siirtyi otsikon alle 20.11.2026;
+            molemmat tekstit natiiviluettu (commit c5c209f). */}
         {/* Kapealla ruudulla otsikkorivi ei mahdu: logo + pilleri kiertyivät
             niin että pilleri jäi yksin otsikon yläpuolelle. Siksi CTA on
             mobiilissa listan alla täysleveänä, sm:stä ylöspäin otsikkorivillä. */}
@@ -442,9 +455,7 @@ export default function KalevalaRail({
         </a>
 
         <div className="mt-2 flex flex-wrap items-end justify-between gap-x-6 gap-y-2">
-          <p className={`max-w-xl text-[11px] leading-snug ${faint}`}>
-            {c.priceNote.replace('{date}', picks.fetchedAt)} {c.shipping}
-          </p>
+          {note ? <p className={`max-w-xl text-base leading-snug ${faint}`}>{note}</p> : <span />}
           <span className={`inline-flex items-center rounded-full px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.16em] ${dark ? 'bg-white/10 text-white/60' : 'bg-black/[0.05] text-black/50'}`}>
             {AD_LABEL[lang] ?? 'Ad'}
           </span>
